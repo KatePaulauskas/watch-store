@@ -1,131 +1,106 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Eternity - Luxury Watch Store
 
-Welcome Ekaterina Mikheeva,
+### Project Link
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The live store is located at the following [address]().
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
 
-## Gitpod Reminders
+## Agile Methodology
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+This project was executed using the Agile framework, promoting iterative progress and adaptability. The Agile approach was employed to plan and monitor the project's advancements. Agile principles were consistently applied through various tools and techniques:
 
-`python3 -m http.server`
+**Planning and Monitoring:**
 
-A blue button should appear to click: _Make Public_,
+All user stories were systematically managed via GitHub Issues and Projects, ensuring an organised and methodical workflow.
 
-Another blue button should appear to click: _Open Browser_.
+**Custom Templates:**
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+Each user story was documented using custom templates, which included sections such as the user story, acceptance criteria, and tasks. This standardisation facilitated easier management and tracking of progress for each story.
 
-A blue button should appear to click: _Make Public_,
+**MoSCoW Prioritisation:**
 
-Another blue button should appear to click: _Open Browser_.
+To prioritise tasks, the MoSCoW method (Must have, Should have, Could have, and Won’t have) was utilised with labels. This prioritisation method helped categorise the importance of each user story, ensuring that essential features were developed first within an iteration, while less critical features were scheduled for later development if necessary. The implementation can be reviewed [here](https://github.com/KatePaulauskas/watch-store/issues).
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**Kanban Board Management:** 
 
-To log into the Heroku toolbelt CLI:
+A Kanban board within GitHub Projects was used to manage user stories, divided into three columns: Todo, In Progress, and Done. This provided clear visibility into the project's status at any given time. The board can be viewed [here](https://github.com/users/KatePaulauskas/projects/4).
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+**Milestones and Iterative Progress:**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+Milestones were established to define the project's iterations and were linked to the project epics. Each user story was allocated to one of six iterations, ensuring a structured development process and smooth progress tracking. The project milestones can be seen [here](https://github.com/KatePaulauskas/watch-store/milestones).
 
-### Connecting your Mongo database
+By leveraging these Agile practices and tools, the project maintained a clear and organised structure, allowing for effective tracking and timely completion of all 41 user stories.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+## User Experience Design
 
-------
+The Eternity - Luxury Watch Store website was meticulously developed to cater to the needs of discerning customers seeking affordable luxury watches. By implementing a strategic approach that combines user-centric design and business objectives, the platform ensures an exceptional online shopping experience for luxury watch enthusiasts.
 
-## Release History
+### Strategy
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The foundation of the user experience was built by considering user needs and business objectives. The strategy focused on three main areas: identifying the target audience, defining clear business goals, and delivering value.
 
-**June 18, 2024,** Add Mongo back into template
+#### User Needs
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+Understanding the diverse needs of our users was essential. After thorough research, the **target audience** for the Eternity website was identified as follows:
 
-**May 28 2024:** Fix Mongo and Links installs
+* **Watch Collectors:** Individuals seeking affordable yet luxurious timepieces to enhance their collections.
+* **Affordable Luxury Shoppers:** Customers looking for premium-quality watches that provide a sense of luxury without a high-end price tag.
+* **Fashion Enthusiasts:** Individuals who view watches as key elements of their style and wardrobe.
+* **Professionals:** Business people and executives who desire sophisticated and elegant timepieces that fit within their budget.
+* **Watch Aficionados:** Enthusiasts who appreciate the craftsmanship and style of luxury watches at more accessible prices.
+* **Gift Buyers:** Individuals searching for high-quality watches as special occasion gifts that offer great value.
+* **International Clients:** Customers from around the globe seeking exclusive yet affordable watch brands and models.
+* **Partners:** Jewelers and boutiques interested in potential partnerships and collaborations.
 
-**April 26 2024:** Update node version to 16
+These users require a platform that offers comprehensive, reliable, high-quality information about affordable luxury watches, including product details, reviews, and a seamless purchasing experience.
 
-**September 20 2023:** Update Python version to 3.9.17.
+#### Business Objectives
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+For Eternity, the primary business objectives include streamlining the purchase process, showcasing a curated selection of high-quality yet affordable watches, and establishing a strong online presence to attract and retain discerning customers.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+**Goal**
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The primary goal of the Eternity website is to streamline the watch purchasing process for customers while providing an inviting, informative, and efficient online presence that highlights the high-quality, affordable timepieces offered.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#### Focus, Definition, and Value
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+**Focus**
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Eternity aims to simplify the watch purchasing process for customers. The key objectives include creating an inviting, informative, and efficient online presence that showcases the high-quality, affordable watches available at the store.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+**Definition**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The website is designed to be a comprehensive online platform for Eternity that serves as an informative and user-friendly website for watch enthusiasts. Key features include:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Detailed information about the store and its range of affordable luxury watches.
+- An online purchasing system for browsing, selecting, and buying watches.
+- Contact details and a form for inquiries.
+- A visually appealing and easy-to-navigate interface.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**Value**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+The value of the Eternity website is multi-faceted:
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+**For the Business:** The website will enhance the store’s online presence, streamline the purchase process, build a network of satisfied customers, and bolster the store's reputation for offering high-quality yet affordable products.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+**For the Users:** Customers will gain confidence in the store's offerings through detailed product descriptions and reviews. They will enjoy the convenience of browsing and purchasing luxury watches online with options for extended warranties, ensuring a satisfying and trustworthy shopping experience.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+By focusing on these key areas, the Eternity website aims to deliver a superior user experience that aligns with both business objectives and user needs.
 
-------
+### Scope
 
-## FAQ about the uptime script
+At the Scope Plane, features and content were developed by defining User Scenarios to understand how different users will interact with the site. This process involved creating Epics and User Stories to break down these scenarios into manageable tasks and features.
 
-**Why have you added this script?**
+#### User Scenarios
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+**First Time Visitor:**
 
-**How will this affect me?**
+A new visitor can effortlessly navigate the website with a clear introduction and an intuitive menu. They can learn about the store's mission, browse the range of watches, and view a gallery of featured timepieces. They can also create an account and make their first purchase with ease.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+**Returning Customer:**
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Returning customers can quickly log in to their accounts to view and manage their orders, check their purchase history, and explore new arrivals or special offers.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+**Potential Partners:**
 
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Jewelers, boutiques, and other potential partners can find comprehensive information about the store's offerings and expertise. They can view the quality of the watches through the gallery and contact the store for potential collaborations using the dedicated contact form.

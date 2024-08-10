@@ -56,7 +56,7 @@ These users require a platform that offers comprehensive, reliable, high-quality
 
 #### Business Objectives
 
-For Eternity, the primary business objectives include streamlining the purchase process, showcasing a curated selection of high-quality yet affordable watches, and establishing a strong online presence to attract and retain discerning customers.
+For Eternity, the primary business objectives include streamlining the purchase process, showcasing a curated selection of high-quality yet affordable watches, and establishing a strong online presence to attract and retain discerning customers. The brand’s commitment is to offer luxury watches that are both timeless and accessible, within a price range customers are comfortable and confident purchasing online.
 
 **Goal**
 
@@ -359,6 +359,33 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      </details>
 
      <br>
+
+- **User Story: Newsletter Subscription**
+
+     As a **visitor**, I can **sign up for a newsletter subscription** so that **I can receive regular updates, promotions, and news from the store**.
+     
+     <details>
+
+     <summary>Acceptance Criteria</summary>
+
+     - Given a visitor is on the home page or any other page of the site
+     - When the visitor enters their email address in the subscription form in thee footer and submits it
+     - Then the email address is added to the Mailchimp subscription list
+     - And the visitor receives a confirmation message 
+
+     </details>
+
+     <details>
+
+     <summary>Tasks</summary>
+
+     - Utilize Mailchimp's embedded forms to handle subscriptions.
+     - Display a success message upon successful subscription.
+     - Display appropriate error messages if the subscription fails.
+     - Test the subscription form functionality across different browsers and devices to ensure compatibility and responsiveness.
+
+     </details>
+
 
 ##### **Epic 2:  User Registration and Account Management**
 
@@ -1267,4 +1294,232 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
      </details>
 
+     <br>
+
+### Structure
+
+At the Structure Plane, the information organisation and interaction design were developed by defining the site pages, database structure, and booking flow. 
+
+#### - Site Pages -
+
+The Eternity Luxury Watch Store comprises of several key pages, each designed to provide essential information and facilitate positive and engaging user experience:
+
+**Home Page:**
+
+**Shop Page:**
+
+**Product Page:**
+
+**Cart Page**
+
+**Checkout Page**
+
+**Contact Page:**
+
+* Contains a contact form for inquiries, collaborations and feedback.
+
+**Log In and Sign Up Pages:**
+
+* Enables users to create an account or log in to access personalised experience.
+* Facilitates order management tracking.
+
+#### - Database Structure -
+
+The Database Structure below visualises the relationships between the key models of the project. The database schema is designed to effectively manage purchasing process.
+
+![Database Structure](/media/database-structure.jpeg)
+
+### Skeleton
+
+At the Skeleton Plane, the interface and navigation design were defined through wireframes.
+
+
+#### Wireframes
+
+The initial layout of the interface and navigation for the Eternity Luxury Watch Store website was developed using Balsamiq Studios software, where mockup wireframes were created for the key pages.
+
+**Home page:**
+![Home Page Wireframe](/media/wireframe-home-page.jpeg)
+
+**Shop Page:**
+![Shop Page Wireframe](/media/wireframe-shop-page.jpeg)
+
+**Product Page:**
+![Product Page Wireframe](/media/wireframe-shop-page.jpeg)
+
+**Cart Page**
+![Cart Page Wireframe](/media/wireframe-shop-page.jpeg)
+
+**Checkout Page**
+![Checkout Page Wireframe](/media/wireframe-shop-page.jpeg)
+
+**Contact page:**
+![Contact Page Wireframe](/media/wireframe-contact-page.jpeg)
+
+**Log In page:**
+![Log In Page Wireframe](/media/wireframe-log-in-page.jpeg)
+
+**Sign Up page:**
+![Sign Up Page Wireframe](/media/wireframe-sign-up-page.jpeg)
+
+
+### Surface
+At the Surface Plane, the visual design of the site was developed, with a strong focus on the overall look and feel of the site.
+
+#### Colour Scheme
+
+The colours for the Eternity Luxury Watch Store site were carefully chosen using the [Coolors tool](https://coolors.co/) to create an inviting, professional, and luxurious atmosphere.
+
+![Colour Scheme](media/color-pallet.png)
+
+#### Typography
+
+The fonts for the Eternity Luxury Watch Store site were thoughtfully chosen using the font pairing service [Font Joy](https://fontjoy.com/) to ensure a visually appealing and cohesive design. Each font was selected to enhance the user experience and reflect the brand's identity.
+
+![Typography Font Paring](/media/typography-font-paring.jpeg)
+
+
+Choosing the right fonts is essential for conveying the luxury and sophistication that aligns with the brand's identity. The selected fonts for the Eternity Luxury Watch Store have been chosen to reflect elegance, readability, and a modern aesthetic. Below is an explanation of the selected fonts and why they are suitable for the site:
+
+1. **Primary Heading Font: "Cormorant Unicase" (Serif)**
+   
+   - **Elegance and Uniqueness:** Cormorant Unicase is a serif font that brings a touch of classical elegance with a unique twist. The unicase design, where uppercase and lowercase letters share similar heights, adds a distinct character that makes the headings stand out. This is particularly important for luxury brands, where uniqueness and attention to detail are highly valued.
+   - **Luxurious Appeal:** The fine strokes and sophisticated letterforms of Cormorant Unicase resonate with the luxury market, aligning with the timeless and refined nature of high-end watches. It sets a distinguished tone for the brand, making it ideal for the main headings (H1).
+
+2. **Secondary Heading Font: "Antic" (Sans-Serif)**
+   
+   - **Simplicity and Clarity:** Antic is a sans-serif font that offers a clean, modern look. It is straightforward and highly legible, which makes it an excellent choice for secondary headings (H2-H6). Its simplicity complements the more ornate Cormorant Unicase, creating a balanced visual hierarchy on the page.
+   - **Modern Touch:** While Cormorant Unicase delivers a classic feel, Antic introduces a modern touch, ensuring the website resonates with contemporary audiences. This fusion of traditional and modern elements mirrors the brand's dedication to offering luxury watches that are timeless, innovative and accessible.
+
+3. **Body Text Font: "Muli" (Sans-Serif)**
+   
+   - **Readability and Functionality:** Muli is a sans-serif font that is optimized for on-screen readability. It’s clean and minimalistic, which makes it ideal for large blocks of text, such as product descriptions and informational content. The font ensures that the text is easy to read, enhancing the user experience.
+   - **Subtle and Neutral:** Muli's subtle design does not distract from the content, allowing the luxury watches to remain the focal point. Its neutral appearance complements the more expressive heading fonts, ensuring a cohesive and harmonious overall design.
+
+#### Visual Representation of Font Pairing
+
+- **Headings (H1):** Cormorant Unicase
+- **Subheadings (H2-H6):** Antic
+- **Body Text (Paragraphs):** Muli
+
+These fonts were selected to create a visual hierarchy that conveys luxury, clarity, and modernity. **Cormorant Unicase** adds a unique and elegant touch to the primary headings, making a strong brand statement. **Antic** provides simplicity and modernity to the secondary headings, ensuring that the design remains clean and accessible. Finally, **Muli** ensures that all body text is highly readable and functional, supporting a seamless user experience across the site.
+
+By integrating these fonts, the Eternity Luxury Watch Store website can effectively communicate its brand values of elegance, precision, and timelessness, while also offering a modern and user-friendly interface.
+
+**Backdrop Font**
+
+In addition to the selected fonts, the backdrop font across the website is also sans-serif. This backdrop enhances the modern and clean aesthetic, supporting the visual hierarchy and helping foreground content pop against a clear, unobtrusive background.
+
+## Features
+
+### Existing Features
+
+### Header
+
+The header of the Eternity Luxury Watch Store website is designed to provide essential functionality and enhance user experience. It includes a search bar, shopping cart icon, and account icon, all prominently positioned for easy access. The logo, representing the brand's identity, is centered in the header to ensure strong brand recognition.
+
+On the left side of the header, the navigation bar allows users to explore the site with ease. The search bar, cart icon, and account icon are aligned on the right, offering quick access to product searches, shopping cart overview, and account management. These elements ensure that users can efficiently browse and manage their shopping experience.
+
+![Header](/media/header.jpeg)
+
+### Navigation Bar
+
+The fully responsive navigation bar is displayed across all site pages, allowing seamless navigation throughout the website. It includes links to the main site sections: Home, Shop, Brands, and Contact. The design remains consistent across all devices, ensuring a cohesive user experience.
+
+* **Desktop View:**
+  
+  The navigation bar links are displayed horizontally, with the active page highlighted to indicate the user's current location on the site.
+
+  ![Desktop Navbar](/media/navbar-desktop.jpeg)
+
+* **Tablet and Mobile View:**
+  
+  On tablets and mobile devices, the navigation bar is represented by a hamburger icon. Clicking on this icon reveals a drop-down menu with the current page highlighted, ensuring smooth navigation. The search bar, cart, and account icons are prominently displayed for easy access.
+
+  ![Tablet and Mobile Navbar Opened](/media/mobile-tablet-navbar-opened.jpeg)
+
+### Above the Fold
+
+When users first visit the Eternity Luxury Watch Store website, they are greeted with an inviting hero image featuring a luxury watch. This section is designed to captivate the user’s attention immediately, creating a strong first impression of the store's curated selection of high-quality timepieces.
+
+![Above Fold](/media/above-fold.jpeg)
+
+### About Us
+
+The About Us section provides visitors with a comprehensive overview of the brand's mission and vision. It emphasizes Eternity's commitment to offering affordable luxury watches. This section builds trust and fosters a connection with potential customers by highlighting the brand’s dedication to quality and customer satisfaction.
+
+![About Us](/media/about-eternity-luxury-watches.jpeg)
+
+### Shop Page
+
+### Product Page
+
+### Cart Page
+
+### Checkout Page
+
+### Contact Us Page
+
+The Contact Us Page provides a user-friendly contact form for inquiries, collaborations and feedback. This page is designed to facilitate smooth communication between Eternity Luxury Watch Store and its customers and potential partners, allowing them to easily reach out with any questions or concerns regarding their purchases or collaboration offers.
+
+![Contact Us Page](/media/contact-us-page.jpeg)
+
+Upon submitting a request through the form, the user receives a notification confirming successful submission, and the form is refreshed in case the user wishes to send another request:
+
+![Contact Us Page - Submission Confirmation](/media/contact-us-page-submission-confirmation.jpeg)
+
+### Log In Page
+
+The Log In page allows existing customers to access their accounts and view their orders. This page ensures secure authentication and provides a straightforward way for users to log in and access personalised experience. There is also a prompt to reset their password if needed.
+
+![Log In Page](/media/log-in-page.jpeg)
+
+After logging in, customers are directed to their account dashboard and notified of a successful login:
+
+![Header for Logged In User](/media/header-user-logged-in.jpeg)
+
+### Sign Up Page
+
+If a customer does not have an existing account, they can click on the 'Sign Up' link on the Log In page. They are then redirected to the Sign Up page, which allows new users to create an account, enabling them to track their orders and manage their account details online.
+
+![Sign Up Page](/media/sign-up-page.jpeg)
+
+If a user does not follow the recommendations for creating secure credentials, notifications appear in a bright color to draw their attention to the issue and help them correct it.
+
+![Sign Up Page Errors List](/media/sign-up-page-error-list.jpeg)
+
+After signing up, customers are directed to their account dashboard and notified of their successful account creation:
+
+![Sign Up Page Success Message](/media/sign-up-success-message.jpeg)
+
+### Log Out Page
+
+Upon clicking the Log Out button in the header, the user is taken to the Log Out page, where they must confirm their intent to sign out:
+
+![Sign Out Page](/media/log-out-page.jpeg)
+
+Upon confirmation, the user is redirected to the home page and notified of their successful action:
+
+![Sign Out Confirmation](/media/sign-out-confirmation.jpeg)
+
+### Footer
+
+The footer is displayed at the bottom of every page and contains essential information and links:
+
+* **Contact Information:** Phone number and email address for customer inquiries.
+* **Social Media Links:** Icons linking to Eternity's Instagram and Facebook pages, allowing customers to connect with the brand on social platforms.
+* **Subscribe Form:** A subscription form where users can enter their email addresses to receive newsletters, promotions, and updates from Eternity. This helps build a loyal customer base and keeps users informed about new arrivals and special offers.
+* **Footer Menu:** A compact menu providing quick links to important pages such as Home, Shop, Contact, Privacy anf Return Policy, and Terms of Service. This menu ensures that users can easily navigate to key sections of the site from any page.
+
+![Footer](/media/footer.jpeg)
+
+### Custom Error Pages
+
+To enhance the user experience, custom error pages for 404 and 500 errors have been implemented. These error pages provide clear and helpful messages when users encounter a broken link or an internal server error. By guiding users back to the home page or other key sections, these error pages help maintain a seamless browsing experience even in the event of an error.
+
+![404 Error Page](/media/404-error-page.jpeg)
+
+### Admin Access Features
+
+### Future Features
 

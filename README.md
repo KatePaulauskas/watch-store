@@ -1523,3 +1523,104 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 
 ### Future Features
 
+## Technologies used
+
+### Languages
+
+### Libraries and Frameworks
+
+### Technologies
+
+#### Dependencies
+
+## Testing
+
+### Manual Testing
+#### Site features and behaviour
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+
+#### User Stories
+| User Story | Expected Behaviour | Actual Behaviour | Status |
+|------------|-------------------|----------------|-----------|
+
+### Validator Testing
+
+#### HTML
+<details>
+  <summary>HTML Testing</summary>
+
+To ensure adherence to web standards and improve accessibility, the site's HTML was submitted to [W3C validation testing]().
+
+</details>
+
+#### CSS
+
+<details>
+  <summary>CSS Testing</summary>
+
+For compliance with web standards and accessibility guidelines, the site's CSS code was checked using the [(Jigsaw) validator](). 
+
+</details>
+
+#### JavaScript
+
+<details>
+  <summary>JavaScript Testing</summary>
+
+To enhance adherence to web standards and ensure accessibility, the site's JavaScript code was validated using the [JSHint Validator](https://jshint.com/). 
+
+</details>
+
+#### Python
+
+<details>
+  <summary>Python Testing</summary>
+
+To ensure conformity with web standards and accessibility requirements, the site's Python code from every relevant file was tested using the [PEP8 Python Validator](https://pep8ci.herokuapp.com). 
+
+</details>
+
+### Responsivness
+
+<details>
+  <summary>Responsivness Testing</summary>
+
+</details>
+
+### Lighthouse Testing
+
+<details>
+  <summary>Lighthouse Testing</summary>
+
+To ensure the accessibility requirements are met for the current project, Lighthouse testing was conducted for the site
+
+</details>
+
+### Accessibility Testing
+
+<details>
+  <summary>Accessibility Testing</summary>
+
+</details>
+
+### Bugs
+
+#### Solved Bugs
+
+#### Remaining Bugs
+
+## Deployment
+
+## Credits
+
+### Code Development
+
+### Content & Design
+
+### Media
+
+### Fixing bugs
+
+## Acknowledgements

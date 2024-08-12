@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">Welcome to Eternity Luxury Watch Store!</h1>
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+        <div class="text-center">
+            <h1 class="display-4 fw-bold mb-4">
+                Eternity Luxury Watch Store
+            </h1>
+            <div>
+                <a href="#" class="btn btn-lg btn-dark text-uppercase py-3 px-5 rounded-pill">Explore</a>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

@@ -83,10 +83,8 @@
                     </div>
                 </nav>
 
-                <!-- Logo & Search Bar Section -->
+                <!-- Logo Section -->
                 <div class="d-flex flex-column align-items-start my-0 my-md-3 my-lg-0">
-
-                    <!-- Logo -->
                     <div class="logo-container">
                         <a class="navbar-brand mx-3" href="{% url 'home' %}">
                             <img src="{% static 'images/logo/logo-eternity.webp' %}" 
@@ -97,19 +95,7 @@
                 </div>
 
                 <!-- Header Icons Section-->
-                <div class="d-flex flex-column align-items-start my-0 my-md-3 my-lg-0">
-                    <div class="header-icons d-flex align-items-center">
-
-                        <!-- Cart -->
-                        <a href="#" aria-label="Cart">
-                            <iconify-icon icon="solar:cart-5-bold" width="32" height="32"></iconify-icon>
-                        </a>
-
-                        <!-- Account -->
-                        <a href="#" aria-label="Account">
-                            <iconify-icon icon="mdi:account-arrow-left" width="32" height="32"></iconify-icon>
-                        </a>
-                    </div>
+                <div class="d-flex flex-column align-items-start my-0">
                     <!-- Authentication messages -->
                     <div class="auth d-none d-md-block"> 
                         {% if user.is_authenticated %} 
@@ -118,24 +104,64 @@
                         <p class="auth text-end fs-6 my-0 me-4">You are not logged in</p> 
                         {% endif %} 
                     </div>
+                    <ul class="header-icons d-flex flex-row my-md-2 mx-1"> 
+                        <!-- Cart -->
+                        <li class="list-inline-item">
+                            <a class="nav-link {% if grand_total %}text-info fw-bold{% else %}text-dark{% endif %}" href="#">
+                                <div class="text-center">
+                                    <div><iconify-icon icon="solar:cart-5-bold" width="32" height="32"></iconify-icon></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                            ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            $0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <!-- Account Dropdown -->
+                        <li class="list-inline-item dropdown">
+                            <a class="nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    {% if request.user.is_authenticated %}
+                                    <div><iconify-icon icon="mdi:account-arrow-down" width="32" height="32"></iconify-icon></div>
+                                    <p class="my-0">Account</p>
+                                    {% else %}
+                                    <div><iconify-icon icon="mdi:account-arrow-left" width="32" height="32"></iconify-icon></div>
+                                    <p class="my-0">Log In</p>
+                                    {% endif %}
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="#" class="dropdown-item">Manage Products</a>
+                                    {% endif %}
+                                    <a href="#" class="dropdown-item">Profile</a>
+                                    <a href="#" class="dropdown-item">Logout</a>
+                                {% else %}
+                                    <a href="#" class="dropdown-item">Login/Register</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             
             <!-- Search Bar -->
-            <div class="col-12 my-auto py-1 py-lg-0">
-                <form method="GET" action="">
-                    <div class="input-group w-60">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search for a watch">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
+            <div class="col-12 d-flex justify-content-center align-items-center py-1">
+                <form method="GET" action="" class="w-75 w-lg-50">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-0 border-bottom rounded-0" name="q" placeholder="Search for a watch">
+                        <button class="btn rounded-0" type="submit">
+                            <iconify-icon icon="mingcute:search-fill" width="20" height="20"></iconify-icon>
+                        </button>
                     </div>
                 </form>
             </div>
+            
         </header>
 
 

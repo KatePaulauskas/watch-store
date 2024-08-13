@@ -25,7 +25,7 @@ h4
     font-family: "Antic", sans-serif !important;
     font-weight: 400;
     font-style: normal;
-    font-size: 220% !important;
+    font-size: 150% !important;
     color: #AA9159;
 }
 
@@ -90,15 +90,10 @@ header p {
 .navbar-toggler {
     border-color: #E4C58A;
     border-width: 2px;
+    padding: 3px;
 }
 
-/* Style logo */
-.img-logo {
-    width: 120px;
-    height: auto;
-}
-/* Ensure logo is always in the center of the header 
-   Source: Shecodes */
+/* Ensure logo is always in the center of the header */
 .logo-container {
     position: absolute;
     left: 50%;
@@ -109,6 +104,10 @@ header p {
 /* Style search bar */
 .form-control {
     background: #113227;
+}
+
+.form-control :focus {
+    color: #230903 !important; 
 }
 
 input::placeholder {
@@ -124,11 +123,190 @@ input.form-control {
 /* Above fold style */
 
 .above-fold {
-    background: url('/media/home_abovefold_image.webp');
+    background: url('/images/home_page/home_abovefold_image.webp');
     background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    height: 500px;
-    overflow-y: scroll;
-    position: relative;
+    background-position: center top;
+    height: 400px;
 }
+
+.home-h1 {
+    color: #FBFAF8;
+    font-size: 200% !important;
+    font-weight: 500;
+}
+
+/* Add h1 text outline. Source: Kinsta*/
+.text-outline {
+    text-shadow: 
+        -1px -1px 0 #230903,
+         1px -1px 0 #230903,
+        -1px  1px 0 #230903,
+         1px  1px 0 #230903;
+}
+
+/* Style the explore button */
+.btn-explore {
+    background-color: #e4c58a !important;
+    color: #230903 !important;
+    width: 100px !important;
+    min-height: 20px !important;
+    font-family: "Cormorant Unicase", sans-serif !important;
+    outline: 1px solid #230903 !important;
+}
+
+.btn-explore:hover {
+    background-color: #230903 !important;
+    color: #e4c58a !important;
+    border: 1px solid #e4c58a !important;
+}
+
+.btn-explore:active {
+    border: 2px solid #aa9159 !important;
+    background-color: #230903 !important;
+    color: #e4c58a !important;
+}
+
+/* Media query: mobile phones (270px and up) */
+@media screen and (min-width: 270px) {
+    /* Paragraph style */
+    p {
+        font-size: 60% !important;
+    }
+    
+    /* Header style */
+    header {
+        padding: 5px !important;
+    }
+
+    /* Navbar style */
+    .navbar {
+        padding: 0px !important;
+    }
+
+    /* Style logo */
+    .img-logo {
+        width: 100px;
+        height: auto;
+    }
+    
+    /* Icons style */
+    iconify-icon {
+        width: 10px;
+        height: 10px;
+    }
+
+    .header-icons {
+        margin: 0px !important;
+    }
+    
+    /* Above Fold Style */
+    .home-h1 {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .btn-explore {
+        margin-left: 0px;
+    }
+}
+
+/* Media query: tablets and larger screens (576px and up) */
+@media screen and (min-width: 576px) {
+    /* Paragraph style */
+    p {
+        font-size: 80% !important;
+    }
+    
+    /* Header style */
+    header {
+        padding: 10px !important;
+    }
+
+    /* Navbar style */
+    .navbar-toggler {
+        padding: 7px;
+        margin: 5px;
+    }
+
+    /* Style logo */
+    .img-logo {
+        width: 120px;
+    }
+
+    .header-icons {
+        margin: 5px !important;
+    }
+    
+    /* Above Fold Style */
+    .above-fold {
+        height: 500px;
+    }
+
+    .home-h1 {
+        margin-left: 10px;
+        font-size: 250% !important;
+    }
+
+    .btn-explore {
+        margin-left: 10px;
+    }
+
+    .form-control {
+        width: 250px !important;
+    }
+}
+
+/* Media query: larger devices (laptops & desktops, 768px and up) */
+@media screen and (min-width: 768px) {
+    /* Style logo */
+    .img-logo {
+        width: 170px;
+    }
+}
+
+/* Media query: larger devices (laptops & desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+        /* Paragraph style */
+        p {
+            font-size: 100% !important;
+        }
+        
+        /* Header style */
+        header {
+            padding: 15px !important;
+        }
+    
+        /* Nav links style */
+        .menu {
+            font-size: 22px;
+        }
+    
+        /* Style logo */
+        .img-logo {
+            width: 200px;
+        }
+
+        /* Above Fold Style */
+        .above-fold {
+            height: 700px;
+        }
+
+        .home-h1 {
+            margin-right: 48px;
+            margin-left: 48px;
+            margin-top: 30px !important;
+            font-size: 320% !important;
+        }
+
+        .btn-explore {
+            margin-left: 48px;
+            margin-top: 30px;
+            font-size: 140%;
+        }
+}
+
+/* Media query: larger screens (1400px and up) */
+@media screen and (min-width: 1400px) {
+}
+
+

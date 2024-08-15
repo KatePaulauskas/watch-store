@@ -1368,15 +1368,25 @@ At the Surface Plane, the visual design of the site was developed, with a strong
 
 #### Colour Scheme
 
-The colours for the Eternity Luxury Watch Store site were carefully chosen using the [Coolors tool](https://coolors.co/) to create an inviting, professional, and luxurious atmosphere.
+The colours for the Eternity Luxury Watch Store site were carefully chosen using the [Coolors tool](https://coolors.co/) to establish a brand identity that exudes both luxury and sophistication. 
 
-![Colour Scheme](media/color-pallet.png)
+![Colour Scheme](media/color-pallet.webp)
+
+Each color plays a critical role in creating an inviting and refined user experience, while also ensuring that the website conveys the premium quality of the products.
+
+- **Dark Green (#113227ff):** Serving as the primary background color, dark green was chosen for its association with wealth, stability, and timeless elegance. This deep, rich tone provides a strong foundation that enhances the perception of luxury and makes the site feel both exclusive and grounded.
+
+- **Ecru (#e4c58aff):** Ecru is used for most of the text and main accents across the site. Its warm, neutral tone ensures readability while adding a touch of understated elegance. This color complements the darker background, creating a harmonious balance that is both inviting and visually pleasing.
+
+- **Lion (#aa9159ff), Licorice (#230903ff), and Seasalt (#fbfaf8ff):** These colors are strategically employed throughout the site to add contrast and highlight important elements. The rich and sophisticated tones of lion and licorice, paired with the soft and clean seasalt, ensure that the overall design remains luxurious while also being visually dynamic and engaging. These colors work together to create a cohesive aesthetic that reflects the brand’s commitment to quality and timeless elegance.
+
+The combination of these carefully selected colors creates a cohesive and luxurious aesthetic that embodies the brand’s dedication to offering timeless, high-quality watches. The palette strikes a balance between bold, rich tones and elegant neutrals, ensuring that the website appeals to discerning customers who value both style and substance.
 
 #### Typography
 
 The fonts for the Eternity Luxury Watch Store site were thoughtfully chosen using the font pairing service [Font Joy](https://fontjoy.com/) to ensure a visually appealing and cohesive design. Each font was selected to enhance the user experience and reflect the brand's identity.
 
-![Typography Font Paring](/media/typography-font-paring.jpeg)
+![Typography Font Paring](/media/typography-font-paring.webp)
 
 
 Choosing the right fonts is essential for conveying the luxury and sophistication that aligns with the brand's identity. The selected fonts for the Eternity Luxury Watch Store have been chosen to reflect elegance, readability, and a modern aesthetic. Below is an explanation of the selected fonts and why they are suitable for the site:
@@ -1603,6 +1613,23 @@ To ensure the accessibility requirements are met for the current project, Lighth
 <details>
   <summary>Accessibility Testing</summary>
 
+The accessibility of the site was tested using the [Adoby Color Contrast Checker](https://color.adobe.com/create/color-contrast-analyzer).
+
+![Contrast Checker](/media/contrast-checker-ecru-on-green.webp)
+![Contrast Checker](/media/contrast-checker-green-on-ecru.webp)
+![Contrast Checker](/media/contrast-checker-lion-on-green.webp)
+![Contrast Checker](/media/contrast-checker-green-on-lion.webp)
+![Contrast Checker](/media/contrast-checker-green-on-seasalt.webp)
+![Contrast Checker](/media/contrast-checker-seasalt-on-green.webp)
+![Contrast Checker](/media/contrast-checker-seasalt-on-licorice.webp)
+![Contrast Checker](/media/contrast-checker-licorice-on-seasalt.webp)
+![Contrast Checker](/media/contrast-checker-lion-on-licorice.webp)
+![Contrast Checker](/media/contrast-checker-licorice-on-lion.webp)
+
+The site's colours were also evaluated for accessibility to ensure they are safe for color-blind users using the [Adoby Color accessibility tool](https://color.adobe.com/create/color-accessibility), which returned the result: 'No conflicts found. Swatches are color-blind safe'.
+
+![Color Blind Safe Checker Color Pallet](/media/color-blind-safe-checker-color-pallet.webp)
+
 </details>
 
 ### Bugs
@@ -1616,10 +1643,22 @@ To ensure the accessibility requirements are met for the current project, Lighth
 ## Credits
 
 ### Code Development
+To change the color of the hamburger menu icon on mobile, instructions from [Stack Overflow](https://stackoverflow.com/questions/50761763/how-can-i-change-the-color-of-the-hamburger-in-bootstrap-4-from-the-given-link) were used.
+Instructions from [Kinsta](https://kinsta.com/blog/css-text-outline/) were used to add outline to the H1 text on the home page.
 
 ### Content & Design
+- [Balsamiq Studios software](https://balsamiq.com/wireframes/) was used to create mockup wireframes for the current project.
+- To select the fonts for the site, a font pairing service was used: [Font Joy](https://fontjoy.com/).
+- Paired font families were downloaded from [Google Fonts](https://fonts.google.com/).
+- The colour palette for the site was designed using [Coolors](https://coolors.co/).
+- Site colours' accessibility was checked using [Adobe Color Accessibility Tool](https://color.adobe.com/).
+- The logo idea was created using [Wix Logo Maker](https://www.wix.com/logo/maker).
+- Favicon files were created using [Favicon.io](https://favicon.io/favicon-converter/).
+- Images for the site were converted and compressed using [11zon](hhttps://converter.11zon.com/) tool.
+
 
 ### Media
+- The hero image was sourced from [Freepik](https://www.freepik.com/).
 
 ### Fixing bugs
 

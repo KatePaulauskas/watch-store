@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-1vz4hrg2%@_maco1xgiilc7jcq^hw)ree*1@5a()twbipq9_f+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',]
+ALLOWED_HOSTS = ['8000-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
+'.herokuapp.com',
+]
 
 
 # Application definition
@@ -49,6 +51,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'watch_store.urls'
@@ -123,6 +127,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')

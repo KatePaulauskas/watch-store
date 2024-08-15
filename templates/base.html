@@ -53,6 +53,14 @@
         {% endblock %}
 
         <!-- Meta Tags for Social Sharing -->
+        <meta property="og:title" content="Eternity | Luxury Watch Store">
+        <meta property="og:description" content="Eternity Luxury Watch Store offers a curated selection
+            of high-quality, affordable luxury watches.">
+        <meta property="og:image" content="{% static 'images/logo/logo.webp' %}">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://eternity-watch-store-1f855f4289ad.herokuapp.com/">
+        <meta property="og:type" content="website">
         
         {% block corejs %}
             <!-- IconifyIcon web component -->
@@ -201,6 +209,75 @@
             <!-- Content Goes here -->
             {% endblock content %}
         </main>
+
+        <!-- Footer -->
+        <footer class="container-fluid m-2 p-2">
+            <div class="row subscribe">
+
+                <!-- Subscribe Form -->
+                <div class="col-12 col-md-12 col-lg-3 order-lg-5 order-md-1">
+                    <h5>Subscribe form</h5>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-6 col-lg-3 order-2 order-md-2 order-lg-3">
+                    <h6 class="fw-bold">Contact Details</h6>
+                        <p class="py-0 m-0">Phone: +353 21 123 4567</p>
+                        <p class="py-0 m-0">Email: info@eternitywatchstore.ie</p>
+                </div>
+
+                <!-- Follow Us -->
+                <div class="col-6 col-lg-2 order-3 order-md-3 order-lg-4">
+                <h6>Follow Us</h6>
+                    <div class="row mt-3">
+                        <div class="d-flex align-items-start gap-4 gap-lg-5">
+                            
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/barks-in-bubbles/" target="_blank" 
+                            rel="noopener" aria-label="Visit my Instagram page (opend in a new tab)">
+                            <iconify-icon icon="bi:instagram"  style="color: #e4c58a" width="30" height="30"></iconify-icon>
+                            </a>
+
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/barks-in-bubbles/" target="_blank" 
+                            rel="noopener" aria-label="Visit my Facebook page (opend in a new tab)">
+                            <iconify-icon icon="entypo-social:facebook"  style="color: #e4c58a" width="30" height="30"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Menu 1 -->
+                <div class="col-6 col-lg-2 order-4 order-md-4 order-lg-1 px-2">
+                    <ul class="navbar-nav footer-menu me-auto">
+                        <li class="nav-item py-0">
+                            <a class="nav-link py-0 footer-menu {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0 footer-menu" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0 footer-menu" href="#">Get In Touch</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Footer Menu 2 -->
+                <div class="col-6 col-lg-2 order-5 order-md-5 order-lg-2">
+                    <ul class="navbar-nav footer-menu me-auto pl-3">
+                        <li class="nav-item">
+                            <a class="nav-link py-0 footer-menu" href="#">Terms & Conditions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0 footer-menu" href="#">Return Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-0 footer-menu" href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
 
         {% block postloadjs %}
         {% endblock postloadjs %}

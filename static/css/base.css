@@ -166,11 +166,45 @@ input.form-control {
     color: #e4c58a !important;
 }
 
+/* Style footer */
+footer {
+    border-top: 1px solid #E4C58A;
+}
+
+.footer-menu {
+    font-family: "Antic", sans-serif !important;
+}
+
+.footer-heading {
+    color: #E4C58A;
+}
+
 /* Media query: mobile phones (270px and up) */
 @media screen and (min-width: 270px) {
+
+    /* H1 style */
+    h1 {
+        font-size: 230% !important;
+    }
+
+    /* H2-4 styles */
+    h2,
+    h3,
+    h4
+    {
+        font-size: 200% !important;
+    }
+
+    /* H5-6 styles */
+    h5,
+    h6
+    {
+        font-size: 110% !important;
+    }
+    
     /* Paragraph style */
     p {
-        font-size: 60% !important;
+        font-size: 85% !important;
     }
     
     /* Header style */
@@ -198,6 +232,10 @@ input.form-control {
     .header-icons {
         margin: 0px !important;
     }
+
+    p.icon-text {
+        font-size: 60% !important;
+    }
     
     /* Above Fold Style */
     .home-h1 {
@@ -213,9 +251,7 @@ input.form-control {
 /* Media query: tablets and larger screens (576px and up) */
 @media screen and (min-width: 576px) {
     /* Paragraph style */
-    p {
-        font-size: 80% !important;
-    }
+
     
     /* Header style */
     header {
@@ -232,9 +268,14 @@ input.form-control {
     .img-logo {
         width: 120px;
     }
-
+    
+    /* Style header icons */
     .header-icons {
         margin: 5px !important;
+    }
+
+    p.icon-text {
+        font-size: 80% !important;
     }
     
     /* Above Fold Style */
@@ -267,9 +308,7 @@ input.form-control {
 /* Media query: larger devices (laptops & desktops, 992px and up) */
 @media screen and (min-width: 992px) {
         /* Paragraph style */
-        p {
-            font-size: 100% !important;
-        }
+    
         
         /* Header style */
         header {
@@ -284,6 +323,11 @@ input.form-control {
         /* Style logo */
         .img-logo {
             width: 200px;
+        }
+
+        /* Style header icons */
+        p.icon-text {
+            font-size: 100% !important;
         }
 
         /* Above Fold Style */

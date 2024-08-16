@@ -306,9 +306,9 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
      <br>
 
-- **User Story: Contact Information**
+- **User Story: Footer Menu and Contact Information**
 
-     As a **user**, I can **easily access contact details in the footer of the site** so that **I can get in touch with the store if needed**.
+     As a **user**, I can **easily access contact details and important links in the footer of the site** so that **I can get in touch with the store if needed and quickly navigate to key sections like Home, Shop, Terms & Conditions, Return Policy, Privacy Policy, and Get in Touch**.
      
      <details>
 
@@ -317,6 +317,7 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      - Given a user accesses the homepage or any other page
      - When the page loads
      - Then the user can easily find the store’s contact details in the footer
+     - And the user can access important links such as Home, Shop, Get in Touch, Terms & Conditions, Return Policy, and Privacy Policy from the footer menu
 
      </details>
 
@@ -325,6 +326,7 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      <summary>Tasks</summary>
 
      - Add contact details to the footer of the site.
+     - Add a footer menu with links to important pages such as Home, Shop, Get in Touch, Terms & Conditions, Return Policy, and Privacy Policy.
      - Ensure the contact information is accurate and up-to-date.
      - Test the visibility and functionality of the contact details.
      - Check the responsiveness and visual appeal across different devices to ensure a uniform experience, adjust layouts and font sizes as needed.
@@ -1296,6 +1298,39 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
      <br>
 
+- **User Story: Store Policies Management**
+
+     As an **admin** I can **update the content for Terms & Conditions, Return Policy, and Privacy Policy through both the admin panel and the front end** so that **the footer menu always provides accurate and up-to-date information for users.**
+     
+     <details>
+
+     <summary>Acceptance Criteria</summary>
+
+     - Given an admin is logged into the site
+     - When the admin navigates to the admin panel
+     - Then the admin can update the content for the Terms & Conditions, Return Policy, and Privacy Policy pages
+     - When the content is updated
+     - Then the footer menu automatically links to the updated content
+     - Given an admin is logged into the site
+     - When the admin navigates to the front-end pages of Terms & Conditions, Return Policy, or Privacy Policy
+     - Then the admin can directly edit the content on those pages without needing to access the admin panel
+
+     </details>
+
+     <details>
+
+     <summary>Tasks</summary>
+
+     - Create a model to store the content for Terms & Conditions, Return Policy, and Privacy Policy.
+     - Add editable fields for Terms & Conditions, Return Policy, and Privacy Policy in the admin panel.
+     - Implement front-end editing capabilities for Terms & Conditions, Return Policy, and Privacy Policy pages accessible only to logged-in admin.
+     - Implement logic to display the updated content on the respective pages linked in the footer menu.
+     - Ensure the footer menu remains consistent and functional across all pages.
+     - Test the ability to update content through both the admin panel and the front-end pages and verify the links in the footer menu reflect these changes.
+     - Check the responsiveness and visual appeal of the footer menu across different devices.
+
+     </details>
+
 ### Structure
 
 At the Structure Plane, the information organisation and interaction design were developed by defining the site pages, database structure, and booking flow. 
@@ -1519,7 +1554,7 @@ The footer is displayed at the bottom of every page and contains essential infor
 * **Contact Information:** Phone number and email address for customer inquiries.
 * **Social Media Links:** Icons linking to Eternity's Instagram and Facebook pages, allowing customers to connect with the brand on social platforms.
 * **Subscribe Form:** A subscription form where users can enter their email addresses to receive newsletters, promotions, and updates from Eternity. This helps build a loyal customer base and keeps users informed about new arrivals and special offers.
-* **Footer Menu:** A compact menu providing quick links to important pages such as Home, Shop, Contact, Privacy anf Return Policy, and Terms of Service. This menu ensures that users can easily navigate to key sections of the site from any page.
+* **Footer Menu:** A compact menu providing quick links to important pages such as Home, Shop, Contact, Terms & Conditions, Return Policy and Privacy Policy. This menu ensures that users can easily navigate to key sections of the site from any page.
 
 ![Footer](/media/footer.jpeg)
 

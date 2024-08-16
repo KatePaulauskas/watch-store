@@ -5,6 +5,10 @@
 /* Basic styles */
 body {
     background-color: #113227;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 

@@ -44,8 +44,13 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'home',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -102,6 +107,10 @@ LOGOUT_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'watch_store.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
+    'https://eternity-watch-store-1f855f4289ad.herokuapp.com/'
+]
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

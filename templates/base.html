@@ -1,4 +1,7 @@
 {% load static %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -166,9 +169,9 @@
                                         <a href="#" class="dropdown-item">Manage Products</a>
                                     {% endif %}
                                     <a href="#" class="dropdown-item">Profile</a>
-                                    <a href="#" class="dropdown-item">Logout</a>
+                                    <a class="dropdown-item {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                                 {% else %}
-                                    <a href="#" class="dropdown-item">Login/Register</a>
+                                    <a class="dropdown-item {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login/Register</a>
                                 {% endif %}
                             </div>
                         </li>
@@ -194,7 +197,7 @@
         {% if messages %}
             <div class="message-container">
                 {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">
+                    <div class="alert alert-{{ message.tags }} mb-0 p-1 text-center">
                         {{ message }}
                     </div>
                 {% endfor %}

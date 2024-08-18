@@ -388,6 +388,34 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
      </details>
 
+- **User Story: Submit Contact Form Request**
+
+    As a **user** I can **access and use the contact form on the 'Contact' page** so that **I can send inquiries directly to the store**.
+
+    <details>
+
+     <summary>Acceptance Criteria</summary>
+
+     - Given a site, the user navigates to the "Contact" page
+     - When the user looks at the page
+     - Then the user sees a form to submit their name, email, and message
+     - When the user fills out and submits the contact form
+     - Then the user receives an on-screen confirmation that their message has been sent
+
+     </details>
+
+     <details>
+
+     <summary>Tasks</summary>
+
+     - Use Django Crispy Forms to create and style a contact form. Ensure the form collects the user's name, email, and message.
+     - Style the form to make it visually appealing and consistent with the site’s overall design.
+     - Ensure immediate feedback is provided to the user through an on-screen confirmation message upon successful submission of the form.
+     - Test the form across multiple devices to ensure it is responsive and functions correctly.
+     - Verify that confirmation messages and error handling are working as expected to provide a positive user experience.
+
+      </details>
+
 
 ##### **Epic 2:  User Registration and Account Management**
 
@@ -403,7 +431,7 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
      - Given an email, a customer can register an account
      - When the user enters their details and submits the form
-     - Then the account is created and the user is redirected to the login page
+     - Then the account is created and the user is redirected to the home page
 
      </details>
 
@@ -1330,6 +1358,59 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      - Check the responsiveness and visual appeal of the footer menu across different devices.
 
      </details>
+
+- **User Story: Store Contact Form Requests**
+
+    As an **admin** I can **store contact form requests in the database** so that **I can review them, and mark them as read or delete them**.
+
+    <details>
+
+    <summary>Acceptance Criteria</summary>
+
+     - Given a site user submits the contact form
+     - When the form data is sent to the server
+     - Then the data should be stored in the database securely
+     - And the admin should be able to access and review this submission
+
+
+    </details>
+
+     <details>
+
+     <summary>Tasks</summary>
+
+     - Create a database model for storing contact requests. Include fields for name, email, message, submission date, and a status field to track whether the request has been read.
+     - Implement functionality to capture and store data from the form submissions.
+     - Use Django’s built-in protections against Cross-Site Request Forgery (CSRF) to secure form submissions.
+     - Utilize Django’s admin interface to create a custom panel where submitted requests can be reviewed.
+     - Ensure that the admin panel is intuitive and allows the site owner to easily manage the contact requests.
+     - Conduct thorough testing to ensure that form data is correctly captured, securely stored, and easily accessible via the admin panel.
+
+     </details>
+
+- **User Story: Track Contact Form Submissions**
+
+    As an **admin** I can **mark contact form submission as "read"** so that **I can track how many I still need to process**.
+
+    <details>
+
+    <summary>Acceptance Criteria</summary>
+
+    - Given admin is reviewing contact form submissions in the admin panel
+    - When the admin selects a request
+    - Then the admin should be able to mark it as "read"
+
+    </details>
+
+    <details>
+
+    <summary>Tasks</summary>
+
+    - Enhance the existing admin panel to include an option to mark and unmark contact requests as "read."
+    - Verify that the functionality works seamlessly and the status updates are preserved when exiting and re-entering the admin panel.
+
+    </details>
+
 
 ### Structure
 

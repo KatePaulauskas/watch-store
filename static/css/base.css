@@ -18,7 +18,7 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 160% !important;
-    color: #AA9159;
+    color: #E4C58A;
 }
 
 /* H2-4 styles */
@@ -30,7 +30,7 @@ h4
     font-weight: 400;
     font-style: normal;
     font-size: 150% !important;
-    color: #AA9159;
+    color: #E4C58A;
 }
 
 /* H5-6 styles */
@@ -41,7 +41,7 @@ h6
     font-weight: 400;
     font-style: normal;
     font-size: 180% !important;
-    color: #AA9159;
+    color: #E4C58A;
 
  }
 
@@ -53,7 +53,7 @@ p {
     font-style: normal;
     font-size: 120% !important;
     padding: 5px;
-    color: #E4C58A;
+    color: #AA9159;
 }
 
 /* Icons style */
@@ -105,13 +105,17 @@ header p {
     max-height: 100px;
 }
 
+p.icon-text {
+    color: #E4C58A;
+}
+
 /* Style search bar */
 .form-control {
     background: #113227;
 }
 
-.form-control :focus {
-    color: #230903 !important; 
+.form-control:focus {
+    color: #230903 !important;
 }
 
 input::placeholder {
@@ -122,6 +126,24 @@ input::placeholder {
 
 input.form-control {
     border-bottom: 1px solid #E4C58A !important;
+}
+
+/* Style dropdown account menu */
+.dropdown-menu,
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item:active,
+.dropdown-item:visited {
+    background-color: #AA9159 !important;
+    color: #230903 !important;
+}
+
+.dropdown-item {
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    text-decoration: underline;
 }
 
 /* Above fold style */
@@ -148,26 +170,148 @@ input.form-control {
          1px  1px 0 #230903;
 }
 
-/* Style the explore button */
-.btn-explore {
+/* Style the explore and account buttons */
+.btn-explore, 
+.btn-account {
     background-color: #e4c58a !important;
     color: #230903 !important;
     width: 100px !important;
     min-height: 20px !important;
     font-family: "Cormorant Unicase", sans-serif !important;
     outline: 1px solid #230903 !important;
+    font-size: 100% !important;
 }
 
-.btn-explore:hover {
+.btn-reset {
+    width: 150px !important;
+    height: 40px !important;
+}
+.btn-explore:hover,
+.btn-account:hover {
     background-color: #230903 !important;
     color: #e4c58a !important;
     border: 1px solid #e4c58a !important;
 }
 
-.btn-explore:active {
+.btn-explore:active,
+.btn-account:active {
     border: 2px solid #aa9159 !important;
     background-color: #230903 !important;
     color: #e4c58a !important;
+}
+
+/* Style forms */
+
+label {
+    font-size: 110% !important;
+    color: #AA9159;
+}
+
+input,
+select,
+textarea {
+    font-size: 100% !important;
+    background-color: #113227 !important;
+    color: #E4C58A !important;
+    border-radius: 5px;
+    border-color: #E4C58A;
+    width: 200px;
+}
+
+/* Override background color in forms when autifilled in browser. Source: */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background-color: #113227 !important;
+    color: #E4C58A !important;
+    -webkit-box-shadow: 0 0 0 30px #113227 inset !important;
+    -webkit-text-fill-color: #E4C58A !important;
+    transition: background-color 5000s ease-in-out 0s; 
+}
+
+input[type="checkbox"] {
+    width: 20px;
+}
+
+/* Checkbox styling. Source: Ben Nadel.com */
+#id_remember {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #e4c58a; 
+    background-color: #113227;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Checked state styling with a tick mark */
+#id_remember:checked {
+    background-color: #e4c58a !important;
+    border-color: #230903;
+}
+
+/* Add a tick mark using ::after. Source: W3 Schools */
+#id_remember:checked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 5px;
+    height: 7px;
+    border: solid #230903;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+/* Style Sign Up form */
+.signup ul {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.signup p {
+    margin-bottom: 16px;
+    padding: 5px;
+}
+
+.signup label {
+    width: 180px;
+}
+
+.signup input {
+    color: #230903;
+}
+
+/* Style Error List */
+.signup li {
+    list-style: inside;
+    color: #FBFAF8;
+    font-size: 90%;
+    text-align: center !important;
+}
+
+/* Style Links */
+.link,
+.link:hover,
+.link:focus,
+.link:active,
+.link:visited {
+    color: #fbfaf8ff;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.password-reset {
+    background-color: #113227 !important;
+    width: 160px !important;
+    color: #FBFAF8 !important;
+    outline-color: #113227 !important;
 }
 
 /* Style footer */
@@ -179,8 +323,14 @@ footer {
     font-family: "Antic", sans-serif !important;
 }
 
-.footer-heading {
+.footer-text {
     color: #E4C58A;
+}
+
+.footer-menu, 
+.footer-text,
+.footer-heading {
+font-size: 100% !important;
 }
 
 /* Media query: mobile phones (270px and up) */
@@ -188,7 +338,7 @@ footer {
 
     /* H1 style */
     h1 {
-        font-size: 230% !important;
+        font-size: 200% !important;
     }
 
     /* H2-4 styles */
@@ -208,7 +358,7 @@ footer {
     
     /* Paragraph style */
     p {
-        font-size: 85% !important;
+        font-size: 95% !important;
     }
     
     /* Header style */
@@ -254,7 +404,30 @@ footer {
 
 /* Media query: tablets and larger screens (576px and up) */
 @media screen and (min-width: 576px) {
+    /* H1 style */
+    h1 {
+        font-size: 230% !important;
+    }
+
+    /* H2-4 styles */
+    h2,
+    h3,
+    h4
+    {
+        font-size: 210% !important;
+    }
+
+    /* H5-6 styles */
+    h5,
+    h6
+    {
+        font-size: 130% !important;
+    }
+    
     /* Paragraph style */
+    p {
+        font-size: 120% !important;
+    }
 
     
     /* Header style */
@@ -299,6 +472,21 @@ footer {
     .form-control {
         width: 250px !important;
     }
+
+    /* Style Forms */
+    label {
+        font-size: 100% !important;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 90% !important;
+    }
+
+    input {
+        width: 230px;
+    }
 }
 
 /* Media query: larger devices (laptops & desktops, 768px and up) */
@@ -311,50 +499,76 @@ footer {
 
 /* Media query: larger devices (laptops & desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-        /* Paragraph style */
+        /* H1 style */
+    h1 {
+        font-size: 250% !important;
+    }
+
+    /* H2-4 styles */
+    h2,
+    h3,
+    h4
+    {
+        font-size: 230% !important;
+    }
+
+    /* H5-6 styles */
+    h5,
+    h6
+    {
+        font-size: 140% !important;
+    }
     
-        
-        /* Header style */
-        header {
-            padding: 15px !important;
-        }
-    
-        /* Nav links style */
-        .menu {
-            font-size: 22px;
-        }
-    
-        /* Style logo */
-        .img-logo {
-            width: 200px;
-        }
+    /* Paragraph style */
+    p {
+        font-size: 130% !important;
+    }
 
-        /* Style header icons */
-        p.icon-text {
-            font-size: 100% !important;
-        }
+    /* Header style */
+    header {
+        padding: 15px !important;
+    }
 
-        /* Above Fold Style */
-        .above-fold {
-            height: 700px;
-        }
+    /* Nav links style */
+    .menu {
+        font-size: 22px;
+    }
 
-        .home-h1 {
-            margin-right: 48px;
-            margin-left: 48px;
-            margin-top: 30px !important;
-            font-size: 320% !important;
-        }
+    /* Style logo */
+    .img-logo {
+        width: 200px;
+    }
 
-        .btn-explore {
-            margin-left: 48px;
-            margin-top: 30px;
-            font-size: 140%;
-        }
+    /* Style header icons */
+    p.icon-text {
+        font-size: 100% !important;
+    }
+
+    /* Above Fold Style */
+    .above-fold {
+        height: 700px;
+    }
+
+    .home-h1 {
+        margin-right: 48px;
+        margin-left: 48px;
+        margin-top: 30px !important;
+        font-size: 320% !important;
+    }
+
+    .btn-explore {
+        margin-left: 48px;
+        margin-top: 30px;
+        font-size: 140%;
+    }
+
+    /* Style Forms */
+
+    input {
+        width: 250px;
+    }
 }
 
 /* Media query: larger screens (1400px and up) */
 @media screen and (min-width: 1400px) {
 }
-
-

@@ -153,7 +153,7 @@
                         <!-- Account Dropdown -->
                         <li class="list-inline-item dropdown">
                             <a class="nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center">
+                                <div class="dropdown-options text-center">
                                     {% if request.user.is_authenticated %}
                                     <div><iconify-icon icon="mdi:account-arrow-down" width="20" height="20"></iconify-icon></div>
                                     <p class="my-0 icon-text">Account</p>
@@ -163,7 +163,7 @@
                                     {% endif %}
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu border-0 m-1 p-1" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="#" class="dropdown-item">Manage Products</a>
@@ -214,7 +214,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="container-fluid p-2 px-lg-5 mx-0">
+        <footer class="container-fluid justify-content-between px-lg-5 mx-0 pt-2">
             <div class="row subscribe">
 
                 <!-- Subscribe Form -->
@@ -225,8 +225,8 @@
                 <!-- Contact Details -->
                 <div class="col-6 col-sm-3 col-lg-2 order-2 order-sm-3 order-lg-3 px-3 mb-2">
                     <h6 class="footer-heading">Contact Details:</h6>
-                        <p class="p-0 m-0">01234567</p>
-                        <p class="p-0 m-0">info@eternity.ie</p>
+                        <p class="footer-text p-0 m-0">01234567</p>
+                        <p class="footer-text p-0 m-0">info@eternity.ie</p>
                 </div>
 
                 <!-- Follow Us -->
@@ -270,7 +270,7 @@
                 <div class="col-6 col-sm-3 col-lg-2 order-5 order-sm-2 order-lg-2 mt-2 mt-sm-0 mt-md-0">
                     <ul class="navbar-nav footer-menu me-auto pl-3">
                         <li class="nav-item">
-                            <a class="nav-link py-0 footer-menu" href="#">Terms & Conditions</a>
+                            <a class="nav-link py-0 footer-menu" href="#">Terms</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link py-0 footer-menu" href="#">Return Policy</a>

@@ -590,7 +590,7 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
 - **User Story: Shop Page**
 
-     As a **user**, I can **access the shop page (all-products page) from the site menu** so that **I can view all available watches and apply filters to refine my search**.
+     As a **user**, I can **access the shop page (all-products page) from the site menu** so that **I can view all available watches**.
      
      <details>
 
@@ -599,8 +599,6 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      - Given a user accesses the all-products page directly, from the site menu, or call-to-action button
      - When the page loads
      - Then the user can see all available watches displayed in a gallery
-     - When the user clicks on a product
-     - Then the user is taken to the product detail page
 
      </details>
 
@@ -611,7 +609,6 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      - Design the shop page and link it to the site menu.
      - Create Django model for watches with relevant fields (name, image, brand, price, gender, etc.).
      - Implement logic in Django views to fetch and display all watches.
-     - Ensure products are linked to individual dynamic product pages.
      - Test the all-products page functionality.
      - Check the responsiveness and visual appeal across different devices to ensure a uniform experience.
 

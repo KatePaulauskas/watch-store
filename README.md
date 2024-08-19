@@ -1902,8 +1902,15 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 ## Credits
 
 ### Code Development
-To change the color of the hamburger menu icon on mobile, instructions from [Stack Overflow](https://stackoverflow.com/questions/50761763/how-can-i-change-the-color-of-the-hamburger-in-bootstrap-4-from-the-given-link) were used.
-Instructions from [Kinsta](https://kinsta.com/blog/css-text-outline/) were used to add outline to the H1 text on the home page.
+- To change the color of the hamburger menu icon on mobile, instructions from [Stack Overflow](https://stackoverflow.com/questions/50761763/how-can-i-change-the-color-of-the-hamburger-in-bootstrap-4-from-the-given-link) were used.
+- Instructions from [Kinsta](https://kinsta.com/blog/css-text-outline/) were used to add outline to the H1 text on the home page.
+- The method for styling checkboxes, including the tick mark, was referenced from [Ben Nadel's blog](https://www.bennadel.com/blog/3778-using-css-webkit-appearance-to-style-checkbox-after-pseudo-element.htm).
+- The general styling approach for checkboxes was adapted from a tutorial on [W3Schools](https://www.w3schools.com/howto/howto_css_custom_checkbox.asp).
+- The approach for changing the autocomplete background color in webkit browsers was based on tips from [CSS-Tricks](https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/).
+- The solution for showing a `ManyToManyField` in Django Admin's `list_display` was found on [Stack Overflow](https://stackoverflow.com/questions/18108521/how-to-show-a-many-to-many-field-with-list-display-in-django-admin).
+- The technique for limiting text to three lines and ensuring card height consistency was referenced from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp).
+- The method for creating a responsive product grid using CSS Grid was derived from a guide on [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids).
+
 
 ### Content & Design
 - [Balsamiq Studios software](https://balsamiq.com/wireframes/) was used to create mockup wireframes for the current project.

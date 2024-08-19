@@ -218,7 +218,7 @@ textarea {
     width: 200px;
 }
 
-/* Override background color in forms when autifilled in browser. Source: */
+/* Override background color in forms when autifilled in browser. Source: CSS Tricks */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -265,7 +265,6 @@ input[type="checkbox"] {
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
-
 
 /* Style Sign Up form */
 .signup ul {
@@ -314,6 +313,66 @@ input[type="checkbox"] {
     outline-color: #113227 !important;
 }
 
+/* Style Shop page */
+
+.container {
+    max-width: 100%;
+    margin: 10px;
+}
+
+.product-grid {
+    display: grid;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Set 1 product per row. Source: MDN Web Docs */
+.product-grid {
+    grid-template-columns: 1fr;
+}
+
+.card, .card-footer {
+    background-color: #113227 !important;
+}
+
+.card {
+    border-color: #e4c58a;
+}
+
+.card-body {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    /* Limit product name to 3 lines. Source: MDN Web Docs */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card-body, .card-footer {
+    font-size: 85% !important;
+}
+
+.product-name {
+    font-weight: 300 !important;
+    color: #e4c58a;
+
+}
+
+.card-footer {
+    border-color: #113227;
+}
+
+.rating iconify-icon {
+    vertical-align: middle !important;
+    margin-right: 15px;
+}
+
+.rating {
+    /* Ensure the icon and text share the same line height */
+    line-height: 1; 
+    display: inline-flex;
+}
+
 /* Style footer */
 footer {
     border-top: 1px solid #E4C58A;
@@ -335,7 +394,6 @@ font-size: 100% !important;
 
 /* Media query: mobile phones (270px and up) */
 @media screen and (min-width: 270px) {
-
     /* H1 style */
     h1 {
         font-size: 200% !important;
@@ -400,6 +458,11 @@ font-size: 100% !important;
     .btn-explore {
         margin-left: 0px;
     }
+
+    /* Style Shop page */
+    .card-body, .card-footer {
+        font-size: 110% !important;
+    }
 }
 
 /* Media query: tablets and larger screens (576px and up) */
@@ -428,7 +491,6 @@ font-size: 100% !important;
     p {
         font-size: 120% !important;
     }
-
     
     /* Header style */
     header {
@@ -487,6 +549,16 @@ font-size: 100% !important;
     input {
         width: 230px;
     }
+    
+    /* Style Shop page */
+    .card-body, .card-footer {
+        font-size: 85% !important;
+    }
+
+    /* 2 products per row */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Media query: larger devices (laptops & desktops, 768px and up) */
@@ -499,7 +571,7 @@ font-size: 100% !important;
 
 /* Media query: larger devices (laptops & desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-        /* H1 style */
+    /* H1 style */
     h1 {
         font-size: 250% !important;
     }
@@ -563,12 +635,20 @@ font-size: 100% !important;
     }
 
     /* Style Forms */
-
     input {
         width: 250px;
+    }
+
+    /* Style Shop page. 3 products per row */
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /* Media query: larger screens (1400px and up) */
 @media screen and (min-width: 1400px) {
+    /* Style Shop page. 4 products per row */
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

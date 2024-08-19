@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 mb-3 py-2 py-lg-5 px-3">
+        <div class="row justify-content-between mx-2 mx-sm-5 px-0">
+            
+            <!-- Product name for small screens -->
+            <div class="text-center my-3 py-1 d-md-none">
+                <h1 class="product-page-name">{{ product.name }}</h1>
+            </div>
+
+            <!-- Product Image -->
+            <div class="col-12 col-md-6 mb-3 mb-md-0 px-0">
+                <div class="product-img-container d-flex justify-content-center align-items-center">
+                    {% if product.image %}
+                        <a href="{{ product.image.url }}" target="_blank">
+                            <img src="{{ product.image.url }}" class="product-img" alt="{{ product.name }}">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img src="{{ MEDIA_URL }}noimage.png" class="product-img" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details col-12 col-md-6 px-0 px-md-3">
+                <div class="d-none d-md-block text-center py-1">
+                    <h1 class="product-page-name mb-4 text-start">{{ product.name }}</h1>
+                </div>
+                <div class="product-details py-0">
+                    <p class="price m-0 py-0">€{{ product.price }}</p>
+                    {% if product.rating %}
+                        <p class="rating m-0 py-0">
+                            <iconify-icon icon="rivet-icons:star" style="color: #AA9159;"></iconify-icon>
+                            {{ product.rating }} / 5
+                        </p>
+                    {% else %}
+                        <p class="rating">No Rating</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Description -->
+        <div class="product-description mx-2 mx-sm-5 mt-4 mt-md-5">
+            <p class="mb-0">{{ product.description|safe }}</p>
+        </div>
+    </div>
+{% endblock %}

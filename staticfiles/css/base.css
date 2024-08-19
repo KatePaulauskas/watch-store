@@ -47,7 +47,7 @@ h6
 
 /* Paragraph style */
 p {
-    font-family: "Mulish", sans-serif !important;
+    font-family: 
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -373,6 +373,43 @@ input[type="checkbox"] {
     display: inline-flex;
 }
 
+/* Style Product page */
+.product-page-name {
+    font-size: 150% !important;
+    font-weight: 300 !important;
+}
+
+.product-details > p,
+.product-details > .rating,
+.product-details iconify-icon {
+    color: #E4C58A !important;
+    font-weight: 100 !important;
+}
+
+.product-description {
+    text-align: justify !important;
+}
+
+.product-description > p {
+    font-weight: 300 !important;
+}
+
+.product-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.product-img {
+    height: 350px !important;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
 /* Style footer */
 footer {
     border-top: 1px solid #E4C58A;
@@ -566,6 +603,11 @@ font-size: 100% !important;
     /* Style logo */
     .img-logo {
         width: 170px;
+    }
+    
+    /* Style Product page */
+    .product-page-name {
+        font-size: 200% !important;
     }
 }
 

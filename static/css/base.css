@@ -376,13 +376,21 @@ input[type="checkbox"] {
 }
 
 /* Style Shop page filers and sorting */
-.category-menu .nav-link {
+.category-menu .nav-link,
+.sort-menu .nav-link,
+.products-count {
     font-size: 90% !important;
     font-family: "Antic", sans-serif !important;
     color: #AA9159 !important;
 }
 
+.category-menu .dropdown-menu {
+    min-width: 80px !important;
+}
 
+.sort-select-wrapper select {
+    border: none !important;
+}
 
 /* Style Product page */
 .product-page-name {
@@ -621,9 +629,11 @@ font-size: 100% !important;
     }
 
     /* Style Shop page filers and sorting */
-.category-menu .nav-link {
-    font-size: 110% !important;
-    }
+    .category-menu .nav-link,
+    .sort-menu .nav-link,
+    .products-count {
+        font-size: 110% !important;
+        }
 }
 
 /* Media query: larger devices (laptops & desktops, 992px and up) */

@@ -18,6 +18,7 @@ def shop(request):
     if selected_gender:
         products = products.filter(categories__name__iexact=selected_gender)
 
+    if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:

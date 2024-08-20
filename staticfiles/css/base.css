@@ -375,6 +375,23 @@ input[type="checkbox"] {
     display: inline-flex;
 }
 
+/* Style Shop page filers and sorting */
+.category-menu .nav-link,
+.sort-menu .nav-link,
+.products-count {
+    font-size: 90% !important;
+    font-family: "Antic", sans-serif !important;
+    color: #AA9159 !important;
+}
+
+.category-menu .dropdown-menu {
+    min-width: 80px !important;
+}
+
+.sort-select-wrapper select {
+    border: none !important;
+}
+
 /* Style Product page */
 .product-page-name {
     font-size: 150% !important;
@@ -410,7 +427,6 @@ input[type="checkbox"] {
     max-width: 100%;
     object-fit: cover;
 }
-
 
 /* Style footer */
 footer {
@@ -611,6 +627,13 @@ font-size: 100% !important;
     .product-page-name {
         font-size: 200% !important;
     }
+
+    /* Style Shop page filers and sorting */
+    .category-menu .nav-link,
+    .sort-menu .nav-link,
+    .products-count {
+        font-size: 110% !important;
+        }
 }
 
 /* Media query: larger devices (laptops & desktops, 992px and up) */

@@ -1,30 +1,66 @@
-<div class="d-flex justify-content-between">
-    <nav class="category-menu">
-        <ul class="navbar-nav d-flex flex-row mx-auto gap-2 gap-lg-4 align-items-center">
-            <li class="nav-item">
-                <span class="nav-link">Filter:</span>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle m-0" href="#" id="brand" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    | Brand
-                </a>
-                <ul class="dropdown-menu border-0" aria-labelledby="brand">
-                    <li><a href="{% url 'shop' %}?brand=tissot{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Tissot</a></li>
-                    <li><a href="{% url 'shop' %}?brand=hamilton{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Hamilton</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="gender" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    | Gender
-                </a>
-                <ul class="dropdown-menu border-0" aria-labelledby="gender">
-                    <li><a href="{% url 'shop' %}?gender=men{% if current_brand %}&brand={{ current_brand }}{% endif %}" class="dropdown-item">Men</a></li>
-                    <li><a href="{% url 'shop' %}?gender=women{% if current_brand %}&brand={{ current_brand }}{% endif %}" class="dropdown-item">Women</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="{% url 'shop' %}" class="nav-link">| Reset</a>
-            </li>
-        </ul>
-    </nav>
+<div class="row d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center">
+    <!-- Filter Section -->
+    <div class="col-12 col-sm-6 d-flex justify-content-between">
+        <nav class="category-menu">
+            <ul class="navbar-nav d-flex flex-row mx-auto gap-2 gap-lg-4 align-items-center">
+                <li class="nav-item">
+                    <span class="nav-link">Filter:</span>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle m-0" href="#" id="brand" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        | Brand
+                    </a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="brand">
+                        <li><a href="{% url 'shop' %}?brand=tissot{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Tissot</a></li>
+                        <li><a href="{% url 'shop' %}?brand=hamilton{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Hamilton</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="gender" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        | Gender
+                    </a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="gender">
+                        <li><a href="{% url 'shop' %}?gender=men{% if current_brand %}&brand={{ current_brand }}{% endif %}" class="dropdown-item">Men</a></li>
+                        <li><a href="{% url 'shop' %}?gender=women{% if current_brand %}&brand={{ current_brand }}{% endif %}" class="dropdown-item">Women</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'shop' %}" class="nav-link">| Reset</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- Sort Section -->
+    <div class="col-12 col-sm-6 d-flex justify-content-between justify-content-sm-end">
+        <nav class="sort-menu">
+            <ul class="navbar-nav d-flex flex-row gap-2 gap-lg-4 align-items-center">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle m-0" href="#" id="sort" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort by
+                    </a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="sort">
+                        <li><a href="{% url 'shop' %}?sort=price_asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Price (low to high)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=price_desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Price (high to low)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=rating_desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Rating (high to low)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=rating_asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Rating (low to high)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=name_asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Name (A-Z)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=name_desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Name (Z-A)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=category_asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Category (A-Z)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=category_desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Category (Z-A)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- Products Count -->
+<div class="col-12">
+    <p class="products-count mt-3">
+        {{ products|length }} Products
+        {% if search_term %}
+            found for <strong>"{{ search_term }}"</strong>
+        {% endif %}
+    </p>
 </div>

@@ -99,9 +99,12 @@
                             <li class="nav-item">
                                 <a class="nav-link menu {% if request.path == shop_url %}active{% endif %}" aria-current="page" href="{% url 'shop' %}">Shop</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link menu {% if request.path == contact_url %}active{% endif %}" aria-current="page" href="#">Contact</a>
+                            </li>
                         </ul>
 
-                        <!-- Authentication messages -->
+                        <!-- Authentication messages mobile-->
                         <div class="d-block d-md-none"> 
                             {% if user.is_authenticated %} 
                             <p class="fs-6 pt-1 pb-0 px-0 mb-0">You are logged in as {{ user }}</p> 
@@ -125,7 +128,7 @@
 
                 <!-- Header Icons Section-->
                 <div class="d-flex flex-column my-0">
-                    <!-- Authentication messages -->
+                    <!-- Authentication messages desktop -->
                     <div class="auth d-none d-md-block"> 
                         {% if user.is_authenticated %} 
                         <p class="auth text-end fs-6 my-0">You are logged in as {{ user }}</p> 
@@ -181,10 +184,10 @@
             
             <!-- Search Bar -->
             <div class="col-12 d-flex justify-content-center align-items-center py-1">
-                <form method="GET" action="" class="w-75 w-lg-50">
+                <form method="GET" action="{% url 'shop' %}" class="w-75 w-lg-50">
                     <div class="input-group">
                         <input type="text" class="form-control search-bar border-0 border-bottom rounded-0 p-0 m-0" name="q" placeholder="Search for a watch">
-                        <button class="btn rounded-0" type="submit">
+                        <button class="btn rounded-0" type="submit" aria-label="Search">
                             <iconify-icon icon="mingcute:search-fill" width="20" height="20"></iconify-icon>
                         </button>
                     </div>
@@ -193,7 +196,7 @@
             
         </header>
 
-
+        <!-- Django messages -->
         {% if messages %}
             <div class="message-container">
                 {% for message in messages %}
@@ -255,10 +258,10 @@
                 <div class="col-6 col-sm-3 col-lg-2 order-4 order-sm-1 order-lg-1 px-3 mt-2 mt-sm-0 mt-md-0">
                     <ul class="navbar-nav footer-menu me-auto">
                         <li class="nav-item py-0">
-                            <a class="nav-link py-0 footer-menu {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link py-0 footer-menu" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link py-0 footer-menu{% if request.path == shop_url %}active{% endif %}" aria-current="page" href="{% url 'shop' %}">Shop</a>
+                            <a class="nav-link py-0 footer-menu" aria-current="page" href="{% url 'shop' %}">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link py-0 footer-menu" href="#">Get In Touch</a>

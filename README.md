@@ -799,10 +799,11 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
      <summary>Tasks</summary>
 
-     - Design and implement the product detail page using HTML, CSS, and Bootstrap for a responsive layout.
-     - Populate the product detail page with descriptions, specifications, and images.
-     - Test the display of product details.
-     - Check the responsiveness and visual appeal across different devices.
+     - Add products through the Django admin panel to populate the product database.
+     - Design and implement the product detail page using HTML, CSS, and Bootstrap for responsive layout.
+     - Implement a Django view to retrieve and display the product details on the product detail page.
+     - Test the display of product details, ensuring all data is correctly pulled from the database.
+     - Check the responsiveness and visual appeal of the product detail page across different devices.
 
      </details>
 

@@ -115,7 +115,7 @@ p.icon-text {
 }
 
 .form-control:focus {
-    color: #230903 !important;
+    color: #e4c58a !important;
 }
 
 input::placeholder {
@@ -126,6 +126,11 @@ input::placeholder {
 
 input.form-control {
     border-bottom: 1px solid #E4C58A !important;
+}
+
+.alert-error {
+    background-color: #FC7C73 !important;
+    margin: 0 !important;
 }
 
 /* Style dropdown account menu */
@@ -341,11 +346,8 @@ input[type="checkbox"] {
 
 .card-body {
     height: 80px;
-    display: flex;
-    align-items: center;
     /* Limit product name to 3 lines. Source: MDN Web Docs */
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
 }
 
 .card-body, .card-footer {

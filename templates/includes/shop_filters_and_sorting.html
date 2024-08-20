@@ -40,14 +40,12 @@
                         Sort by
                     </a>
                     <ul class="dropdown-menu border-0" aria-labelledby="sort">
-                        <li><a href="{% url 'shop' %}?sort=price_asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Price (low to high)</a></li>
-                        <li><a href="{% url 'shop' %}?sort=price_desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Price (high to low)</a></li>
-                        <li><a href="{% url 'shop' %}?sort=rating_desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Rating (high to low)</a></li>
-                        <li><a href="{% url 'shop' %}?sort=rating_asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Rating (low to high)</a></li>
-                        <li><a href="{% url 'shop' %}?sort=name_asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Name (A-Z)</a></li>
-                        <li><a href="{% url 'shop' %}?sort=name_desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Name (Z-A)</a></li>
-                        <li><a href="{% url 'shop' %}?sort=category_asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Category (A-Z)</a></li>
-                        <li><a href="{% url 'shop' %}?sort=category_desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Category (Z-A)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=price&direction=asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Price (low to high)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=price&direction=desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Price (high to low)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=rating&direction=desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Rating (high to low)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=rating&direction=asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Rating (low to high)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=name&direction=asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Name (A-Z)</a></li>
+                        <li><a href="{% url 'shop' %}?sort=name&direction=desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Name (Z-A)</a></li>
                     </ul>
                 </li>
             </ul>

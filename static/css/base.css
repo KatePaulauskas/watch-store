@@ -375,6 +375,15 @@ input[type="checkbox"] {
     display: inline-flex;
 }
 
+/* Style Shop page filers and sorting */
+.category-menu .nav-link {
+    font-size: 90% !important;
+    font-family: "Antic", sans-serif !important;
+    color: #AA9159 !important;
+}
+
+
+
 /* Style Product page */
 .product-page-name {
     font-size: 150% !important;
@@ -410,7 +419,6 @@ input[type="checkbox"] {
     max-width: 100%;
     object-fit: cover;
 }
-
 
 /* Style footer */
 footer {
@@ -610,6 +618,11 @@ font-size: 100% !important;
     /* Style Product page */
     .product-page-name {
         font-size: 200% !important;
+    }
+
+    /* Style Shop page filers and sorting */
+.category-menu .nav-link {
+    font-size: 110% !important;
     }
 }
 

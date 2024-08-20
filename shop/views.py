@@ -1,15 +1,23 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product
+from .models import Product, Category
 
 def shop(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
     query = None
+    categories = None
+    selected_brand = request.GET.get('brand', None)
+    selected_gender = request.GET.get('gender', None)
 
-    if request.GET:
+    if selected_brand:
+        products = products.filter(categories__name__iexact=selected_brand)
+        
+    if selected_gender:
+        products = products.filter(categories__name__iexact=selected_gender)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -21,6 +29,9 @@ def shop(request):
 
     context = {
         'products': products,
+        'search_term': query,
+        'current_brand': selected_brand,
+        'current_gender': selected_gender,
     }
 
     return render(request, 'shop/shop.html', context)

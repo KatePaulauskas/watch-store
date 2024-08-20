@@ -11,8 +11,10 @@ def shop(request):
     categories = None
     sort = None
     direction = None
+    selected_brand = None
+    selected_gender = None
 
-    """ Mapping of sorting keys to model fields """
+    # Mapping of sorting keys to model fields
     sort_mapping = {
         'name': 'name',
         'price': 'price',
@@ -20,7 +22,7 @@ def shop(request):
     }
 
     if request.GET:
-        """ Handle sorting """
+        # Handle sorting
         sort = request.GET.get('sort', 'name') # Default sorting by name
         direction = request.GET.get('direction', 'asc')
         
@@ -30,9 +32,9 @@ def shop(request):
                 sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
         
-        """ Handle filtering by brand and gender """
-        selected_brand = request.GET.get('brand')
-        selected_gender = request.GET.get('gender')
+        # Handle filtering by brand and gender
+        selected_brand = request.GET.get('brand', None)
+        selected_gender = request.GET.get('gender', None)
         
         if selected_brand:
             products = products.filter(categories__name__iexact=selected_brand)
@@ -40,7 +42,7 @@ def shop(request):
         if selected_gender:
             products = products.filter(categories__name__iexact=selected_gender)
         
-        """ Handle search """
+        #Handle search
         query = request.GET.get('q')
         if query:
             queries = Q(name__icontains=query) | Q(description__icontains=query)

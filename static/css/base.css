@@ -185,6 +185,28 @@ input.form-control {
     outline: 1px solid #230903 !important;
 }
 
+.btn-cart {
+    background-color: #230903 !important;
+    color: #e4c58a !important;
+    border: 1px solid #E4C58A !important;
+    font-family: "Cormorant Unicase", sans-serif !important;
+    font-size: 70%;
+    outline: 1px solid #230903 !important;
+    width: 165px !important;
+    min-height: 30px !important;
+    margin: 15px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase !important;
+}
+
+.btn-cart iconify-icon {
+    vertical-align: middle !important;
+    margin-right: 15px;
+    margin-bottom: 7px;
+}
+
 .btn-account {
     font-size: 100% !important;
 }
@@ -204,7 +226,8 @@ input.form-control {
 
 .btn-explore:hover,
 .btn-account:hover,
-.btn-add:hover {
+.btn-add:hover,
+.btn-cart:hover {
     background-color: #230903 !important;
     color: #e4c58a !important;
     border: 1px solid #e4c58a !important;
@@ -212,7 +235,8 @@ input.form-control {
 
 .btn-explore:active,
 .btn-account:active,
-.btn-add:active {
+.btn-add:active
+.btn-cart:active {
     border: 2px solid #aa9159 !important;
     background-color: #230903 !important;
     color: #e4c58a !important;
@@ -454,11 +478,11 @@ input[type="checkbox"] {
     width: 70px !important;
 }
 
-input.form-control {
+.product-details .form-control {
     border: 1px solid #E4C58A !important;
 }
 
-input.form-control:focus {
+.product-details .form-control:focus {
     border-color: #AA9159 !important;
     outline: none;
     box-shadow: 0 0 5px #AA9159 !important;
@@ -468,6 +492,38 @@ input.form-control:focus {
     color: #E4C58A !important;
     font-weight: 200;
 }
+
+/* Style Cart Page */
+
+.table {
+    --bs-table-bg: #113227; /* Your desired background color */
+    --bs-table-color: #E4C58A; /* Your desired text color */
+}
+
+.table td {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+table tr {
+    border-bottom: 0.2px solid #230903 !important;
+}
+
+
+/* Ensure images vertically aligned in the center */
+.img-col {
+    vertical-align: middle;
+}
+
+/* Center the image within its container and set minimum size */
+.cart-img {
+    min-width: 80px;
+    min-height: auto;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
 
 /* Style footer */
 footer {
@@ -559,6 +615,11 @@ font-size: 100% !important;
     .card-body, .card-footer {
         font-size: 110% !important;
     }
+    
+    /* Style Cart table */
+    .table {
+        font-size: 13px;
+    }
 }
 
 /* Media query: tablets and larger screens (576px and up) */
@@ -584,7 +645,7 @@ font-size: 100% !important;
     }
     
     /* Paragraph style */
-    p {
+    p, table th {
         font-size: 120% !important;
     }
     
@@ -655,6 +716,10 @@ font-size: 100% !important;
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    /* Cart Page */
+    .btn-cart {
+        font-size: 100%;
 }
 
 /* Media query: larger devices (laptops & desktops, 768px and up) */

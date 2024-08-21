@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="col-12 col-sm-6">
+                <h1 class="h1 text-center mt-4">
+                    Cart
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {% if cart_items %}
+                <div class="table-responsive rounded">
+                    <!-- Cart items table here -->
+                </div>
+            {% else %}
+                <p class="mb-5">Your cart is empty.</p>
+                <a href="{% url 'shop' %}" class="btn btn-outline-dark rounded-0 btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -669,9 +669,9 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
      <br>
 
-- **User Story: Filter Application**
+- **User Story: Multiple Filters Application**
 
-     As a **user**, I can **apply filters (e.g., brand, gender, price range) on the all products page** so that **I can narrow down the selection**.
+     As a **user** I can **apply multiple filters (e.g., brand and gender) on the shop page** so that **I can narrow down the selection**.
      
      <details>
 
@@ -698,7 +698,7 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
 - **User Story: Sort All Products Page Results**
 
-     As a **user**, I can **sort search results by criteria like popularity, price, and newest** so that **I can view products in my preferred order**.
+     As a **user** I can **sort search results by criteria like rating, price, and name** so that **I can view products in my preferred order**.
      
      <details>
 

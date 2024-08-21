@@ -139,7 +139,7 @@
                     <ul class="header-icons d-flex flex-row mx-1"> 
                         <!-- Cart -->
                         <li class="list-inline-item">
-                            <a class="nav-link {% if grand_total %}text-info fw-bold{% else %}text-dark{% endif %}" href="#">
+                            <a class="nav-link {% if grand_total %}text-info fw-bold{% else %}text-dark{% endif %}" href="{% url 'view_cart' %}">
                                 <div class="text-center">
                                     <div><iconify-icon icon="solar:cart-5-bold" width="20" height="20"></iconify-icon></div>
                                     <p class="my-0 icon-text">

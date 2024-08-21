@@ -143,8 +143,8 @@
                                 <div class="text-center">
                                     <div><iconify-icon icon="solar:cart-5-bold" width="20" height="20" aria-hidden="true"></iconify-icon></div>
                                     <p class="my-0 icon-text">
-                                        {% if product_count > 0 %}
-                                            ${{ grand_total|floatformat:2 }}
+                                        {% if total > 0 %}
+                                            ${{ total|floatformat:2 }}
                                         {% else %}
                                             $0.00
                                         {% endif %}

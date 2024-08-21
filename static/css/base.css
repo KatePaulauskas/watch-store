@@ -173,9 +173,10 @@ input.form-control {
          1px  1px 0 #230903;
 }
 
-/* Style the explore and account buttons */
+/* Style buttons */
 .btn-explore, 
-.btn-account {
+.btn-account,
+.btn-add {
     background-color: #e4c58a !important;
     color: #230903 !important;
     width: 100px !important;
@@ -196,18 +197,30 @@ input.form-control {
     width: 150px !important;
     height: 40px !important;
 }
+
+.btn-add {
+    width: 150px !important;
+}
+
 .btn-explore:hover,
-.btn-account:hover {
+.btn-account:hover,
+.btn-add:hover {
     background-color: #230903 !important;
     color: #e4c58a !important;
     border: 1px solid #e4c58a !important;
 }
 
 .btn-explore:active,
-.btn-account:active {
+.btn-account:active,
+.btn-add:active {
     border: 2px solid #aa9159 !important;
     background-color: #230903 !important;
     color: #e4c58a !important;
+}
+
+.btn:active,
+.btn:focus {
+    border: none !important;
 }
 
 /* Style forms */
@@ -369,12 +382,14 @@ input[type="checkbox"] {
     border-color: #113227;
 }
 
-.rating iconify-icon {
+.rating iconify-icon,
+.btn-back-to-shop iconify-icon {
     vertical-align: middle !important;
     margin-right: 15px;
 }
 
-.rating {
+.rating,
+.btn-back-to-shop {
     /* Ensure the icon and text share the same line height */
     line-height: 1; 
     display: inline-flex;
@@ -405,7 +420,8 @@ input[type="checkbox"] {
 
 .product-details > p,
 .product-details > .rating,
-.product-details iconify-icon {
+.product-details iconify-icon,
+.btn-back-to-shop {
     color: #E4C58A !important;
     font-weight: 100 !important;
 }
@@ -431,6 +447,26 @@ input[type="checkbox"] {
     width: auto;
     max-width: 100%;
     object-fit: cover;
+}
+
+/* Quantity form */
+.form-group {
+    width: 70px !important;
+}
+
+input.form-control {
+    border: 1px solid #E4C58A !important;
+}
+
+input.form-control:focus {
+    border-color: #AA9159 !important;
+    outline: none;
+    box-shadow: 0 0 5px #AA9159 !important;
+}
+
+.quantity {
+    color: #E4C58A !important;
+    font-weight: 200;
 }
 
 /* Style footer */

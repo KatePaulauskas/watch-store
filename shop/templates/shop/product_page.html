@@ -3,6 +3,12 @@
 
 {% block content %}
     <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 mb-3 py-2 py-lg-5 px-3">
+        <div class="col-12">
+            <a href="{% url 'shop' %}" class="btn btn-back-to-shop">
+                <iconify-icon icon="typcn:arrow-back" style="color: #e4c58a" aria-hidden="true"></iconify-icon>
+                Back to Shop
+            </a>
+        </div>
         <div class="row justify-content-between mx-2 mx-sm-5 px-0">
             
             <!-- Product name for small screens -->
@@ -25,7 +31,7 @@
                 </div>
             </div>
 
-            <!-- Product Details -->
+            <!-- Product Details, Quantity & Button -->
             <div class="product-details col-12 col-md-6 px-0 px-md-3">
                 <div class="d-none d-md-block text-center py-1">
                     <h1 class="product-page-name mb-4 text-start">{{ product.name }}</h1>
@@ -34,12 +40,30 @@
                     <p class="price m-0 py-0">€{{ product.price }}</p>
                     {% if product.rating %}
                         <p class="rating m-0 py-0">
-                            <iconify-icon icon="rivet-icons:star" style="color: #AA9159;"></iconify-icon>
+                            <iconify-icon icon="rivet-icons:star" style="color: #AA9159;" aria-hidden="true"></iconify-icon>
                             {{ product.rating }} / 5
                         </p>
                     {% else %}
                         <p class="rating">No Rating</p>
                     {% endif %}
+                    <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <label for="id_qty_{{ product.id }}" class="mt-3">Quantity:</label>
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <input class="form-control qty_input mt-2" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-add text-uppercase mt-4">Add to Cart</button>
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

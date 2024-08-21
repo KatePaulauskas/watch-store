@@ -3,6 +3,8 @@
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
+{% load humanize %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -144,7 +146,7 @@
                                     <div><iconify-icon icon="solar:cart-5-bold" width="20" height="20" aria-hidden="true"></iconify-icon></div>
                                     <p class="my-0 icon-text">
                                         {% if total > 0 %}
-                                        €{{ total|floatformat:2 }}
+                                        €{{ total|floatformat:2|intcomma }}
                                         {% else %}
                                             $0.00
                                         {% endif %}

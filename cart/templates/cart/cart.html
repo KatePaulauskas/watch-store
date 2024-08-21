@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% load humanize %}
+
 {% block content %}
 <div class="container-fluid">
     <div class="row">
@@ -34,20 +36,20 @@
                                 <td class="py-0">
                                     <p class="my-0 py-0"><strong>{{ item.product.name }}</strong></p>
                                     <p class="my-0">SKU: {{ item.product.sku|upper }}</p>
-                                    <p class="my-0">€{{ item.product.price }}</p>
+                                    <p class="my-0">€{{ item.product.price|intcomma }}</p>
                                     <p class="my-0">{{ item.quantity }}</p>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">€{{ item.product.price }}</p>
+                                    <p class="my-0">€{{ item.product.price|intcomma }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="pt-5 px-2 px-md-4 px-lg-5 text-end">
                                 <h5>Order Summary:</h5>
-                                <p>Subtotal: €{{ total|floatformat:2 }}</p>
-                                <p>Delivery: €{{ delivery|floatformat:2 }}</p>
-                                <h5 class="mt-4"><strong>Total: €{{ grand_total|floatformat:2 }}</strong></h5>
+                                <p>Subtotal: €{{ total|floatformat:2|intcomma }}</p>
+                                <p>Delivery: €{{ delivery|floatformat:2|intcomma }}</p>
+                                <h5 class="mt-4"><strong>Total: €{{ grand_total|floatformat:2|intcomma }}</strong></h5>
                             </td>
                         </tr>
                     </table>

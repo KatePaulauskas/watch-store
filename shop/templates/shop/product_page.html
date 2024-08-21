@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% load humanize %}
+
 {% block content %}
     <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 mb-3 py-2 py-lg-5 px-3">
         <div class="col-12">
@@ -37,7 +39,7 @@
                     <h1 class="product-page-name mb-4 text-start">{{ product.name }}</h1>
                 </div>
                 <div class="product-details py-0">
-                    <p class="price m-0 py-0">€{{ product.price }}</p>
+                    <p class="price m-0 py-0">€{{ product.price|intcomma }}</p>
                     {% if product.rating %}
                         <p class="rating m-0 py-0">
                             <iconify-icon icon="rivet-icons:star" style="color: #AA9159;" aria-hidden="true"></iconify-icon>

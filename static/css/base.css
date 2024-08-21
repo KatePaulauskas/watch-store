@@ -1,7 +1,6 @@
 /* Import Google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Antic&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-
 /* Basic styles */
 body {
     background-color: #113227;
@@ -10,7 +9,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 /* H1 style */
 h1 {
@@ -184,7 +182,14 @@ input.form-control {
     min-height: 20px !important;
     font-family: "Cormorant Unicase", sans-serif !important;
     outline: 1px solid #230903 !important;
+}
+
+.btn-account {
     font-size: 100% !important;
+}
+
+.btn-explore {
+    font-size: 120% !important;
 }
 
 .btn-reset {
@@ -698,7 +703,8 @@ font-size: 100% !important;
     .btn-explore {
         margin-left: 48px;
         margin-top: 30px;
-        font-size: 140%;
+        font-size: 150% !important;
+        width: 120px !important;
     }
 
     /* Style Forms */

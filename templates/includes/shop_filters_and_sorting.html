@@ -1,14 +1,11 @@
 <div class="row d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center">
-    <!-- Filter Section -->
-    <div class="col-12 col-sm-6 d-flex justify-content-between">
+    <!-- Filter and Sort Section -->
+    <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-between p-1 p-sm-2">
         <nav class="category-menu">
-            <ul class="navbar-nav d-flex flex-row mx-auto gap-2 gap-lg-4 align-items-center">
-                <li class="nav-item">
-                    <span class="nav-link">Filter:</span>
-                </li>
+            <ul class="navbar-nav d-flex flex-row mx-auto gap-1 gap-sm-2 gap-lg-4 align-items-center">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle m-0" href="#" id="brand" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        | Brand
+                        Brand
                     </a>
                     <ul class="dropdown-menu border-0" aria-labelledby="brand">
                         <li><a href="{% url 'shop' %}?brand=tissot{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Tissot</a></li>
@@ -24,20 +21,9 @@
                         <li><a href="{% url 'shop' %}?gender=women{% if current_brand %}&brand={{ current_brand }}{% endif %}" class="dropdown-item">Women</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="{% url 'shop' %}" class="nav-link">| Reset</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    
-    <!-- Sort Section -->
-    <div class="col-12 col-sm-6 d-flex justify-content-between justify-content-sm-end">
-        <nav class="sort-menu">
-            <ul class="navbar-nav d-flex flex-row gap-2 gap-lg-4 align-items-center">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle m-0" href="#" id="sort" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Sort by
+                        | Sort by
                     </a>
                     <ul class="dropdown-menu border-0" aria-labelledby="sort">
                         <li><a href="{% url 'shop' %}?sort=price&direction=asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Price (low to high)</a></li>
@@ -47,6 +33,9 @@
                         <li><a href="{% url 'shop' %}?sort=name&direction=asc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Name (A-Z)</a></li>
                         <li><a href="{% url 'shop' %}?sort=name&direction=desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Name (Z-A)</a></li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'shop' %}" class="nav-link">| Reset</a>
                 </li>
             </ul>
         </nav>

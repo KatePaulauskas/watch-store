@@ -2,7 +2,7 @@
 
 ### Project Link
 
-The live store is located at the following [address]().
+The live store is located at the following [address](https://eternity-watch-store-1f855f4289ad.herokuapp.com/).
 
 
 ## Agile Methodology
@@ -717,33 +717,6 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      - Design and implement sort options using HTML, CSS, and Bootstrap for a responsive layout.
      - Implement sorting logic in Django views.
      - Test sorting functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
-
-- **User Story: Product Category Sorting**
-
-     As a **user**, I can **sort a specific category of products** so that **I can find the best-priced, newest, and most popular product in that category or sort the products in that category by name**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user is on the all products page
-     - When the user selects a sort option within a category
-     - Then the sorted results are displayed within that category
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement category-specific sort options using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement category-specific sorting logic in Django views.
-     - Test category-specific sorting functionality.
      - Check the responsiveness and visual appeal across different devices.
 
      </details>
@@ -1646,6 +1619,8 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 ### Admin Access Features
 
 ### Future Features
+
+1. Enhanced Sorting Based on Selected Filters. Currently, sorting resets applied filters (like brand or gender). This future feature can ensure sorting respects active filters, keeping them intact and sorting within the filtered results only.
 
 ## Technologies used
 

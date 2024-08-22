@@ -65,11 +65,15 @@
                     </div>
                 </div>
             {% else %}
-                <p class="mb-5">Your cart is empty.</p>
-                <a href="{% url 'shop' %}" class="btn btn-cart">
-                    <iconify-icon icon="typcn:arrow-back" style="color: #e4c58a" aria-hidden="true"></iconify-icon>
-                    Back to Shop
-                </a>
+            <div class="d-flex justify-content-center align-items-start">
+                <div class="text-center">
+                    <p class="my-5">Your cart is empty.</p>
+                    <a href="{% url 'shop' %}" class="btn btn-cart">
+                        <iconify-icon icon="typcn:arrow-back" style="color: #e4c58a" aria-hidden="true"></iconify-icon>
+                        Back to Shop
+                    </a>
+                </div>
+            </div>
             {% endif %}
         </div>
     </div>

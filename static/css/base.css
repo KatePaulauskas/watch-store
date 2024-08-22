@@ -159,7 +159,7 @@ input.form-control {
 }
 
 .home-h1 {
-    color: #FBFAF8;
+    color: #FBFAF8 !important;
     font-size: 200% !important;
     font-weight: 500;
 }

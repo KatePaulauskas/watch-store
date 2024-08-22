@@ -527,6 +527,11 @@ table tr {
 .update-link,
 .remove-item {
     cursor: pointer;
+    color: #E4C58A !important;
+}
+
+.decrement-qty {
+    --bs-btn-disabled-border-color: #113227 !important;
 }
 
 /* Style footer */

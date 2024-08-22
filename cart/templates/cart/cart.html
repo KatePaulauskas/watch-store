@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% load humanize %}
 
@@ -42,24 +43,27 @@
                                     <p class="my-0">SKU: {{ item.product.sku|upper }}</p>
                                     <p class="my-0">€{{ item.product.price|intcomma }}</p>
                                     <!-- Quantity -->
-                                    <form class="form update-form" method="POST" action="">
+                                    <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.product.id %}">
                                         {% csrf_token %}
                                         <div class="form-row align-items-center">
                                             <div class="col-12">
                                                 <div class="col w-25 mt-2">
                                                     <div class="d-flex">
-                                                        <button class="decrement-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}" id="decrement-qty_{{ product.id }}">
+                                                        <button class="decrement-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}" id="decrement-qty_{{ item.product.id }}">
                                                             <iconify-icon icon="heroicons-outline:minus"  style="color: #e4c58a"></iconify-icon>
                                                         </button>
                                                         <input class="form-control qty_input text-center mx-2" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="10"
                                                             data-item_id="{{ product.id }}" id="id_qty_{{ item.product.id }}" style="width: 60px;">
-                                                        <button class="increment-qty btn px-1 mb-1" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                        <button class="increment-qty btn px-1 mb-1" data-item_id="{{ product.id }}" id="increment-qty_{{ item.product.id }}">
                                                             <iconify-icon icon="heroicons-outline:plus"  style="color: #e4c58a"></iconify-icon>
                                                         </button>
                                                     </div>
                                                     <div class="d-flex justify-content-between justify-content-md-center px-0">
                                                         <a class="update-link" style="text-decoration: none;"><small>Update</small></a>
-                                                        <a class="remove-item ps-3" style="text-decoration: none;" id="remove_{{ item.product_id }}" ><small>Remove</small></a>
+                                                        <a class="remove-item ps-3" style="text-decoration: none;" data-item_id="{{ item.product.id }}">
+                                                            <small>Remove</small>
+                                                        </a>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -68,7 +72,7 @@
                                     </td>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">€{{ item.product.price|intcomma }}</p>
+                                    <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
@@ -112,33 +116,47 @@
 {{ block.super }}
 {% include 'shop/includes/qty_input_script.html' %}
 <script type="text/javascript">
+
     // Handle quantity updates
     document.querySelectorAll('.update-link').forEach(function(link) {
+        // Add a click event listener to each update link
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Submit the form for updating quantity
-            this.previousElementSibling.submit();
+            // Prevent the default link behavior
+            e.preventDefault(); 
+
+            // Find the closest form element related to the clicked link
+            const form = this.closest('form');
+
+            // If the form is found, submit it to update the quantity
+            if (form) {
+                form.submit();
+            }
         });
     });
 
     // Handle item removal
-    document.querySelectorAll('.remove-item').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const form = document.createElement('form');
-            form.method = 'POST';
-            // Use a data attribute for the item ID
-            form.action = `/cart/remove/${this.dataset.itemId}/`;
+    $('.remove-item').click(function(e) {
+        // Prevent the default action
+        e.preventDefault();
+        
+        // Get the CSRF token
+        var csrfToken = "{{ csrf_token }}";
+        // Extract the item ID from the data attribute
+        var itemId = $(this).data('item_id');
 
-            const csrfInput = document.createElement('input');
-            csrfInput.type = 'hidden';
-            csrfInput.name = 'csrfmiddlewaretoken';
-            csrfInput.value = '{{ csrf_token }}';
-            form.appendChild(csrfInput);
+        // Build the URL for the removal action
+        var url = `/cart/remove/${itemId}/`;
+        // Prepare the data to be sent with the POST request
+        var data = {'csrfmiddlewaretoken': csrfToken};
 
-            document.body.appendChild(form);
-            // Submit the form to remove the item
-            form.submit();
+        // Perform the POST request to remove the item
+        $.post(url, data)
+        .done(function() {
+            // Reload the page after the request completes
+            location.reload();
+        })
+        .fail(function() {
+            alert('Error removing item from cart.');
         });
     });
 </script>

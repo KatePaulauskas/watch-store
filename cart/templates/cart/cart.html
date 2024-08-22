@@ -31,13 +31,41 @@
                         {% for item in cart_items %}
                             <tr>
                                 <td class="img-col p-0 w-25">
-                                    <img class="img-fluid cart-img" src="{{ item.product.image.url }}">
+                                    <a href="{% url 'product_detail' item.product.id %}">
+                                        <img class="img-fluid cart-img" src="{{ item.product.image.url }}">
+                                    </a>
                                 </td>
                                 <td class="py-0">
-                                    <p class="my-0 py-0"><strong>{{ item.product.name }}</strong></p>
+                                    <a href="{% url 'product_detail' item.product.id %}" style="text-decoration: none;">
+                                        <p class="my-0 py-0"><strong>{{ item.product.name }}</strong></p>
+                                    </a>
                                     <p class="my-0">SKU: {{ item.product.sku|upper }}</p>
                                     <p class="my-0">€{{ item.product.price|intcomma }}</p>
-                                    <p class="my-0">{{ item.quantity }}</p>
+                                    <!-- Quantity -->
+                                    <form class="form update-form" method="POST" action="">
+                                        {% csrf_token %}
+                                        <div class="form-row align-items-center">
+                                            <div class="col-12">
+                                                <div class="col w-25 mt-2">
+                                                    <div class="d-flex">
+                                                        <button class="decrement-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}" id="decrement-qty_{{ product.id }}">
+                                                            <iconify-icon icon="heroicons-outline:minus"  style="color: #e4c58a"></iconify-icon>
+                                                        </button>
+                                                        <input class="form-control qty_input text-center mx-2" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="10"
+                                                            data-item_id="{{ product.id }}" id="id_qty_{{ item.product.id }}" style="width: 60px;">
+                                                        <button class="increment-qty btn px-1 mb-1" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                            <iconify-icon icon="heroicons-outline:plus"  style="color: #e4c58a"></iconify-icon>
+                                                        </button>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between justify-content-md-center px-0">
+                                                        <a class="update-link" style="text-decoration: none;"><small>Update</small></a>
+                                                        <a class="remove-item ps-3" style="text-decoration: none;" id="remove_{{ item.product_id }}" ><small>Remove</small></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    </td>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">€{{ item.product.price|intcomma }}</p>
@@ -78,4 +106,41 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'shop/includes/qty_input_script.html' %}
+<script type="text/javascript">
+    // Handle quantity updates
+    document.querySelectorAll('.update-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Submit the form for updating quantity
+            this.previousElementSibling.submit();
+        });
+    });
+
+    // Handle item removal
+    document.querySelectorAll('.remove-item').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const form = document.createElement('form');
+            form.method = 'POST';
+            // Use a data attribute for the item ID
+            form.action = `/cart/remove/${this.dataset.itemId}/`;
+
+            const csrfInput = document.createElement('input');
+            csrfInput.type = 'hidden';
+            csrfInput.name = 'csrfmiddlewaretoken';
+            csrfInput.value = '{{ csrf_token }}';
+            form.appendChild(csrfInput);
+
+            document.body.appendChild(form);
+            // Submit the form to remove the item
+            form.submit();
+        });
+    });
+</script>
+
 {% endblock %}

@@ -524,6 +524,10 @@ table tr {
     object-fit: cover;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
 
 /* Style footer */
 footer {

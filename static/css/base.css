@@ -340,6 +340,11 @@ input[type="checkbox"] {
     text-align: center !important;
 }
 
+.errorlist {
+    color: #FC7C73 !important;
+    list-style: inside;
+}
+
 /* Style Links */
 .link,
 .link:hover,
@@ -729,6 +734,7 @@ font-size: 100% !important;
     /* Cart Page */
     .btn-cart {
         font-size: 100%;
+    }
 }
 
 /* Media query: larger devices (laptops & desktops, 768px and up) */

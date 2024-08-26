@@ -64,10 +64,17 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-12 d-flex justify-content-center justify-content-md-between">
-                                <button type="submit" class="btn btn-add text-uppercase mt-4">Add to Cart</button>
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% if product.availability %}
+                                <div class="col-12 d-flex justify-content-center justify-content-md-between">
+                                    <button type="submit" class="btn btn-add text-uppercase mt-4">Add to Cart</button>
+                                </div>
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% else %}
+                                <!-- If product is not available, show an "Out of Stock" button -->
+                                <div class="col-12 d-flex justify-content-center justify-content-md-between">
+                                    <button type="button" class="btn btn-add text-uppercase mt-4" disabled style="background-color: #ccc;">Out of Stock</button>
+                                </div>
+                            {% endif %}
                         </div>
                     </form>
                 </div>

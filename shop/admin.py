@@ -3,7 +3,7 @@ from .models import Product, Category
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'rating', 'display_categories')
+    list_display = ('name', 'price', 'availability', 'rating', 'display_categories')
     list_filter = ('categories', 'price', 'rating',)
     search_fields = ('name', 'description')
     filter_horizontal = ('categories',)

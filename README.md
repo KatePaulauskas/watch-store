@@ -842,18 +842,18 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
      <br>
 
-- **User Story: Select Product Options**
+- **User Story: Select Product Quantity**
 
-     As a **shopper**, I can **select product options and quantity** so that I can **customize my purchase before adding it to the cart**.
-     
+     As a **shopper**, I can **select product quantity** so that I can **customize my choice before adding it to the cart**.
+
      <details>
 
      <summary>Acceptance Criteria</summary>
 
      - Given a shopper is on a product detail page
      - When the page loads
-     - Then the shopper can see options to select product attributes and quantity
-     - When the shopper selects product attributes and quantity
+     - Then the shopper can see options to select product quantity
+     - When the shopper selects product quantity
      - Then the selections are captured correctly and can be added to the cart
 
      </details>
@@ -861,9 +861,9 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      <details>
 
      <summary>Tasks</summary>
-
-     - Design and implement product option selectors (e.g., dropdowns, radio buttons) using HTML, CSS, and Bootstrap for a responsive layout.
-     - Ensure the quantity selector is intuitive and user-friendly.
+     
+     - Design and implement product quantity selector
+     - Ensure the quantity selector is intuitive and user-friendly
      - Integrate the selection functionality in Django models and views to capture and process the selected attributes and quantity.
      - Test the selection functionality to ensure the options and quantity are accurately captured and processed.
      - Validate the visual appeal and responsiveness of the product option selectors across different devices.
@@ -886,7 +886,7 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      <summary>Acceptance Criteria</summary>
 
      - Given a user is on a product page
-     - When the user selects the product option and quantity and then clicks the "Add to Cart" button
+     - When the user selects the quantity and then clicks the "Add to Cart" button
      - Then a pop-up notification is displayed and the item is added to the shopping cart
 
      </details>
@@ -896,12 +896,11 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      <summary>Tasks</summary>
 
      - Design and implement the "Add to Cart" button using HTML, CSS, and Bootstrap for a responsive layout.
-     - Ensure the selected product options and quantity are correctly captured and sent to the backend.
+     - Ensure the selected product quantity are correctly captured and sent to the backend.
      - Implement add-to-cart functionality in Django views.
      - Develop the pop-up notification to confirm the item has been added to the cart.
      - Test the add-to-cart functionality.
      - Validate that the cart is updated correctly and displayed accurately in the shopping cart summary.
-     - Provide feedback to the user in case of errors (e.g., out of stock) when adding items to the cart.
      - Check the responsiveness and visual appeal across different devices.
 
      </details>
@@ -959,7 +958,6 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
      - Implement functionality to update quantities and remove items in the cart using HTML, CSS, and Bootstrap for a responsive layout.
      - Update Django views to handle cart updates.
      - Ensure the cart dynamically updates the total cost when changes are made.
-     - Provide user feedback for any errors or issues (e.g., items out of stock) when viewing or updating the cart.
      - Test the update and removal functionality.
      - Check the responsiveness and visual appeal across different devices.
 
@@ -1385,7 +1383,7 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
 ### Structure
 
-At the Structure Plane, the information organisation and interaction design were developed by defining the site pages, database structure, and booking flow. 
+At the Structure Plane, the information organisation and interaction design were developed by defining the site pages, database structure, and purchasing flow. 
 
 #### - Site Pages -
 
@@ -1393,13 +1391,23 @@ The Eternity Luxury Watch Store comprises of several key pages, each designed to
 
 **Home Page:**
 
+* Welcomes visitors with a visually appealing hero image, featured products, and About Us information as well as quick access to key sections like Shop and Contact Us. It sets the tone for the brand and provides an overview of what Eternity offers.
+
 **Shop Page:**
+
+* Displays the full range of luxury watches, allowing users to browse, filter, and sort products by various criteria such as brand, price, and rating. It serves as the main shopping hub for customers.
 
 **Product Page:**
 
+* Offers a detailed view of each watch, including descriptions, specifications, images, price, and customer ratings. It also includes options for selecting quantity and adding the product to the cart.
+
 **Cart Page**
 
+* Provides an overview of selected items, allowing users to review, update quantities, remove products, and view the total cost before proceeding to checkout.
+
 **Checkout Page**
+
+* The final step in the purchasing process, where customers enter shipping and payment details, review their order, and complete their purchase securely.
 
 **Contact Page:**
 
@@ -1414,7 +1422,7 @@ The Eternity Luxury Watch Store comprises of several key pages, each designed to
 
 The Database Structure below visualises the relationships between the key models of the project. The database schema is designed to effectively manage purchasing process.
 
-![Database Structure](/media/database-structure.jpeg)
+![Database Structure](/media/database-structure.webp)
 
 ### Skeleton
 
@@ -1426,28 +1434,28 @@ At the Skeleton Plane, the interface and navigation design were defined through 
 The initial layout of the interface and navigation for the Eternity Luxury Watch Store website was developed using Balsamiq Studios software, where mockup wireframes were created for the key pages.
 
 **Home page:**
-![Home Page Wireframe](/media/wireframe-home-page.jpeg)
+![Home Page Wireframe](/media/wireframe-home-page.webp)
 
 **Shop Page:**
-![Shop Page Wireframe](/media/wireframe-shop-page.jpeg)
+![Shop Page Wireframe](/media/wireframe-shop-page.webp)
 
 **Product Page:**
-![Product Page Wireframe](/media/wireframe-shop-page.jpeg)
+![Product Page Wireframe](/media/wireframe-product-page.webp)
 
 **Cart Page**
-![Cart Page Wireframe](/media/wireframe-shop-page.jpeg)
+![Cart Page Wireframe](/media/wireframe-cart-page.webp)
 
 **Checkout Page**
-![Checkout Page Wireframe](/media/wireframe-shop-page.jpeg)
+![Checkout Page Wireframe](/media/wireframe-checkout-page.webp)
 
 **Contact page:**
-![Contact Page Wireframe](/media/wireframe-contact-page.jpeg)
+![Contact Page Wireframe](/media/wireframe-contact-page.webp)
 
 **Log In page:**
-![Log In Page Wireframe](/media/wireframe-log-in-page.jpeg)
+![Log In Page Wireframe](/media/wireframe-log-in-page.webp)
 
 **Sign Up page:**
-![Sign Up Page Wireframe](/media/wireframe-sign-up-page.jpeg)
+![Sign Up Page Wireframe](/media/wireframe-sign-up-page.webp)
 
 
 ### Surface
@@ -1517,7 +1525,7 @@ The header of the Eternity Luxury Watch Store website is designed to provide ess
 
 On the left side of the header, the navigation bar allows users to explore the site with ease. The search bar, cart icon, and account icon are aligned on the right, offering quick access to product searches, shopping cart overview, and account management. These elements ensure that users can efficiently browse and manage their shopping experience.
 
-![Header](/media/header.jpeg)
+![Header](/media/header.webp)
 
 ### Navigation Bar
 
@@ -1527,33 +1535,55 @@ The fully responsive navigation bar is displayed across all site pages, allowing
   
   The navigation bar links are displayed horizontally, with the active page highlighted to indicate the user's current location on the site.
 
-  ![Desktop Navbar](/media/navbar-desktop.jpeg)
+  ![Desktop Navbar](/media/navbar-desktop.webp)
 
 * **Tablet and Mobile View:**
   
   On tablets and mobile devices, the navigation bar is represented by a hamburger icon. Clicking on this icon reveals a drop-down menu with the current page highlighted, ensuring smooth navigation. The search bar, cart, and account icons are prominently displayed for easy access.
 
-  ![Tablet and Mobile Navbar Opened](/media/mobile-tablet-navbar-opened.jpeg)
+  ![Tablet and Mobile Navbar Opened](/media/mobile-tablet-navbar-opened.webp)
 
-### Above the Fold
+### Home Page
+
+#### Above the Fold
 
 When users first visit the Eternity Luxury Watch Store website, they are greeted with an inviting hero image featuring a luxury watch. This section is designed to captivate the user’s attention immediately, creating a strong first impression of the store's curated selection of high-quality timepieces.
 
-![Above Fold](/media/above-fold.jpeg)
+![Above Fold](/media/above-fold.webp)
 
-### About Us
+#### Popular Products
+
+![Popular products](/media/popular-products.webp)
+
+#### About Us
 
 The About Us section provides visitors with a comprehensive overview of the brand's mission and vision. It emphasizes Eternity's commitment to offering affordable luxury watches. This section builds trust and fosters a connection with potential customers by highlighting the brand’s dedication to quality and customer satisfaction.
 
-![About Us](/media/about-eternity-luxury-watches.jpeg)
+![About Us](/media/about-eternity-luxury-watches.webp)
 
 ### Shop Page
 
+The Shop Page is the central hub where customers can browse Eternity's curated collection of luxury watches. The page features a clean and intuitive layout, allowing users to filter products by brand and gender or sort them by price, rating or name. Each watch is displayed with a high-quality image, name, price and rating, providing an overview before customers click to view detailed information. The Shop Page is designed to make the shopping experience seamless and enjoyable, helping customers find the perfect timepiece with ease.
+
+![Shop Page](/media/shop-page.webp)
+
 ### Product Page
+
+The Product Page offers a detailed view of each luxury watch, showcasing comprehensive descriptions, specifications, and high-resolution images. This page allows customers to explore the finer details of the timepieces, including price and customer ratings. The Product Page also provides options for customers to select the desired quantity. A prominently placed "Add to Cart" button ensures that customers can easily proceed with their purchase, making the shopping experience seamless and straightforward.
+
+![Product Page](/media/product-page.webp)
 
 ### Cart Page
 
+The Cart Page provides an overview of the items a customer intends to purchase. It displays the product name, SKU, image, price, quantity, and total cost, allowing customers to review their selections before proceeding to checkout. The page also offers options to update quantities or remove items.
+
+![Cart Page](/media/cart-page.webp)
+
 ### Checkout Page
+
+
+
+![About Us](/media/about-eternity-luxury-watches.webp)
 
 ### Contact Us Page
 
@@ -1621,6 +1651,8 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 ### Future Features
 
 1. Enhanced Sorting Based on Selected Filters. Currently, sorting resets applied filters (like brand or gender). This future feature can ensure sorting respects active filters, keeping them intact and sorting within the filtered results only.
+
+2. Inventory Tracking System. Introduce an inventory tracking system that automatically updates stock levels as products are sold. When inventory reaches zero, the product will automatically display an "Out of Stock" notification, preventing further purchases until stock is replenished. This feature will help maintain accurate stock levels and provide real-time availability information to shoppers.
 
 ## Technologies used
 

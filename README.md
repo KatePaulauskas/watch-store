@@ -1569,9 +1569,13 @@ The Shop Page is the central hub where customers can browse Eternity's curated c
 
 ### Product Page
 
-The Product Page offers a detailed view of each luxury watch, showcasing comprehensive descriptions, specifications, and high-resolution images. This page allows customers to explore the finer details of the timepieces, including price and customer ratings. The Product Page also provides options for customers to select the desired quantity. A prominently placed "Add to Cart" button ensures that customers can easily proceed with their purchase, making the shopping experience seamless and straightforward.
+The Product Page offers a detailed view of each luxury watch, showcasing comprehensive descriptions, specifications, and high-resolution images. This page allows customers to explore the finer details of the timepieces, including price and customer ratings. Additionally, the Product Page provides options for customers to select the desired quantity. A prominently placed "Add to Cart" button ensures that customers can easily proceed with their purchase, making the shopping experience seamless and straightforward. At the top of the page, a "Back to Shop" button allows customers to return to the shop and browse through other products if needed.
 
 ![Product Page](/media/product-page.webp)
+
+The product availability feature allows for effective management and display of the stock status of products in the store. Admins can mark products as either "available" or "out of stock" based on their current inventory status. When a product is marked as unavailable in the admin panel, an "Out of Stock" button is displayed on the Product Page. This button is disabled and styled differently to indicate that the product cannot be purchased. The presence of the "Out of Stock" button ensures that customers are informed about the unavailability of the product, enhancing the shopping experience by setting clear expectations.
+
+![Out of Stock](/media/out-of-stock.webp)
 
 ### Cart Page
 

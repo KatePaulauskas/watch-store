@@ -571,6 +571,10 @@ hr {
   background-color: #113227 !important;
 }
 
+.text-danger {
+    color: #FC7C73 !important;
+}
+
 /* Style footer */
 footer {
     border-top: 1px solid #E4C58A;

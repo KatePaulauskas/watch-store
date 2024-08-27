@@ -98,6 +98,10 @@
                             {% endif %}
                         </div>
                     </fieldset>
+                    <h5 class="px-2 text-center text-lg-start">Shipping Method</h5>
+                    <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
+                        {{ order_form.shipping_method }}
+                    </fieldset>
                     <h5 class="px-2 text-center text-lg-start">Payment</h5>
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
                         <!-- A Stripe card element will go here -->

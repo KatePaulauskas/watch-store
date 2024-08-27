@@ -1,14 +1,21 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.conf import settings
 
 from .forms import OrderForm
+from cart.contexts import cart_contents
 
+import stripe
 
 def checkout(request):
-    bag = request.session.get('cart', {})
-    if not bag:
+    cart = request.session.get('cart', {})
+    if not cart:
         messages.error(request, "There's nothing in your cart at the moment")
         return redirect(reverse('shop'))
+    
+    current_cart = cart_contents(request)
+    total = current_cart['grand_total']
+    stripe_total = round(total * 100)
 
     order_form = OrderForm()
     template = 'checkout/checkout.html'

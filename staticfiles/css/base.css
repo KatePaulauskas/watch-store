@@ -122,7 +122,7 @@ input::placeholder {
     font-weight: 200;
 }
 
-input.form-control {
+input.search-bar {
     border-bottom: 1px solid #E4C58A !important;
 }
 
@@ -159,7 +159,7 @@ input.form-control {
 }
 
 .home-h1 {
-    color: #FBFAF8;
+    color: #FBFAF8 !important;
     font-size: 200% !important;
     font-weight: 500;
 }
@@ -338,6 +338,11 @@ input[type="checkbox"] {
     color: #FBFAF8;
     font-size: 90%;
     text-align: center !important;
+}
+
+.errorlist {
+    color: #FC7C73 !important;
+    list-style: inside;
 }
 
 /* Style Links */
@@ -524,6 +529,55 @@ table tr {
     object-fit: cover;
 }
 
+.update-link,
+.remove-item {
+    cursor: pointer;
+    color: #E4C58A !important;
+}
+
+.decrement-qty {
+    --bs-btn-disabled-border-color: #113227 !important;
+}
+
+/* Style Checkout Page */
+#payment-form input {
+    border: 1px solid #aa9159 !important;
+}
+
+#payment-form input::placeholder {
+    color: #aa9159 !important;
+}
+
+hr {
+    color: #AA9159 !important;
+}
+
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4;
+}
 
 /* Style footer */
 footer {
@@ -536,6 +590,7 @@ footer {
 
 .footer-text {
     color: #E4C58A;
+    font-family: "Antic", sans-serif !important;
 }
 
 .footer-menu, 
@@ -619,6 +674,11 @@ font-size: 100% !important;
     /* Style Cart table */
     .table {
         font-size: 13px;
+    }
+
+    /* Style Checkout Page */
+    #payment-form input {
+        width: 250px !important;
     }
 }
 
@@ -720,6 +780,12 @@ font-size: 100% !important;
     /* Cart Page */
     .btn-cart {
         font-size: 100%;
+    }
+
+    /* Style Checkout Page */
+    #payment-form input {
+        width: 300px !important;
+    }
 }
 
 /* Media query: larger devices (laptops & desktops, 768px and up) */

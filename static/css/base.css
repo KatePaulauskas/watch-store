@@ -552,6 +552,15 @@ hr {
     color: #AA9159 !important;
 }
 
+.form-check-label {
+    font-size: small !important;
+    font-weight: 100 !important;
+}
+
+#card-element {
+    color: #E4C58A !important;
+}
+
 .StripeElement {
   height: 40px;
   padding: 10px 12px;
@@ -568,11 +577,36 @@ hr {
 }
 
 .StripeElement--webkit-autofill {
-  background-color: #113227 !important;
+    background-color: #113227 !important;
+    color: #E4C58A !important;
+    -webkit-box-shadow: 0 0 0 30px #113227 inset !important;
+    -webkit-text-fill-color: #E4C58A !important;
+    transition: background-color 5000s ease-in-out 0s; 
 }
 
 .text-danger {
     color: #FC7C73 !important;
+}
+
+#loading-overlay {
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #230903;
+    opacity: 0.9;
+    z-index: 9999;
+}
+
+.loading-spinner {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
 }
 
 /* Style footer */
@@ -676,6 +710,10 @@ font-size: 100% !important;
     #payment-form input,
     .StripeElement {
         width: 250px !important;
+    }
+
+    #payment-form #id-save-info {
+        width: 15px !important;
     }
 }
 

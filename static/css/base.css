@@ -540,6 +540,24 @@ table tr {
 }
 
 /* Style Checkout Page */
+
+.text-info {
+    color: #FBFAF8 !important;
+}
+
+select,
+select option {
+    color: #e4c58a !important;
+    font-style: italic;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #AA9159!important;
+    font-weight: 100;
+    font-style: italic;
+}
+
 .stripe-style-input {
     border: 1px solid #aa9159 !important;
 }
@@ -608,6 +626,30 @@ hr {
     margin: 0;
     height: 100%;
 }
+
+/* Style select dropdown. Source: CSS Tricks */
+.select-container {
+    position: relative;
+}
+
+.select-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    background: #f8f9fa;
+}
+
+.select-container::after {
+    content: '▼'; 
+    color: #AA9159;
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+    /* Ensure it doesn't block clicks */
+    pointer-events: none;
+}
+
 
 /* Style Thank you page */
 
@@ -714,7 +756,8 @@ font-size: 100% !important;
 
     /* Style Checkout Page */
     #payment-form input,
-    .StripeElement {
+    .StripeElement,
+    .stripe-style-input {
         width: 250px !important;
     }
 
@@ -825,7 +868,8 @@ font-size: 100% !important;
 
     /* Style Checkout Page */
     #payment-form input,
-    .StripeElement {
+    .StripeElement,
+    .stripe-style-input {
         width: 300px !important;
     }
 }

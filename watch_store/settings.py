@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'shop',
     'cart',
     'checkout',
+    'delivery_method',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"

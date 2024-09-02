@@ -260,9 +260,9 @@ textarea {
     font-size: 100% !important;
     background-color: #113227 !important;
     color: #E4C58A !important;
-    border-radius: 5px;
-    border-color: #E4C58A;
-    width: 200px;
+    border-radius: 5px !important;
+    border-color: #E4C58A !important;
+    width: 200px !important;
 }
 
 /* Override background color in forms when autifilled in browser. Source: CSS Tricks */
@@ -278,7 +278,7 @@ input:-webkit-autofill:active {
 }
 
 input[type="checkbox"] {
-    width: 20px;
+    width: 20px !important;
 }
 
 /* Checkbox styling. Source: Ben Nadel.com */
@@ -552,7 +552,8 @@ select option {
 }
 
 select:invalid,
-select option[value=""] {
+select option[value=""],
+input[type="radio"] + label {
     color: #AA9159!important;
     font-weight: 100;
     font-style: italic;
@@ -581,7 +582,7 @@ hr {
 
 .StripeElement {
   height: 40px;
-  padding: 10px 12px;
+  padding: 6px 12px;
   border: 1px solid #aa9159 !important;
   border-radius: 0.375rem;
   -webkit-transition: box-shadow 150ms ease;
@@ -757,8 +758,13 @@ font-size: 100% !important;
     /* Style Checkout Page */
     #payment-form input,
     .StripeElement,
-    .stripe-style-input {
+    .stripe-style-input,
+    #id-country {
         width: 250px !important;
+    }
+
+    #payment-form input[type="radio"] {
+        width: 20px !important;
     }
 
     #payment-form #id-save-info {
@@ -869,8 +875,13 @@ font-size: 100% !important;
     /* Style Checkout Page */
     #payment-form input,
     .StripeElement,
-    .stripe-style-input {
+    .stripe-style-input,
+    #id-country {
         width: 300px !important;
+    }
+
+    #payment-form input[type="radio"] {
+        width: 25px !important;
     }
 }
 

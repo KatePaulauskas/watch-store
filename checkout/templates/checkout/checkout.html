@@ -79,13 +79,13 @@
                         <a class="text-info" href="{% url 'account_signup' %}">register</a></p>
                     </div>
                     {% endif %}
-                    <h5 class="px-2 text-center text-lg-start">Details</h5>
+                    <h5 class="px-2 text-center text-lg-start">Customer Details</h5>
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                         {{ order_form.phone_number | as_crispy_field }}
                     </fieldset>
-                    <h5 class="px-2 text-center text-lg-start">Delivery</h5>
+                    <h5 class="px-2 text-center text-lg-start">Delivery Details</h5>
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
                         <div class="select-container">
                         {{ order_form.country | as_crispy_field }}
@@ -102,9 +102,18 @@
                             {% endif %}
                         </div>
                     </fieldset>
-                    <h5 class="px-2 text-center text-lg-start">Shipping Method</h5>
-                    <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
-                        {{ order_form.shipping_method }}
+                    <h5 class="px-2 text-center text-lg-start">Delivery Method</h5>
+                    <fieldset class="rounded px-3 py-1 mb-5 d-flex flex-column align-items-center">
+                        <div id="delivery-methods">
+                            {% for method in order_form.fields.delivery_method.queryset %}
+                                <div>
+                                    <input type="radio" name="delivery_method" id="delivery_method_{{ method.pk }}" value="{{ method.pk }}" data-rate="{{ method.rate }}">
+                                    <label for="delivery_method_{{ method.pk }}">{{ method.name }}</label>
+                                </div>
+                            {% endfor %}
+
+
+                        </div>
                     </fieldset>
                     <h5 class="px-2 text-center text-lg-start">Payment</h5>
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
@@ -140,5 +149,5 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script> 
 {% endblock %}

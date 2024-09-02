@@ -1,20 +1,15 @@
 from django import forms
 from .models import Order
-
+from delivery_method.models import DeliveryMethod
 
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ('full_name', 'email', 'phone_number',
-                  'street_address1', 'street_address2',
-                  'town_or_city', 'postcode', 'country',
-                  'county',)
+        fields = ('full_name', 'email', 'phone_number', 'street_address1', 
+                  'street_address2', 'town_or_city', 'postcode', 
+                  'country', 'county', 'delivery_method')
 
     def __init__(self, *args, **kwargs):
-        """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
-        """
         super().__init__(*args, **kwargs)
         placeholders = {
             'full_name': 'Full Name',
@@ -27,9 +22,17 @@ class OrderForm(forms.ModelForm):
             'county': 'County, State or Region',
         }
 
+        self.fields['delivery_method'] = forms.ModelChoiceField(
+            queryset=DeliveryMethod.objects.all(),
+            label='Delivery Method',
+            widget=forms.RadioSelect(),
+            empty_label=None,
+        )
+        
         self.fields['full_name'].widget.attrs['autofocus'] = True
+        
         for field in self.fields:
-            if field != 'country':
+            if field != 'country' and field != 'delivery_method':
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:

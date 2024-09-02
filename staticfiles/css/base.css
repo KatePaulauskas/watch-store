@@ -3,7 +3,7 @@
 
 /* Basic styles */
 body {
-    background-color: #113227;
+    background-color: #113227 !important;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@ h6
 
 /* Paragraph style */
 p {
-    font-family: 
+    font-family: "Muli", sans-serif !important;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -260,9 +260,9 @@ textarea {
     font-size: 100% !important;
     background-color: #113227 !important;
     color: #E4C58A !important;
-    border-radius: 5px;
-    border-color: #E4C58A;
-    width: 200px;
+    border-radius: 5px !important;
+    border-color: #E4C58A !important;
+    width: 200px !important;
 }
 
 /* Override background color in forms when autifilled in browser. Source: CSS Tricks */
@@ -274,11 +274,12 @@ input:-webkit-autofill:active {
     color: #E4C58A !important;
     -webkit-box-shadow: 0 0 0 30px #113227 inset !important;
     -webkit-text-fill-color: #E4C58A !important;
-    transition: background-color 5000s ease-in-out 0s; 
+    transition: background-color 5000s ease-in-out 0s !important;
+    caret-color: #AA9159 !important;
 }
 
 input[type="checkbox"] {
-    width: 20px;
+    width: 20px !important;
 }
 
 /* Checkbox styling. Source: Ben Nadel.com */
@@ -540,6 +541,34 @@ table tr {
 }
 
 /* Style Checkout Page */
+
+.text-info {
+    color: #FBFAF8 !important;
+}
+
+select,
+select option {
+    color: #e4c58a !important;
+    font-style: italic;
+}
+
+select:invalid,
+select option[value=""],
+input[type="radio"] + label,
+#card-element {
+    color: #AA9159!important;
+    font-weight: 100 !important;
+    font-style: italic !important;
+}
+
+input[type="radio"] + label {
+    font-weight: 200;
+}
+
+input[type="radio"] {
+    accent-color: #e4c58a !important;
+}
+
 .stripe-style-input {
     border: 1px solid #aa9159 !important;
 }
@@ -557,23 +586,25 @@ hr {
     font-weight: 100 !important;
 }
 
-#card-element {
-    color: #E4C58A !important;
-}
-
 .StripeElement {
-  height: 40px;
-  padding: 10px 12px;
-  border: 1px solid #aa9159 !important;
-  border-radius: 0.375rem;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
+    height: 40px;
+    padding: 6px 12px;
+    border: 1px solid #aa9159 !important;
+    border-radius: 0.375rem;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+    color: #AA9159!important;
+    font-weight: 100 !important;
+    font-style: italic !important;
 }
 
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #E4C58A !important;
+    box-shadow: 0 1px 3px 0 #E4C58A !important;
+    color: #AA9159!important;
+    font-weight: 100 !important;
+    font-style: italic !important;
 }
 
 .StripeElement--webkit-autofill {
@@ -607,6 +638,38 @@ hr {
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+/* Style select dropdown for countries. Source: CSS Tricks */
+.select-container {
+    position: relative;
+}
+
+.select-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    background: #f8f9fa;
+}
+
+.select-container::after {
+    content: '▼'; 
+    color: #AA9159;
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+    /* Ensure it doesn't block clicks */
+    pointer-events: none;
+}
+
+/* Style countries dropdown autofill */
+
+#id_country:-webkit-autofill {
+    background-color: #113227 !important;
+    color: #E4C58A !important;
+    -webkit-box-shadow: 0 0 0px 1000px #113227 inset !important;
+    -webkit-text-fill-color: #E4C58A !important;
 }
 
 /* Style Thank you page */
@@ -714,12 +777,21 @@ font-size: 100% !important;
 
     /* Style Checkout Page */
     #payment-form input,
-    .StripeElement {
+    .StripeElement,
+    .stripe-style-input,
+    #id-country {
         width: 250px !important;
+        height: 35px !important;
+    }
+
+    #payment-form input[type="radio"] {
+        width: 20px !important;
+        height: 15px !important;
     }
 
     #payment-form #id-save-info {
         width: 15px !important;
+        height: 15px !important;
     }
 }
 
@@ -825,8 +897,14 @@ font-size: 100% !important;
 
     /* Style Checkout Page */
     #payment-form input,
-    .StripeElement {
+    .StripeElement,
+    .stripe-style-input,
+    #id-country {
         width: 300px !important;
+    }
+
+    #payment-form input[type="radio"] {
+        width: 25px !important;
     }
 }
 

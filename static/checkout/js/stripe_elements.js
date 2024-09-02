@@ -12,13 +12,29 @@ var stripe = Stripe(stripePublicKey);
 var elements = stripe.elements();
 var style = {
     base: {
-        color: '#aa9159',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        color: '#AA9159',
+        fontFamily: '"Antic", Antic, sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
         '::placeholder': {
-            color: '#aa9159'
-        }
+            color: '#AA9159',
+            fontWeight: '100',
+            fontStyle: 'italic',
+        },
+        '::selection': {
+            background: '#000000',
+            color: '#AA9159',
+        },
+        ':-webkit-autofill': {
+            color: '#AA9159',
+            '-webkit-text-fill-color': '#AA9159',
+            'box-shadow': '0 0 0px 1000px #000 inset',
+            caretColor: '#AA9159',
+        },
+        ':focus': {
+            caretColor: '#AA9159',
+        },
+
     },
     invalid: {
         color: '#FC7C73',

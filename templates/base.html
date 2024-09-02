@@ -174,7 +174,7 @@
                                     {% if request.user.is_superuser %}
                                         <a href="#" class="dropdown-item">Manage Products</a>
                                     {% endif %}
-                                    <a href="#" class="dropdown-item">Profile</a>
+                                    <a class="dropdown-item {% if request.path == profile %}active{% endif %}" href="{% url 'profile' %}" class="dropdown-item">Profile</a>
                                     <a class="dropdown-item {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                                 {% else %}
                                     <a class="dropdown-item {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login/Register</a>

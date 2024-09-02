@@ -61,10 +61,11 @@
                     <h5 class="my-2"><strong>Grand Total:</strong></h5>
                 </div>
                 <div class="col-4 col-sm-3">
-                    <p class="my-0">€{{ total | floatformat:2 | intcomma }}</p>
-                    <p class="my-0">€{{ delivery | floatformat:2 | intcomma }}</p>
+                    <input type="hidden" id="cart-weight" value="{{ cart_weight }}">
+                    <p class="my-0"><span id="initial-total">{{ total|floatformat:2|intcomma }}</span></p>
+                    <p class="my-0"><span id="delivery-cost">€{{ delivery|floatformat:2|intcomma }}</span></p>
                     <hr>
-                    <h5 class="my-2"><strong>€{{ grand_total | floatformat:2 | intcomma }}</strong></h5>
+                    <h5 class="my-2"><span id="grand-total"><strong>€{{ grand_total|floatformat:2|intcomma }}</strong></span></h5>
                 </div>
             </div>
         </div>
@@ -107,7 +108,7 @@
                         <div id="delivery-methods">
                             {% for method in order_form.fields.delivery_method.queryset %}
                                 <div>
-                                    <input type="radio" name="delivery_method" id="delivery_method_{{ method.pk }}" value="{{ method.pk }}" data-rate="{{ method.rate }}">
+                                    <input type="radio" name="delivery_method" id="delivery_method_{{ method.pk }}" value="{{ method.pk }}" data-rate="{{ method.rate }}" {% if method.name == "Standard: 5-10 days" %} data-standard="true" {% endif %}>
                                     <label for="delivery_method_{{ method.pk }}">{{ method.name }}</label>
                                 </div>
                             {% endfor %}
@@ -147,5 +148,6 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/delivery_calculation.js' %}"></script>
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script> 
 {% endblock %}

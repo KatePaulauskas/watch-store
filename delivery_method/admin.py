@@ -1,4 +1,8 @@
 from django.contrib import admin
 from .models import DeliveryMethod
 
-admin.site.register(DeliveryMethod)
+
+class DeliveryMethodAdmin(admin.ModelAdmin):
+    list_display = ('name', 'rate',)
+
+admin.site.register(DeliveryMethod, DeliveryMethodAdmin)

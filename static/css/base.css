@@ -559,6 +559,14 @@ input[type="radio"] + label {
     font-style: italic;
 }
 
+input[type="radio"] + label {
+    font-weight: 200;
+}
+
+input[type="radio"] {
+    accent-color: #e4c58a !important;
+}
+
 .stripe-style-input {
     border: 1px solid #aa9159 !important;
 }

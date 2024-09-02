@@ -7,6 +7,7 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 from shop.models import Product
 from cart.contexts import cart_contents
+from delivery_method.models import DeliveryMethod
 
 import stripe
 import json
@@ -34,6 +35,12 @@ def checkout(request):
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
+        selected_delivery_method_id = request.POST.get('delivery_method')
+        # Use the selected delivery method or fall back to standard if none is selected
+        if selected_delivery_method_id:
+            selected_delivery_method = get_object_or_404(DeliveryMethod, pk=selected_delivery_method_id)
+        else:
+            selected_delivery_method = DeliveryMethod.objects.filter(name='Standard: 5-10 days').first()
 
         form_data = {
             'full_name': request.POST['full_name'],
@@ -45,6 +52,7 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
+            'delivery_method': selected_delivery_method,
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
@@ -52,14 +60,26 @@ def checkout(request):
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
+            order.delivery_method = selected_delivery_method
             order.save()
+            
+            # Calculate delivery cost based on the selected or default delivery method
+            cart_weight = sum([
+                item_data * get_object_or_404(Product, pk=item_id).weight if get_object_or_404(Product, pk=item_id).weight is not None else Decimal('1.00')
+                for item_id, item_data in cart.items()
+            ])
+            
+            delivery_cost = round(selected_delivery_method.rate * cart_weight)
+            total = sum([item_data * get_object_or_404(Product, pk=item_id).price for item_id, item_data in cart.items()])
+            grand_total = total + delivery_cost
+            
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=item_data,
+                        order=order,
+                        product=product,
+                        quantity=item_data,
                     )
                     order_line_item.save()
                 except Product.DoesNotExist:

@@ -12,15 +12,51 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 px-sm-2 px-lg-5 align-items-center">
-            <div class="d-flex justify-content-center">
-                <h5 class="px-2 text-center text-lg-start">Order History:</h5>
-                    {{ orders }}
+        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 px-1 align-items-center justify-content-center mb-5">
+            <div class="text-center">
+                <h5 class="px-2 text-center">Order History:</h5>
+                <div class="d-flex justify-content-center">
+                    <div class="order-history table-responsive">
+                        <table class="table-orders-history">
+                            <thead>
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Order Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for order in orders %}
+                                    <tr>
+                                        <td>
+                                            <a href="{% url 'order_history' order.order_number %}"
+                                            title="{{ order.order_number }}">
+                                                {{ order.order_number|truncatechars:6 }}
+                                            </a>
+                                        </td>
+                                        <td>{{ order.date }}</td>
+                                        <td>
+                                            <ul class="list-unstyled">
+                                                {% for item in order.lineitems.all %}
+                                                    <li class="small">
+                                                        {{ item.product.name }} x{{ item.quantity }}
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </td>
+                                        <td>${{ order.grand_total }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 px-sm-2 px-lg-5 align-items-center justify-content-center">
+        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 px-sm-2 px-lg-5 align-items-center justify-content-center mb-5">
             <div class="d-flex justify-content-center">
-                <h5 class="mb-0 text-center">Default Delivery Information:</h5>
+                <h5 class="mb-0 text-center">Default Delivery Details:</h5>
             </div>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
@@ -35,7 +71,7 @@
                     {{ form.default_postcode | as_crispy_field }}
                 </fieldset>
                 <div class="d-flex justify-content-center">
-                    <button class="btn btn-update">Update Information</button>
+                    <button class="btn btn-profile">Update Information</button>
                 </div>
             </form>
         </div>        

@@ -152,5 +152,14 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+			<div class="col-12 col-lg-7 text-right">
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-profile">
+                        <span class="text-uppercase">Back to Profile</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
     </div>
 {% endblock %}

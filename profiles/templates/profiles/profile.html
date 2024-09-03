@@ -11,5 +11,34 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 px-sm-2 px-lg-5 align-items-center">
+            <div class="d-flex justify-content-center">
+                <h5 class="px-2 text-center text-lg-start">Order History:</h5>
+                    {{ orders }}
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 px-sm-2 px-lg-5 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <h5 class="mb-0 text-center">Default Delivery Information:</h5>
+            </div>
+            <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                {% csrf_token %}
+                <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
+                    <div class="select-container">
+                        {{ form.default_country | as_crispy_field }}
+                    </div> 
+                    {{ form.default_street_address1 | as_crispy_field }}
+                    {{ form.default_street_address2 | as_crispy_field }}
+                    {{ form.default_town_or_city | as_crispy_field }}
+                    {{ form.default_county | as_crispy_field }}
+                    {{ form.default_postcode | as_crispy_field }}
+                </fieldset>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-update">Update Information</button>
+                </div>
+            </form>
+        </div>        
+    </div>
 </div>
 {% endblock %}

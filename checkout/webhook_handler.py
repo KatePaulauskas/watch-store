@@ -2,6 +2,7 @@ from django.http import HttpResponse
 
 from .models import Order, OrderLineItem
 from shop.models import Product
+from profiles.models import UserProfile
 
 import json
 import time
@@ -27,7 +28,7 @@ class StripeWH_Handler:
         intent = event.data.object
         pid = intent.id
         cart = intent.metadata.cart
-        save_info = intent.metadata.save_info
+        save_info = intent.metadata.get('save_info', 'false').lower() == 'true'
 
         # Get the Charge object
         stripe_charge = stripe.Charge.retrieve(
@@ -36,12 +37,36 @@ class StripeWH_Handler:
 
         billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
-        grand_total = round(stripe_charge.amount / 100, 2) 
+        grand_total = round(stripe_charge.amount / 100, 2)
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
+
+        # Update profile information if save_info was checked
+        profile = None
+        username = intent.metadata.get('username', 'AnonymousUser')
+        
+        # Check if the user is authenticated (not 'AnonymousUser') and save_info is true
+        if username != 'AnonymousUser':
+            try:
+                profile = UserProfile.objects.get(user__username=username)
+                if save_info:
+                    # Update profile with shipping details if save_info is checked
+                    profile.default_phone_number = shipping_details.get('phone', profile.default_phone_number)
+                    profile.default_country = shipping_details.address.get('country', profile.default_country)
+                    profile.default_postcode = shipping_details.address.get('postal_code', profile.default_postcode)
+                    profile.default_town_or_city = shipping_details.address.get('city', profile.default_town_or_city)
+                    profile.default_street_address1 = shipping_details.address.get('line1', profile.default_street_address1)
+                    profile.default_street_address2 = shipping_details.address.get('line2', profile.default_street_address2)
+                    profile.default_county = shipping_details.address.get('state', profile.default_county)
+                    profile.save()
+                    print(f"Profile updated for user: {username}")
+            except UserProfile.DoesNotExist:
+                print(f"UserProfile not found for {username}")
+            except Exception as e:
+                print(f"Error updating profile for {username}: {e}")
 
         order_exists = False
         attempt = 1
@@ -66,10 +91,12 @@ class StripeWH_Handler:
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
+
         if order_exists:
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
-                status=200)
+                status=200
+            )
         else:
             order = None
             try:
@@ -95,25 +122,18 @@ class StripeWH_Handler:
                             quantity=item_data,
                         )
                         order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            order_line_item.save()
             except Exception as e:
                 if order:
-                    order.delete()
+                    order.delete()  # Rollback if there’s an error
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
-                    status=500)
+                    status=500
+                )
+
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
-            status=200)
-
+            status=200
+        )
 
     def handle_payment_intent_payment_failed(self, event):
         """
@@ -121,4 +141,5 @@ class StripeWH_Handler:
         """
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
-            status=200)
+            status=200
+        )

@@ -176,7 +176,8 @@ input.search-bar {
 /* Style buttons */
 .btn-explore, 
 .btn-account,
-.btn-add {
+.btn-add,
+.btn-profile {
     background-color: #e4c58a !important;
     color: #230903 !important;
     width: 100px !important;
@@ -224,10 +225,15 @@ input.search-bar {
     width: 150px !important;
 }
 
+.btn-profile {
+    width: 180px !important;
+}
+
 .btn-explore:hover,
 .btn-account:hover,
 .btn-add:hover,
-.btn-cart:hover {
+.btn-cart:hover,
+.btn-profile:hover {
     background-color: #230903 !important;
     color: #e4c58a !important;
     border: 1px solid #e4c58a !important;
@@ -235,8 +241,9 @@ input.search-bar {
 
 .btn-explore:active,
 .btn-account:active,
-.btn-add:active
-.btn-cart:active {
+.btn-add:active,
+.btn-cart:active,
+.btn-profile:active {
     border: 2px solid #aa9159 !important;
     background-color: #230903 !important;
     color: #e4c58a !important;
@@ -287,8 +294,8 @@ input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 15px;
-    height: 15px;
+    width: 15px !important;
+    height: 15px !important;
     border: 1px solid #e4c58a; 
     background-color: #113227;
     cursor: pointer;
@@ -314,7 +321,7 @@ input[type="checkbox"] {
     transform: rotate(45deg);
 }
 
-/* Style Sign Up form */
+/* Style Sign Up and Login forms */
 .signup ul {
     text-align: center;
     margin-bottom: 0px;
@@ -330,7 +337,7 @@ input[type="checkbox"] {
 }
 
 .signup input {
-    color: #230903;
+    width: 250px !important;
 }
 
 /* Style Error List */
@@ -502,8 +509,8 @@ input[type="checkbox"] {
 /* Style Cart Page */
 
 .table {
-    --bs-table-bg: #113227; /* Your desired background color */
-    --bs-table-color: #E4C58A; /* Your desired text color */
+    --bs-table-bg: #113227 !important;
+    --bs-table-color: #E4C58A !important;
 }
 
 .table td {
@@ -540,7 +547,7 @@ table tr {
     --bs-btn-disabled-border-color: #113227 !important;
 }
 
-/* Style Checkout Page */
+/* Style Checkout and Profile Pages */
 
 .text-info {
     color: #FBFAF8 !important;
@@ -569,11 +576,13 @@ input[type="radio"] {
     accent-color: #e4c58a !important;
 }
 
-.stripe-style-input {
+.stripe-style-input,
+.profile-form-input {
     border: 1px solid #aa9159 !important;
 }
 
-.stripe-style-input::placeholder {
+.stripe-style-input::placeholder,
+.profile-form-input::placeholder {
     color: #aa9159 !important;
 }
 
@@ -600,7 +609,9 @@ hr {
 
 .StripeElement--focus,
 .stripe-style-input:focus,
-.stripe-style-input:active {
+.stripe-style-input:active,
+.profile-form-input:focus,
+.profile-form-input:active {
     box-shadow: 0 1px 3px 0 #E4C58A !important;
     color: #AA9159!important;
     font-weight: 100 !important;
@@ -670,6 +681,27 @@ hr {
     color: #E4C58A !important;
     -webkit-box-shadow: 0 0 0px 1000px #113227 inset !important;
     -webkit-text-fill-color: #E4C58A !important;
+}
+
+/* Style Profile page */
+
+.order-history {
+    /* height of profile form + submit button */
+    max-height: 416px;
+    overflow-y: auto;
+}
+
+.table-orders-history {
+    color: #AA9159 !important;
+}
+
+ul.list-unstyled {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 /* Style Thank you page */
@@ -779,7 +811,8 @@ font-size: 100% !important;
     #payment-form input,
     .StripeElement,
     .stripe-style-input,
-    #id-country {
+    #id-country,
+    .profile-form-input {
         width: 250px !important;
         height: 35px !important;
     }
@@ -792,6 +825,13 @@ font-size: 100% !important;
     #payment-form #id-save-info {
         width: 15px !important;
         height: 15px !important;
+    }
+    
+    /* Style Profile page */
+    .table-orders-history, th, td, tr {
+        font-size: 14px !important;
+        font-weight: 200 !important;
+        padding: 5px !important;
     }
 }
 
@@ -899,7 +939,8 @@ font-size: 100% !important;
     #payment-form input,
     .StripeElement,
     .stripe-style-input,
-    #id-country {
+    #id-country,
+    .profile-form-input {
         width: 300px !important;
     }
 
@@ -1002,6 +1043,11 @@ font-size: 100% !important;
     /* Style Shop page. 3 products per row */
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Style Profile page */
+    .table-orders-history, td, tr {
+        font-size: 16px !important;
     }
 }
 

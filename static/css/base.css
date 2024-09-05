@@ -217,7 +217,7 @@ input.search-bar {
 }
 
 .btn-reset {
-    width: 150px !important;
+    width: 170px !important;
     height: 40px !important;
 }
 
@@ -269,7 +269,7 @@ textarea {
     color: #E4C58A !important;
     border-radius: 5px !important;
     border-color: #E4C58A !important;
-    width: 200px !important;
+    width: 280px !important;
 }
 
 /* Override background color in forms when autifilled in browser. Source: CSS Tricks */

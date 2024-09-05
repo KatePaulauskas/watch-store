@@ -1,4 +1,7 @@
 from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
 
 from .models import Order, OrderLineItem
 from shop.models import Product
@@ -12,6 +15,28 @@ class StripeWH_Handler:
 
     def __init__(self, request):
         self.request = request
+
+    def _send_confirmation_email(self, order):
+        """Send the user a confirmation email"""
+        try:
+            cust_email = order.email
+            subject = render_to_string(
+                'checkout/confirmation_emails/confirmation_email_subject.txt',
+                {'order': order})
+            body = render_to_string(
+                'checkout/confirmation_emails/confirmation_email_body.txt',
+                {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [cust_email]
+            )
+            print(f"Confirmation email sent to {cust_email}")
+        except Exception as e:
+            print(f"Error sending confirmation email: {e}")
+
 
     def handle_event(self, event):
         """
@@ -31,9 +56,7 @@ class StripeWH_Handler:
         save_info = intent.metadata.get('save_info', 'false').lower() == 'true'
 
         # Get the Charge object
-        stripe_charge = stripe.Charge.retrieve(
-            intent.latest_charge
-        )
+        stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
 
         billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
@@ -47,13 +70,11 @@ class StripeWH_Handler:
         # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.get('username', 'AnonymousUser')
-        
-        # Check if the user is authenticated (not 'AnonymousUser') and save_info is true
+
         if username != 'AnonymousUser':
             try:
                 profile = UserProfile.objects.get(user__username=username)
                 if save_info:
-                    # Update profile with shipping details if save_info is checked
                     profile.default_phone_number = shipping_details.get('phone', profile.default_phone_number)
                     profile.default_country = shipping_details.address.get('country', profile.default_country)
                     profile.default_postcode = shipping_details.address.get('postal_code', profile.default_postcode)
@@ -62,12 +83,10 @@ class StripeWH_Handler:
                     profile.default_street_address2 = shipping_details.address.get('line2', profile.default_street_address2)
                     profile.default_county = shipping_details.address.get('state', profile.default_county)
                     profile.save()
-                    print(f"Profile updated for user: {username}")
             except UserProfile.DoesNotExist:
-                print(f"UserProfile not found for {username}")
-            except Exception as e:
-                print(f"Error updating profile for {username}: {e}")
+                pass
 
+        # Check if the order already exists
         order_exists = False
         attempt = 1
         while attempt <= 5:
@@ -93,6 +112,8 @@ class StripeWH_Handler:
                 time.sleep(1)
 
         if order_exists:
+            # If the order exists, send a confirmation email
+            self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200
@@ -115,21 +136,22 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(cart).items():
                     product = Product.objects.get(id=item_id)
-                    if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
-                            order=order,
-                            product=product,
-                            quantity=item_data,
-                        )
-                        order_line_item.save()
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
             except Exception as e:
                 if order:
-                    order.delete()  # Rollback if there’s an error
+                    order.delete()  # Rollback if there's an error
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500
                 )
 
+        # Send confirmation email after the order is created
+        self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200
@@ -141,5 +163,4 @@ class StripeWH_Handler:
         """
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
-            status=200
-        )
+            status=200)

@@ -96,3 +96,40 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
+
+def edit_product(request, product_id):
+    """ Edit a product in the store """
+    product = get_object_or_404(Product, pk=product_id)
+
+    # Pre-select categories
+    product_categories = list(product.categories.all())  # Get all categories assigned to the product
+    initial_data = {
+        'category_1': product_categories[0] if len(product_categories) > 0 else None,
+        'category_2': product_categories[1] if len(product_categories) > 1 else None,
+    }
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product updated successfully!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = ProductForm(instance=product, initial=initial_data)
+
+    template = 'shop/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+def cancel_action(request):
+    messages.add_message(request, messages.INFO,
+                         "Action cancelled. No changes were saved.")
+
+    return redirect('shop')

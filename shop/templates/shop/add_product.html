@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="h1 mt-4">Manage Products</h1>
+            <h5>Add a Product</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <form action="{% url 'add_product' %}" method="POST" id="add-product-form" enctype="multipart/form-data" class="w-75 text-center my-3">
+                {% csrf_token %}
+                {{ form.name | as_crispy_field }}
+                {{ form.sku | as_crispy_field }}
+                {{ form.description | as_crispy_field }}
+                <div class="mb-3">
+                    <label for="id_category_1" class="mb-2">Category 1</label>
+                    <br>
+                    {{ form.category_1 }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_category_2" class="mb-2">Category 2</label>
+                    <br>
+                    {{ form.category_2 }}
+                </div>
+                {{ form.price | as_crispy_field }}
+                {{ form.rating | as_crispy_field }}
+                {{ form.image | as_crispy_field }}
+                {{ form.weight | as_crispy_field }}
+                {{ form.availability | as_crispy_field }}
+                <div class="mt-auto d-flex flex-column align-items-center flex-sm-row justify-content-center">
+                    <a href="{% url 'shop' %}" class="btn btn-profile m-2">Cancel</a>
+                    <button class="btn btn-profile m-2" type="submit">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}

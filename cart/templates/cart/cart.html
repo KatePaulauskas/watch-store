@@ -32,12 +32,12 @@
                         {% for item in cart_items %}
                             <tr>
                                 <td class="img-col p-0 w-25">
-                                    <a href="{% url 'product_detail' item.product.id %}">
+                                    <a href="{% url 'product_page' item.product.id %}">
                                         <img class="img-fluid cart-img" src="{{ item.product.image.url }}">
                                     </a>
                                 </td>
                                 <td class="py-0">
-                                    <a href="{% url 'product_detail' item.product.id %}" style="text-decoration: none;">
+                                    <a href="{% url 'product_page' item.product.id %}" style="text-decoration: none;">
                                         <p class="my-0 py-0"><strong>{{ item.product.name }}</strong></p>
                                     </a>
                                     <p class="my-0">SKU: {{ item.product.sku|upper }}</p>

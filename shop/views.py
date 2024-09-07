@@ -66,8 +66,8 @@ def shop(request):
     return render(request, 'shop/shop.html', context)
 
 
-def product_detail(request, product_id):
-    """ A view to show individual product details """
+def product_page(request, product_id):
+    """ A view to show individual product pages """
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
@@ -84,7 +84,7 @@ def add_product(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Product is added successfully!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product_page', args=[product.id]))
         else:
             messages.error(request, 'There was a problem adding your product, ensure the form is valid.')
     else:
@@ -114,7 +114,7 @@ def edit_product(request, product_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Product updated successfully!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product_page', args=[product.id]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
@@ -137,7 +137,17 @@ def delete_product(request, product_id):
     return redirect(reverse('shop'))
 
 def cancel_action(request):
+    """ Cancel delete action on she shop page """
     messages.add_message(request, messages.INFO,
-                         "Action cancelled. No changes were saved.")
+                         "Action cancelled. No changes were made.")
 
     return redirect('shop')
+
+def cancel_action_product_page(request, product_id):
+    """ Cancel delete action on she product page """
+    product = get_object_or_404(Product, pk=product_id)
+    messages.add_message(request, messages.INFO, "Action cancelled. No changes were made.")
+
+    return redirect(reverse('product_page', args=[product.id]))
+
+

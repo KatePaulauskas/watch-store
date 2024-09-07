@@ -22,7 +22,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = ['8002-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
     '.herokuapp.com',
     'localhost', 
     '127.0.0.1']
@@ -118,7 +118,7 @@ LOGOUT_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'watch_store.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
+    'https://8002-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
     'https://eternity-watch-store-1f855f4289ad.herokuapp.com/',
 ]
 

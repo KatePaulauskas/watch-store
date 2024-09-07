@@ -410,7 +410,8 @@ input[type="checkbox"] {
     font-size: 85% !important;
 }
 
-.product-name {
+.product-name,
+.admin {
     font-weight: 300 !important;
     color: #e4c58a;
 
@@ -448,6 +449,26 @@ input[type="checkbox"] {
 
 .sort-select-wrapper select {
     border: none !important;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    background-color: #FBFAF8;
+}
+
+.modal-title {
+    color: #113227 !important;
+}
+
+.btn-secondary {
+    color: #230903 !important;
+    background-color: #AA9159 !important;
+}
+
+#deleteConfirm {
+    color: #FBFAF8 !important;
+    background-color: #113227 !important;
 }
 
 /* Style Product page */
@@ -542,6 +563,7 @@ table tr {
 .remove-item {
     cursor: pointer;
     color: #E4C58A !important;
+    font-family: "Muli", sans-serif !important;
 }
 
 .decrement-qty {
@@ -762,6 +784,11 @@ ul.list-unstyled {
     color: #FC7C73 !important;
 }
 
+.product-edit,
+.product-delete {
+    color: #FBFAF8 !important;
+}
+
 /* Style footer */
 footer {
     border-top: 1px solid #E4C58A;
@@ -806,7 +833,7 @@ font-size: 100% !important;
     
     /* Paragraph style */
     p {
-        font-size: 95% !important;
+        font-size: 16px !important;
     }
     
     /* Header style */
@@ -854,7 +881,7 @@ font-size: 100% !important;
 
     /* Style Shop page */
     .card-body, .card-footer {
-        font-size: 110% !important;
+        font-size: 16px !important;
     }
     
     /* Style Cart table */
@@ -1019,7 +1046,8 @@ font-size: 100% !important;
     /* Style Shop page filers and sorting */
     .category-menu .nav-link,
     .sort-menu .nav-link,
-    .products-count {
+    .products-count,
+    .admin {
         font-size: 110% !important;
         }
 }

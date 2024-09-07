@@ -28,6 +28,27 @@ def add_to_cart(request, item_id):
     request.session['cart'] = cart
     return redirect(redirect_url)
 
+def shop_page_add_to_cart(request, item_id):
+    """Add product to the shopping cart from the shop page"""
+    
+    product = get_object_or_404(Product, pk=item_id)
+    redirect_url = request.POST.get('redirect_url')
+    cart = request.session.get('cart', {})
+
+    # If the product is already in the cart, increase its quantity by 1
+    if str(item_id) in cart:
+        cart[str(item_id)] += 1
+        messages.success(request, f'{product.name} quantity was updated to {cart[str(item_id)]}')
+    else:
+        # Add the product to the cart with a default quantity of 1
+        cart[str(item_id)] = 1
+        messages.success(request, f'{product.name} was added to your cart')
+
+    # Save the updated cart to the session
+    request.session['cart'] = cart
+    return redirect(redirect_url)
+
+
 def adjust_cart(request, item_id):
     """Adjust product quantity"""
 

@@ -75,6 +75,12 @@
                                     <button type="button" class="btn btn-add text-uppercase mt-4" disabled style="background-color: #ccc;">Out of Stock</button>
                                 </div>
                             {% endif %}
+                            {% if request.user.is_superuser %}
+                                <small>
+                                    <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                    <a class="" href="{% url 'delete_product' product.id %}">Delete</a>
+                                </small>
+                            {% endif %}
                         </div>
                     </form>
                 </div>

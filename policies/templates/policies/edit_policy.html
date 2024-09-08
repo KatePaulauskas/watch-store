@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="col-12">
+    <h1 class="text-center">Edit {{ policy.title }}</h1>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <form method="POST" id="edit-policy-form" class="w-75 text-center my-3">
+                {% csrf_token %}
+                {{ form.title | as_crispy_field }}
+                {{ form.content | as_crispy_field }}
+                <div class="mt-auto d-flex flex-column align-items-center flex-sm-row justify-content-center">
+                    <button type="submit" class="btn btn-profile m-2">Save Changes</button>
+                    <a href="{% url 'cancel_editing' %}" class="btn btn-profile m-2">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

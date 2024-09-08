@@ -44,8 +44,8 @@
                 {{ form.weight | as_crispy_field }}
                 {{ form.availability | as_crispy_field }}
                 <div class="mt-auto d-flex flex-column align-items-center flex-sm-row justify-content-center">
-                    <a href="{% url 'cancel_action' %}" class="btn btn-profile m-2">Cancel</a>
                     <button class="btn btn-profile m-2" type="submit">Update Product</button>
+                    <a href="{% url 'cancel_action' %}" class="btn btn-profile m-2">Cancel</a>
                 </div>
             </form>
         </div>

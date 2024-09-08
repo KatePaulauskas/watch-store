@@ -173,6 +173,7 @@
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a class="dropdown-item {% if request.path == profile %}active{% endif %}" href="{% url 'add_product' %}" class="dropdown-item">Manage Products</a>
+                                        <a class="dropdown-item {% if request.path == policies %}active{% endif %}" href="{% url 'policies' %}" class="dropdown-item">Manage Policies</a>
                                     {% endif %}
                                     <a class="dropdown-item {% if request.path == profile %}active{% endif %}" href="{% url 'profile' %}" class="dropdown-item">Profile</a>
                                     <a class="dropdown-item {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>

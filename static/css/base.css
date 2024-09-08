@@ -746,10 +746,12 @@ ul.list-unstyled {
 }
 
 /* Style Admin Pages */
-
 #add-product-form input, 
+#edit-policy-form input,
 #add-product-form select, 
-#add-product-form textarea {
+#edit-policy-form select,
+#add-product-form textarea, 
+#edit-policy-form textarea {
     width: 100% !important;
     max-width: 500px !important;
     margin: 0 auto !important;
@@ -759,7 +761,8 @@ ul.list-unstyled {
     color: #AA9159 !important;
 }
 
-#add-product-form {
+#add-product-form,
+#edit-policy-form {
     text-align: center !important;
 }
 

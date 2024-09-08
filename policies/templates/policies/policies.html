@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col=12 mx-2 mx-md-5">
+    <h1 class="text-center">Store Policies</h1>
+    <ul class="px-0">
+        {% for policy in policies %}
+            {% if policy.title == "Terms & Conditions" %}
+                <li id="terms">
+                    <h2 class="text-center">{{ policy.title }}</h2>
+                    <p>{{ policy.content|linebreaks }}</p>
+                </li>
+            {% elif policy.title == "Return Policy" %}
+                <li id="return-policy">
+                    <h2 class="text-center">{{ policy.title }}</h2>
+                    <p>{{ policy.content|linebreaks }}</p>
+                </li>
+            {% elif policy.title == "Privacy Policy" %}
+                <li id="privacy-policy">
+                    <h2 class="text-center">{{ policy.title }}</h2>
+                    <p>{{ policy.content|linebreaks }}</p>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -10,6 +10,11 @@ body {
     justify-content: space-between;
 }
 
+/* Disable horizontal scrolling */
+html, body {
+    overflow-x: hidden !important;
+}
+
 /* H1 style */
 h1 {
     font-family: "Cormorant Unicase", sans-serif !important;
@@ -570,6 +575,13 @@ table tr {
     --bs-btn-disabled-border-color: #113227 !important;
 }
 
+/* Wrap text in cart table */
+.table td {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 /* Style Checkout and Profile Pages */
 
 .text-info {
@@ -706,6 +718,12 @@ hr {
     -webkit-text-fill-color: #E4C58A !important;
 }
 
+/* Style Thank you page */
+
+.order-confirmation-wrapper {
+    border-color: #E4C58A !important;
+}
+
 /* Style Profile page */
 
 .order-history {
@@ -725,12 +743,6 @@ ul.list-unstyled {
     height: 100%;
     padding: 0;
     margin: 0;
-}
-
-/* Style Thank you page */
-
-.order-confirmation-wrapper {
-    border-color: #E4C58A !important;
 }
 
 /* Style Admin Pages */
@@ -889,6 +901,15 @@ font-size: 100% !important;
         font-size: 13px;
     }
 
+    .table .product-name-wrap {
+        max-width: 190px;
+    }
+
+    /* Remove border on the table sells that are hidden on mobile */
+    .table .d-none.d-sm-block {
+        border: none !important;
+    }
+    
     /* Style Checkout Page */
     #payment-form input,
     .StripeElement,
@@ -1017,6 +1038,10 @@ font-size: 100% !important;
         font-size: 100%;
     }
 
+    .table .product-name-wrap {
+        max-width: 250px;
+    }
+
     /* Style Checkout Page */
     #payment-form input,
     .StripeElement,
@@ -1049,7 +1074,12 @@ font-size: 100% !important;
     .products-count,
     .admin {
         font-size: 110% !important;
-        }
+    }
+
+    /* Style Cart page */
+    .table .product-name-wrap {
+        max-width: 350px;
+    }
 }
 
 /* Media query: larger devices (laptops & desktops, 992px and up) */
@@ -1126,6 +1156,11 @@ font-size: 100% !important;
     /* Style Shop page. 3 products per row */
     .product-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Style Cart page */
+    .table .product-name-wrap {
+        max-width: 500px;
     }
 
     /* Style Profile page */

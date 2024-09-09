@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% load humanize %}
+
 {% block content %}
 <div class="container-fluid">
     <div class="row">
@@ -16,9 +18,68 @@
         </div>
     </div>
 </div>
+<!-- Featured Products Section -->
 
-    <div class="popular-products">
-        <h2>Check our collection</h2>
+<div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
+    <div class="text-center mt-3">
+        <h2 class="text-center my-3 my-lg-5">Featured Products</h2>
     </div>
 
+    <div class="product-grid">
+        {% for product in featured_products %}
+        <div class="product-card">
+            <div class="card py-3">
+                {% if product.image %}
+                    <a href="{% url 'product_page' product.id %}">
+                        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                {% else %}
+                    <a href="{% url 'product_page' product.id %}">
+                        <img class="card-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                {% endif %}
+                <div class="card-body text-center py-1">
+                    <a href="{% url 'product_page' product.id %}" style="text-decoration: none;">
+                        <p class="product-name mb-0">{{ product.name }}</p>
+                    </a>
+                </div>
+                <div class="card-footer py-0">
+                    <p class="m-0 py-0">€{{ product.price|intcomma }}</p>
+                    {% if product.rating %}
+                        <p class="rating m-0 py-0">
+                            <iconify-icon icon="rivet-icons:star"  style="color: #AA9159"></iconify-icon>
+                            {{ product.rating }} / 5
+                        </p>
+                    {% else %}
+                        <p class="rating">No Rating</p>
+                    {% endif %}
+                    <!-- Add to Cart Form (for Shop Page) -->
+                    {% if product.availability %}
+                    <form action="{% url 'shop_page_add_to_cart' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <div class="col-12 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-add text-uppercase mt-4">Add to Cart</button>
+                        </div>
+                    </form>
+                    {% else %}
+                        <div class="col-12 d-flex justify-content-center">
+                            <button type="button" class="btn btn-add text-uppercase mt-4" disabled style="background-color: #ccc;">Out of Stock</button>
+                        </div>
+                    {% endif %}
+                    <br>
+                    {% if request.user.is_superuser %}
+                    <div class="admin mt-2 mt-md-3">
+                        <a href="{% url 'edit_product' product.id %}" class="mx-1 update-link product-edit">Edit</a>
+                        <a href="{% url 'delete_product' product.id %}" class="remove-item product-delete" product-id="{{ product.id }}">Delete</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center">No featured products available at the moment.</p>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

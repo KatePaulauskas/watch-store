@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-7 p-0 p-sm-2">
                     <p class="my-0 px-1">{{ item.product.name }}</p>
-                    <p class="my-0 px-0">Qty: {{ item.quantity }}</p>
+                    <p class="my-0 px-0 item-quantity">Qty: {{ item.quantity }}</p>
                 </div>
                 <div class="col-3 px-0 p-sm-2 text-end">
                     <p class="my-0 px-2">€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</p>
@@ -55,6 +55,7 @@
                 <div class="col-7 offset-1 offset-sm-2">
                     <p class="my-0">Order Total:</p>
                     <p class="my-0">Delivery:</p>
+                    <p class="my-0">Add-ons:</p>
                     <hr>
                     <h5 class="my-2"><strong>Grand Total:</strong></h5>
                 </div>
@@ -62,8 +63,11 @@
                     <input type="hidden" id="cart-weight" value="{{ cart_weight }}">
                     <p class="my-0"><span id="initial-total">{{ total|floatformat:2|intcomma }}</span></p>
                     <p class="my-0"><span id="delivery-cost">€{{ delivery|floatformat:2|intcomma }}</span></p>
+                    <p class="my-0">
+                        <span id="add-ons">€0.00</span>
+                    </p>
                     <hr>
-                    <h5 class="my-2"><span id="grand-total"><strong>€{{ grand_total|floatformat:2|intcomma }}</strong></span></h5>
+                    <h5 class="my-2"><span id="grand-total-summary"><strong>€{{ grand_total|floatformat:2|intcomma }}</strong></span></h5>
                 </div>
             </div>
         </div>
@@ -105,22 +109,22 @@
                     <fieldset class="rounded mb-5 px-5 py-1 d-flex flex-column align-items-center align-items-sm-start">
                         <div id="delivery-methods">
                             {% for method in order_form.fields.delivery_method.queryset %}
-                                <div>
-                                    <input type="radio" name="delivery_method" id="delivery_method_{{ method.pk }}" value="{{ method.pk }}" data-rate="{{ method.rate }}" {% if method.name == "Standard: 5-10 days" %} data-standard="true" {% endif %}>
-                                    <label for="delivery_method_{{ method.pk }}">{{ method.name }}</label>
+                                <div class="d-flex">
+                                    <input type="radio" class="mt-1" name="delivery_method" id="delivery_method_{{ method.pk }}" value="{{ method.pk }}" data-rate="{{ method.rate }}" {% if method.name == "Standard: 5-10 days" %} data-standard="true" {% endif %}>
+                                    <label class="px-2" for="delivery_method_{{ method.pk }}">{{ method.name }}</label>
                                 </div>
                             {% endfor %}
                         </div>
                     </fieldset>
                     <!-- Add-ons -->
-                    <div class="mb-5">
+                    <div class="mb-3">
                         <h5 class="px-2 text-center text-lg-start">Add-ons</h5>
                         <div id="add-ons">
                             {% if add_ons %}
                                 {% for add_on in add_ons %}
                                     <!-- For xs screens -->
                                     <div class="text-center d-block d-sm-none">
-                                        <input type="checkbox" class="form-check-input" value="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}" onchange="updatePrice()">
+                                        <input type="checkbox" class="form-check-input mt-1" value="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}">
                                         <label class="mb-3" for="addon{{ add_on.id }}">
                                             {{ add_on.name }}
                                             <br>
@@ -129,9 +133,9 @@
                                     </div>
 
                                     <!-- For sm and larger screens -->
-                                    <div class="d-none d-flex d-sm-block px-5">
-                                        <input type="checkbox" class="form-check-input" value="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}" onchange="updatePrice()">
-                                        <label class="mb-3" for="addon{{ add_on.id }}">
+                                    <div class="d-none d-sm-flex align-items-start px-5">
+                                        <input type="checkbox" class="form-check-input" value="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}">
+                                        <label class="mb-3 px-2" for="addon{{ add_on.id }}">
                                             {{ add_on.name }} (+€{{ add_on.price|intcomma }} per item)
                                         </label>
                                     </div>
@@ -141,6 +145,7 @@
                             {% endif %}
                         </div>
                     </div>
+                    <p class="mb-5 text-center">Your card will be charged <span id="grand-total-payment"><strong>€{{ grand_total|floatformat:2 | intcomma }}</strong></span></p>
                     <h5 class="px-2 text-center text-lg-start">Payment</h5>
                     <fieldset class="rounded px-3 mb-1 d-flex flex-column align-items-center">
                         <!-- A Stripe card element will go here -->
@@ -153,7 +158,6 @@
                     </fieldset>
                     <div class="submit-button text-end mt-2 mt-md-5 mb-2 d-flex flex-column align-items-center">
                         <button id="submit-button" class="btn btn-cart my-2">Complete Order</button>
-                        <p class="my-0 text-center">Your card will be charged <strong>€{{ grand_total|floatformat:2 | intcomma }}</strong></p>
                     </div>
                 </form>
             </div>
@@ -175,5 +179,5 @@
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/delivery_calculation.js' %}"></script>
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script> 
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

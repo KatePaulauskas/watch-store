@@ -44,6 +44,8 @@
                 <div class="col-7 p-0 p-sm-2">
                     <p class="my-0 px-1">{{ item.product.name }}</p>
                     <p class="my-0 px-0 item-quantity">Qty: {{ item.quantity }}</p>
+                    <!-- Hidden input to store the total product count for use in JavaScript -->
+                    <input type="hidden" id="product-count" value="{{ product_count }}">
                 </div>
                 <div class="col-3 px-0 p-sm-2 text-end">
                     <p class="my-0 px-2">€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</p>
@@ -124,7 +126,7 @@
                                 {% for add_on in add_ons %}
                                     <!-- For xs screens -->
                                     <div class="text-center d-block d-sm-none">
-                                        <input type="checkbox" class="form-check-input mt-1" value="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}">
+                                        <input type="checkbox" class="form-check-input mt-1" value="{{ add_on.id }}" name="add_ons" id="addon{{ add_on.id }}">
                                         <label class="mb-3" for="addon{{ add_on.id }}">
                                             {{ add_on.name }}
                                             <br>
@@ -134,7 +136,7 @@
 
                                     <!-- For sm and larger screens -->
                                     <div class="d-none d-sm-flex align-items-start px-5">
-                                        <input type="checkbox" class="form-check-input" value="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}">
+                                        <input type="checkbox" class="form-check-input" value="{{ add_on.id }}" name="add_ons" id="addon{{ add_on.id }}">
                                         <label class="mb-3 px-2" for="addon{{ add_on.id }}">
                                             {{ add_on.name }} (+€{{ add_on.price|intcomma }} per item)
                                         </label>
@@ -178,6 +180,6 @@
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/delivery_calculation.js' %}"></script>
+    <script src="{% static 'checkout/js/grand_total_calculation.js' %}"></script>
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

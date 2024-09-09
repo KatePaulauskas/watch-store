@@ -179,6 +179,29 @@ input.search-bar {
          1px  1px 0 #230903;
 }
 
+/* Home page style */
+.about-us {
+    color:#E4C58A !important;
+    text-align: justify !important;
+}
+
+.home {
+    color: #E4C58A !important;
+    font-weight: 200;
+}
+.values {
+    color: #E4C58A !important;
+    font-weight: 150;
+    font-family: "Muli", sans-serif !important;
+}
+
+.home-bottom-image {
+    background: url('/images/home_page/home_bottom_image.webp');
+    background-size: cover;
+    background-position: center center;
+    height: 350px;
+}
+
 /* Style buttons */
 .btn-explore, 
 .btn-account,
@@ -1067,6 +1090,11 @@ font-size: 100% !important;
     .img-logo {
         width: 170px;
     }
+
+    /* Home page style */
+    .values {
+        font-size: 110%;
+    }
     
     /* Style Product page */
     .product-page-name {
@@ -1151,6 +1179,11 @@ font-size: 100% !important;
         margin-top: 30px;
         font-size: 150% !important;
         width: 120px !important;
+    }
+
+    /* Home page style */
+    .values {
+        font-size: 120%;
     }
 
     /* Style Forms */

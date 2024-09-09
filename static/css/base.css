@@ -620,6 +620,7 @@ select option {
 select:invalid,
 select option[value=""],
 input[type="radio"] + label,
+input[type="checkbox"] + label,
 #card-element {
     color: #AA9159!important;
     font-weight: 100 !important;
@@ -953,7 +954,9 @@ font-size: 100% !important;
         height: 15px !important;
     }
 
-    #payment-form #id-save-info {
+    #payment-form #id-save-info,
+    #payment-form #addon1,
+    #payment-form #addon2 {
         width: 15px !important;
         height: 15px !important;
     }

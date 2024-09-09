@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, AddOn
 from shop.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
@@ -34,6 +34,9 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+
+    # Fetch available add-ons
+    add_ons = AddOn.objects.all()
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
@@ -139,6 +142,7 @@ def checkout(request):
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+        'add_ons': add_ons,
     }
 
     return render(request, template, context)

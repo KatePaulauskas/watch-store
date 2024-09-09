@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, AddOn
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
@@ -28,4 +28,8 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ('-date',)
 
+class AddOnAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price',)
+
 admin.site.register(Order, OrderAdmin)
+admin.site.register(AddOn, AddOnAdmin)

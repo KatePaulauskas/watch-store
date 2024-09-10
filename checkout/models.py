@@ -39,13 +39,17 @@ class Order(models.Model):
         """Generate a random, unique order number using UUID"""
         return uuid.uuid4().hex.upper()
 
+
     def update_total(self, delivery_type='standard'):
         """Update grand total each time a line item is added, accounting for delivery costs."""
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or Decimal('0')
-        if delivery_type == 'priority':
-            self.delivery_cost = Decimal(settings.PRIORITY_DELIVERY)
+
+        # Calculate grand total (order total + delivery cost)
+        if self.delivery_method:
+            self.delivery_cost = self.delivery_method.rate
         else:
-            self.delivery_cost = Decimal(settings.STANDARD_DELIVERY)
+            self.delivery_cost = Decimal(0)  # Default to 0 if no delivery method is selected
+
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 

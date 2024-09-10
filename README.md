@@ -1422,7 +1422,10 @@ The Eternity Luxury Watch Store comprises of several key pages, each designed to
 
 The Database Structure below visualises the relationships between the key models of the project. The database schema is designed to effectively manage purchasing process.
 
-![Database Structure](/media/database-structure.webp)
+![Database Structure](/media/database-structure.png)
+
+![Database Structure Policies](/media/database-structure-policies.png)
+
 
 ### Skeleton
 

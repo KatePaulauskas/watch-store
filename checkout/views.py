@@ -75,22 +75,14 @@ def checkout(request):
             ])
             
             delivery_cost = round(selected_delivery_method.rate * cart_weight)
-            total = sum([item_data * get_object_or_404(Product, pk=item_id).price for item_id, item_data in cart.items()])
+            order.delivery_cost = delivery_cost  # Store the calculated delivery cost
 
-            # Calculate add-ons total
             selected_add_ons = request.POST.getlist('add_ons')
-            add_on_total = 0
             if selected_add_ons:
                 add_ons_queryset = AddOn.objects.filter(pk__in=selected_add_ons)
-                for item_id, item_data in cart.items():
-                    quantity = item_data
-                    for add_on in add_ons_queryset:
-                        add_on_total += add_on.price * quantity
+                order.add_ons.set(add_ons_queryset)
 
-            # Calculate grand total
-            grand_total = total + add_on_total + delivery_cost
-            
-             # Create order line items and save the order
+            # Create order line items and save the order
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -108,11 +100,9 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('view_cart'))
 
-            # Update order with totals
-            order.add_ons_total = add_on_total
-            order.grand_total = grand_total
-            order.save()
-
+            # Update order with totals, including add-ons and delivery cost
+            order.update_total() 
+            
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('thank_you', args=[order.order_number]))
         else:

@@ -111,9 +111,9 @@
                     <fieldset class="rounded mb-5 px-5 py-1 d-flex flex-column align-items-center align-items-sm-start">
                         <div id="delivery-methods">
                             {% for method in order_form.fields.delivery_method.queryset %}
-                                <div class="d-flex">
-                                    <input type="radio" class="mt-1" name="delivery_method" id="delivery_method_{{ method.pk }}" value="{{ method.pk }}" data-rate="{{ method.rate }}" {% if method.name == "Standard: 5-10 days" %} data-standard="true" {% endif %}>
-                                    <label class="px-2" for="delivery_method_{{ method.pk }}">{{ method.name }}</label>
+                                <div>
+                                    <input type="radio" name="delivery_method" id="delivery_method_{{ method.pk }}" value="{{ method.pk }}" data-rate="{{ method.rate }}" {% if method.name == "Standard: 5-10 days" %} data-standard="true" {% endif %}>
+                                    <label for="delivery_method_{{ method.pk }}">{{ method.name }}</label>
                                 </div>
                             {% endfor %}
                         </div>
@@ -126,24 +126,23 @@
                                 {% for add_on in add_ons %}
                                     <!-- For xs screens -->
                                     <div class="text-center d-block d-sm-none">
-                                        <input type="checkbox" class="form-check-input mt-1" value="{{ add_on.id }}" name="add_ons" id="addon{{ add_on.id }}">
+                                        <input type="checkbox" class="form-check-input mt-1" value="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}">
                                         <label class="mb-3" for="addon{{ add_on.id }}">
                                             {{ add_on.name }}
                                             <br>
                                             <small>(+€{{ add_on.price|intcomma }} per item)</small>
                                         </label>
                                     </div>
-
                                     <!-- For sm and larger screens -->
                                     <div class="d-none d-sm-flex align-items-start px-5">
-                                        <input type="checkbox" class="form-check-input" value="{{ add_on.id }}" name="add_ons" id="addon{{ add_on.id }}">
+                                        <input type="checkbox" class="form-check-input" value="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}">
                                         <label class="mb-3 px-2" for="addon{{ add_on.id }}">
                                             {{ add_on.name }} (+€{{ add_on.price|intcomma }} per item)
                                         </label>
                                     </div>
                                 {% endfor %}
-                                {% else %}
-                                    <p>No add-ons available.</p>
+                            {% else %}
+                                <p>No add-ons available.</p>
                             {% endif %}
                         </div>
                     </div>

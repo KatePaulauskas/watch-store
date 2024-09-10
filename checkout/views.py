@@ -81,6 +81,7 @@ def checkout(request):
             selected_add_ons = request.POST.getlist('add_ons')
             add_on_total = 0
             if selected_add_ons:
+                # Fetch AddOn objects using their IDs
                 add_ons_queryset = AddOn.objects.filter(pk__in=selected_add_ons)
                 for item_id, item_data in cart.items():
                     quantity = item_data
@@ -133,6 +134,7 @@ def checkout(request):
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
+            payment_method_types=['card'],
             )
 
         # Attempt to prefill the form with any info the user maintains in their profile

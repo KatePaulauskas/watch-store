@@ -97,10 +97,10 @@
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav me-auto pl-3">
                             <li class="nav-item">
-                                <a class="nav-link menu {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                                <a class="nav-link menu {% if request.path == home_url %}active" aria-current="page{% endif %}" href="{% url 'home' %}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link menu {% if request.path == shop_url %}active{% endif %}" aria-current="page" href="{% url 'shop' %}">Shop</a>
+                                <a class="nav-link menu {% if request.path == shop_url %}active" aria-current="page{% endif %}" href="{% url 'shop' %}">Shop</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link menu {% if request.path == contact_url %}active{% endif %}" aria-current="page" href="#">Contact</a>
@@ -172,13 +172,21 @@
                             <div class="dropdown-menu border-0 m-1 p-1" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
-                                        <a class="dropdown-item {% if request.path == profile %}active{% endif %}" href="{% url 'add_product' %}" class="dropdown-item">Manage Products</a>
-                                        <a class="dropdown-item {% if request.path == policies %}active{% endif %}" href="{% url 'policies' %}" class="dropdown-item">Manage Policies</a>
+                                        {% url 'add_product' as add_product_url %}
+                                        <a class="dropdown-item {% if request.path == add_product_url %}active{% endif %}" href="{{ add_product_url }}">Manage Products</a>
+
+                                        {% url 'policies' as policies_url %}
+                                        <a class="dropdown-item {% if request.path == policies_url %}active{% endif %}" href="{{ policies_url }}">Manage Policies</a>
                                     {% endif %}
-                                    <a class="dropdown-item {% if request.path == profile %}active{% endif %}" href="{% url 'profile' %}" class="dropdown-item">Profile</a>
-                                    <a class="dropdown-item {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                                    
+                                    {% url 'profile' as profile_url %}
+                                    <a class="dropdown-item {% if request.path == profile_url %}active{% endif %}" href="{{ profile_url }}">Profile</a>
+
+                                    {% url 'account_logout' as logout_url %}
+                                    <a class="dropdown-item {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{{ logout_url }}">Logout</a>
                                 {% else %}
-                                    <a class="dropdown-item {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login/Register</a>
+                                    {% url 'account_login' as login_url %}
+                                    <a class="dropdown-item {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{{ login_url }}">Login/Register</a>
                                 {% endif %}
                             </div>
                         </li>

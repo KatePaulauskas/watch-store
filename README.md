@@ -1524,15 +1524,15 @@ In addition to the selected fonts, the backdrop font across the website is also 
 
 ### Header
 
-The header of the Eternity Luxury Watch Store website is designed to provide essential functionality and enhance user experience. It includes a search bar, shopping cart icon, and account icon, all prominently positioned for easy access. The logo, representing the brand's identity, is centered in the header to ensure strong brand recognition.
+The header of the Eternity Luxury Watch Store website is designed to provide essential functionality and enhance user experience. It includes navigation bar, search bar, shopping cart icon, and account icon, all prominently positioned for easy access. The logo, representing the brand's identity, is centered in the header to ensure strong brand recognition.
 
-On the left side of the header, the navigation bar allows users to explore the site with ease. The search bar, cart icon, and account icon are aligned on the right, offering quick access to product searches, shopping cart overview, and account management. These elements ensure that users can efficiently browse and manage their shopping experience.
+On the left side of the header, the navigation bar allows users to explore the site with ease. The search bar is aligned to the center offering quick access to product searches, while cart and account icons are aligned on the right, offering quick access to product searches, shopping cart overview, and account management. These elements ensure that users can efficiently browse and manage their shopping experience.
 
-![Header](/media/header.webp)
+![Header](/media/header.jpeg)
 
 ### Navigation Bar
 
-The fully responsive navigation bar is displayed across all site pages, allowing seamless navigation throughout the website. It includes links to the main site sections: Home, Shop, Brands, and Contact. The design remains consistent across all devices, ensuring a cohesive user experience.
+The fully responsive navigation bar is displayed across all site pages, allowing seamless navigation throughout the website. It includes links to the main site sections: Home, Shop and Contact. The design remains consistent across all devices, ensuring a cohesive user experience.
 
 * **Desktop View:**
   
@@ -1540,11 +1540,19 @@ The fully responsive navigation bar is displayed across all site pages, allowing
 
   ![Desktop Navbar](/media/navbar-desktop.webp)
 
-* **Tablet and Mobile View:**
+* **Mobile View:**
   
-  On tablets and mobile devices, the navigation bar is represented by a hamburger icon. Clicking on this icon reveals a drop-down menu with the current page highlighted, ensuring smooth navigation. The search bar, cart, and account icons are prominently displayed for easy access.
+  On tablets and mobile devices, the navigation bar is represented by a hamburger icon. 
 
-  ![Tablet and Mobile Navbar Opened](/media/mobile-tablet-navbar-opened.webp)
+  ![Mobile Navbar Closed](/media/navbar-menu-closed.jpeg)
+
+  Clicking on this icon reveals a drop-down menu with the current page highlighted, ensuring smooth navigation. The search bar, cart, and account icons are prominently displayed for easy access.
+
+  ![Mobile Navbar Opened](/media/navbar-menu.jpeg)
+
+Account Menu Regular User
+
+![Account Menu Regular User](account-menu-reg-user.jpeg)
 
 ### Home Page
 
@@ -1552,17 +1560,17 @@ The fully responsive navigation bar is displayed across all site pages, allowing
 
 When users first visit the Eternity Luxury Watch Store website, they are greeted with an inviting hero image featuring a luxury watch. This section is designed to captivate the user’s attention immediately, creating a strong first impression of the store's curated selection of high-quality timepieces.
 
-![Above Fold](/media/above-fold.webp)
+![Above Fold](/media/above-fold.jpeg)
 
-#### Popular Products
+#### Featured Products
 
-![Popular products](/media/popular-products.webp)
+![Popular products](/media/featured-products.jpeg)
 
 #### About Us
 
 The About Us section provides visitors with a comprehensive overview of the brand's mission and vision. It emphasizes Eternity's commitment to offering affordable luxury watches. This section builds trust and fosters a connection with potential customers by highlighting the brand’s dedication to quality and customer satisfaction.
 
-![About Us](/media/about-eternity-luxury-watches.webp)
+![About Us](/media/about-us.jpeg)
 
 ### Shop Page
 
@@ -1574,7 +1582,7 @@ The Shop Page is the central hub where customers can browse Eternity's curated c
 
 The Product Page offers a detailed view of each luxury watch, showcasing comprehensive descriptions, specifications, and high-resolution images. This page allows customers to explore the finer details of the timepieces, including price and customer ratings. Additionally, the Product Page provides options for customers to select the desired quantity. A prominently placed "Add to Cart" button ensures that customers can easily proceed with their purchase, making the shopping experience seamless and straightforward. At the top of the page, a "Back to Shop" button allows customers to return to the shop and browse through other products if needed.
 
-![Product Page](/media/product-page.webp)
+![Product Page](/media/product-page.jpeg)
 
 The product availability feature allows for effective management and display of the stock status of products in the store. Admins can mark products as either "available" or "out of stock" based on their current inventory status. When a product is marked as unavailable in the admin panel, an "Out of Stock" button is displayed on the Product Page. This button is disabled and styled differently to indicate that the product cannot be purchased. The presence of the "Out of Stock" button ensures that customers are informed about the unavailability of the product, enhancing the shopping experience by setting clear expectations.
 
@@ -1588,9 +1596,7 @@ The Cart Page provides an overview of the items a customer intends to purchase. 
 
 ### Checkout Page
 
-
-
-![About Us](/media/about-eternity-luxury-watches.webp)
+![Checkout Page](/media/checkout-page.webp)
 
 ### Contact Us Page
 
@@ -1606,17 +1612,28 @@ Upon submitting a request through the form, the user receives a notification con
 
 The Log In page allows existing customers to access their accounts and view their orders. This page ensures secure authentication and provides a straightforward way for users to log in and access personalised experience. There is also a prompt to reset their password if needed.
 
+![Account Login Menu](/media/account-login-menu.jpeg)
+
+![Account Login Page](/media/account-login-page.png)
+
+![Account Menu Admin](/media/account-menu-admin.png)
+
 ![Log In Page](/media/log-in-page.jpeg)
 
 After logging in, customers are directed to their account dashboard and notified of a successful login:
 
-![Header for Logged In User](/media/header-user-logged-in.jpeg)
+![Password reset page](/media/password-reset.jpeg)
 
-### Sign Up Page
+![Password Reset Link Sent](/media/password-reset-link.jpeg)
+
+![Sign In Success Admin](/media/sign-in-success.jpeg)
+![Sign In Success Regular User](/media/sign-in-success-reg-user.jpeg)
+
+### Register an Account Page
 
 If a customer does not have an existing account, they can click on the 'Sign Up' link on the Log In page. They are then redirected to the Sign Up page, which allows new users to create an account, enabling them to track their orders and manage their account details online.
 
-![Sign Up Page](/media/sign-up-page.jpeg)
+![Register an Account Page](/media/register-account-page.png)
 
 If a user does not follow the recommendations for creating secure credentials, notifications appear in a bright color to draw their attention to the issue and help them correct it.
 
@@ -1624,7 +1641,13 @@ If a user does not follow the recommendations for creating secure credentials, n
 
 After signing up, customers are directed to their account dashboard and notified of their successful account creation:
 
-![Sign Up Page Success Message](/media/sign-up-success-message.jpeg)
+![Request to Confirm Email.jpeg](/media/request-to-confirm-email.jpeg)
+
+![Request to Verify Email Address](/media/verify-email-address.jpeg)
+
+![email-confirmed-notification](/media/email-confirmed-notification.jpeg)
+
+![Email Confirmed - Redirect to Login Page](email-confirmed-notification-full-page.jpeg)
 
 ### Log Out Page
 
@@ -1635,6 +1658,12 @@ Upon clicking the Log Out button in the header, the user is taken to the Log Out
 Upon confirmation, the user is redirected to the home page and notified of their successful action:
 
 ![Sign Out Confirmation](/media/sign-out-confirmation.jpeg)
+
+### Store Policies
+
+![Edit Policies Terms and Conditions](/media/edit-policies-terms-and-conditions.jpeg)
+
+![Policy Updated Successfully Notification](/media/policy-updated-successfully.jpeg)
 
 ### Footer
 
@@ -1654,6 +1683,20 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 ![404 Error Page](/media/404-error-page.jpeg)
 
 ### Admin Access Features
+
+![Product Page Admin](/media/product-page-admin.jpeg)
+
+#### Store Policies Admin
+
+![Terms & onditions Eedit.jpeg](/media/terms-and-conditions-edit.jpeg)
+
+![Return Policy Edit.jpeg](/media/return-policy-edit.jpeg)
+
+![Privacy Policy Edit.jpeg](/media/privacy-policy-edit.jpeg)
+
+![Edit Policies Terms and Conditions](/media/edit-policies-terms-and-conditions.jpeg)
+
+![Policy Updated Successfully Notification](/media/policy-updated-successfully.jpeg)
 
 ### Future Features
 

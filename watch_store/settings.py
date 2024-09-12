@@ -164,6 +164,8 @@ cloudinary.config(
     secure=True
 )
 
+X_FRAME_OPTIONS = 'ALLOW-FROM https://eternity-watch-store-1f855f4289ad.herokuapp.com/'
+
 # Static files settings
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]

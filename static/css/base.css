@@ -89,6 +89,19 @@ header p {
     text-decoration: underline !important;
 }
 
+/* Hover effect for all links */
+.nav-link:hover {
+    text-decoration: underline !important;
+}
+
+.dropdown-item {
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    text-decoration: underline;
+}
+
 /* Style toggler hamburger icon. Source: Stackoverflow */
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23E4C58A' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -366,7 +379,7 @@ input[type="checkbox"] {
 }
 
 .signup input {
-    width: 250px !important;
+    width: 300px !important;
 }
 
 /* Style Error List */
@@ -380,6 +393,10 @@ input[type="checkbox"] {
 .errorlist {
     color: #FC7C73 !important;
     list-style: inside;
+}
+
+a {
+    color: #FBFAF8 !important;
 }
 
 /* Style Links */

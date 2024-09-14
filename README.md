@@ -1526,7 +1526,9 @@ In addition to the selected fonts, the backdrop font across the website is also 
 
 The header of the Eternity Luxury Watch Store website is designed to provide essential functionality and enhance user experience. It includes navigation bar, search bar, shopping cart icon, and account icon, all prominently positioned for easy access. The logo, representing the brand's identity, is centered in the header to ensure strong brand recognition.
 
-On the left side of the header, the navigation bar allows users to explore the site with ease. The search bar is aligned to the center offering quick access to product searches, while cart and account icons are aligned on the right, offering quick access to product searches, shopping cart overview, and account management. These elements ensure that users can efficiently browse and manage their shopping experience.
+![Eternity Watch Store Logo](/media/logo.webp)
+
+On the left side of the header, the navigation bar allows users to explore the site with ease. The search bar is aligned to the center offering quick access to product searches, while cart and account icons are aligned on the right, offering quick access to shopping cart overview, and account management. These elements ensure that users can efficiently browse and manage their shopping experience.
 
 ![Header](/media/header.jpeg)
 
@@ -1538,21 +1540,53 @@ The fully responsive navigation bar is displayed across all site pages, allowing
   
   The navigation bar links are displayed horizontally, with the active page highlighted to indicate the user's current location on the site.
 
-  ![Desktop Navbar](/media/navbar-desktop.webp)
+  ![Desktop Navbar](/media/navbar-desktop.jpeg)
 
 * **Mobile View:**
   
   On tablets and mobile devices, the navigation bar is represented by a hamburger icon. 
 
-  ![Mobile Navbar Closed](/media/navbar-menu-closed.jpeg)
+  ![Mobile Navbar Closed](/media/navbar-mob-closed.jpeg)
 
-  Clicking on this icon reveals a drop-down menu with the current page highlighted, ensuring smooth navigation. The search bar, cart, and account icons are prominently displayed for easy access.
+ Clicking on this icon reveals a drop-down menu with the current page highlighted, ensuring smooth navigation. The user's login status is also displayed in the dropdown menu. Additionally, the search bar, cart, and account icons remain prominently displayed for easy access.
 
-  ![Mobile Navbar Opened](/media/navbar-menu.jpeg)
+  ![Mobile Navbar Opened](/media/navbar-mob.jpeg)
 
-Account Menu Regular User
+  ### Search Bar
 
-![Account Menu Regular User](account-menu-reg-user.jpeg)
+  The search bar lets users search for products in the store by typing a search term (like a product name or description) and submitting it.
+  
+  If no term is entered, an error message appears.
+
+  ![search-bar-no-search-criteria.jpeg](/media/search-bar-no-search-criteria.jpeg)
+  
+  If a term is provided, the system looks for products that match the search term in either the product name or description.
+
+  ![search-bar-result-found.png](/media/search-bar-result-found.png)
+  
+  Search Results: The products that match the search are shown on the shop page. If no products match, the page will display no results.
+
+  ![search-bar-no-results.jpeg](/media/search-bar-no-results.jpeg)
+
+  ### User Account
+
+  User account dropdown menu  changes based on the user's authentication status. When clicked, the menu reveals different options:
+
+**If the user is logged in:**
+
+**Superuser:** The dropdown includes options to "Manage Products" and "Manage Policies," along with the standard "Profile" and "Logout" links. This allows superusers to access administrative functions directly from the dropdown.
+
+![Account Menu Superuser](/media/account-menu-superuser.jpeg)
+
+**Regular User:** The dropdown shows options for "Profile" and "Logout," allowing regular users to view their prders and manage delivery details.
+
+![Account Menu Regular User](/media/account-menu-reg-user.jpeg)
+
+**If the user is not logged in:** The dropdown provides a "Login/Register" option, enabling users to sign in or create an account.
+
+![Account Menu Log In](/media/account-menu-log-in.jpeg)
+
+The account icon changes based on the user's login status, with different icons for logged-in and logged-out states, making the navigation more intuitive. The current page is also highlighted in the dropdown menu to improve user experience.
 
 ### Home Page
 

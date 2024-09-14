@@ -78,6 +78,7 @@ header p {
 }
 
 /* Style navbar text */
+
 .nav-link {
     color: #E4C58A !important;
     font-size: 16px;
@@ -85,7 +86,11 @@ header p {
 }
 
 .nav-link.active {
-    color: #AA9159 !important;
+    color: #FBFAF8 !important;
+    text-decoration: underline !important;
+}
+
+.nav-link:hover {
     text-decoration: underline !important;
 }
 
@@ -94,12 +99,16 @@ header p {
     text-decoration: underline !important;
 }
 
+.auth-mob {
+    font-size: 12px !important;
+}
+
 .dropdown-item {
     text-align: center;
 }
 
-.dropdown-item:hover {
-    text-decoration: underline;
+.dropdown-item.active {
+    text-decoration: underline !important;
 }
 
 /* Style toggler hamburger icon. Source: Stackoverflow */
@@ -777,6 +786,24 @@ hr {
     color: #AA9159 !important;
 }
 
+.table-orders-history th,
+.table-orders-history td {
+    min-width: 50px;
+    text-align: center;
+}
+
+.table-orders-history th {
+    font-size: 14px !important;
+}
+
+.table-orders-history td {
+    font-size: 12px !important;
+}
+
+.table-orders-history a {
+    color: #AA9159 !important;
+}
+
 ul.list-unstyled {
     display: flex;
     flex-direction: column;
@@ -1102,7 +1129,21 @@ font-size: 100% !important;
     #payment-form input[type="radio"] {
         width: 25px !important;
     }
-}
+
+    /* Style Profile Page */
+    .table-orders-history th,
+    .table-orders-history td {
+        min-width: 100px;
+    }
+
+    .table-orders-history th {
+        font-size: 16px !important;
+    }
+    
+    .table-orders-history td {
+        font-size: 14px !important;
+    }
+}   
 
 /* Media query: larger devices (laptops & desktops, 768px and up) */
 @media screen and (min-width: 768px) {

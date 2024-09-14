@@ -20,12 +20,12 @@ function updateGrandTotal() {
             var finalInitialTotal = parseFloat(initialTotal.textContent.replace(/[^0-9.-]+/g, ""));
             var finalDeliveryCost = Math.round(deliveryRate * cartWeight);
 
-            // Calculate the add-on total
+            // Calculate the add-on total using the data-price attribute
             var addOnTotal = 0;
             var cartQuantity = parseInt(document.getElementById("product-count").value);
             var addOnCheckboxes = document.querySelectorAll('input[name="add_ons"]:checked');
             addOnCheckboxes.forEach(function (addOnCheckbox) {
-                var addOnPrice = parseFloat(addOnCheckbox.value);
+                var addOnPrice = parseFloat(addOnCheckbox.getAttribute('data-price'));  // Use data-price attribute
                 addOnTotal += addOnPrice * cartQuantity;
             });
 

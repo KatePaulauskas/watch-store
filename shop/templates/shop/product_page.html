@@ -110,9 +110,9 @@
 </div>
 {% endblock %}
 
-{% include 'shop/includes/qty_input_script.html' %}
 {% block postloadjs %}
     {{ block.super }}
+    {% include 'shop/includes/qty_input_script.html' %}
     <script type="text/javascript">
         const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
         const deleteButtons = document.getElementsByClassName("product-delete");

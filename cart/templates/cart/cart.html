@@ -36,34 +36,30 @@
                             </a>
                             <p class="d-none d-sm-block my-0">SKU: {{ item.product.sku|upper }}</p>
                             <p class="my-0">€{{ item.product.price|intcomma }}</p>
-                            <!-- Quantity -->
+                            <!-- Adjusted form for quantity update with plus and minus buttons -->
                             <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.product.id %}">
                                 {% csrf_token %}
                                 <div class="form-row align-items-center">
                                     <div class="col-12">
                                         <div class="col w-25 mt-2">
                                             <div class="d-flex">
-                                                <button class="decrement-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}" id="decrement-qty_{{ item.product.id }}">
-                                                    <iconify-icon icon="heroicons-outline:minus"  style="color: #e4c58a"></iconify-icon>
+                                                <button type="button" class="decrement-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}">
+                                                    <iconify-icon icon="heroicons-outline:minus" style="color: #e4c58a"></iconify-icon>
                                                 </button>
-                                                <input class="form-control qty_input text-center mx-2" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="10"
-                                                    data-item_id="{{ product.id }}" id="id_qty_{{ item.product.id }}" style="width: 60px;">
-                                                <button class="increment-qty btn px-1 mb-1" data-item_id="{{ product.id }}" id="increment-qty_{{ item.product.id }}">
-                                                    <iconify-icon icon="heroicons-outline:plus"  style="color: #e4c58a"></iconify-icon>
+                                                <input class="form-control qty_input text-center mx-2" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="10" id="id_qty_{{ item.product.id }}" style="width: 60px;">
+                                                <button type="button" class="increment-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}">
+                                                    <iconify-icon icon="heroicons-outline:plus" style="color: #e4c58a"></iconify-icon>
                                                 </button>
                                             </div>
                                             <div class="d-flex justify-content-between justify-content-md-center px-0">
-                                                <a class="update-link" style="text-decoration: none;"><small>Update</small></a>
                                                 <a class="remove-item ps-3" style="text-decoration: none;" data-item_id="{{ item.product.id }}">
                                                     <small>Remove</small>
                                                 </a>
-                                                
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </form>
-                            </td>
                         </td>
                         <td class="py-3 d-none d-sm-block">
                             <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</p>
@@ -107,22 +103,35 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'shop/includes/qty_input_script.html' %}
 <script type="text/javascript">
 
-    // Handle quantity updates
-    document.querySelectorAll('.update-link').forEach(function(link) {
-        // Add a click event listener to each update link
-        link.addEventListener('click', function(e) {
-            // Prevent the default link behavior
-            e.preventDefault(); 
+    // Increment quantity and submit the form
+    document.querySelectorAll('.increment-qty').forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Get the previous sibling (quantity input)
+            const qtyInput = button.previousElementSibling;
+            let currentValue = parseInt(qtyInput.value);
+            if (currentValue < 10) {
+                qtyInput.value = currentValue + 1;
+                // Submit the form automatically after updating the quantity
+                button.closest('form').submit();
+            } else {
+                // Display a message if the quantity is more than 10
+                alert("You cannot add more than 10 items.");
+            }
+        });
+    });
 
-            // Find the closest form element related to the clicked link
-            const form = this.closest('form');
-
-            // If the form is found, submit it to update the quantity
-            if (form) {
-                form.submit();
+    // Decrement quantity and submit the form
+    document.querySelectorAll('.decrement-qty').forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Get the next sibling (quantity input)
+            const qtyInput = button.nextElementSibling;
+            let currentValue = parseInt(qtyInput.value);
+            if (currentValue > 1) {
+                qtyInput.value = currentValue - 1;
+                // Submit the form automatically after updating the quantity
+                button.closest('form').submit();
             }
         });
     });
@@ -153,5 +162,4 @@
         });
     });
 </script>
-
 {% endblock %}

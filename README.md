@@ -1608,29 +1608,57 @@ The About Us section provides visitors with a comprehensive overview of the bran
 
 ### Shop Page
 
-The Shop Page is the central hub where customers can browse Eternity's curated collection of luxury watches. The page features a clean and intuitive layout, allowing users to filter products by brand and gender or sort them by price, rating or name. Each watch is displayed with a high-quality image, name, price and rating, providing an overview before customers click to view detailed information. The Shop Page is designed to make the shopping experience seamless and enjoyable, helping customers find the perfect timepiece with ease.
+The Shop Page is the central hub where customers can browse Eternity's curated collection of luxury watches. The page features a clean and intuitive layout designed to make the shopping experience seamless and enjoyable, helping customers find the perfect timepiece with ease.
 
-![Shop Page](/media/shop-page.webp)
+![Shop Page](/media/) 
+
+Customers can filter products by brand and gender or sort them by price, rating, or name, and add them directly to the cart. A reset button is also available next to the filters, allowing users to reset the filters and view all store products.
+
+![Shop Filters](/media/)
+
+Each watch is displayed with a high-quality image, name, price, and rating, providing a general overview. Customers can click on the product image or name to view detailed information or click on the "Add to Cart" button to add the item directly to the cart from the shop page. This allows for a quick purchasing flow for those who already know what brand and model they are looking for.
+
+![Shop Page](/media/shop-page-add-to cart)
 
 ### Product Page
 
-The Product Page offers a detailed view of each luxury watch, showcasing comprehensive descriptions, specifications, and high-resolution images. This page allows customers to explore the finer details of the timepieces, including price and customer ratings. Additionally, the Product Page provides options for customers to select the desired quantity. A prominently placed "Add to Cart" button ensures that customers can easily proceed with their purchase, making the shopping experience seamless and straightforward. At the top of the page, a "Back to Shop" button allows customers to return to the shop and browse through other products if needed.
+The Product Page offers a detailed view of each watch, showcasing comprehensive descriptions, specifications, and high-resolution images. 
 
 ![Product Page](/media/product-page.jpeg)
 
-The product availability feature allows for effective management and display of the stock status of products in the store. Admins can mark products as either "available" or "out of stock" based on their current inventory status. When a product is marked as unavailable in the admin panel, an "Out of Stock" button is displayed on the Product Page. This button is disabled and styled differently to indicate that the product cannot be purchased. The presence of the "Out of Stock" button ensures that customers are informed about the unavailability of the product, enhancing the shopping experience by setting clear expectations.
+This page allows customers to explore the finer details of the timepieces, including price and ratings. Additionally, the Product Page provides an option for customers to select the desired quantity, where the maximum amount is limited to 10. When the quantity of 10 is reached, the plus icon is blurred out.
+
+![Product Page Max Amount.jpeg](/media/product-page-max-amount.jpeg)
+
+A prominently placed "Add to Cart" button ensures that customers can easily proceed with their purchase, making the shopping experience seamless and straightforward. Once an item is added to the cart, the customer receives a notification.
+
+![Product Added to the Cart](/media/)
+
+At the top of the page on the left, a "Back to Shop" button allows customers to return to the shop and browse through other products if needed.
+
+![Back to Shop](/media/)
+
+ When a product is marked as unavailable by Admin, an "Out of Stock" button is displayed on the Product Page instead of "Add to Cart" button. This button is disabled and styled differently to indicate that the product cannot be purchased. The presence of the "Out of Stock" button ensures that customers are informed about the unavailability of the product, enhancing the shopping experience by setting clear expectations.
 
 ![Out of Stock](/media/out-of-stock.webp)
 
 ### Cart Page
 
-The Cart Page provides an overview of the items a customer intends to purchase. It displays the product name, SKU, image, price, quantity, and total cost, allowing customers to review their selections before proceeding to checkout. The page also offers options to update quantities or remove items.
+The Cart Page provides an overview of the items a customer intends to purchase. It displays the product name, SKU, image, price, quantity, subtotal, standard delivery cost, and total cost, allowing customers to review their selections before proceeding to checkout. The page also offers options to update quantities or remove items.
 
-![Cart Page](/media/cart-page.webp)
+![Cart Page](/media/cart-page.jpeg)
+
+If a customer visits the Cart Page before adding any items to the cart, they receive a notification that their cart is empty, and a button is provided to return to the shop.
+
+![Empty Cart](/media/empty-cart.jpeg)
 
 ### Checkout Page
 
-![Checkout Page](/media/checkout-page.webp)
+![Checkout Page](/media/checkout-page.jpeg)
+
+### Thank You Page
+
+![Thank You Page.jpeg](/media/thank-you-page.jpeg)
 
 ### Contact Us Page
 
@@ -1695,6 +1723,15 @@ Upon confirmation, the user is redirected to the home page and notified of their
 
 ### Store Policies
 
+
+### Admin Access
+
+#### Manage Products
+
+The product availability feature allows for effective management and display of the stock status of products in the store. Admins can mark products as either "available" or "out of stock" based on their current inventory status in the admin panel or through the "Manage Products" page in their account. When a product is marked as "out of stock," an "Out of Stock" button is displayed on the Product Page instead of "Add to Cart." This button is disabled and styled differently to indicate that the product cannot be purchased.
+
+### Manage Policies
+
 ![Edit Policies Terms and Conditions](/media/edit-policies-terms-and-conditions.jpeg)
 
 ![Policy Updated Successfully Notification](/media/policy-updated-successfully.jpeg)
@@ -1755,6 +1792,21 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
+
+
+##### Manage Products
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Access the "Manage Products" page from the admin account | The page loads successfully, displaying a form to add a new product to the store | Pass |
+| Locate any available product on the Home Page, Shop Page, or from the Product Page and click on 'Edit" button. When the page loads remove tick from the field "availability" and click on "Update Product" button | Admin is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!". Product shows as "Out of Stock" on the Product Page. The same product is displayed as "Out of Stock" on the Shop Page and Home Page, if the product included into the featured products gallery. This product can't be added to the cart from any page | Pass |
+| Click the "Out of Stock" button on the Product Page, Shop Page or Home Page| The button is disabled, and clicking it results in no action | Pass |
+| Locate any out of stock product on the Home Page, Shop Page, or from the Product Page and click on 'Edit" button. When the page loads tick the field "availability" and click on "Update Prpduct" button | Admin is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!". Product becomes available and  "Add to Cart" button appears on the Product Page, Shop Page and Home Page, if the product is included into the featured products gallery | Pass |
+| Locate any product on the Home Page, Shop Page, or from the Product Page and click on 'Edit" button. When the page loads, edit any product details (e.g., name, collections, price, description or upload a new image), then click on "Update Prpduct" button | Notification is displayed "Product updated successfully!" and changes are reflected correctly on all the pages, where product is displayed: in a galleries (Shop and Home pages if relevant) as well as on the Product Page | Pass   |
+| Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete" | A pop-up window appears, asking, 'Delete product? Are you sure you want to delete this product? This action cannot be undone.' Options to close or confirm delete are available | Pass |
+| Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Delete' button | The product is removed from the store and no longer appears on any store pages, and the user is redirected to the "Shop Page"  with a confirmation message: "Prpduct deleted successfully!"| Pass |
+| | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Close' button | The pop-up window is closed, the admin remains on the same page with a confirmation message: "Action cancelled. No changes were made. " | Pass |
+
 
 #### User Stories
 | User Story | Expected Behaviour | Actual Behaviour | Status |

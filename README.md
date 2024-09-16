@@ -1793,6 +1793,48 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 
+##### Shop Page 
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Visit the Shop Page by clicking the Shop link in the site menu | The Shop Page loads successfully with a list of all available products | Pass   |
+| Visit the Shop Page by clicking the "Explore" button on the home page | The Shop Page loads successfully with a list of all available products | Pass   |
+| Filter products by a specific brand | Only products matching the selected brand are displayed | Pass   |
+| Filter products by gender | Only products matching the selected gender are displayed | Pass   |
+| Sort products by price (low to high) | Products are sorted in ascending order based on price | Pass   |
+| Sort products by price (high to low) | Products are sorted in descending order based on price | Pass   |
+| Sort products by rating (low to high)  | Products are sorted in ascending order based on rating | Pass   |
+| Sort products by rating (high to low)  | Products are sorted in descending order based on rating  | Pass   |
+| Sort products by name (A-Z)   | Products are sorted alphabetically  | Pass   |
+| Sort products by name (Z-A) | Products are sorted alphabetically in reverse order  | Pass   |
+| Click "Reset" in the filters menu | All filters are cleared, and the full product list is displayed | Pass   |
+| Click "Add to Cart" on any product | The product is added to the cart, and a confirmation message is displayed: "-Product Name- was added to your cart" | Pass   |
+| Click on any product image | The user is directed to the Product Page for that specific product | Pass   |
+| Click on any product name | The user is directed to the Product Page for that specific product | Pass   |
+
+
+##### Product Page 
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Visit the Product Page by clicking on product name on the Shop page | The page loads successfully, displaying the product details, images, and price, quantity and "Add to Cart" button | Pass   |
+| Select product quantity (up to 10) | Quantity can be adjusted by clicking on plus or minus icons, and the plus icon is disabled when the quantity reaches 10 | Pass |
+| Click "Add to cart" button  | The product is added to the cart, and a confirmation message is displayed "-Product Name- was added to your cart" | Pass   |
+| Product is marked "Out of Stock" | The "Add to Cart" button is replaced with an "Out of Stock" button that is disabled | Pass   |
+| Click "Back to Shop" button  | The user is redirected back to the Shop Page  | Pass   |
+
+
+##### Cart Page
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Visit the Cart Page by clicking on the cart icon in the header, when no items are added to the cart yet | Notification: "Your cart is empty" is displayed alongside the "Back to Shop" button  | Pass   |
+| While being on the cart page when it is empty, click on the "Back to Shop" button | The Shop page loads, displaying all the products | Pass   |
+| Visit the Cart Page by clicking on the cart icon in the header, when items are added to the cart | The page loads, showing all products added to the cart, with image, name, SKU, quantity, price, subtotal, and order summary, which includes subtotal, standard delivery, and total cost | Pass   |
+| Adjust product quantity with plus/minus buttons | Quantity is updated, the subtotal and order summary are recalculated automatically, and a notification is displayed: "-Product name- was updated to -product number-" | Pass   |
+| Click "Remove" on a product | The product is removed from the cart, the page reloads with the updated list of items or an empty cart, and a notification is displayed: "-Product name- was removed from the cart!" | Pass   |
+| Click "Checkout" button  | The user is redirected to the checkout page to complete the purchase  | Pass   |
+| While being on the cart page when products are added to the cart, click on the "Back to Shop" button | The Shop page loads, displaying all the products  | Pass   |
 
 ##### Manage Products
 

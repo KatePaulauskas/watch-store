@@ -52,7 +52,7 @@
                                                 </button>
                                             </div>
                                             <div class="d-flex justify-content-between justify-content-md-center px-0">
-                                                <a class="remove-item ps-3" style="text-decoration: none;" data-item_id="{{ item.product.id }}">
+                                                <a class="remove-item" style="text-decoration: none;" data-item_id="{{ item.product.id }}">
                                                     <small>Remove</small>
                                                 </a>
                                             </div>
@@ -136,7 +136,10 @@
         });
     });
 
-    // Handle item removal
+    /**
+     *  Handle item removal
+     * Source: Code Institute Boutique Ado walk through
+     */
     $('.remove-item').click(function(e) {
         // Prevent the default action
         e.preventDefault();

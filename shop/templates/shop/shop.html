@@ -86,9 +86,26 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
+        /**
+         * Source: Code Institute: I Think Therefore I Blog walk through
+         */
         const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
         const deleteButtons = document.getElementsByClassName("product-delete");
         const deleteConfirm = document.getElementById("deleteConfirm");
+
+                /**
+         * Initializes deletion functionality for the delete buttons.
+         * 
+         * For each button in the `deleteButtons` collection:
+         * - Adds a click event listener.
+         * - Retrieves the associated product ID using the button's `product-id` attribute.
+         * - Checks if the product ID exists:
+         *   - If valid, updates the `deleteConfirm` href to the deletion endpoint
+         *     for the specific product.
+         *   - If no product ID is found, logs an error.
+         * - Displays the confirmation modal (`deleteModal`) to prompt the user 
+         *   for confirmation before proceeding with the deletion.
+         */
 
         for (let button of deleteButtons) {
             button.addEventListener("click", (e) => {

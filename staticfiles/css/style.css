@@ -570,6 +570,11 @@ a {
     object-fit: cover;
 }
 
+.increment-qty:disabled {
+    border: none !important;
+    opacity: 30%;
+}
+
 /* Quantity form */
 .form-group {
     width: 70px !important;

@@ -4,6 +4,8 @@ from .models import Product, Category
 class ProductForm(forms.ModelForm):
     category_1 = forms.ModelChoiceField(queryset=Category.objects.all(), label=" Category 1")
     category_2 = forms.ModelChoiceField(queryset=Category.objects.all(), label="Category 2")
+    # Add the weight label with the unit
+    weight = forms.DecimalField(label="Weight (kg)")
 
     class Meta:
         model = Product

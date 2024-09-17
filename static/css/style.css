@@ -412,7 +412,7 @@ input[type="checkbox"] {
     list-style: inside;
 }
 
-a {
+.signup a {
     color: #FBFAF8 !important;
 }
 
@@ -452,6 +452,11 @@ a {
 /* Set 1 product per row. Source: MDN Web Docs */
 .product-grid {
     grid-template-columns: 1fr;
+}
+
+/* Style filters menu on hover */
+.filters-menu .nav-link:hover {
+    text-decoration: none !important;
 }
 
 .card, .card-footer {

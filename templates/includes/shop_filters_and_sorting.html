@@ -3,15 +3,21 @@
     <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-between p-1 p-sm-2">
         <nav class="category-menu">
             <ul class="navbar-nav d-flex flex-row mx-auto gap-1 gap-sm-2 gap-lg-4 align-items-center">
-                <li class="nav-item dropdown">
+
+                <!-- Brand Dropdown -->
+                <li class="nav-item dropdown filters-menu">
                     <a class="nav-link dropdown-toggle m-0" href="#" id="brand" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Brand
                     </a>
                     <ul class="dropdown-menu border-0" aria-labelledby="brand">
-                        <li><a href="{% url 'shop' %}?brand=tissot{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Tissot</a></li>
+                        <li><a href="{% url 'shop' %}?brand=citizen{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Citizen</a></li>
                         <li><a href="{% url 'shop' %}?brand=hamilton{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Hamilton</a></li>
+                        <li><a href="{% url 'shop' %}?brand=oris{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Oris</a></li>
+                        <li><a href="{% url 'shop' %}?brand=seiko{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Seiko</a></li>
+                        <li><a href="{% url 'shop' %}?brand=tissot{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Tissot</a></li>
                     </ul>
                 </li>
+                <!-- Gender Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="gender" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         | Gender
@@ -21,6 +27,7 @@
                         <li><a href="{% url 'shop' %}?gender=women{% if current_brand %}&brand={{ current_brand }}{% endif %}" class="dropdown-item">Women</a></li>
                     </ul>
                 </li>
+                <!-- Sort by Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle m-0" href="#" id="sort" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         | Sort by
@@ -35,11 +42,47 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'shop' %}" class="nav-link">| Reset</a>
+                    <a href="{% url 'shop' %}?reset=true" class="nav-link">| Reset</a>
                 </li>
             </ul>
         </nav>
     </div>
+</div>
+
+<!-- Display Active Filters -->
+<div class="active-filters my-3">
+    {% if brand_friendly_name or gender_friendly_name or current_sorting %}
+        <p>
+            <!-- Brand Filter -->
+            {% if brand_friendly_name %}
+                <span><strong>Brand:</strong> {{ brand_friendly_name }}</span>{% if gender_friendly_name or current_sorting %}, {% endif %}
+            {% endif %}
+
+            <!-- Gender Filter -->
+            {% if gender_friendly_name %}
+                <span><strong>Gender:</strong> {{ gender_friendly_name }}</span>{% if current_sorting %}, {% endif %}
+            {% endif %}
+
+            <!-- Sorting Filter (only show if sorting is applied) -->
+            {% if current_sorting %}
+                <span><strong>Sorted by:</strong> 
+                    {% if current_sorting == 'price_asc' %}
+                        Price (low to high)
+                    {% elif current_sorting == 'price_desc' %}
+                        Price (high to low)
+                    {% elif current_sorting == 'rating_asc' %}
+                        Rating (low to high)
+                    {% elif current_sorting == 'rating_desc' %}
+                        Rating (high to low)
+                    {% elif current_sorting == 'name_asc' %}
+                        Name (A-Z)
+                    {% elif current_sorting == 'name_desc' %}
+                        Name (Z-A)
+                    {% endif %}
+                </span>
+            {% endif %}
+        </p>
+    {% endif %}
 </div>
 
 <!-- Products Count -->
@@ -51,3 +94,4 @@
         {% endif %}
     </p>
 </div>
+

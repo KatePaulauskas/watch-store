@@ -15,6 +15,18 @@ def shop(request):
     direction = None
     selected_brand = None
     selected_gender = None
+    # Track if filters are applied
+    filters_applied = False
+    # Initialise reset_filters
+    reset_filters = False
+    brand_friendly_name = None
+    gender_friendly_name = None
+
+    # Check if the reset button was clicked
+    if 'reset' in request.GET:
+        # Add a Django message to show that filters were reset
+        messages.info(request, 'Filters have been reset')
+        return redirect('shop')  # Redirect to remove the `reset` parameter from the UR
 
     # Mapping of sorting keys to model fields
     sort_mapping = {
@@ -25,7 +37,7 @@ def shop(request):
 
     if request.GET:
         # Handle sorting
-        sort = request.GET.get('sort', 'name') # Default sorting by name
+        sort = request.GET.get('sort', None)
         direction = request.GET.get('direction', 'asc')
         
         if sort in sort_mapping:
@@ -39,12 +51,18 @@ def shop(request):
         selected_gender = request.GET.get('gender', None)
         
         if selected_brand:
-            products = products.filter(categories__name__iexact=selected_brand)
+            brand_category = Category.objects.filter(name__iexact=selected_brand).first()
+            if brand_category:
+                brand_friendly_name = brand_category.get_friendly_name()
+                products = products.filter(categories__name__iexact=selected_brand)
         
         if selected_gender:
-            products = products.filter(categories__name__iexact=selected_gender)
+            gender_category = Category.objects.filter(name__iexact=selected_gender).first()
+            if gender_category:
+                gender_friendly_name = gender_category.get_friendly_name()
+                products = products.filter(categories__name__iexact=selected_gender)
         
-        #Handle search
+        # Handle search
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -54,14 +72,18 @@ def shop(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
+    # Only show sorting if it's applied
+    current_sorting = f'{sort}_{direction}' if sort else None
 
     context = {
         'products': products,
         'search_term': query,
         'current_brand': selected_brand,
         'current_gender': selected_gender,
+        'brand_friendly_name': brand_friendly_name,
+        'gender_friendly_name': gender_friendly_name, 
         'current_sorting': current_sorting,
+        'reset_filters': reset_filters,
     }
 
     return render(request, 'shop/shop.html', context)

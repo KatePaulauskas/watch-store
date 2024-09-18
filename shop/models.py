@@ -10,10 +10,13 @@ class Category(models.Model):
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.friendly_name if self.friendly_name else self.name
 
     def get_friendly_name(self):
         return self.friendly_name
+
+    class Meta:
+        verbose_name_plural = 'Categories'
 
 
 class Product(models.Model):
@@ -22,7 +25,7 @@ class Product(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=3, decimal_places=1, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = CloudinaryField('image', default='placeholder')
     availability = models.BooleanField(default=True)

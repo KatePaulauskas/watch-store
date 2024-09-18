@@ -857,6 +857,12 @@ ul.list-unstyled {
     height: 38px !important;
 }
 
+#id_rating_helptext {
+    color: #AA9159 !important;
+    font-style: italic;
+    font-size: 12px;
+}
+
 /* Style availability checkbox and label */
 #div_id_availability,
 #div_id_featured_product {

@@ -32,7 +32,11 @@
                         {% if product.rating %}
                             <p class="rating m-0 py-0">
                                 <iconify-icon icon="rivet-icons:star"  style="color: #AA9159"></iconify-icon>
-                                {{ product.rating }} / 5
+                                {% if product.rating|floatformat:"0" == product.rating|stringformat:"d" %}
+                                    {{ product.rating|floatformat:"0" }} / 5
+                                {% else %}
+                                    {{ product.rating|floatformat:"1" }} / 5
+                                {% endif %}
                             </p>
                         {% else %}
                             <p class="rating">No Rating</p>

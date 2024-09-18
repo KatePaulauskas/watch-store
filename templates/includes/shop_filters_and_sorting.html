@@ -11,8 +11,8 @@
                     </a>
                     <ul class="dropdown-menu border-0" aria-labelledby="brand">
                         <li><a href="{% url 'shop' %}?brand=citizen{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Citizen</a></li>
+                        <li><a href="{% url 'shop' %}?brand=frederique_constant{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Frederique Constant</a></li>
                         <li><a href="{% url 'shop' %}?brand=hamilton{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Hamilton</a></li>
-                        <li><a href="{% url 'shop' %}?brand=oris{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Oris</a></li>
                         <li><a href="{% url 'shop' %}?brand=seiko{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Seiko</a></li>
                         <li><a href="{% url 'shop' %}?brand=tissot{% if current_gender %}&gender={{ current_gender }}{% endif %}" class="dropdown-item">Tissot</a></li>
                     </ul>

@@ -2,10 +2,36 @@ from django import forms
 from .models import Product, Category
 
 class ProductForm(forms.ModelForm):
-    category_1 = forms.ModelChoiceField(queryset=Category.objects.all(), label=" Category 1")
-    category_2 = forms.ModelChoiceField(queryset=Category.objects.all(), label="Category 2")
-    # Add the weight label with the unit
-    weight = forms.DecimalField(label="Weight (kg)")
+    # Display friendly names for categories dropdowns
+    category_1 = forms.ModelChoiceField(
+        queryset=Category.objects.all(),
+        label="Category 1",
+        widget=forms.Select
+    )
+    
+    category_2 = forms.ModelChoiceField(
+        queryset=Category.objects.all(),
+        label="Category 2",
+        widget=forms.Select
+    )
+
+    # Ensure weight is greater than zero
+    weight = forms.DecimalField(
+        label="Weight (kg)", 
+        min_value=0.05,
+        max_digits=5, 
+        decimal_places=2,
+    )
+
+    # Ensure rating is greater than zero and up to 5
+    rating = forms.DecimalField(
+        label="Rating", 
+        min_value=1,
+        max_value=5, 
+        max_digits=2, 
+        decimal_places=1,
+        help_text="Rating must be between 1 and 5."
+    )
 
     class Meta:
         model = Product
@@ -18,3 +44,4 @@ class ProductForm(forms.ModelForm):
             instance.save()
             instance.categories.set([self.cleaned_data['category_1'], self.cleaned_data['category_2']])
         return instance
+

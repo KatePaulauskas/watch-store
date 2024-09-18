@@ -913,9 +913,44 @@ footer {
 }
 
 .footer-menu, 
-.footer-text,
-.footer-heading {
+.footer-text {
 font-size: 100% !important;
+}
+
+.footer-heading {
+    font-size: 16px !important;
+}
+
+/* Mailchimp style */
+
+#mc_embed_signup {
+    font: 14px Muli, sans-serif;
+    width: 200px;
+    color: #E4C58A;
+}
+
+#mce-EMAIL {
+    width: 250px !important;
+}
+
+#mc-embedded-subscribe {
+    width: 65px !important;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    background-color: #113227;
+    color: #FC7C73;
+}
+
+#mc_embed_signup #mce-success-response {
+    display: contents;
+    color: #FBFAF8;
+}
+
+#mc_embed_signup div#mce-responses {
+    padding-left: 80px;
+    margin-top: 5px;
+
 }
 
 /* Media query: mobile phones (270px and up) */
@@ -1309,5 +1344,10 @@ font-size: 100% !important;
     /* Style Shop page. 4 products per row */
     .product-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Style Subscribe form */
+    #mce-EMAIL {
+        width: 300px !important;
     }
 }

@@ -1775,6 +1775,93 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 
 2. Inventory Tracking System. Introduce an inventory tracking system that automatically updates stock levels as products are sold. When inventory reaches zero, the product will automatically display an "Out of Stock" notification, preventing further purchases until stock is replenished. This feature will help maintain accurate stock levels and provide real-time availability information to shoppers.
 
+## E-commerce Business Model
+
+**Purpose of the Application:** B2C Focused
+
+TThe primary focus of the Eternity - Luxury Watch Store application is Business-to-Consumer (B2C). The website is designed to cater directly to end customers who are looking for high-quality yet affordable luxury watches. By offering a seamless online shopping experience, Eternity aims to attract individual consumers from various demographics, including watch collectors, fashion enthusiasts, and gift buyers.
+
+**Core Business Intent:**
+
+- **Customer Acquisition & Retention:** The goal is to attract new customers through engaging content and keep them coming back with high-quality service, exclusive products, and promotions.
+
+- **Brand Positioning:** Eternity aims to position itself as a reliable, affordable luxury watch brand, offering consumers access to premium timepieces without high-end price tags.
+
+- **Online Sales & Revenue Growth:** The key objective is to drive online sales by making the purchasing process simple and efficient, while also providing an informative platform about watches.
+
+### Marketing Strategies
+
+**Search Engine Optimization (SEO)**
+
+- **Keyword Targeting:** Eternity optimizes its website using relevant regular and long-tailed keywords such as "luxury watches," "affordable watches," "branded watches," and "timeless designs." This ensures high visibility in organic search results, attracting users searching for affordable luxury watch options.
+
+     <details>
+     <summary>List of all keywords</summary>
+
+     **Main Keywords:**
+     - Luxury watch
+     - Luxury watches
+     - Men's luxury watches
+     - Luxury watch brands
+     - Affordable luxury watches
+     - Luxury watch store
+
+     **Secondary Keywords:**
+     - High-quality watches
+     - Branded watches
+     - Elegant watches
+     - Timeless designs
+     - Popular luxury watches
+     - Online watch shopping
+     - Luxury timepieces
+     - Watch sales online
+     - Luxury watches for men
+     - Luxury watches for women
+     - Affordable luxury watch brands
+
+     **Long-Tail Keywords:**
+     - Best affordable luxury watches
+     - Men's luxury watches cheap
+     - Best cheap luxury watches
+     - Cheap luxury watch brands
+     - Luxury watch brands cheap
+     - Luxury watches for men cheap
+     - Cheap luxury watches for men
+     - Luxury watches cheap
+     - Cheap luxury watches
+     - Luxury watches for cheap
+
+     </details>
+     <br>
+
+- **On-page SEO:** Meta descriptions and title tags, such as "Eternity | Luxury Watch Store," are crafted to reflect the core offerings of high-quality, affordable luxury watches. By including relevant keywords like "timeless designs" and "online watch shopping," the site becomes more attractive to search engines.
+
+- **Technical SEO:** The website is designed to be mobile-friendly, with fast loading speeds and optimized images, ensuring a smooth user experience and better rankings in search results.
+
+**Facebook Business Page**
+
+- **Social Engagement:** Eternity's Facebook page is leveraged to engage with potential and existing customers. The page regularly posts about new products, collections, and promotions, building a community of watch enthusiasts.
+
+- **Customer Service:** The Facebook page serves as a platform for customer inquiries and support, ensuring that the brand is responsive and accessible.
+
+![Facebook Page](/media)
+
+**Subscribe Form & Newsletter Marketing (Mailchimp)**
+
+- **Email List Building:** A subscribe form in the website footer invites users to sign up for newsletters powered by Mailchimp. This helps Eternity build a list of subscribers for future marketing campaigns.
+
+- **Personalized Email Campaigns:** Subscribers receive personalized newsletters with product recommendations, new arrivals, and exclusive discounts. Mailchimp's automation tools can help in managing these campaigns effectively.
+
+- **Engagement Metrics:** Mailchimp’s analytics can be used to track open rates, click-through rates, and conversions, refining future campaigns based on subscriber behavior.
+
+**Social Sharing and Brand Awareness**
+
+**Optimised Social Sharing:** By implementing Open Graph (OG) meta tags, allows Eternity to ensure that its products and pages are shared effectively on social media platforms like Facebook. High-quality images and compelling descriptions make the brand more shareable, thus enhancing visibility.
+
+**Consistent Branding:** The social sharing tags ensure that whenever users share pages from the site, the title "Eternity | Luxury Watch Store" and brand logo are displayed, reinforcing brand identity across all social platforms.
+
+Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded marketing strategies across SEO, social media, and email marketing to enhance its visibility, engage with customers, and drive online sales of affordable luxury watches. These SEO-driven tactics ensure higher search engine rankings, while personalised newsletters and active social media presence promote brand loyalty and increase conversions.
+
 ## Technologies used
 
 ### Languages
@@ -2107,6 +2194,7 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 - The logo idea was created using [Wix Logo Maker](https://www.wix.com/logo/maker).
 - Favicon files were created using [Favicon.io](https://favicon.io/favicon-converter/).
 - Images for the site were converted and compressed using [11zon](hhttps://converter.11zon.com/) tool.
+- SEO keywords were selcted using [Semrush](https://www.semrush.com/).
 
 
 ### Media

@@ -1,5 +1,7 @@
 # Eternity - Luxury Watch Store
 
+![Responsive Mockup](media/responsive-mockup.jpeg)
+
 ### Project Link
 
 The live store is located at the following [address](https://eternity-watch-store-1f855f4289ad.herokuapp.com/).
@@ -1743,9 +1745,24 @@ The footer is displayed at the bottom of every page and contains essential infor
 * **Contact Information:** Phone number and email address for customer inquiries.
 * **Social Media Links:** Icons linking to Eternity's Instagram and Facebook pages, allowing customers to connect with the brand on social platforms.
 * **Subscribe Form:** A subscription form where users can enter their email addresses to receive newsletters, promotions, and updates from Eternity. This helps build a loyal customer base and keeps users informed about new arrivals and special offers.
+
+     Users are rewquired to add their email address for the subscription: 
+
+     ![Subscribe Form Email Required](/media/subscribe-email-required.jpeg)
+
+     Upon clicking submit button they receive a confirmation:
+
+     ![Subscribe Form Confirmation](/media/subscribe-confirmation.jpeg)
+
 * **Footer Menu:** A compact menu providing quick links to important pages such as Home, Shop, Contact, Terms & Conditions, Return Policy and Privacy Policy. This menu ensures that users can easily navigate to key sections of the site from any page.
 
-![Footer](/media/footer.jpeg)
+     Footer Mobile and Tablet view: 
+
+     ![Footer](/media/footer-mobile-and-tablet.jpeg)
+
+     Footer Desktop view:
+
+     ![Footer](/media/footer-desktop.jpeg)
 
 ### Custom Error Pages
 
@@ -2175,6 +2192,10 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 ## Credits
 
 ### Code Development
+- Repository was created using [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template).
+- Code Institute ['Boutique Ado' Walk through](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+4/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) was used as an inspiration and guide for creating this project.
+- [Bootstrap 5 documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) was used for designing the layout and styling elements of the project.
+- [Django Documentation](https://docs.djangoproject.com/en/stable/) was extensively used throughout the project creation for general guidance, model and views setup and form handling.
 - To change the color of the hamburger menu icon on mobile, instructions from [Stack Overflow](https://stackoverflow.com/questions/50761763/how-can-i-change-the-color-of-the-hamburger-in-bootstrap-4-from-the-given-link) were used.
 - Instructions from [Kinsta](https://kinsta.com/blog/css-text-outline/) were used to add outline to the H1 text on the home page.
 - The method for styling checkboxes, including the tick mark, was referenced from [Ben Nadel's blog](https://www.bennadel.com/blog/3778-using-css-webkit-appearance-to-style-checkbox-after-pseudo-element.htm).
@@ -2183,6 +2204,16 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 - The solution for showing a `ManyToManyField` in Django Admin's `list_display` was found on [Stack Overflow](https://stackoverflow.com/questions/18108521/how-to-show-a-many-to-many-field-with-list-display-in-django-admin).
 - The technique for limiting text to three lines and ensuring card height consistency was referenced from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp).
 - The method for creating a responsive product grid using CSS Grid was derived from a guide on [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids).
+- Code Institute ['I think Therefore I blog' Walk through](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+4/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/) inspired modal usage for admin products delete functionality on Shop and Product pages.
+- The country select dropdown was styled using [CSS-Tricks](https://css-tricks.com/striking-a-balance-between-native-and-custom-select-elements).
+- The `get_or_create()` method was used to save customer delivery details and prefill checkout delivery address form using [Django documentation](https://docs.djangoproject.com/en/5.1/ref/models/querysets/#django.db.models.query.QuerySet.get_or_create).
+- The Mailchimp subscribe form was integrated using [Mailchimp Documentation](https://mailchimp.com/developer/marketing/guides/hosted-embedded-forms/).
+- The store policies for Terms & Conditions, Return Policy, and Privacy Policy were created using the following references:
+  - [Wix Support: Creating a Terms and Conditions Policy](https://support.wix.com/en/article/creating-a-terms-and-conditions-policy)
+  - [Wix Blog: Return Policy](https://www.wix.com/blog/ecommerce/2020/08/return-policy)
+  - [Wix Support: Creating a Privacy Policy](https://support.wix.com/en/article/creating-a-privacy-policy)
+- Error pages 404 and 500 were set up using instructions provided by the Code Institute course facilitator: "Error Pages in Django."
+
 
 
 ### Content & Design

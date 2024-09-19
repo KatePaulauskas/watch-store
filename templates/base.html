@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         {% block meta %}
             <!-- Essential Meta Tags -->
             <meta charset="utf-8">
@@ -16,18 +15,17 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% endblock %}
 
-        {% block extra_meta %}
-        {% endblock %}
+        {% block extra_meta %}{% endblock %}
 
         <!-- Meta Tags for Search Engine Optimization -->
         <meta name="description" content="Eternity Luxury Watch Store offers a curated selection of
         high-quality, affordable luxury watches, including popular men's and women's luxury watches.
         Shop from top luxury watch brands and timeless designs, ensuring you find the perfect timepiece
         for your style and budget.">
-        <meta name="keywords" content="luxury watch, luxury watches, men's luxury watches,
+        <meta name="keywords" content="luxury watch, luxury watches, men's luxury watches, 
         luxury watch brands, affordable luxury watches, luxury watch store, high-quality watches,
-        branded watches, elegant watches, timeless designs, popular luxury watches, online watch shopping,
-        luxury timepieces, watch sales online, luxury watches for men, luxury watches for women, affordable
+        branded watches, elegant watches, timeless designs, popular luxury watches, online watch shopping, 
+        luxury timepieces, watch sales online, luxury watches for men, luxury watches for women, affordable 
         luxury watch brands, best affordable luxury watches, men's luxury watches cheap, best cheap luxury
         watches, cheap luxury watch brands, luxury watch brands cheap, luxury watches for men cheap,
         cheap luxury watches for men, luxury watches cheap, cheap luxury watches, luxury watches for cheap">
@@ -46,17 +44,16 @@
         <meta name="msapplication-config" content="{% static 'images/favicons/browserconfig.xml' %}">
         <meta name="theme-color" content="#ffffff">
 
-        
         {% block corecss %}
             <!-- Bootstrap CSS -->
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
             <!-- Google Fonts CSS -->
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Antic&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-            rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Antic&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" 
+                rel="stylesheet">
 
             <!-- Mailchimp CSS -->
             <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
@@ -65,8 +62,7 @@
             <link rel="stylesheet" href="{% static 'css/style.css' %}">
         {% endblock %}
 
-        {% block extra_css %}
-        {% endblock %}
+        {% block extra_css %}{% endblock %}
 
         <!-- Meta Tags for Social Sharing -->
         <meta property="og:title" content="Eternity | Luxury Watch Store">
@@ -83,27 +79,25 @@
             <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
             <!-- JavaScript -->
-            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"
+                integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
             <!-- Stripe -->
             <script src="https://js.stripe.com/v3/"></script>
         {% endblock %}
 
-        {% block extra_js %}
-        {% endblock %}
-        
+        {% block extra_js %}{% endblock %}
     </head>
     <body>
         <!-- Header -->
         <header class="container-fluid sticky-top pt-2 pb-3">
             <div class="d-flex justify-content-between align-items-start">
-
                 <!-- Menu Section-->
                 <nav class="navbar navbar-expand-md mt-lg-1 px-3 px-lg-2 pb-0">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-                    data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
@@ -120,11 +114,11 @@
                         </ul>
                         <!-- Authentication messages mobile-->
                         <div class="d-block d-md-none">
-                            {% if user.is_authenticated %} 
-                            <p class="fs-6 pt-2 pb-0 px-0 mb-2 auth-mob">*You are logged in as {{ user }}</p> 
-                            {% else %} 
-                            <p class="fs-6 pt-2 pb-0 px-0 mb-2 auth-mob">*You are not logged in</p> 
-                            {% endif %} 
+                            {% if user.is_authenticated %}
+                            <p class="fs-6 pt-2 pb-0 px-0 mb-2 auth-mob">*You are logged in as {{ user }}</p>
+                            {% else %}
+                            <p class="fs-6 pt-2 pb-0 px-0 mb-2 auth-mob">*You are not logged in</p>
+                            {% endif %}
                         </div>
                     </div>
                 </nav>
@@ -133,24 +127,22 @@
                 <div class="logo-container flex-column align-items-start my-0">
                     <div class="logo-container">
                         <a class="navbar-brand mx-3" href="{% url 'home' %}">
-                            <img src="{% static 'images/logo/logo.webp' %}" 
-                            alt="Eternity Logo" class="img-logo">
+                            <img src="{% static 'images/logo/logo.webp' %}" alt="Eternity Logo" class="img-logo">
                         </a>
                     </div>
-                    
                 </div>
 
                 <!-- Header Icons Section-->
                 <div class="d-flex flex-column align-items-end my-0">
                     <!-- Authentication messages desktop -->
-                    <div class="auth d-none d-md-block"> 
-                        {% if user.is_authenticated %} 
-                        <p class="auth text-end fs-6 my-0">You are logged in as {{ user }}</p> 
-                        {% else %} 
-                        <p class="auth text-end fs-6 my-0">You are not logged in</p> 
-                        {% endif %} 
+                    <div class="auth d-none d-md-block">
+                        {% if user.is_authenticated %}
+                        <p class="auth text-end fs-6 my-0">You are logged in as {{ user }}</p>
+                        {% else %}
+                        <p class="auth text-end fs-6 my-0">You are not logged in</p>
+                        {% endif %}
                     </div>
-                    <ul class="header-icons d-flex flex-row mx-1"> 
+                    <ul class="header-icons d-flex flex-row mx-1">
                         <!-- Cart -->
                         <li class="list-inline-item mx-0">
                             <a class="nav-link {% if grand_total %}text-info fw-bold{% else %}text-dark{% endif %}" href="{% url 'view_cart' %}">
@@ -160,13 +152,12 @@
                                         {% if total > 0 %}
                                         €{{ total|floatformat:2|intcomma }}
                                         {% else %}
-                                            $0.00
+                                        €0.00
                                         {% endif %}
                                     </p>
                                 </div>
                             </a>
                         </li>
-
                         <!-- Account Dropdown -->
                         <li class="list-inline-item dropdown">
                             <a class="nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -182,29 +173,26 @@
                             </a>
                             <div class="dropdown-menu border-0 m-1 p-1" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                        {% url 'add_product' as add_product_url %}
-                                        <a class="dropdown-item {% if request.path == add_product_url %}active{% endif %}" href="{{ add_product_url }}">Manage Products</a>
-
-                                        {% url 'policies' as policies_url %}
-                                        <a class="dropdown-item {% if request.path == policies_url %}active{% endif %}" href="{{ policies_url }}">Manage Policies</a>
-                                    {% endif %}
-                                    
-                                    {% url 'profile' as profile_url %}
-                                    <a class="dropdown-item {% if request.path == profile_url %}active{% endif %}" href="{{ profile_url }}">Profile</a>
-
-                                    {% url 'account_logout' as logout_url %}
-                                    <a class="dropdown-item {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{{ logout_url }}">Logout</a>
+                                {% if request.user.is_superuser %}
+                                {% url 'add_product' as add_product_url %}
+                                <a class="dropdown-item {% if request.path == add_product_url %}active{% endif %}" href="{{ add_product_url }}">Manage Products</a>
+                                {% url 'policies' as policies_url %}
+                                <a class="dropdown-item {% if request.path == policies_url %}active{% endif %}" href="{{ policies_url }}">Manage Policies</a>
+                                {% endif %}
+                                {% url 'profile' as profile_url %}
+                                <a class="dropdown-item {% if request.path == profile_url %}active{% endif %}" href="{{ profile_url }}">Profile</a>
+                                {% url 'account_logout' as logout_url %}
+                                <a class="dropdown-item {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{{ logout_url }}">Logout</a>
                                 {% else %}
-                                    {% url 'account_login' as login_url %}
-                                    <a class="dropdown-item {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{{ login_url }}">Login/Register</a>
+                                {% url 'account_login' as login_url %}
+                                <a class="dropdown-item {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{{ login_url }}">Login/Register</a>
                                 {% endif %}
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            
+
             <!-- Search Bar -->
             <div class="col-12 d-flex justify-content-center align-items-center py-1">
                 <form method="GET" action="{% url 'shop' %}" class="w-75 w-lg-50">
@@ -216,52 +204,47 @@
                     </div>
                 </form>
             </div>
-            
         </header>
 
         <!-- Django messages -->
         {% if messages %}
-            <div class="message-container">
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }} mb-0 p-1 text-center">
-                        {{ message }}
-                        <button type="button" class="btn-close mx-1" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                {% endfor %}
+        <div class="message-container">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} mb-0 p-1 text-center">
+                {{ message }}
+                <button type="button" class="btn-close mx-1" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
+            {% endfor %}
+        </div>
         {% endif %}
-        
-        {% block page_header %}
-        {% endblock page_header %}
-        
+
+        {% block page_header %}{% endblock page_header %}
+
         <main>
-            {% block content %}
-            <!-- Content Goes here -->
-            {% endblock content %}
+            {% block content %}{% endblock content %}
         </main>
 
         <!-- Footer -->
         <footer class="container-fluid justify-content-between px-lg-5 mx-0 pt-2">
             <div class="row">
                 <!-- Subscribe Form Mailchimp -->
-                <div class="subscribe col-12 col-md-12 col-lg-4 order-lg-5 order-md-1 px-0 mt-0 d-flex align-items-start">
-                    <div id="mc_embed_shell p-0 m-0 d-flex align-items-start">
+                <div class="subscribe col-12 col-md-12 col-lg-4 order-lg-5 order-md-1 px-0 mt-0 d-flex justify-content-center justify-content-lg-start">
+                    <div class="mc_embed_shell p-0 m-0">
                         <div id="mc_embed_signup">
                             <form action="https://herokuapp.us12.list-manage.com/subscribe/post?u=26681a6adf2fe9919c2154fdc&amp;id=199ad3a083&amp;f_id=001de0e0f0"
-                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate d-flex my-0"
+                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate mt-0 mb-4 mx-0"
                                 target="_blank">
                                 <div id="mc_embed_signup_scroll" class="row">
                                     <h5 class="footer-heading mb-0">Subscribe:</h5>
                                     <div class="mc-field-group">
-                                        <div id="mce-responses" class="clear foot">
-                                            <div class="response" id="mce-error-response" style="display: none;"></div>
-                                            <div class="col-12 response" id="mce-success-response"></div>
-                                        </div>
                                         <div class="d-flex align-items-center justify-content-center">
-                                            <input type="email" name="EMAIL" class="required email me-2" id="mce-EMAIL"
-                                                placeholder="Email*:" required="">
+                                            <input type="email" name="EMAIL" class="required email me-2" id="mce-EMAIL" placeholder="Email*:" required="">
                                             <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-account py-1 mx-0"
                                                 value="Submit">
+                                        </div>
+                                        <div id="mce-responses" class="clear foot px-0 mx-0">
+                                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                                            <div class="col-12 response" id="mce-success-response"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -276,8 +259,8 @@
                 <!-- Contact Details -->
                 <div class="col-6 col-sm-3 col-lg-2 order-2 order-sm-3 order-lg-3 px-3 mb-2">
                     <h6 class="footer-heading">Contact Details:</h6>
-                        <p class="footer-text p-0 m-0">01234567</p>
-                        <p class="footer-text p-0 m-0">info@eternity.ie</p>
+                    <p class="footer-text p-0 m-0">01234567</p>
+                    <p class="footer-text p-0 m-0">info@eternity.ie</p>
                 </div>
 
                 <!-- Follow Us -->
@@ -285,7 +268,6 @@
                     <h6 class="mb-0 footer-heading">Follow Us:</h6>
                     <div class="row">
                         <div class="d-flex align-items-start gap-4 gap-lg-5">
-                            
                             <!-- Instagram -->
                             <a href="https://www.instagram.com/eternity-watch-store/" target="_blank" 
                             rel="noopener" aria-label="Visit my Instagram page (opend in a new tab)">
@@ -293,9 +275,9 @@
                             </a>
 
                             <!-- Facebook -->
-                            <a href="https://www.facebook.com/people/Eternity-Luxury-Watch-Store/61564422000153/" target="_blank" 
+                            <a href="https://www.facebook.com/people/Eternity-Luxury-Watch-Store/61564422000153/" target="_blank"
                             rel="noopener" aria-label="Visit my Facebook page (opend in a new tab)">
-                            <iconify-icon icon="entypo-social:facebook"  style="color: #e4c58a" width="30" height="30"></iconify-icon>
+                            <iconify-icon icon="entypo-social:facebook"  class="px-2" style="color: #e4c58a" width="30" height="30"></iconify-icon>
                             </a>
                         </div>
                     </div>
@@ -320,7 +302,7 @@
                 <div class="col-6 col-sm-3 col-lg-2 order-5 order-sm-2 order-lg-2 mt-2 mt-sm-0 mt-md-0">
                     <ul class="navbar-nav footer-menu me-auto pl-3">
                         <li class="nav-item">
-                            <a class="nav-link py-0 footer-menu" href="{% url 'policies' %}#terms">Terms & Conditions</a>
+                            <a class="nav-link py-0 footer-menu" href="{% url 'policies' %}#terms">Terms</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link py-0 footer-menu" href="{% url 'policies' %}#return-policy">Return Policy</a>
@@ -331,13 +313,12 @@
                     </ul>
                 </div>
             </div>
+            <p class="fs-6 text-center my-2"><small>*This website is created for educational and training purposes only.</small></p>
         </footer>
 
         {% block postloadjs %}
             <!-- Mailchimp script -->
-            <script type="text/javascript" 
-                src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js">
-            </script>
+            <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
             <script type="text/javascript">
                 (function($) {
                     window.fnames = new Array();
@@ -353,7 +334,5 @@
                 var $mcj = jQuery.noConflict(true);
             </script>
         {% endblock postloadjs %}
-
     </body>
-
 </html>

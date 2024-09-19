@@ -929,8 +929,15 @@ font-size: 100% !important;
     color: #E4C58A;
 }
 
+/* Ensure form container has enough width */
+.mc_embed_shell {
+    width: 100%;
+    max-width: 245px;
+    margin: 0 auto;
+}
+
 #mce-EMAIL {
-    width: 250px !important;
+    width: 180px !important;
 }
 
 #mc-embedded-subscribe {
@@ -945,12 +952,12 @@ font-size: 100% !important;
 #mc_embed_signup #mce-success-response {
     display: contents;
     color: #FBFAF8;
+    font-weight: 100 !important;
 }
 
-#mc_embed_signup div#mce-responses {
-    padding-left: 80px;
-    margin-top: 5px;
-
+#mc_embed_signup #mce-responses {
+    margin-top: 5px !important;
+    text-align: start !important;
 }
 
 /* Media query: mobile phones (270px and up) */
@@ -1209,11 +1216,20 @@ font-size: 100% !important;
         font-size: 14px !important;
     }
 
-        /* Style Thank you page */
-        .order-summary p,
-        .thank-you p {
-            font-size: 120% !important;
-        }
+    /* Style Thank you page */
+    .order-summary p,
+    .thank-you p {
+        font-size: 120% !important;
+    }
+
+    /* Style Subscribe form */
+    .mc_embed_shell {
+        max-width: 315px;
+    }
+    
+    #mce-EMAIL {
+        width: 250px !important;
+    }
 }   
 
 /* Media query: larger devices (laptops & desktops, 768px and up) */
@@ -1336,6 +1352,11 @@ font-size: 100% !important;
     /* Style Profile page */
     .table-orders-history, td, tr {
         font-size: 16px !important;
+    }
+
+    /* Style Subscribe form */
+    .subscribe {
+        justify-content: flex-start !important;
     }
 }
 

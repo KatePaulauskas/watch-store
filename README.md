@@ -1674,52 +1674,59 @@ Upon submitting a request through the form, the user receives a notification con
 
 ### Log In Page
 
-The Log In page allows existing customers to access their accounts and view their orders. This page ensures secure authentication and provides a straightforward way for users to log in and access personalised experience. There is also a prompt to reset their password if needed.
+To access the Log In page, users need to click on the account menu in the header, indicated by an icon and the words "Log In." A dropdown will appear with the option to "Login/Register."
 
-![Account Login Menu](/media/account-login-menu.jpeg)
+The Log In page allows existing customers to securely access their accounts and view their orders. This page provides a straightforward and safe way for users to log in and enjoy a personalized experience. If needed, users can also reset their passwords through the provided link.
 
 ![Account Login Page](/media/account-login-page.png)
 
-![Account Menu Admin](/media/account-menu-admin.png)
+After logging in, customers are directed to the homepage and notified of a successful login:
 
-![Log In Page](/media/log-in-page.jpeg)
+![Sign In Success Regular User](/media/sign-in-success-reg-user.jpeg)
 
-After logging in, customers are directed to their account dashboard and notified of a successful login:
+**Password Reset**
 
-![Password reset page](/media/password-reset.jpeg)
+If a registered user forgets their password, they can click the "Forgot Password?" link.
+
+![Password Reset Page](/media/password-reset.jpeg)
+
+After entering the email associated with their account and clicking "Reset My Password," the user is notified that a reset link has been sent to their email:
 
 ![Password Reset Link Sent](/media/password-reset-link.jpeg)
 
-![Sign In Success Admin](/media/sign-in-success.jpeg)
-![Sign In Success Regular User](/media/sign-in-success-reg-user.jpeg)
-
 ### Register an Account Page
 
-If a customer does not have an existing account, they can click on the 'Sign Up' link on the Log In page. They are then redirected to the Sign Up page, which allows new users to create an account, enabling them to track their orders and manage their account details online.
+If a customer does not have an existing account, they can click the "Register" link on the Log In page. They will be redirected to the Register page, where new users can create an account, enabling them to track their orders and manage their account details online.
 
 ![Register an Account Page](/media/register-account-page.png)
 
-If a user does not follow the recommendations for creating secure credentials, notifications appear in a bright color to draw their attention to the issue and help them correct it.
+If a user does not follow the security recommendations for creating strong credentials, notifications will appear in a bright color to alert them to the issue and guide them to correct it.
 
 ![Sign Up Page Errors List](/media/sign-up-page-error-list.jpeg)
 
-After signing up, customers are directed to their account dashboard and notified of their successful account creation:
+After signing up, customers are prompted to verify their email address by following a link sent to the email address associated with the newly created account:
 
-![Request to Confirm Email.jpeg](/media/request-to-confirm-email.jpeg)
+![Request to Verify Email](/media/account-verify-email.jpeg)
 
-![Request to Verify Email Address](/media/verify-email-address.jpeg)
+Upon clicking the link, the user is directed to a page requesting email confirmation:
 
-![email-confirmed-notification](/media/email-confirmed-notification.jpeg)
+![Request to Confirm Email](/media/account-confirm-email.jpeg)
 
-![Email Confirmed - Redirect to Login Page](email-confirmed-notification-full-page.jpeg)
+Once the email address is confirmed, the user is redirected to login page where they need to enter thei credential to log in:
+
+![Email Confirmed Login Page](/media/email-confirmed-login-page.jpeg)
+
+Once user loogs in with their credentials, a result they are redirected to the homepage and notified of their successful sign-in:
+
+![Successful Signin - Redirect to Home Page](/media/account-sign-in-confirmation.jpeg)
 
 ### Log Out Page
 
-Upon clicking the Log Out button in the header, the user is taken to the Log Out page, where they must confirm their intent to sign out:
+To log out, the user must click the account dropdown and select the "Log Out" option. The log out page then loads, where the user must confirm their intent to log out:
 
 ![Sign Out Page](/media/log-out-page.jpeg)
 
-Upon confirmation, the user is redirected to the home page and notified of their successful action:
+Upon confirmation, the user is redirected to the homepage and notified of the successful action:
 
 ![Sign Out Confirmation](/media/sign-out-confirmation.jpeg)
 

@@ -1896,6 +1896,87 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
+| Enter site URL: <https://eternity-watch-store-1f855f4289ad.herokuapp.com/> | Home page loads | Pass |
+| Menu was tested on all pages of the site on multiple devices: mobile, tablet, and desktop |  |  |
+| Click on the Home page link in the site menu | Home page loads | Pass |
+| Click on the Shop page link in the site menu | Shop page loads | Pass |
+| Click on the Contact page link in the site menu | Contact page loads | Pass |
+| Click on the hamburger menu icon on a mobile device | Menu items expand inside the header in a dropdown | Pass |
+| Hamburger menu icon on larger screens | Hidden | Pass |
+| Header icons and logo were tested on all pages of the site on mobile, tablet, and desktop |  |  |
+| Click on the logo | Home page loads | Pass |
+| Click on the Lig In icon while being logged out | Login/Register dropdown appears | Pass |
+| Click on the Account icon while beign logged in | Dropdown appears with the following pages: Profile and Logout | Pass |
+| Click on the Cart Icon | Cart page loads | Pass |
+| Notification about user login status | Correctly displays user login status | Pass |
+
+##### Search Bar
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Enter a valid search term, which is a word that matches either in product name or description | Products matching the search term (either in product name or description) are displayed on the shop page. | Pass |
+| Enter a search term that doesn't match any product | A "0 Products found for -term-" message is displayed on the shop page | Pass |
+| Submit the search bar with no term entered   | An error message is displayed: "You didn't enter any search criteria!" | Pass |
+| Enter a partial search term | Products whose names or descriptions contain the partial term are displayed | Pass    |
+| Search term with special characters | The system correctly processes the special characters and shows results or an error if no match is found | Pass    |
+| Search term with uppercase letters | The search is case-insensitive, and products matching the term are displayed regardless of capitaliSation | Pass    |
+| Search bar usability with keyboard shortcuts | The search bar is usable with the "Tab" and "Enter" keys for accessibility | Pass |
+
+##### Home Page
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Click on the 'Explore' button on the Home Page | Shop page loads | Pass |
+
+#### Log In Page
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Click Log In icon in the header of the site and click Login/Register in the dropdown  | Log In page loads | Pass |
+| Click Log In without filling in any fields | Error message "Please fill in this field" is displayed in the login field | Pass |
+| Enter only the login and click Log In | Error message "Please fill in this field" is displayed next to the password field | Pass |
+| Enter only the password and click Log In | Error message "Please fill in this field" is displayed next to the login field | Pass |
+| Enter an invalid username and password, click Log In | Error message "The username and/or password you specified are not correct" is displayed | Pass |
+| Enter an invalid username or password, click Log In | Error message "The username and/or password you specified are not correct" is displayed | Pass |
+| Enter valid username and password, click Log In | User is redirected to Home page. The following message displayed "Successfully signed in as 'username'" | Pass |
+| Enter valid username and password, tick 'Remember me' click Log In | User is redirected to Home page. The following message is displayed: "Successfully signed in as 'username'". On subsequent visits to the site, the user remains logged in without needing to enter credentials again | Pass |
+| Click 'Forgot password?' | Password Reset page loads | Pass |
+| On the Password Reset page enter an invalid email format missing @ | "Please include an '@' in the email address. 'email' is missing an '@'" notification appears | Pass |
+| On the Password Reset page enter a valid email address | A confirmation stating that reset email has been sent is displayed | Pass |
+
+
+#### Register Page
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Click 'Register' link on the Login Page | Sign Up page loads | Pass |
+| Leave required fields empty and click Register | Error messages "Please fill in this field" are displayed next to the email field | Pass |
+| Enter only the email and click Register | Error message "Please fill in this field" is displayed next to the email again field | Pass |
+| Enter only the email into the email again field and click Register | Error message "Please fill in this field" is displayed next to the email field | Pass |
+| Enter only the username and click Register | Error message "Please fill in this field" is displayed next to the email field | Pass |
+| Enter only the password and click Register | Error message "Please fill in this field" is displayed next to the email field | Pass |
+| Enter only the email and email again and click Register | Error message "Please fill in this field" is displayed next to the username field | Pass |
+| Enter only the email, email again and username and click Register | Error message "Please fill in this field" is displayed next to the password field | Pass |
+| Enter email, email again, username and password, click Register | Error message "Please fill in this field" is displayed next to the password (again) field | Pass |
+| Enter already registered email, email again, username, password, password (again) and click Register | Verify Your Email Address page loads. User receives email stating that an account with that email address already exists and offering to recover account with password reset link | Pass |
+| Enter email, email again, but use different emails, enter username, password, password (again) and click Register | Error message "You must type the same email each time." is displayed | Pass |
+| Enter email, email again, username three or less characters, a password, and a password (again) and click Register | "Please lengthen this text to 4 characters or more (you are currently using 3 characters)" notification is displayed next tothe username field | Pass |
+| Enter email, email again, username, a password, and a password (again) that is less than 8 characters and click Register | Error message "This password is too short. It must contain at least 8 characters." is displayed | Pass |
+| Enter email, email again, username, password, and password (again), use a common password, and click Register | Error message "This password is too common." is displayed | Pass |
+| Enter email, email again, username, password, and password (again), use a numeric password, and click Register | Error message "This password is entirely numeric." is displayed | Pass |
+| Enter email, email again, username, password, and password (again), use a password similar to personal information and click Register | Error message "Your password can’t be too similar to your other personal information." is displayed | Pass |
+| Enter email, email again, username, password, and password (again), use different passwords for password and password (again), and click Register | Error message "You must type the same password each time." is displayed | Pass |
+| Fill out all fields correctly: enter  email, email again, username (four or more characters), password, and password (again), use the same passwords; if adding email, add email that was not previously registered; and click Register | Verify Your Email Address page loads with a message: 'We have sent an email to you for verification. Follow the link provided to finalise the signup process. If you do not see the verification email in your main inbox, check your spam folder. Please contact us via email at: eternitywatchstore0@gmail.com if you do not receive the verification email within a few  | Pass |
+| Open the email received as a result of the registration process: '[Eternity Watch Store] Please Confirm Your Email Address' and click the link to confirm | Page loads asking to confirm email address for the user | Pass |
+| Click confirm button on the loaded page to confirm email address for the user | 'You have confirmed -email address-" notification is displayed and the user is redirected to the Log In page | Pass |
+| Enter the login and password details for the registered account |  'Successfully signed in as -username-" notification is displayed and the user is redirected to the home page | Pass |
+
+#### Log Out Page
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Click 'Log Out' button in the header | Redirects to the Log Out confirmation page | Pass |
+| Confirm logout by clicking on the 'Log Out' button | Redirects to Home page; notification about successful logout displayed | Pass |
+
 
 ##### Shop Page 
 
@@ -1938,9 +2019,65 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Adjust product quantity with plus/minus buttons | Quantity is updated, the subtotal and order summary are recalculated automatically, and a notification is displayed: "-Product name- was updated to -product number-" | Pass   |
 | Click "Remove" on a product | The product is removed from the cart, the page reloads with the updated list of items or an empty cart, and a notification is displayed: "-Product name- was removed from the cart!" | Pass   |
 | Click "Checkout" button  | The user is redirected to the checkout page to complete the purchase  | Pass   |
-| While being on the cart page when products are added to the cart, click on the "Back to Shop" button | The Shop page loads, displaying all the products  | Pass   |
+| While being on the cart page when products are added to the cart, click on the "Back to Shop" button | The Shop page loads, displaying all the products  | Pass |
 
-##### Manage Products
+##### Checkout Page
+
+##### Thank You Page
+
+##### Policies Page
+
+##### Footer
+
+**Newsletter Subscription Form Testing**
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Navigate to the site footer from any page of the site | The form is visible to the user in the footer | Pass |
+| Click submit button without addign an email | An error message appears 'This field is required' requesting the user to enter an email | Pass |
+| Input an invalid email format missing @ | An error message appears 'Please enter a valid email address' requesting the user to enter a valid email | Pass |
+| Input valid email in the form and submit | The user is shown a confirmation message of successful subscription: 'Thank you for subscribing!' | Pass |
+| Verify Mailchimp list includes the submitted email | The email appears in the Mailchimp list under the correct audience | Pass    |
+
+**Contact Details**
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Ensure the phone number and email are visible | Contact details are displayed correctly in the footer | Pass |
+| Click on the email address link | The user's default email client opens with the email pre-filled | Pass |
+
+**Follow Us (Social Media Links)**
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Click on the Instagram icon | The Instagram opens in a new tab | Pass |
+| Click on the Facebook icon | The Facebook page opens in a new tab | Pass |
+| Ensure social media icons are visible and properly aligned | The icons are displayed correctly on both desktop and mobile views | Pass |
+
+**Footer Menu Links**
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Click on "Home" link in the footer menu | The user is navigated to the homepage | Pass |
+| Click on "Shop" link in the footer menu | The user is navigated to the shop page | Pass |
+| Click on "Get In Touch" link in the footer menu | The user is navigated to the contact page | Pass |
+| Click on "Terms" link in the footer menu | The user is navigated to the Terms & Conditions section on the Store Policies page | Pass |
+| Click on "Return Policy" link in the footer menu | The user is navigated to the Return Policy section  on the Store Policies page | Pass |
+| Click on "Privacy Policy" link in the footer menu | The user is navigated to the Privacy Policy section  on the Store Policies page | Pass |
+
+**Footer Disclaimer**
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Verify that the disclaimer text is visible | The text '* *This website is created for educational and training purposes only*' is displayed in the footer | Pass |
+
+##### Features anf Pages with Admin Access
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Click on the Account icon while beign logged in as superuser | Dropdown appears with the following pages: Manage Products, Manage Policies, Profile and Logout | Pass |
+
+
+##### Manage Products Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
@@ -1951,8 +2088,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on 'Edit" button. When the page loads, edit any product details (e.g., name, collections, price, description or upload a new image), then click on "Update Prpduct" button | Notification is displayed "Product updated successfully!" and changes are reflected correctly on all the pages, where product is displayed: in a galleries (Shop and Home pages if relevant) as well as on the Product Page | Pass   |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete" | A pop-up window appears, asking, 'Delete product? Are you sure you want to delete this product? This action cannot be undone.' Options to close or confirm delete are available | Pass |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Delete' button | The product is removed from the store and no longer appears on any store pages, and the user is redirected to the "Shop Page"  with a confirmation message: "Prpduct deleted successfully!"| Pass |
-| | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Close' button | The pop-up window is closed, the admin remains on the same page with a confirmation message: "Action cancelled. No changes were made. " | Pass |
-
+| Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Close' button | The pop-up window is closed, the admin remains on the same page with a confirmation message: "Action cancelled. No changes were made. " | Pass |
 
 #### User Stories
 | User Story | Expected Behaviour | Actual Behaviour | Status |

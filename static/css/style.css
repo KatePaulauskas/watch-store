@@ -59,6 +59,10 @@ p {
     color: #AA9159;
 }
 
+a {
+    color: #FBFAF8 !important;
+}
+
 /* Icons style */
 iconify-icon {
     color: #E4C58A;
@@ -142,6 +146,10 @@ p.icon-text {
     color: #E4C58A;
 }
 
+.cart {
+    z-index: 999;
+}
+
 /* Style search bar */
 .search-bar {
     background: #113227;
@@ -186,7 +194,6 @@ input.search-bar {
 }
 
 /* Above fold style */
-
 .above-fold {
     background: url('/images/home_page/home_abovefold_image.webp');
     background-size: cover;
@@ -328,7 +335,7 @@ textarea {
     color: #E4C58A !important;
     border-radius: 5px !important;
     border-color: #E4C58A !important;
-    width: 280px !important;
+    width: 250px !important;
 }
 
 /* Override background color in forms when autifilled in browser. Source: CSS Tricks */
@@ -407,7 +414,7 @@ input[type="checkbox"] {
     text-align: center !important;
 }
 
-.errorlist {
+ul.errorlist li {
     color: #FC7C73 !important;
     list-style: inside;
 }
@@ -907,9 +914,11 @@ footer {
     font-family: "Antic", sans-serif !important;
 }
 
-.footer-text {
-    color: #E4C58A;
+.footer-text, 
+.footer-text a {
+    color: #E4C58A !important;
     font-family: "Antic", sans-serif !important;
+    text-decoration: none;
 }
 
 .footer-menu, 
@@ -927,6 +936,7 @@ font-size: 100% !important;
     font: 14px Muli, sans-serif;
     width: 200px;
     color: #E4C58A;
+    font-weight: 200 !important;
 }
 
 /* Ensure form container has enough width */
@@ -1164,10 +1174,7 @@ font-size: 100% !important;
     select,
     textarea {
         font-size: 90% !important;
-    }
-
-    input {
-        width: 230px;
+        width: 280px;
     }
     
     /* Style Shop page */

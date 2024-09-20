@@ -59,6 +59,10 @@ p {
     color: #AA9159;
 }
 
+a {
+    color: #FBFAF8 !important;
+}
+
 /* Icons style */
 iconify-icon {
     color: #E4C58A;
@@ -142,6 +146,10 @@ p.icon-text {
     color: #E4C58A;
 }
 
+.cart {
+    z-index: 999;
+}
+
 /* Style search bar */
 .search-bar {
     background: #113227;
@@ -186,7 +194,6 @@ input.search-bar {
 }
 
 /* Above fold style */
-
 .above-fold {
     background: url('/images/home_page/home_abovefold_image.webp');
     background-size: cover;
@@ -328,7 +335,7 @@ textarea {
     color: #E4C58A !important;
     border-radius: 5px !important;
     border-color: #E4C58A !important;
-    width: 280px !important;
+    width: 250px !important;
 }
 
 /* Override background color in forms when autifilled in browser. Source: CSS Tricks */
@@ -412,7 +419,7 @@ input[type="checkbox"] {
     list-style: inside;
 }
 
-a {
+.signup a {
     color: #FBFAF8 !important;
 }
 
@@ -452,6 +459,11 @@ a {
 /* Set 1 product per row. Source: MDN Web Docs */
 .product-grid {
     grid-template-columns: 1fr;
+}
+
+/* Style filters menu on hover */
+.filters-menu .nav-link:hover {
+    text-decoration: none !important;
 }
 
 .card, .card-footer {
@@ -852,6 +864,12 @@ ul.list-unstyled {
     height: 38px !important;
 }
 
+#id_rating_helptext {
+    color: #AA9159 !important;
+    font-style: italic;
+    font-size: 12px;
+}
+
 /* Style availability checkbox and label */
 #div_id_availability,
 #div_id_featured_product {
@@ -896,15 +914,60 @@ footer {
     font-family: "Antic", sans-serif !important;
 }
 
-.footer-text {
-    color: #E4C58A;
+.footer-text, 
+.footer-text a {
+    color: #E4C58A !important;
     font-family: "Antic", sans-serif !important;
+    text-decoration: none;
 }
 
 .footer-menu, 
-.footer-text,
-.footer-heading {
+.footer-text {
 font-size: 100% !important;
+}
+
+.footer-heading {
+    font-size: 16px !important;
+}
+
+/* Mailchimp style */
+
+#mc_embed_signup {
+    font: 14px Muli, sans-serif;
+    width: 200px;
+    color: #E4C58A;
+    font-weight: 200 !important;
+}
+
+/* Ensure form container has enough width */
+.mc_embed_shell {
+    width: 100%;
+    max-width: 245px;
+    margin: 0 auto;
+}
+
+#mce-EMAIL {
+    width: 180px !important;
+}
+
+#mc-embedded-subscribe {
+    width: 65px !important;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+    background-color: #113227;
+    color: #FC7C73;
+}
+
+#mc_embed_signup #mce-success-response {
+    display: contents;
+    color: #FBFAF8;
+    font-weight: 100 !important;
+}
+
+#mc_embed_signup #mce-responses {
+    margin-top: 5px !important;
+    text-align: start !important;
 }
 
 /* Media query: mobile phones (270px and up) */
@@ -1111,10 +1174,7 @@ font-size: 100% !important;
     select,
     textarea {
         font-size: 90% !important;
-    }
-
-    input {
-        width: 230px;
+        width: 280px;
     }
     
     /* Style Shop page */
@@ -1163,11 +1223,20 @@ font-size: 100% !important;
         font-size: 14px !important;
     }
 
-        /* Style Thank you page */
-        .order-summary p,
-        .thank-you p {
-            font-size: 120% !important;
-        }
+    /* Style Thank you page */
+    .order-summary p,
+    .thank-you p {
+        font-size: 120% !important;
+    }
+
+    /* Style Subscribe form */
+    .mc_embed_shell {
+        max-width: 315px;
+    }
+    
+    #mce-EMAIL {
+        width: 250px !important;
+    }
 }   
 
 /* Media query: larger devices (laptops & desktops, 768px and up) */
@@ -1291,6 +1360,11 @@ font-size: 100% !important;
     .table-orders-history, td, tr {
         font-size: 16px !important;
     }
+
+    /* Style Subscribe form */
+    .subscribe {
+        justify-content: flex-start !important;
+    }
 }
 
 /* Media query: larger screens (1400px and up) */
@@ -1298,5 +1372,10 @@ font-size: 100% !important;
     /* Style Shop page. 4 products per row */
     .product-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* Style Subscribe form */
+    #mce-EMAIL {
+        width: 300px !important;
     }
 }

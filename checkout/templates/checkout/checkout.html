@@ -17,7 +17,7 @@
                 Edit Cart
             </a>
         </div>
-        <div class="col-12 col-lg-6 order-lg-last mb-5 p-1 p-sm-3">
+        <div class="col-12 col-lg-6 order-lg-last mb-5 p-3">
             <div class="d-flex justify-content-start">
                 <h5 class="mb-0">Order Summary ({{ product_count }})</h5>
             </div>
@@ -41,14 +41,14 @@
                         {% endif %}
                     </a>
                 </div>
-                <div class="col-7 p-0 p-sm-2">
-                    <p class="my-0 px-1">{{ item.product.name }}</p>
-                    <p class="my-0 px-0 item-quantity">Qty: {{ item.quantity }}</p>
+                <div class="col-7 p-0 p-xs-2">
+                    <p class="my-0 px-1"><small>{{ item.product.name }}</small></p>
+                    <p class="my-0 px-0 item-quantity"><small>Qty: {{ item.quantity }}</small></p>
                     <!-- Hidden input to store the total product count for use in JavaScript -->
                     <input type="hidden" id="product-count" value="{{ product_count }}">
                 </div>
-                <div class="col-3 px-0 p-sm-2 text-end">
-                    <p class="my-0 px-2">€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</p>
+                <div class="col-3 px-0 p-xs-1 p-sm-2 text-end">
+                    <p class="my-0"><small>€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</small></p>
                 </div>
             </div>
             {% endfor %}
@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-4 col-sm-3">
                     <input type="hidden" id="cart-weight" value="{{ cart_weight }}">
-                    <p class="my-0"><span id="initial-total">{{ total|floatformat:2|intcomma }}</span></p>
+                    <p class="my-0"><span id="initial-total">€{{ total|floatformat:2|intcomma }}</span></p>
                     <p class="my-0"><span id="delivery-cost">€{{ delivery|floatformat:2|intcomma }}</span></p>
                     <p class="my-0">
                         <span id="add-ons">€0.00</span>
@@ -78,8 +78,9 @@
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     {% if not user.is_authenticated %}
-                    <div class="text-center small">
-                        <p>Have an account?
+                    <div class="text-center px-2">
+                        <p class="fs-6">Have an account?
+                        <br>
                         <a class="text-info" href="{% url 'account_login' %}">Login</a> to prefill your details or
                         <a class="text-info" href="{% url 'account_signup' %}">register</a></p>
                     </div>

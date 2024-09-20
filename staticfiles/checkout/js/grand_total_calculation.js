@@ -1,63 +1,86 @@
 // Automatically select the standard delivery method on page load
-var standardDelivery = document.querySelector('input[name="delivery_method"][data-standard="true"]');
+const standardDelivery = document.querySelector('input[name="delivery_method"][data-standard="true"]');
 if (standardDelivery) {
+    // If a standard delivery option is available, set it as the default checked option
     standardDelivery.checked = true;
 }
 
 // Function to calculate and update the grand total (delivery cost + add-ons)
 function updateGrandTotal() {
-    var selectedDeliveryMethod = document.querySelector('input[name="delivery_method"]:checked');
+    // Get the currently selected delivery method (radio button)
+    const selectedDeliveryMethod = document.querySelector('input[name="delivery_method"]:checked');
 
+    // Proceed if a delivery method is selected
     if (selectedDeliveryMethod) {
-        var deliveryRate = parseFloat(selectedDeliveryMethod.dataset.rate);
-        var cartWeight = parseFloat(document.getElementById("cart-weight").value);
-        var initialTotal = document.getElementById("initial-total");
-        var deliveryCost = document.getElementById("delivery-cost");
-        var grandTotalSummary = document.getElementById("grand-total-summary");
-        var grandTotalPayment = document.getElementById("grand-total-payment");
+        // Extract the delivery rate from the data attribute of the selected delivery method
+        const deliveryRate = parseFloat(selectedDeliveryMethod.dataset.rate);
+        
+        // Get the total weight of items in the cart from the hidden input field
+        const cartWeight = parseFloat(document.getElementById("cart-weight").value);
+        
+        // Get references to various DOM elements that will display the calculated totals
+        const initialTotal = document.getElementById("initial-total");
+        const deliveryCost = document.getElementById("delivery-cost");
+        const grandTotalSummary = document.getElementById("grand-total-summary");
+        const grandTotalPayment = document.getElementById("grand-total-payment");
 
+        // Ensure all necessary DOM elements exist before proceeding
         if (initialTotal && deliveryCost && grandTotalSummary && grandTotalPayment) {
-            var finalInitialTotal = parseFloat(initialTotal.textContent.replace(/[^0-9.-]+/g, ""));
-            var finalDeliveryCost = Math.round(deliveryRate * cartWeight);
+            // Parse the initial total amount from the text content (removing currency symbols or non-numeric characters)
+            const finalInitialTotal = parseFloat(initialTotal.textContent.replace(/[^0-9.-]+/g, ""));
+            
+            // Calculate the delivery cost based on the delivery rate and cart weight
+            const finalDeliveryCost = Math.round(deliveryRate * cartWeight);
 
-            // Calculate the add-on total using the data-price attribute
-            var addOnTotal = 0;
-            var cartQuantity = parseInt(document.getElementById("product-count").value);
-            var addOnCheckboxes = document.querySelectorAll('input[name="add_ons"]:checked');
+            // Initialize add-ons total
+            let addOnTotal = 0;
+            
+            // Get the number of products in the cart from the hidden input field
+            const cartQuantity = parseInt(document.getElementById("product-count").value);
+            
+            // Find all checked add-ons and calculate their total price
+            const addOnCheckboxes = document.querySelectorAll('input[name="add_ons"]:checked');
             addOnCheckboxes.forEach(function (addOnCheckbox) {
-                var addOnPrice = parseFloat(addOnCheckbox.getAttribute('data-price'));  // Use data-price attribute
+                // Get the price of each checked add-on from its data attribute
+                const addOnPrice = parseFloat(addOnCheckbox.getAttribute('data-price'));
+                
+                // Multiply the add-on price by the quantity of products in the cart
                 addOnTotal += addOnPrice * cartQuantity;
             });
 
-            // Update the delivery cost and add-ons in the DOM
+            // Update the delivery cost and add-ons total in the DOM
             deliveryCost.textContent = "€" + finalDeliveryCost.toFixed(2);
             document.getElementById("add-ons").textContent = "€" + addOnTotal.toFixed(2);
 
-            // Calculate the grand total including both delivery cost and add-ons
-            var finalGrandTotal = finalInitialTotal + finalDeliveryCost + addOnTotal;
+            // Calculate the grand total by summing the initial total, delivery cost, and add-ons total
+            const finalGrandTotal = finalInitialTotal + finalDeliveryCost + addOnTotal;
 
-            // Update the grand total in both 'grand-total-summary' and 'grand-total-payment'
+            // Update the grand total in both the summary and payment sections of the DOM
             grandTotalSummary.textContent = "€" + finalGrandTotal.toFixed(2);
             grandTotalPayment.textContent = "€" + finalGrandTotal.toFixed(2);
         } else {
+            // Log an error if any of the required DOM elements are missing
             console.error("One or more elements with IDs 'initial-total', 'delivery-cost', or 'grand-total-summary' are missing in the DOM.");
         }
     } else {
+        // Log an error if no delivery method is selected
         console.error("No delivery method selected.");
     }
 }
 
 // Add event listeners to the delivery method radio buttons
-var deliveryMethodRadios = document.querySelectorAll('input[name="delivery_method"]');
+const deliveryMethodRadios = document.querySelectorAll('input[name="delivery_method"]');
 deliveryMethodRadios.forEach(function (radio) {
+    // Update the grand total whenever the user selects a different delivery method
     radio.addEventListener('change', updateGrandTotal);
 });
 
 // Add event listeners to the add-ons checkboxes
-var addOnCheckboxes = document.querySelectorAll('input[name="add_ons"]');
+const addOnCheckboxes = document.querySelectorAll('input[name="add_ons"]');
 addOnCheckboxes.forEach(function (checkbox) {
+    // Update the grand total whenever the user selects or deselects an add-on
     checkbox.addEventListener('change', updateGrandTotal);
 });
 
-// Initial calculation on page load
+// Perform an initial grand total calculation when the page first loads
 updateGrandTotal();

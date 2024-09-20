@@ -5,10 +5,10 @@
 {% endblock head_title %}
 
 {% block content %}
-<div class="container mb-5">
-    <div class="row text-center">
-        <div class="col-lg-8 offset-lg-2 mt-5">
-            <h1>{% trans "Email Address" %}</h1>
+<div class="container mb-5 mx-0 px-0">
+    <div class="row text-center justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 mt-5 px-3">
+            <h1 class="mb-3">{% trans "Email Address" %}</h1>
             {% if emailaddresses %}
                 {% if current_emailaddress %}
                     <p>

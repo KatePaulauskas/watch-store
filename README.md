@@ -1858,7 +1858,9 @@ TThe primary focus of the Eternity - Luxury Watch Store application is Business-
      </details>
      <br>
 
-- **On-page SEO:** Meta descriptions and title tags, such as "Eternity | Luxury Watch Store," are crafted to reflect the core offerings of high-quality, affordable luxury watches. By including relevant keywords like "timeless designs" and "online watch shopping," the site becomes more attractive to search engines.
+- **On-page SEO:** Meta descriptions and title tags, such as "Eternity | Luxury Watch Store," are crafted to reflect the core offerings of high-quality, affordable luxury watches. By including relevant keywords like "timeless designs" and "online watch shopping," the site becomes more attractive to search engines. Additionally, each page features a single H1 tag to reinforce relevance and improve search engine rankings.
+
+- **Image SEO:** All images on the website include descriptive alt-text to enhance accessibility and improve search engine visibility, ensuring that search engines and visually impaired users can understand the content of the images.
 
 - **Technical SEO:** The website is designed to be mobile-friendly, with fast loading speeds and optimized images, ensuring a smooth user experience and better rankings in search results.
 

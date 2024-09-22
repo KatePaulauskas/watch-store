@@ -109,7 +109,7 @@
                                 <a class="nav-link menu {% if request.path == '/shop/' %}active{% endif %}" href="{% url 'shop' %}">Shop</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link menu {% if request.path == '/contact/' %}active{% endif %}" href="#">Contact</a>
+                                <a class="nav-link menu {% if request.path == '/contact/' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
                             </li>
                         </ul>
                         <!-- Authentication messages mobile-->
@@ -293,7 +293,7 @@
                             <a class="nav-link py-0 footer-menu" aria-current="page" href="{% url 'shop' %}">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link py-0 footer-menu" href="#">Get In Touch</a>
+                            <a class="nav-link py-0 footer-menu" href="{% url 'contact' %}">Get In Touch</a>
                         </li>
                     </ul>
                 </div>

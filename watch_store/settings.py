@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'delivery_method',
     'profiles',
     'policies',
+    'contact_request',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"

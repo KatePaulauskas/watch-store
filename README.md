@@ -1439,13 +1439,13 @@ At the Skeleton Plane, the interface and navigation design were defined through 
 The initial layout of the interface and navigation for the Eternity Luxury Watch Store website was developed using Balsamiq Studios software, where mockup wireframes were created for the key pages.
 
 **Home page:**
-![Home Page Wireframe](/media/wireframe-home-page.webp)
+![Home Page Wireframe](/media/wireframe-hope-page.jpeg)
 
 **Shop Page:**
-![Shop Page Wireframe](/media/wireframe-shop-page.webp)
+![Shop Page Wireframe](/media/wireframe-shop-page.jpeg)
 
 **Product Page:**
-![Product Page Wireframe](/media/wireframe-product-page.webp)
+![Product Page Wireframe](/media/wireframe-shop-page.jpeg)
 
 **Cart Page**
 ![Cart Page Wireframe](/media/wireframe-cart-page.webp)
@@ -1664,7 +1664,7 @@ If a customer visits the Cart Page before adding any items to the cart, they rec
 
 ### Contact Us Page
 
-The Contact Us Page provides a user-friendly contact form for inquiries, collaborations and feedback. This page is designed to facilitate smooth communication between Eternity Luxury Watch Store and its customers and potential partners, allowing them to easily reach out with any questions or concerns regarding their purchases or collaboration offers.
+The Contact Page provides a user-friendly contact form for inquiries, collaborations and feedback. This page is designed to facilitate smooth communication between Eternity Luxury Watch Store and its customers and potential partners, allowing them to easily reach out with any questions or concerns regarding their purchases or collaboration offers.
 
 ![Contact Us Page](/media/contact-us-page.jpeg)
 
@@ -2034,7 +2034,34 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 ##### Thank You Page
 
+##### Contact Page
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Click submit without filling out fields | "Please fill in this field" appears in the 'Name' field | Pass |
+| Fill out only the name, and click submit | "Please fill in this field" appears in the 'Email' field | Pass |
+| Fill out the name and email fields without the '@' sign, and click submit | "Please include an '@' in the email address. 'email' is missing an '@'" appears in the 'Email' field | Pass |
+| Fill out the name and email address with the '@' sign, and click submit | "Please fill in this field" appears in the 'Message' field | Pass |
+| Fill out the name, email address with the '@' sign, message, and remove 'General Enquiry' from the subject, and click submit	| "Please fill in this field" appears in the 'Subject' field | Pass |
+" Fill out all fields except for the 'Subject' (delete prefilled text "General Enquiry"), and click submit | "Please fill in this field" appears in the 'Subject' field | Pass |
+| Fill out the name, email address with the '@'sign, add subject or keep the default prefilled text "General Enquiry", and add a message, click submit | The notification "Thanks for reaching out! We got your message and will be in touch within 24 hours." displayed at the top of the screen | Pass |
+
 ##### Policies Page
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Click on "Terms" link in the footer menu | The user is navigated to the Terms & Conditions section on the Store Policies page | Pass |
+| Click on "Return Policy" link in the footer menu | The user is navigated to the Return Policy section  on the Store Policies page | Pass |
+| Click on "Privacy Policy" link in the footer menu | The user is navigated to the Privacy Policy section  on the Store Policies page | Pass |	
+| Verify content for "Terms & Conditions" | The "Terms & Conditions" policy content is visible and formatted correctly | Pass |
+| Verify content for "Return Policy" | The "Return Policy" content is displayed and properly formatted	| Pass |
+| Verify content for "Privacy Policy"	| The "Privacy Policy" content is visible and formatted correctly	| Pass |
+| Log in as a regular user and view policies	| Edit buttons are not visible to regular users	| Pass |
+
+
+| Log in as superuser and view policies	| Edit buttons are visible for each policy, allowing the superuser to modify the content |	Pass
+|Click "Edit" button as superuser	| Clicking the "Edit" button redirects the superuser to the corresponding policy edit form	| Pass
+
 
 ##### Footer
 
@@ -2053,7 +2080,8 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Ensure the phone number and email are visible | Contact details are displayed correctly in the footer | Pass |
-| Click on the email address link | The user's default email client opens with the email pre-filled | Pass |
+| Verify phone number is clickable on mobile devices | The phone number is clickable, allowing users to call directly when tapped on mobile devices |	Pass |
+| Verify email address is clickable | Clicking the email address opens the default email client with the 'to' field populated with the Eternity email	| Pass |
 
 **Follow Us (Social Media Links)**
 
@@ -2080,7 +2108,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 |-------------------------|-------------------------|----------------|
 | Verify that the disclaimer text is visible | The text '* *This website is created for educational and training purposes only*' is displayed in the footer | Pass |
 
-##### Features anf Pages with Admin Access
+##### Features and Pages with Admin Access
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Click on the Account icon while beign logged in as superuser | Dropdown appears with the following pages: Manage Products, Manage Policies, Profile and Logout | Pass |
@@ -2098,6 +2126,30 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete" | A pop-up window appears, asking, 'Delete product? Are you sure you want to delete this product? This action cannot be undone.' Options to close or confirm delete are available | Pass |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Delete' button | The product is removed from the store and no longer appears on any store pages, and the user is redirected to the "Shop Page"  with a confirmation message: "Prpduct deleted successfully!"| Pass |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Close' button | The pop-up window is closed, the admin remains on the same page with a confirmation message: "Action cancelled. No changes were made. " | Pass |
+
+##### Manage Policies Page
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Access the "Manage Policies" page from the admin account dropdown | 	Redirects the superuser to the "Store Policies" page with visible "Edit" buttons for each policy |	Pass |
+| Log out and try to access the edit URL directly	| The user is redirected to the login page | Pass | 
+| Click the "Edit" button for "Terms & Conditions" policy	| The superuser is redirected to the policy editing form for the "Terms & Conditions" policy	| Pass |
+| Update the content of the "Terms & Conditions" and click "Save Changes" |	The policy content is updated, and a success message "Terms & Conditions updated successfully!" is displayed	| Pass |
+| Verify that the updated policy content appears on the "Store Policies" page	| The new content for "Terms & Conditions" is visible on the main policies page	| Pass |
+| Click the "Edit" button for "Return Policy" policy | The superuser is redirected to the policy editing form for the "Return Policy" policy |	Pass |
+| Update the content of the "Return Policy" and click "Save Changes"	| The policy content is updated, and a success message "Return Policy updated successfully!" is displayed	| Pass | 
+| Verify that the updated policy content appears on the "Store Policies" page	| The new content for "Return Policy" is visible on the main policies page	| Pass |
+| Click the "Edit" button for "Privacy Policy" policy	| The superuser is redirected to the policy editing form for the "Privacy Policy" policy	| Pass |
+| Update the content of the "Privacy Policy" and click "Save Changes"	| The policy content is updated, and a success message "Privacy Policy updated successfully!" is displayed	| Pass |
+| Verify that the updated policy content appears on the "Store Policies" page	| The new content for "Privacy Policy" is visible on the main policies page | Pass |
+| Click "Edit" for any policy and then click the "Cancel" button	| The user is redirected back to the "Store Policies" page with a message "Action cancelled. No changes were made."	| Pass |
+| Attempt to submit a policy title with less than 5 characters (e.g., "ABC") | Validation error is raised. Error message like "Ensure this value has at least 5 characters" is displayed | Pass   |
+| Attempt to submit a policy title with characters between 5 and 30 | The title is accepted, and the policy is saved successfully | Pass   |
+| Attempt to submit a policy title with more than 30 characters | Superuser is prevented from typling more than 30 characters | Pass   |
+ Attempt to submit a policy content with less than 50 characters | Validation error is raised. Error message "Ensure this value has at least 50 characters" is displayed | Pass   |
+| Attempt to submit a policy content with 50 or more characters | The content is accepted, and the policy is saved successfully | Pass   |
+| Attempt to submit a policy with an empty title | Validation error is raised. Error message "This field is required" is displayed | Pass   |
+| Attempt to submit a policy with empty content | Validation error is raised. Error message "This field is required" is displayed | Pass   |
 
 #### User Stories
 | User Story | Expected Behaviour | Actual Behaviour | Status |

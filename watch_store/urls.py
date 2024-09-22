@@ -30,3 +30,7 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('shop/', include('shop.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Error handlers
+handler404 = 'watch_store.views.handler404'
+handler500 = 'watch_store.views.handler500'

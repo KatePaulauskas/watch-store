@@ -1,10 +1,14 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.core.validators import MinLengthValidator
 
 class Policy(models.Model):
-
-    title = models.CharField(max_length=200)
-    content = models.TextField()
+    title = models.CharField(
+        max_length=30,
+        validators=[MinLengthValidator(5)]
+    )
+    content = models.TextField(
+        validators=[MinLengthValidator(50)]
+    )
     updated_at = models.DateTimeField(auto_now=True)
     position = models.PositiveIntegerField(default=0)
 

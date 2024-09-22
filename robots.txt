@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /accounts/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /profile/
+Disallow: /policies/edit/
+Disallow: /shop/add/
+Disallow: /shop/edit/
+Disallow: /shop/delete/
+
+Sitemap: https://eternity-watch-store-1f855f4289ad.herokuapp.com/sitemap.xml

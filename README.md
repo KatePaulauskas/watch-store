@@ -116,308 +116,37 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 - **User Story: Home Page First Impression (above fold)**
 
      As a **user** I can **see a visually appealing homepage with store name, logo, tagline, high-quality image and call to action button** so that **I get a good first impression of the store**.
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user accesses the homepage
-     - When the homepage loads
-     - Then the user immediately sees the store name, logo, tagline, high-quality image relevant to the store business and call-to-action button prominently displayed.
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design the homepage layout using Bootstrap for responsive layout.
-     - Add the store name, logo, and tagline.
-     - Upload high-quality appealing image relevant to the store business.
-     - Create and place call-to-action button.
-     - Test the homepage for visual appeal and functionality.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience, adjust layouts and font sizes as needed.
-
-     </details>
-
-     <br>
 
 - **User Story: Navigation Menu**
 
      As a **user**, I can **access the navigation menu from any page** so that **I can easily access site pages and find what I’m looking for or discover what is available.**
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user accesses the site
-     - When the homepage loads
-     - Then the navigation menu is easily accessible in the header of the site
-     - When a user clicks on any item in the site menu
-     - Then the user is directed to the appropriate section or page of the site
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the navigation menu using Bootstrap for responsive layout.
-     - Ensure all navigation links are working correctly.
-     - Conduct user testing to ensure ease of navigation.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience; adjust layouts and font sizes as needed.
-
-     </details>
-
-     <br>
 
 - **User Story: Search Bar**
 
      As a **user**, I can **access the search functionality in the header of the site** so that **I can easily find what I’m looking for or discover what is available**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user accesses the site
-     - When the homepage loads
-     - Then the search bar is prominently placed in the header of the site and functional
-     - Given a user uses the search bar
-     - When a search is performed
-     - Then the user receives relevant search results
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Add and design a search bar in the header of the site.
-     - Ensure the search functionality works correctly.
-     - Conduct user testing to ensure the search bar is easy to find and use.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience; adjust layouts and font sizes as needed.
-
-     </details>
-
-     <br>
 
 - **User Story: Featured Products**
 
      As a **user**, I can view **featured products on the home page** so that **I can quickly see what products are popular.**
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user accesses the homepage
-     - When the homepage loads
-     - Then featured products are displayed prominently on the home page
-     - Given a user clicks on a featured product
-     - When the product name or image is clicked
-     - Then the user is taken to the product detail page
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and display featured products on the homepage in a gallery.
-     - Link featured products to their detail pages.
-     - Test the functionality of featured product links.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience; adjust layouts and font sizes as needed.
-
-     </details>
-
-     <br>
-
-- **User Story: Current Promotions and Offers**
-
-     As a **user**, I can **view promotions and offers on the home page** so that **I can take advantage of existing deals.**
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user accesses the homepage
-     - When the homepage loads
-     - Then promotions and offers are highlighted
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Display and highlight current promotions and offers on the homepage.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience; adjust layouts and font sizes as needed.
-
-     </details>
-
-     <br>
 
 - **User Story: Brand Connection**
 
      As a **user**, I can **read about the store, its goal, and mission on the home page** so that **I can connect with the values and vision of the business**.
-     
-     <details>
 
-     <summary>Acceptance Criteria</summary>
 
-     - Given a user accesses the homepage
-     - When the homepage loads
-     - Then the user can see a section that describes the store’s goal, mission, values, and vision.
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Create and add to the homepage text about the store, its goals, values, mission, and vision.
-     - Test the readability and accessibility of the information.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience, and adjust layouts and font sizes as needed.
-
-     </details>
-
-     <br>
-
-     - **User Story: Social Media Engagement**
+- **User Story: Social Media Engagement**
 
      As a **user**, I can see **links to social media profiles in the footer of the site** so that **I can follow the brand and stay connected via social media platforms**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user accesses the homepage or any page of the site
-     - When the page loads
-     - Then the user can see links to the store’s social media profiles in the footer
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Add social media profile links to the footer.
-     - Ensure the links are functional.
-     - Test the visibility and functionality of social media links.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience, and adjust layouts and font sizes as needed.
-
-     </details>
-
-     <br>
 
 - **User Story: Footer Menu and Contact Information**
 
      As a **user**, I can **easily access contact details and important links in the footer of the site** so that **I can get in touch with the store if needed and quickly navigate to key sections like Home, Shop, Terms & Conditions, Return Policy, Privacy Policy, and Get in Touch**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user accesses the homepage or any other page
-     - When the page loads
-     - Then the user can easily find the store’s contact details in the footer
-     - And the user can access important links such as Home, Shop, Get in Touch, Terms & Conditions, Return Policy, and Privacy Policy from the footer menu
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Add contact details to the footer of the site.
-     - Add a footer menu with links to important pages such as Home, Shop, Get in Touch, Terms & Conditions, Return Policy, and Privacy Policy.
-     - Ensure the contact information is accurate and up-to-date.
-     - Test the visibility and functionality of the contact details.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience, adjust layouts and font sizes as needed.
-
-     </details>
-
-     <br>
-
-- **User Story: Customer Trust**
-
-     As a **user**, I can **view customer reviews on the home page** so that **I learn about the quality of the products and level of service from other customers**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user accesses the homepage
-     - When the homepage loads
-     - Then the user can see customer reviews and gauge the quality of the store's products and the level of service.
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Collect customer reviews.
-     - Design a section to display customer reviews on the homepage.
-     - Test the readability and accessibility of the reviews section.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience, adjust layouts and font sizes as needed.
-
-     </details>
-
-     <br>
 
 - **User Story: Newsletter Subscription**
 
      As a **visitor**, I can **sign up for a newsletter subscription** so that **I can receive regular updates, promotions, and news from the store**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a visitor is on the home page or any other page of the site
-     - When the visitor enters their email address in the subscription form in thee footer and submits it
-     - Then the email address is added to the Mailchimp subscription list
-     - And the visitor receives a confirmation message 
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Utilize Mailchimp's embedded forms to handle subscriptions.
-     - Display a success message upon successful subscription.
-     - Display appropriate error messages if the subscription fails.
-     - Test the subscription form functionality across different browsers and devices to ensure compatibility and responsiveness.
-
-     </details>
 
 - **User Story: Submit Contact Form Request**
-
-    As a **user** I can **access and use the contact form on the 'Contact' page** so that **I can send inquiries directly to the store**.
-
-    <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a site, the user navigates to the "Contact" page
-     - When the user looks at the page
-     - Then the user sees a form to submit their name, email, and message
-     - When the user fills out and submits the contact form
-     - Then the user receives an on-screen confirmation that their message has been sent
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Use Django Crispy Forms to create and style a contact form. Ensure the form collects the user's name, email, and message.
-     - Style the form to make it visually appealing and consistent with the site’s overall design.
-     - Ensure immediate feedback is provided to the user through an on-screen confirmation message upon successful submission of the form.
-     - Test the form across multiple devices to ensure it is responsive and functions correctly.
-     - Verify that confirmation messages and error handling are working as expected to provide a positive user experience.
-
-      </details>
-
 
 ##### **Epic 2:  User Registration and Account Management**
 
@@ -426,165 +155,26 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 - **User Story: Account Creation**
 
      As a **new customer**, I can **create a new account through the Log In bar** so that **I can view my profile and past purchases**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given an email, a customer can register an account
-     - When the user enters their details and submits the form
-     - Then the account is created and the user is redirected to the home page
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Implement the user registration form using Django's authentication framework all-auth and Crispy Forms.
-     - Set up validation for email uniqueness and password confirmation.
-     - Set up error handling.
-     - Create views and URLs for the registration form and redirection upon successful registration.
-     - Test account creation functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Account Creation Email Confirmation**
 
      As a **new customer**, I can **receive an email confirmation after registering an account** so that **I know my account setup was successful**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user registers a new account
-     - When the registration is successful
-     - Then an email confirmation is sent to the user
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Implement email functionality in Django.
-     - Design the email template.
-     - Test email sending after registration.
-
-     </details>
-
-     <br>
 
 - **User Story: Login Access**
 
      As an **existing customer**, I can **log in to my account** so that **I can access my account and purchase history**.
-     
-     <details>
 
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user is on the login page
-     - When the user enters their credentials and submits the form
-     - Then the user is logged in and redirected to their account page
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Implement the user login form using Django's authentication framework all-auth and Crispy Forms.
-     - Create views and URLs for the login form and redirection upon successful login.
-     - Test login functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
-
-    - **User Story: Password Reset**
+- **User Story: Password Reset**
 
      As an **existing customer**, I can **reset my password if I forget it** so that **I can regain access to my account**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user clicks on the password reset link on the login form
-     - When the user enters their email and submits the form
-     - Then a password reset link is sent to their email
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the password reset form using Django's authentication framework all-auth and Crispy Forms.
-     - Implement password reset logic in Django views.
-     - Test password reset functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Update Personal Details**
 
-     As an **existing customer**, I can **update my personal details (name, address, payment information)** so that **my account information stays accurate and up to date**.
+     As an **existing customer** I can **update my default delivery details** so that **my account information stays accurate and up to date**.
      
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user is on their account page
-     - When the user updates their details and submits the form
-     - Then the user's account information is updated
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the user account page.
-     - Implement account update logic in Django views.
-     - Test updating personal details functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
-
 - **User Story: View Order History**
 
      As a **shopper**, I can **view my order history** so that **I can reference previous purchases**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is logged into their account
-     - When the shopper navigates to the order history page
-     - Then a list of all previous orders is displayed
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the order history page using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to fetch and display order history.
-     - Test the order history functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 ##### **Epic 3: Product Browsing and Search**
 
@@ -593,164 +183,26 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 - **User Story: Shop Page**
 
      As a **user**, I can **access the shop page (all-products page) from the site menu** so that **I can view all available watches**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user accesses the all-products page directly, from the site menu, or call-to-action button
-     - When the page loads
-     - Then the user can see all available watches displayed in a gallery
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design the shop page and link it to the site menu.
-     - Create Django model for watches with relevant fields (name, image, brand, price, gender, etc.).
-     - Implement logic in Django views to fetch and display all watches.
-     - Test the all-products page functionality.
-     - Check the responsiveness and visual appeal across different devices to ensure a uniform experience.
-
-     </details>
-
-     <br>
 
 - **User Story: Category Browsing**
 
      As a **user**, I can **browse watches by categories such as brand, gender, and price** so that **I can find what I’m looking for easily**.
-     
-     <details>
 
-     <summary>Acceptance Criteria</summary>
+- **User Story: Product Sorting**
 
-     - Given a user is on the shop page
-     - When the user selects a category filter
-     - Then only products within that category are displayed
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Implement category browsing functionality.
-     - Integrate category filter logic into Django views.
-     - Test category browsing functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
+     As a **user** I can **sort store products** so that **I can find the best-priced, and most popular product or sort the products by name**.
 
 - **User Story: Keyword Search**
 
      As a **user**, I can **use the search bar to find specific watches by keyword or model number** so that **I can quickly locate desired products**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user is on any page
-     - When the user enters a keyword in the search bar and submits
-     - Then the search results matching the keyword are displayed
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Implement search logic in Django views to filter products based on keywords.
-     - Test keyword search functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Multiple Filters Application**
 
      As a **user** I can **apply multiple filters (e.g., brand and gender) on the shop page** so that **I can narrow down the selection**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user is on the product browsing page
-     - When the user applies filters
-     - Then the filtered results are displayed
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement filter options using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement filter logic in Django views.
-     - Test filter application functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
-
-- **User Story: Sort All Products Page Results**
-
-     As a **user** I can **sort search results by criteria like rating, price, and name** so that **I can view products in my preferred order**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user is on the product browsing page
-     - When the user selects a sort option
-     - Then the sorted results are displayed
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement sort options using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement sorting logic in Django views.
-     - Test sorting functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Search Query and Result Count Display**
 
      As a **user**, I can **clearly see my search query and the total number of results** so that **I can assess if the desired product is offered by the store**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user performs a search
-     - When the search results are displayed
-     - Then the search query and number of results are clearly shown
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Display the search query and result count using HTML, CSS, and Bootstrap for a responsive layout.
-     - Ensure search clarity in Django views.
-     - Test the display of search query and result count.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 ##### **Epic 4: Product Details**
 
@@ -759,121 +211,10 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 - **User Story: Product Page**
 
      As a **shopper**, I can **see detailed product descriptions, specifications, and images** so that **I can understand the product features**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on the product detail page
-     - When the page loads
-     - Then the shopper can see detailed descriptions, specifications, and images
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Add products through the Django admin panel to populate the product database.
-     - Design and implement the product detail page using HTML, CSS, and Bootstrap for responsive layout.
-     - Implement a Django view to retrieve and display the product details on the product detail page.
-     - Test the display of product details, ensuring all data is correctly pulled from the database.
-     - Check the responsiveness and visual appeal of the product detail page across different devices.
-
-     </details>
-
-     <br>
-
-- **User Story: Products' Reviews**
-
-     As a **shopper**, I can **view customer reviews and ratings** so that **I can gauge the quality and satisfaction of other buyers**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on the product detail page
-     - When the page loads
-     - Then the shopper can see customer reviews and ratings
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the customer review section using HTML, CSS, and Bootstrap for a responsive layout.
-     - Integrate customer reviews and ratings in Django models.
-     - Populate the review section with sample reviews and ratings.
-     - Test the display and functionality of customer reviews.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
-
-- **User Story: Extended Warranty Add-On**
-
-     As a **shopper**, I can **opt for an extended warranty for a watch** so that **I have additional protection and peace of mind beyond the standard warranty period**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on the product detail page
-     - When the page loads
-     - Then the shopper can see an option to add an extended warranty
-     - When the shopper clicks on the add-on to extend the warranty
-     - Then the total price of the product adjusts to include the additional charge
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the extended warranty option using HTML, CSS, and Bootstrap for a responsive layout on the product detail page.
-     - Integrate the extended warranty feature in Django models to support the add-on.
-     - Create and display a detailed description of the extended warranty terms and conditions on the product detail page.
-     - Develop functionality to adjust the total product price when the extended warranty is selected.
-     - Ensure the new total price includes the additional charge for the extended warranty.
-     - Test the display and functionality of the extended warranty option across various devices and screen sizes.
-     - Validate that the price adjustment works correctly and is reflected in the shopping cart and checkout process.
-
-     </details>
-
-     <br>
 
 - **User Story: Select Product Quantity**
 
      As a **shopper**, I can **select product quantity** so that I can **customize my choice before adding it to the cart**.
-
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on a product detail page
-     - When the page loads
-     - Then the shopper can see options to select product quantity
-     - When the shopper selects product quantity
-     - Then the selections are captured correctly and can be added to the cart
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-     
-     - Design and implement product quantity selector
-     - Ensure the quantity selector is intuitive and user-friendly
-     - Integrate the selection functionality in Django models and views to capture and process the selected attributes and quantity.
-     - Test the selection functionality to ensure the options and quantity are accurately captured and processed.
-     - Validate the visual appeal and responsiveness of the product option selectors across different devices.
-     - Provide feedback to the user in case of invalid selections or errors (e.g., out-of-stock options).
-
-     </details>
-
-     <br>
 
 ##### **Epic 5: Shopping Cart and Checkout**
 
@@ -882,334 +223,55 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 - **User Story: Add Items to Cart**
 
      As a **shopper**, I can **add items to my shopping cart** so that **I can purchase them later**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a user is on a product page
-     - When the user selects the quantity and then clicks the "Add to Cart" button
-     - Then a pop-up notification is displayed and the item is added to the shopping cart
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the "Add to Cart" button using HTML, CSS, and Bootstrap for a responsive layout.
-     - Ensure the selected product quantity are correctly captured and sent to the backend.
-     - Implement add-to-cart functionality in Django views.
-     - Develop the pop-up notification to confirm the item has been added to the cart.
-     - Test the add-to-cart functionality.
-     - Validate that the cart is updated correctly and displayed accurately in the shopping cart summary.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Review Cart**
 
      As a **shopper**, I can **view the contents of my shopping cart and the total amount** so that **I can review my selections and total cost before proceeding to checkout**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper accesses the shopping cart page
-     - When the page loads
-     - Then the shopper can see all items in the cart with their details and prices
-     - And the shopper can see the total cost of all items in the cart
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the shopping cart page using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to retrieve and display cart contents.
-     - Display each item's details, including name, quantity, price, and any selected options.
-     - Calculate and display the total cost of all items in the cart.
-     - Test the display and functionality of the shopping cart, ensuring items and total cost are shown accurately.
-     - Validate the cart's responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Update Cart**
 
      As a **shopper**, I can **remove or update quantities of items in my cart** so that I can **adjust my order**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on the shopping cart page
-     - When the shopper updates quantities or removes items
-     - Then the cart reflects the changes
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Implement functionality to update quantities and remove items in the cart using HTML, CSS, and Bootstrap for a responsive layout.
-     - Update Django views to handle cart updates.
-     - Ensure the cart dynamically updates the total cost when changes are made.
-     - Test the update and removal functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Add Customer Details at Checkout**
 
      As a **shopper**, I can **enter my customer details during checkout** so that I can **complete my purchase**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on the checkout page
-     - When the shopper enters their customer details
-     - Then the customer details are saved and used for the order
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the customer details form using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to save the customer details.
-     - Test the customer details entry functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-     
-     <br>
 
 - **User Story: Enter Shipping Address at Checkout**
 
      As a **shopper**, I can **enter my shipping address** so that **my order can be delivered to me**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on the checkout page
-     - When the shopper enters their shipping address
-     - Then the shipping address is saved and used for the order
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the shipping address form using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to save the shipping address.
-     - Test the shipping address entry functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Offer Login at Checkout**
 
      As a **shopper**, I can **be prompted to log in at checkout** so that I can **prefill my details if I have an account**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on the checkout page and not logged in
-     - When the page loads
-     - Then the shopper is offered the option to log in
-     - When the shopper logs in
-     - Then their customer details are prefilled in the relevant fields
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the login prompt on the checkout page using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to handle shopper login and retrieval of customer details.
-     - Ensure customer details are prefilled upon successful login.
-     - Test the login prompt and prefill functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Prefill Customer and Shipping Details**
 
      As a **shopper**, I can **have my customer and shipping details prefilled if I'm logged in** so that **I can save time during the checkout process**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is logged in and on the checkout page
-     - When the page loads
-     - Then the shopper’s customer and shipping details are prefilled in the relevant fields
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the customer and shipping details form using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to retrieve and prefill customer and shipping details if the shopper is logged in.
-     - Test the prefill functionality to ensure details are correctly populated.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Choose the Shipping Method at Checkout**
 
      As a **shopper**, I can **choose a shipping method** so that I can **select how my order will be delivered to me**.
-     
-     <details>
 
-     <summary>Acceptance Criteria</summary>
+- **User Story: Add-Ons at Checkout**
 
-     - Given a shopper is on the checkout page
-     - When the shopper selects a shipping method
-     - Then the selected shipping method is saved and used for the order
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the shipping method selection using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to save the selected shipping method.
-     - Test the shipping method selection functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
+     As a **shopper** on the checkout page I can **opt for add-ons such as extended warranty or shipping insurance** so that **I have additional protection for my purchase and secure delivery**.
 
 - **User Story: Add Payment Information at Checkout**
 
      As a **shopper**, I can easily **enter my payment information** so that I can **check out quickly and with no hassles**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on the checkout page
-     - When the shopper enters their payment information
-     - Then the payment information is processed securely
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the payment information form using HTML, CSS, and Bootstrap for a responsive layout.
-     - Integrate Stripe payment gateway in Django views.
-     - Test the payment information entry and processing functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Payment Security**
 
      As a **shopper**, I can **feel my personal and payment information is safe and secure** so that I can **provide the required information in confidence to complete my purchase**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper is on the checkout page
-     - When the shopper enters their payment information
-     - Then the information is encrypted and processed securely
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Ensure Stripe uses secure protocols.
-     - Test the security measures for payment information.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Order Confirmation Page**
 
      As a **shopper**, I can **view an order confirmation page after checkout** so that I can **verify that my order was accepted and I haven't made any mistakes**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper completes the checkout process
-     - When the order is successfully placed
-     - Then the shopper is redirected to an order confirmation page with the order details
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the order confirmation page using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to display order details.
-     - Test the order confirmation page functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Order Email Confirmation**
 
      As a **shopper**, I can **receive an order confirmation via email** so that **I have proof of my purchase**.
      
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given a shopper completes the checkout process
-     - When the order is successfully placed
-     - Then an email confirmation is sent to the shopper
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Implement email functionality in Django.
-     - Design the email template for order confirmation.
-     - Test email sending after order placement.
-
-     </details>
-
-     <br>
 
 ##### **Epic 6: Admin and Store Management**
  
@@ -1218,169 +280,27 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 - **User Story: Add a Product as Admin**
 
      As **an admin**, I can **add a product** so that **I can include new items in the store inventory**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given an admin is logged into the site
-     - When the admin navigates to the add product page and enters product details
-     - Then the new product is added to the store inventory
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the add product form using HTML, CSS, and Bootstrap for a responsive layout.
-     - Create Django models for products.
-     - Implement logic in Django views to handle adding products.
-     - Test the add product functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Edit/Update a Product as Admin**
 
      As an **admin**, I can **edit or update a product** so that **I can change product prices, descriptions, images, and other product criteria**.
      
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given an admin is logged into the site
-     - When the admin navigates to the edit product page and updates product details
-     - Then the product details are updated in the store inventory
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the edit product form using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to handle editing products.
-     - Test the edit product functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Delete a Product as Admin**
 
      As an **admin**, I can **delete a product** so that **I can remove items that are no longer available**.
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given an admin is logged into the site
-     - When the admin navigates to the delete product page and confirms the deletion
-     - Then the product is removed from the store inventory
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Design and implement the delete product confirmation using HTML, CSS, and Bootstrap for a responsive layout.
-     - Implement logic in Django views to handle deleting products.
-     - Test the delete product functionality.
-     - Check the responsiveness and visual appeal across different devices.
-
-     </details>
-
-     <br>
 
 - **User Story: Store Policies Management**
 
      As an **admin** I can **update the content for Terms & Conditions, Return Policy, and Privacy Policy through both the admin panel and the front end** so that **the footer menu always provides accurate and up-to-date information for users.**
-     
-     <details>
-
-     <summary>Acceptance Criteria</summary>
-
-     - Given an admin is logged into the site
-     - When the admin navigates to the admin panel
-     - Then the admin can update the content for the Terms & Conditions, Return Policy, and Privacy Policy pages
-     - When the content is updated
-     - Then the footer menu automatically links to the updated content
-     - Given an admin is logged into the site
-     - When the admin navigates to the front-end pages of Terms & Conditions, Return Policy, or Privacy Policy
-     - Then the admin can directly edit the content on those pages without needing to access the admin panel
-
-     </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Create a model to store the content for Terms & Conditions, Return Policy, and Privacy Policy.
-     - Add editable fields for Terms & Conditions, Return Policy, and Privacy Policy in the admin panel.
-     - Implement front-end editing capabilities for Terms & Conditions, Return Policy, and Privacy Policy pages accessible only to logged-in admin.
-     - Implement logic to display the updated content on the respective pages linked in the footer menu.
-     - Ensure the footer menu remains consistent and functional across all pages.
-     - Test the ability to update content through both the admin panel and the front-end pages and verify the links in the footer menu reflect these changes.
-     - Check the responsiveness and visual appeal of the footer menu across different devices.
-
-     </details>
 
 - **User Story: Store Contact Form Requests**
 
     As an **admin** I can **store contact form requests in the database** so that **I can review them, and mark them as read or delete them**.
 
-    <details>
-
-    <summary>Acceptance Criteria</summary>
-
-     - Given a site user submits the contact form
-     - When the form data is sent to the server
-     - Then the data should be stored in the database securely
-     - And the admin should be able to access and review this submission
-
-
-    </details>
-
-     <details>
-
-     <summary>Tasks</summary>
-
-     - Create a database model for storing contact requests. Include fields for name, email, message, submission date, and a status field to track whether the request has been read.
-     - Implement functionality to capture and store data from the form submissions.
-     - Use Django’s built-in protections against Cross-Site Request Forgery (CSRF) to secure form submissions.
-     - Utilize Django’s admin interface to create a custom panel where submitted requests can be reviewed.
-     - Ensure that the admin panel is intuitive and allows the site owner to easily manage the contact requests.
-     - Conduct thorough testing to ensure that form data is correctly captured, securely stored, and easily accessible via the admin panel.
-
-     </details>
-
 - **User Story: Track Contact Form Submissions**
 
     As an **admin** I can **mark contact form submission as "read"** so that **I can track how many I still need to process**.
-
-    <details>
-
-    <summary>Acceptance Criteria</summary>
-
-    - Given admin is reviewing contact form submissions in the admin panel
-    - When the admin selects a request
-    - Then the admin should be able to mark it as "read"
-
-    </details>
-
-    <details>
-
-    <summary>Tasks</summary>
-
-    - Enhance the existing admin panel to include an option to mark and unmark contact requests as "read."
-    - Verify that the functionality works seamlessly and the status updates are preserved when exiting and re-entering the admin panel.
-
-    </details>
 
 
 ### Structure
@@ -1426,7 +346,53 @@ The Database Structure below visualises the relationships between the key models
 
 ![Database Structure](/media/database-structure.png)
 
-![Database Structure Policies](/media/database-structure-policies.png)
+**Core Models**
+
+* **Product:**
+     Represents the items available for purchase in the store, including details such as name, SKU, price, description, and availability status. Each product belongs to multiple categories and may have add-ons associated with it.
+
+* **Category:**
+     Defines the different groups or types of products (e.g., gender and brands).
+
+* **ProductCategory:** 
+     A junction table connecting Product and Category. The many-to-many relationship between products and categories allows products to belong to multiple categories.
+
+* **AddOn:**
+     Represents optional add-ons that can be purchased alongside a product, such as shipping insurance and extended warranty. Add-ons have an associated price and are linked to each product in an order.
+
+* **Order:**
+     Tracks each individual purchase made by a user. It stores details about the user, delivery information, associated add-ons, and payment details. The order model also keeps track of costs such as delivery and grand totals.
+
+* **OrderLineItem:**
+     Represents a specific product within an order. Each order can have multiple line items, tracking the quantity and total price of each product purchased.
+
+* **AddOnOrder:**
+     A junction table connecting AddOn and Order in a many-to-many relationship, allowing the system to track the quantity of each add-on purchased with an order.
+
+* **DeliveryMethod:**
+     Defines the delivery options available for an order, including the name of the method and its associated rate.
+
+**User Management Models**
+
+* **User:**
+     Represents the customer who interacts with the store. This model stores user details such as first and last names, email, and whether the user has superuser privileges. It is a default Django model.
+
+* **UserProfile:**
+     Stores default contact and delivery details for registered users. This includes fields such as phone number, address, and postal code, making the checkout process quicker for returning customers.
+
+**Additional Models**
+
+* **Policy:**
+     Stores important store policies (e.g., Terms & Conditions, Return Policy) that the store follows. The content of the policies can be updated by an admin.
+
+     ![Database Structure Policies](/media/database-structure-policies.jpeg)
+
+* **ContactRequest:**
+     Handles inquiries from users. This model captures a user's name, email, subject, and message when they use the contact form on the website. Admins can mark requests as read after addressing them.
+
+     ![Database Structure Contact Request](/media/database-structure-contact-request.jpeg)
+
+These models together enable a seamless shopping experience, ensuring that customers can view, filter, and purchase products, while admins can manage orders, product listings, and important store policies effectively.
 
 
 ### Skeleton
@@ -1775,11 +741,16 @@ The footer is displayed at the bottom of every page and contains essential infor
 
 To enhance the user experience, custom error pages for 404 and 500 errors have been implemented. These error pages provide clear and helpful messages when users encounter a broken link or an internal server error. By guiding users back to the home page or other key sections, these error pages help maintain a seamless browsing experience even in the event of an error.
 
+**404 Error Page**
 ![404 Error Page](/media/404-error-page.jpeg)
+
+**500 Error Page**
+![500 Error Page](/media/500-error-page.jpeg)
 
 ### Admin Access Features
 
 ![Product Page Admin](/media/product-page-admin.jpeg)
+
 
 #### Store Policies Admin
 
@@ -1793,11 +764,15 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 
 ![Policy Updated Successfully Notification](/media/policy-updated-successfully.jpeg)
 
+![Superuser Access Only](/media/superuser-access-only.jpeg)
+
 ### Future Features
 
 1. Enhanced Sorting Based on Selected Filters. Currently, sorting resets applied filters (like brand or gender). This future feature can ensure sorting respects active filters, keeping them intact and sorting within the filtered results only.
 
 2. Inventory Tracking System. Introduce an inventory tracking system that automatically updates stock levels as products are sold. When inventory reaches zero, the product will automatically display an "Out of Stock" notification, preventing further purchases until stock is replenished. This feature will help maintain accurate stock levels and provide real-time availability information to shoppers.
+
+3. Sort search results by criteria like rating, price, and name to be ablr to view search results in preferred order.
 
 ## E-commerce Business Model
 
@@ -1861,6 +836,8 @@ TThe primary focus of the Eternity - Luxury Watch Store application is Business-
 - **On-page SEO:** Meta descriptions and title tags, such as "Eternity | Luxury Watch Store," are crafted to reflect the core offerings of high-quality, affordable luxury watches. By including relevant keywords like "timeless designs" and "online watch shopping," the site becomes more attractive to search engines. Additionally, each page features a single H1 tag to reinforce relevance and improve search engine rankings.
 
 - **Image SEO:** All images on the website include descriptive alt-text to enhance accessibility and improve search engine visibility, ensuring that search engines and visually impaired users can understand the content of the images.
+
+- **Sitemap and Robots.txt:** Eternity implements a sitemap.xml file to ensure search engines can easily crawl and index all relevant pages. The robots.txt file specifies which areas of the site should be indexed and which should not, such as excluding admin or account-related URLs. This setup ensures optimal visibility of important pages while keeping sensitive areas secure.
 
 - **Technical SEO:** The website is designed to be mobile-friendly, with fast loading speeds and optimized images, ensuring a smooth user experience and better rankings in search results.
 
@@ -2058,11 +1035,6 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Verify content for "Privacy Policy"	| The "Privacy Policy" content is visible and formatted correctly	| Pass |
 | Log in as a regular user and view policies	| Edit buttons are not visible to regular users	| Pass |
 
-
-| Log in as superuser and view policies	| Edit buttons are visible for each policy, allowing the superuser to modify the content |	Pass
-|Click "Edit" button as superuser	| Clicking the "Edit" button redirects the superuser to the corresponding policy edit form	| Pass
-
-
 ##### Footer
 
 **Newsletter Subscription Form Testing**
@@ -2126,6 +1098,10 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete" | A pop-up window appears, asking, 'Delete product? Are you sure you want to delete this product? This action cannot be undone.' Options to close or confirm delete are available | Pass |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Delete' button | The product is removed from the store and no longer appears on any store pages, and the user is redirected to the "Shop Page"  with a confirmation message: "Prpduct deleted successfully!"| Pass |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Close' button | The pop-up window is closed, the admin remains on the same page with a confirmation message: "Action cancelled. No changes were made. " | Pass |
+| Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/edit/45/) | The user is redirected to the login page with a message indicating that they need to log in | Pass | 
+| Attempt to access the edit URL as a regular user | Regular users are denied access to editing product, redirected to the home page and shown an error message: "Only store owners has access to this action" | Pass |
+| Log out and try to access the delete URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/delete/42/) | The user is redirected to the login page with a message indicating that they need to log in  | Pass | 
+| Attempt to access the delete URL as a regular user | Regular users are denied access to deleting product, redirected to the home page and shown an error message: "Only store owners has access to this action" | Pass |
 
 ##### Manage Policies Page
 
@@ -2150,10 +1126,54 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Attempt to submit a policy content with 50 or more characters | The content is accepted, and the policy is saved successfully | Pass   |
 | Attempt to submit a policy with an empty title | Validation error is raised. Error message "This field is required" is displayed | Pass   |
 | Attempt to submit a policy with empty content | Validation error is raised. Error message "This field is required" is displayed | Pass   |
+| Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/policies/edit/2/) | The user is redirected to the login page with a message indicating that they need to log in to edit policies | Pass | 
+| Attempt to access the edit URL as a regular user | Regular users are denied access to the policy editing page, redirected to the home page and shown an error message: "Only store owners has access to this action" | Pass |
 
 #### User Stories
 | User Story | Expected Behaviour | Actual Behaviour | Status |
 |------------|-------------------|----------------|-----------|
+| Home Page First Impression (above fold) | User sees a visually appealing homepage with store name, logo, welcome message, image, and call-to-action button | Home page is loaded with all elements and attractive design | Pass |
+| Navigation Menu | Navigation menu is accessible from any page | Menu accessible and functional across all pages | Pass |
+| Search Bar | User can search for products using the search bar in the header | Search bar works and provides accurate results | Pass |
+| Keyword Search | User can search for watches by keyword or model number | Search results match keywords entered by the user | Pass |
+| Featured Products | User sees a section featuring popular products on the Home page | Featured products are displayed on the Home page | Pass |
+| Brand Connection | User can read about the store's mission and goals on the Home page | Store information displayed clearly on the Home page | Pass |
+| Social Media Engagement | Links to social media platforms are visible in the footer | Links to Instagram and Facebook are working and open in a new tab | Pass |
+| Footer Menu and Contact Information | Footer contains contact details and key navigation links | Footer menu and contact details visible and functional | Pass |
+| Newsletter Subscription | User can submit email to subscribe to newsletter | Subscription form works and displays confirmation | Pass |
+| Submit Contact Form Request | User can submit a contact request via the contact form on the Contact page | Form submits successfully and records request in the database | Pass |
+| Account Creation | User can create a new account through the Log In icon | New account created successfully and user is redirected to the home page after confirming email | Pass |
+| Account Creation Email Confirmation | User receives a confirmation email after creating an account | Email confirmation sent after registration | Pass |
+| Login Access | User can log in to their account via Log In icon | User successfully logs in and is redirected to the home page | Pass |
+| Password Reset | User can reset their password if forgotten | Password reset link sent via email successfully and allows for easy password reset | Pass |
+| Update Personal Details | User can update default delivery details via the Profile Page under the account icon in the header | User's personal details are updated and saved succcessfully | Pass |
+| View Order History | User can view their previous orders on the Profile Page | If user has past order, the user successfully sees past order details on the Profile Page | Pass |
+| Shop Page | User can access all products from the Shop page | Shop page displays all products | Pass |
+| Category Browsing | User can browse products by categories such as brand and gender | Categories work correctly and filter results as expected | Pass |
+| Product Sorting | User can sort products by price, name, or popularity | Sorting options work correctly | Pass |
+| Multiple Filters Application | User can apply multiple filters like brand and gender to narrow search results | Brand and Gender filters work in conjunction to refine product selection | Pass |
+| Search Query and Result Count Display | Search query and result count are clearly displayed | Query and result count are visible and accurate in the search results | Pass |
+| Product Page | User sees detailed product descriptions, specifications, and images | Product details page displays all relevant information | Pass |
+| Select Product Quantity | User can select product quantity before adding to cart | Quantity selector is functional and updates correctly in the cart | Pass |
+| Add Items to Cart | User can add items to their shopping cart | Items are added to the cart successfully | Pass |
+| Review Cart | User can view the contents of their cart and total cost | Cart is updated and displays contents and total cost correctly | Pass |
+| Update Cart | User can remove or update quantities of items in the cart | User can adjust cart items without issues or remove them | Pass |
+| Add Customer Details at Checkout | User can enter customer details during checkout | Customer details form is functional and submits without errors | Pass |
+| Enter Shipping Address at Checkout | User can enter a shipping address during checkout | Shipping details form works as expected | Pass |
+| Offer Login at Checkout | User is offered to log in during checkout if not logged in | Login prompt appears correctly during checkout | Pass |
+| Prefill Customer and Shipping Details | Logged-in users have customer and shipping details prefilled | Logged-in user's details are prefilled automatically at checkout | Pass |
+| Choose the Shipping Method at Checkout | User can select shipping method at checkout | Shipping methods are displayed and selectable at the checkout and price adjusts accordingly | Pass |
+| Add-Ons at Checkout | User can choose add-ons like extended warranty or shipping insurance during checkout | Add-ons are offered during the checkout process and displays price adjusts accordingly | Pass |
+| Add Payment Information at Checkout | User can enter payment details easily and quickly | Payment form is working and submits payment details securely | Pass |
+| Payment Security | User feels confident their personal and payment details are secure | Payment forms are secure and encrypted | Pass |
+| Order Confirmation Page | User is shown an order confirmation page after successful checkout | Confirmation page displays order details after successful checkout | Pass |
+| Order Email Confirmation | User receives an order confirmation email upon placing an order | Order confirmation email is sent after successful purchase | Pass |
+| Add a Product as Admin | Admin can add new products to the inventory via front end | Front end allows product addition without errors by clicking on Account icon, selecting Manage Products page, filling in 'Add a Product' the form and savign it | Pass |
+| Edit/Update a Product as Admin | Admin can update any product information via Shop page or Product page by clicking 'Edit' next to the relevant product | Admin can successfully edit product details via the front end | Pass |
+| Delete a Product as Admin | Admin can remove products from the store via Shop page or Product page by clicking 'Delete' next to the relevant product | Admin can successfully delete a product via the front end | Pass |
+| Store Policies Management | Admin can edit store policies for Terms & Conditions, Return Policy, and Privacy Policy by click on Manage Policies under the Account icon, navigating to the relevant policy and clicking 'Edit' button | Admin can successfully update store policies via the front end | Pass |
+| Store Contact Form Requests | Admin can view and store contact form submissions via admin panel| Contact form submissions are stored and accessible by the admin via admin panel | Pass |
+| Track Contact Form Submissions | Admin can mark contact form submissions as "read" or delete them via admin panel | Admin can successfully track or delete contact form submissions from the dashboard via admin panel| Pass |
 
 ### Validator Testing
 
@@ -2423,6 +1443,8 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 - Favicon files were created using [Favicon.io](https://favicon.io/favicon-converter/).
 - Images for the site were converted and compressed using [11zon](hhttps://converter.11zon.com/) tool.
 - SEO keywords were selcted using [Semrush](https://www.semrush.com/).
+- Sitemap was created using [XML Sitemaps Generator](https://www.xml-sitemaps.com).
+- Entity-Relationship Diagrams were created using [QuickDBD](https://www.quickdatabasediagrams.com/).
 
 
 ### Media

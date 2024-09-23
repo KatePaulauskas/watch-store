@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
     '.herokuapp.com',
@@ -121,7 +121,7 @@ WSGI_APPLICATION = 'watch_store.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
-    'https://eternity-watch-store-1f855f4289ad.herokuapp.com/',
+    'https://eternity-watch-store-1f855f4289ad.herokuapp.com',
 ]
 
 # Database configuration
@@ -160,11 +160,6 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# Ensures Cloudinary URLs are generated with HTTPS
-cloudinary.config(
-    secure=True
-)
-
 X_FRAME_OPTIONS = 'ALLOW-FROM https://eternity-watch-store-1f855f4289ad.herokuapp.com/'
 
 # Static files settings
@@ -172,8 +167,26 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+# Media files configuration
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+
+# Ensures Cloudinary URLs are generated with HTTPS
+cloudinary.config(
+    cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
+    api_key=os.getenv('CLOUDINARY_API_KEY'),
+    api_secret=os.getenv('CLOUDINARY_API_SECRET'),
+    secure=True
+)
+
+# Static and media file storage with Cloudinary
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'STATIC_IMAGES_EXTENSIONS': ['png', 'jpg', 'jpeg', 'gif', 'webp'],
+    'RESOURCE_TYPE': 'image',
+}
 
 # Stripe settings
 STRIPE_CURRENCY = 'eur'

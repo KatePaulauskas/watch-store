@@ -912,7 +912,7 @@ ul.list-unstyled {
 }
 
 .contact-bottom-image {
-    background: url('/images/contact_page/contact-page-bottom.webp');
+    background: url('https://res.cloudinary.com/dmqcpnmy9/image/upload/v1727090971/contact-page-bottom_ctojck.webp');
     background-size: cover;
     background-position: center center;
     height:400px;

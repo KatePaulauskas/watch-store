@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, reverse, redirect,  get_object_or_404
 from django.contrib.auth.decorators import user_passes_test
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -11,7 +11,12 @@ def policies_display(request):
 
 @login_required
 def edit_policy(request, pk):
+    """ View to edit store policies """
     policy = get_object_or_404(Policy, pk=pk)
+    if not request.user.is_superuser:
+        messages.error(request, 'Only store owners has access to this action.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = PolicyForm(request.POST, instance=policy)
         if form.is_valid():

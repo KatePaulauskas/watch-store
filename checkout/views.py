@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem, AddOn
@@ -13,6 +15,7 @@ from delivery_method.models import DeliveryMethod
 
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -183,20 +186,31 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-    # Prepare email context
-    subject = f'Order Confirmation - {order.order_number}'
-    message = render_to_string('checkout/confirmation_email.html', {'order': order})
-    plain_message = strip_tags(message)
-    from_email = settings.DEFAULT_FROM_EMAIL
-    recipient_list = [order.email]
+    # Prepare email content using templates
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order}
+    )
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
+    )
 
-    # Send confirmation email
+    # Send order confirmation email
     send_mail(
         subject,
-        plain_message,
-        from_email,
-        recipient_list,
-        html_message=message,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [order.email],
+        fail_silently=False,
+    )
+
+    # Send order confirmation email
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [order.email],
         fail_silently=False,
     )
 

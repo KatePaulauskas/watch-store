@@ -183,6 +183,24 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
+    # Prepare email context
+    subject = f'Order Confirmation - {order.order_number}'
+    message = render_to_string('checkout/confirmation_email.html', {'order': order})
+    plain_message = strip_tags(message)
+    from_email = settings.DEFAULT_FROM_EMAIL
+    recipient_list = [order.email]
+
+    # Send confirmation email
+    send_mail(
+        subject,
+        plain_message,
+        from_email,
+        recipient_list,
+        html_message=message,
+        fail_silently=False,
+    )
+
+    # Clear the cart session
     if 'cart' in request.session:
         del request.session['cart']
 

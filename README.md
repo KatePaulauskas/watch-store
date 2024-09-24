@@ -1421,11 +1421,9 @@ To ensure the deployed app looks as nicely styled as the local development versi
          secure=True
      )
 
-     # Static and Media Files
+     # Media Files
      DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-     STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
      ```
-    - Remove WhiteNoise for static files as Cloudinary will be handling all static files and media.
 
 4. **Ensure that Media Files Are Served from Cloudinary:**
    - Push updated code to GitHub and redeploy the app.

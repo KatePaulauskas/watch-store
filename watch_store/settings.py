@@ -65,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 ]
 
@@ -161,6 +162,9 @@ USE_TZ = True
 
 X_FRAME_OPTIONS = 'ALLOW-FROM https://eternity-watch-store-1f855f4289ad.herokuapp.com/'
 
+# Static files storage with WhiteNoise
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Static files settings
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
@@ -178,9 +182,8 @@ cloudinary.config(
     secure=True
 )
 
-# Static and media file storage with Cloudinary
+# Media file storage with Cloudinary
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 CLOUDINARY_STORAGE = {
     'STATIC_IMAGES_EXTENSIONS': ['png', 'jpg', 'jpeg', 'gif', 'webp'],

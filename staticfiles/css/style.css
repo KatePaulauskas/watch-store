@@ -63,6 +63,10 @@ a {
     color: #FBFAF8 !important;
 }
 
+li a {
+    color: #230903 !important;
+}
+
 /* Icons style */
 iconify-icon {
     color: #E4C58A;

@@ -1,0 +1,44 @@
+<html>
+<body>
+    <p>Hello <strong>{{ order.full_name }}</strong>,</p>
+
+    <p>Thank you for your purchase at <strong>Eternity Watch Store</strong>! We're excited to confirm your order:</p>
+
+    <p>
+        <strong>Order Number:</strong> {{ order.order_number }}<br>
+        <strong>Order Date:</strong> {{ order.date }}<br>
+        <strong>Order Total:</strong> €{{ order.order_total }}<br>
+        <strong>Delivery:</strong> €{{ order.delivery_cost }}<br>
+        <strong>Add-ons:</strong> €{{ order.add_ons_cost }}<br>
+        <strong>Grand Total: €{{ order.grand_total }}</strong>
+    </p>
+
+    <h4>Items in Your Order:</h4>
+    <ul>
+        {% for item in order.lineitems.all %}
+        <li>
+            <strong>{{ item.product.name }}</strong> - Quantity: {{ item.quantity }} @ €{{ item.product.price }} each
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h4>Delivery Address:</h4>
+    <p>
+        {{ order.full_name }}<br>
+        {{ order.street_address1 }}<br>
+        {% if order.street_address2 %}{{ order.street_address2 }}<br>{% endif %}
+        {{ order.town_or_city }}, {{ order.county }}<br>
+        {{ order.postcode }}<br>
+        {{ order.country }}<br>
+    </p>
+
+    <p>We’ve also noted your contact number as <strong>{{ order.phone_number }}</strong>.</p>
+
+    <p>If you have any questions or need assistance, please don't hesitate to reach out to us at <strong>{{ contact_email }}</strong>.</p>
+
+    <p>Thank you for choosing <strong>Eternity Watch Store</strong>!</p>
+
+    <p>Best regards,<br>
+    <strong>Eternity Watch Store Team</strong></p>
+</body>
+</html>

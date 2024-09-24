@@ -190,28 +190,28 @@ def checkout_success(request, order_number):
     subject = render_to_string(
         'checkout/confirmation_emails/confirmation_email_subject.txt',
         {'order': order}
-    )
-    body = render_to_string(
+    ).strip()
+
+    # Plain text version
+    plain_message = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
     )
-
-    # Send order confirmation email
-    send_mail(
-        subject,
-        body,
-        settings.DEFAULT_FROM_EMAIL,
-        [order.email],
-        fail_silently=False,
+    
+    # HTML version
+    html_message = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.html',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL}
     )
 
-    # Send order confirmation email
+    # Send the email with both plain text and HTML versions
     send_mail(
         subject,
-        body,
+        plain_message,
         settings.DEFAULT_FROM_EMAIL,
         [order.email],
         fail_silently=False,
+        html_message=html_message
     )
 
     # Clear the cart session

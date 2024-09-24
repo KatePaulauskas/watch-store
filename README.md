@@ -624,6 +624,8 @@ If a customer visits the Cart Page before adding any items to the cart, they rec
 
 ![Checkout Page](/media/checkout-page.jpeg)
 
+![Order Confirmation Email](/media/order-confirmation-email.jpeg)
+
 ### Thank You Page
 
 ![Thank You Page.jpeg](/media/thank-you-page.jpeg)
@@ -1280,6 +1282,8 @@ The luxury watch store Eternity website is hosted on [Heroku](https://heroku.com
 - Add the `SECRET_KEY` with a value in the following format: `secret key`.
 - Click 'Add'.
 
+---
+
 ### Part 2 - Update Code for Deployment
 
 1. **Prepare Dependencies:**
@@ -1321,11 +1325,13 @@ The luxury watch store Eternity website is hosted on [Heroku](https://heroku.com
 
 ```
      ALLOWED_HOSTS = [
-    '8000-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
+    '8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
     '.herokuapp.com']
 ```
 
 5. **Push Updated Code to GitHub**
+
+---
 
 ### Part 3 - Deployment with Static Files
 
@@ -1345,7 +1351,7 @@ To ensure the deployed app looks as nicely styled as the local development versi
     pip3 freeze --local > requirements.txt
 ```
 
-- Integrate WhiteNoise into Django's `MIDDLEWARE` in the `groomingsalon/settings.py` file, ensuring it is placed right after the Django `SecurityMiddleware`:
+- Integrate WhiteNoise into Django's `MIDDLEWARE` in the `watch_store/settings.py` file, ensuring it is placed right after the Django `SecurityMiddleware`:
 ```
      MIDDLEWARE = [
          'django.middleware.security.SecurityMiddleware',
@@ -1355,7 +1361,7 @@ To ensure the deployed app looks as nicely styled as the local development versi
 ```
 
 2. **Create a Static Files Directory and Collect Static Files:**
-- Set the `STATIC_ROOT` path in the `groomingsalon/settings.py` file:
+- Set the `STATIC_ROOT` path in the `watch_store/settings.py` file:
 
 ```
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -1383,7 +1389,114 @@ To ensure the deployed app looks as nicely styled as the local development versi
 
 - Open the Heroku dashboard, go to the app 'Settings' tab, and under 'Reveal config vars', remove the `DISABLE_COLLECTSTATIC` key/value pair.
 
-### Part 4 - Set Up Deployment from GitHub
+---
+
+### Part 4 - Configuring Cloudinary for Media Storage
+
+1. **Create a Cloudinary Account:**
+   - Open [Cloudinary](https://cloudinary.com/).
+   - Sign up for a free account.
+   - Go to the dashboard and locate `CLOUD_NAME`, `API_KEY`, and `API_SECRET`.
+
+2. **Set Up Cloudinary Environment Variables:**
+   - In the Heroku app settings, open the 'Settings' tab and reveal 'Config Vars'.
+   - Add the following variables:
+     - `CLOUDINARY_CLOUD_NAME`
+     - `CLOUDINARY_API_KEY`
+     - `CLOUDINARY_API_SECRET`
+   - Set their values based on the information from the Cloudinary dashboard.
+
+3. **Update Django Settings for Cloudinary:**
+   - In `watch_store/settings.py`, add the following configuration:
+     ```python
+     # Cloudinary Configuration
+     cloudinary.config(
+         cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
+         api_key=os.getenv('CLOUDINARY_API_KEY'),
+         api_secret=os.getenv('CLOUDINARY_API_SECRET'),
+         secure=True
+     )
+
+     # Static and Media Files
+     DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+     STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+     ```
+    - Remove WhiteNoise for static files as Cloudinary will be handling all static files and media.
+
+4. **Ensure that Media Files Are Served from Cloudinary:**
+   - Push updated code to GitHub and redeploy the app.
+
+---
+
+### Part 5 - Configuring Email Settings
+
+1. **Set Up Gmail Account:**
+   - Go to Gmail and create a new account - eternitywatchstore0@gmail.com
+   - In the account settigns enable 2-factor authentication.
+   - Create an App password in the security settings of Gmail account.
+
+2. **Set Up Environment Variables in Heroku:**
+   - In Heroku app, under 'Config Vars', add the following:
+     - `EMAIL_HOST = smtp.gmail.com`
+     - `EMAIL_PORT = 587`
+     - `EMAIL_USE_TLS = True`
+     - `EMAIL_HOST_USER = your_email_address@gmail.com`
+     - `EMAIL_HOST_PASSWORD = your_app_password`
+
+3. **Update Django Email Backend Configuration:**
+   - In `watch_store/settings.py`, add the email settings:
+     ```python
+     if 'DEVELOPMENT' in os.environ:
+         EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+         DEFAULT_FROM_EMAIL = 'eternitywatchstore0@gmail.com'
+     else:
+         EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+         EMAIL_USE_TLS = True
+         EMAIL_PORT = 587
+         EMAIL_HOST = 'smtp.gmail.com'
+         EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+         EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+         DEFAULT_FROM_EMAIL = os.getenv('EMAIL_HOST_USER')
+     ```
+
+---
+
+### Part 6 - Configuring Stripe for Payments
+
+1. **Create a Stripe Account:**
+   - Go to the [Stripe website](https://stripe.com/) and sign up for an account.
+   - Use Stripe's test mode.
+
+2. **Set Up API Keys:**
+   - In the Stripe dashboard, go to 'Developers' > 'API keys'.
+   - Copy `Publishable Key` and `Secret Key`.
+
+3. **Configure Stripe Webhooks:**
+   - Set up Stripe webhooks to handle events.
+   - In the Stripe dashboard, go to 'Developers' > 'Webhooks'.
+   - Create new endpoint and select all events.
+   - Add endpoint URL `https://eternity-watch-store-1f855f4289ad.herokuapp.com/checkout/wh/`.
+   - Copy Signing secret and add it to in 'Config Vars' on Heroku: 
+   - `STRIPE_WH_SECRET`
+
+4. **Add Stripe Settings in Django:**
+   - In `watch_store/settings.py`, add:
+     ```python
+     STRIPE_CURRENCY = 'eur'
+     STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+     STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+     STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+     ```
+
+5. **Set Up Environment Variables:**
+   - In Heroku, in 'Config Vars' add:
+     - `STRIPE_PUBLIC_KEY`
+     - `STRIPE_SECRET_KEY`
+     - `STRIPE_WH_SECRET`
+
+---
+
+### Part 7 -  Set Up Deployment from GitHub
 
 1. **Set Up Deployment from GitHub:**
 
@@ -1405,6 +1518,8 @@ To ensure the deployed app looks as nicely styled as the local development versi
 - Click on the 'View' button to see the deployed project.
 
 The deployed project link can be found at the following URL: [Eternity - Luxury Watch Store](https://eternity-watch-store-1f855f4289ad.herokuapp.com/).
+
+
 
 ## Credits
 

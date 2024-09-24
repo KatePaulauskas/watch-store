@@ -21,7 +21,12 @@ def profile(request):
             message.error(request, 'Profile update has failed. Please, ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+
+    # Check if the user is a superuser
+    if request.user.is_superuser:
+        orders = Order.objects.all()  # Retrieve all orders for superusers
+    else:
+        orders = profile.orders.all()  # Retrieve only specific user's orders
 
     template = 'profiles/profile.html'
     context = {

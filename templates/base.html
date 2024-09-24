@@ -175,7 +175,9 @@
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                 {% url 'add_product' as add_product_url %}
-                                <a class="dropdown-item {% if request.path == add_product_url %}active{% endif %}" href="{{ add_product_url }}">Manage Products</a>
+                                <a class="dropdown-item {% if request.path == add_product_url %}active{% endif %}" href="{{ add_product_url }}">Add Product</a>
+                                {% url 'shop' as shop_url %}
+                                <a class="dropdown-item {% if request.path == shop_url %}active{% endif %}" href="{{ shop_url }}">Manage Products</a>
                                 {% url 'policies' as policies_url %}
                                 <a class="dropdown-item {% if request.path == policies_url %}active{% endif %}" href="{{ policies_url }}">Manage Policies</a>
                                 {% endif %}

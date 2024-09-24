@@ -624,11 +624,15 @@ If a customer visits the Cart Page before adding any items to the cart, they rec
 
 ![Checkout Page](/media/checkout-page.jpeg)
 
-![Order Confirmation Email](/media/order-confirmation-email.jpeg)
+
 
 ### Thank You Page
 
 ![Thank You Page.jpeg](/media/thank-you-page.jpeg)
+
+![thank-you-page-multiple-products](/media/thank-you-page-multiple-products.jpeg)
+
+![Order Confirmation Email](/media/order-confirmation-email.jpeg)
 
 ### Contact Us Page
 

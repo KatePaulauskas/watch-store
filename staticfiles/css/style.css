@@ -117,6 +117,7 @@ header p {
 
 .header-icons .nav-link:hover {
     text-decoration-color: #E4C58A !important;
+    text-decoration: none !important;
 }
 
 .dropdown-item.active {
@@ -685,6 +686,10 @@ input[type="radio"] {
     accent-color: #e4c58a !important;
 }
 
+label[for^="addon"] {
+    pointer-events: none;
+}
+
 .stripe-style-input,
 .profile-form-input {
     border: 1px solid #aa9159 !important;
@@ -912,7 +917,7 @@ ul.list-unstyled {
 }
 
 .contact-bottom-image {
-    background: url('https://res.cloudinary.com/dmqcpnmy9/image/upload/v1727090971/contact-page-bottom_ctojck.webp');
+    background: url('/images/contact_page/contact-page-bottom.webp');
     background-size: cover;
     background-position: center center;
     height:400px;
@@ -987,7 +992,7 @@ font-size: 100% !important;
 @media screen and (min-width: 270px) {
     /* H1 style */
     h1 {
-        font-size: 200% !important;
+        font-size: 190% !important;
     }
 
     /* H2-4 styles */
@@ -995,7 +1000,7 @@ font-size: 100% !important;
     h3,
     h4
     {
-        font-size: 200% !important;
+        font-size: 160% !important;
     }
 
     /* H5-6 styles */
@@ -1120,7 +1125,7 @@ font-size: 100% !important;
     h3,
     h4
     {
-        font-size: 210% !important;
+        font-size: 170% !important;
     }
 
     /* H5-6 styles */
@@ -1288,6 +1293,12 @@ font-size: 100% !important;
         max-width: 350px;
     }
 
+    /* Style Profile Page */
+    .table-orders-history th,
+    .table-orders-history td {
+        min-width: 150px;
+    }
+
     /* Style Contact page */
     .contact-form input,
     .contact-form textarea {
@@ -1307,7 +1318,7 @@ font-size: 100% !important;
     h3,
     h4
     {
-        font-size: 230% !important;
+        font-size: 200% !important;
     }
 
     /* H5-6 styles */
@@ -1382,6 +1393,10 @@ font-size: 100% !important;
     }
 
     /* Style Profile page */
+    .table-orders-history th,
+    .table-orders-history td {
+        min-width: 185px;
+    }
     .table-orders-history, td, tr {
         font-size: 16px !important;
     }
@@ -1412,5 +1427,11 @@ font-size: 100% !important;
     /* Style Subscribe form */
     #mce-EMAIL {
         width: 300px !important;
+    }
+
+    /* Style Profile Page */
+    .table-orders-history th,
+    .table-orders-history td {
+        min-width: 250px;
     }
 }

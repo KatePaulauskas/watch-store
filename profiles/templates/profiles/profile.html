@@ -7,14 +7,14 @@
     <div class="row">
         <div class="col-12">
             <div class="col-12">
-                <h1 class="h1 text-center mt-4">Profile</h1>
+                <h1 class="h1 text-center my-4">Profile</h1>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 px-1 align-items-center justify-content-center mb-5">
+        <div class="col-12 px-1 align-items-center justify-content-center mb-5">
             <div class="text-center">
-                <h5 class="px-2 text-center">Order History:</h5>
+                <h2 class="px-2 text-center" id="orders">Order History:</h2>
                 <div class="d-flex justify-content-center">
                     <div class="order-history table-responsive">
                         <table class="table-orders-history">
@@ -66,9 +66,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 px-sm-2 px-lg-5 align-items-center justify-content-center mb-5">
+        <div class="col-12 px-sm-2 px-lg-5 align-items-center justify-content-center mb-5">
             <div class="d-flex justify-content-center">
-                <h5 class="mb-0 text-center">Default Delivery Details:</h5>
+                <h2 class="mb-0 text-center" id="address">Default Delivery Address:</h2>
             </div>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}

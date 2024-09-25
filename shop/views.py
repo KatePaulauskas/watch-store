@@ -81,7 +81,7 @@ def shop(request):
         'current_brand': selected_brand,
         'current_gender': selected_gender,
         'brand_friendly_name': brand_friendly_name,
-        'gender_friendly_name': gender_friendly_name, 
+        'gender_friendly_name': gender_friendly_name,
         'current_sorting': current_sorting,
         'reset_filters': reset_filters,
     }
@@ -185,5 +185,3 @@ def cancel_action_product_page(request, product_id):
     messages.add_message(request, messages.INFO, "Action cancelled. No changes were made.")
 
     return redirect(reverse('product_page', args=[product.id]))
-
-

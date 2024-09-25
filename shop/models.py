@@ -32,5 +32,8 @@ class Product(models.Model):
     weight = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
     featured_product = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name

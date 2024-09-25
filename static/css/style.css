@@ -592,7 +592,8 @@ ul.errorlist li {
 }
 
 /* Quantity form */
-.form-group {
+
+input[id^="id_qty_"] {
     width: 70px !important;
 }
 
@@ -612,7 +613,6 @@ ul.errorlist li {
 }
 
 /* Style Cart Page */
-
 .table {
     --bs-table-bg: #113227 !important;
     --bs-table-color: #E4C58A !important;
@@ -1185,6 +1185,10 @@ font-size: 100% !important;
 
     .form-control {
         width: 250px !important;
+    }
+
+    .form-control .qty_input {
+        width: 60px !important;
     }
 
     /* Style Forms */

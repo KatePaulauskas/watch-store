@@ -43,7 +43,7 @@
                         {% if request.user.is_superuser %}
                         <div class="admin mt-2 mt-md-3">
                             <a href="{% url 'edit_product' product.id %}" class="mx-1 update-link product-edit">Edit</a>
-                            <a href="{% url 'delete_product' product.id %}" class="remove-item product-delete" product-id="{{ product.id }}" product-name="{{ product.name }}">Delete</a>
+                            <a href="{% url 'delete_product' product.id %}" class="remove-item product-delete" data-product-id="{{ product.id }}" data-product-name="{{ product.name }}">Delete</a>
                         </div>
                         {% endif %}
                     </div>
@@ -97,8 +97,8 @@
         for (let button of deleteButtons) {
             button.addEventListener("click", (e) => {
                 e.preventDefault();
-                let productId = e.target.getAttribute("product-id");
-                let productName = e.target.getAttribute("product-name");
+                let productId = e.target.getAttribute("data-product-id");
+                let productName = e.target.getAttribute("data-product-name");
                 if (productId) {
                     deleteConfirm.href = `/shop/delete/${productId}/`;
                     // Set the product name in the modal

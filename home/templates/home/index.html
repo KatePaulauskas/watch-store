@@ -1,130 +1,156 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% load humanize %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 above-fold">
-            <div class="col-12 col-sm-6">
-                <h1 class="home-h1 text-outline mt-4">
-                    Eternity Luxury Watch Store
-                </h1>
-            </div>
-            <div>
-                <a href="{% url 'shop' %}" class="btn btn-explore py-1 px-2 mt-4">Explore</a>
+    <!-- Main container for the homepage section -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 above-fold">
+                <!-- Store Name and Button -->
+                <div class="col-12 col-sm-6">
+                    <h1 class="home-h1 text-outline mt-4">
+                        Eternity Luxury Watch Store
+                    </h1>
+                </div>
+                <div>
+                    <!-- Explore Button -->
+                    <a href="{% url 'shop' %}" class="btn btn-explore py-1 px-2 mt-4">Explore</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Featured Products Section -->
 
-<div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
-    <div class="text-center mt-3">
-        <h2 class="text-center my-3 my-lg-5">Featured Products</h2>
-    </div>
+    <!-- Featured Products Section -->
+    <div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
+        <div class="text-center mt-3">
+            <!-- Heading for Featured Products -->
+            <h2 class="text-center my-3 my-lg-5">Featured Products</h2>
+        </div>
 
-    <div class="product-grid">
-        {% for product in featured_products %}
-        <div class="product-card">
-            <div class="card py-3">
-                {% if product.image %}
-                    <a href="{% url 'product_page' product.id %}">
-                        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
-                {% else %}
-                    <a href="{% url 'product_page' product.id %}">
-                        <img class="card-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                    </a>
-                {% endif %}
-                <div class="card-body text-center py-1">
-                    <a href="{% url 'product_page' product.id %}" style="text-decoration: none;">
-                        <p class="product-name mb-0">{{ product.name }}</p>
-                    </a>
-                </div>
-                <div class="card-footer py-0">
-                    <p class="m-0 py-0">€{{ product.price|intcomma }}</p>
-                    {% if product.rating %}
-                        <p class="rating m-0 py-0">
-                            <iconify-icon icon="rivet-icons:star"  style="color: #AA9159"></iconify-icon>
-                            {% if product.rating|floatformat:"0" == product.rating|stringformat:"d" %}
-                                {{ product.rating|floatformat:"0" }} / 5
+        <!-- Display featured products in a grid format -->
+        <div class="product-grid">
+            {% for product in featured_products %}
+                <div class="product-card">
+                    <div class="card py-3">
+                        <!-- Product Image -->
+                        {% if product.image %}
+                            <a href="{% url 'product_page' product.id %}">
+                                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                        {% else %}
+                            <!-- Fallback image if the product has no image -->
+                            <a href="{% url 'product_page' product.id %}">
+                                <img class="card-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            </a>
+                        {% endif %}
+                        <!-- Product details (name, rating, price) -->
+                        <div class="card-body text-center py-1">
+                            <a href="{% url 'product_page' product.id %}" style="text-decoration: none;">
+                                <p class="product-name mb-0">{{ product.name }}</p>
+                            </a>
+                        </div>
+                        <div class="card-footer py-0">
+                            <p class="m-0 py-0">€{{ product.price|intcomma }}</p>
+                            <!-- Display product rating -->
+                            {% if product.rating %}
+                                <p class="rating m-0 py-0">
+                                    <iconify-icon icon="rivet-icons:star"  style="color: #AA9159"></iconify-icon>
+                                    {% if product.rating|floatformat:"0" == product.rating|stringformat:"d" %}
+                                        {{ product.rating|floatformat:"0" }} / 5
+                                    {% else %}
+                                        {{ product.rating|floatformat:"1" }} / 5
+                                    {% endif %}
+                                </p>
                             {% else %}
-                                {{ product.rating|floatformat:"1" }} / 5
+                                <p class="rating">No Rating</p>
                             {% endif %}
-                        </p>
-                    {% else %}
-                        <p class="rating">No Rating</p>
-                    {% endif %}
-                    <!-- Add to Cart Form (for Shop Page) -->
-                    {% if product.availability %}
-                    <form action="{% url 'shop_page_add_to_cart' product.id %}" method="POST">
-                        {% csrf_token %}
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <div class="col-12 d-flex justify-content-center">
-                            <button type="submit" class="btn btn-add text-uppercase mt-4">Add to Cart</button>
+                            <!-- Add to Cart functionality for products -->
+                            {% if product.availability %}
+                                <form action="{% url 'shop_page_add_to_cart' product.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-add text-uppercase mt-4">Add to Cart</button>
+                                    </div>
+                                </form>
+                            {% else %}
+                                <!-- Disabled button if the product is out of stock -->
+                                <div class="col-12 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-add text-uppercase mt-4" disabled style="background-color: #ccc;">Out of Stock</button>
+                                </div>
+                            {% endif %}
+                            <br>
+                            <!-- Superuser admin options: Edit and Delete buttons -->
+                            {% if request.user.is_superuser %}
+                                <div class="admin mt-2 mt-md-3">
+                                    <a href="{% url 'edit_product' product.id %}" class="mx-1 update-link product-edit">Edit</a>
+                                    <a href="{% url 'delete_product' product.id %}" class="remove-item product-delete" product-id="{{ product.id }}">Delete</a>
+                                </div>
+                            {% endif %}
                         </div>
-                    </form>
-                    {% else %}
-                        <div class="col-12 d-flex justify-content-center">
-                            <button type="button" class="btn btn-add text-uppercase mt-4" disabled style="background-color: #ccc;">Out of Stock</button>
-                        </div>
-                    {% endif %}
-                    <br>
-                    {% if request.user.is_superuser %}
-                    <div class="admin mt-2 mt-md-3">
-                        <a href="{% url 'edit_product' product.id %}" class="mx-1 update-link product-edit">Edit</a>
-                        <a href="{% url 'delete_product' product.id %}" class="remove-item product-delete" product-id="{{ product.id }}">Delete</a>
                     </div>
-                    {% endif %}
                 </div>
-            </div>
+            {% empty %}
+                <!-- Message if no featured products are available -->
+                <p class="text-center">No featured products available at the moment.</p>
+            {% endfor %}
         </div>
-        {% empty %}
-        <p class="text-center">No featured products available at the moment.</p>
-        {% endfor %}
     </div>
-</div>
-<div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
-    <div class="about-us text-center mt-3 mx-lg-5">
-        <h2 class="text-center my-3 my-lg-5">About Us</h2>
-        <p class="home">At Eternity Luxury Watch Store, we believe luxury watches should be within reach for
-            everyone. We specialize in curating and reselling popular luxury watch brands known for their
-            timeless designs and high-quality craftsmanship. Our mission is to offer a diverse selection
-            of affordable luxury watches that combine elegance with practicality, making it easy for you
-            to find a luxury timepiece that fits your personal style and budget.</p>
-            <p class="home"><strong>Goal:</strong> Our goal is to deliver a seamless shopping experience,
-                offering affordable luxury watches that reflect both classic and modern styles. Whether
-                you're seeking a timeless statement piece or a trendy accessory, our collection caters to
-                a wide range of tastes and budgets. We strive to ensure each customer leaves feeling
-                stylish and valued.</p>
-            <p class="home"><strong>Mission:</strong> At Eternity, we make luxury timepieces more accessible.
-                We handpick the best affordable luxury brands, ensuring they offer both quality and value.
-                Our mission is to present watches that represent craftsmanship and elegance, all at a price
-                point that feels comfortable for online shoppers.</p>
-            <p class="home"><strong>Vision:</strong> Our vision is to become a premier destination for those
-                seeking affordable luxury watches, offering a wide range of timeless designs from prestigious
-                luxury brands. We aim to be the go-to store for customers who want the best luxury watches
-                without compromising on quality or price.</p>
+
+    <!-- About Us Section -->
+    <div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
+        <div class="about-us text-center mt-3 mx-lg-5">
+            <!-- About Us Content -->
+            <h2 class="text-center my-3 my-lg-5">About Us</h2>
+            <p class="home">
+                At Eternity Luxury Watch Store, we believe luxury watches should be within reach for everyone. 
+                We specialize in curating and reselling popular luxury watch brands known for their timeless 
+                designs and high-quality craftsmanship. Our mission is to offer a diverse selection of 
+                affordable luxury watches that combine elegance with practicality, making it easy for you to 
+                find a luxury timepiece that fits your personal style and budget.
+            </p>
+            <p class="home"><strong>Goal:</strong> Our goal is to deliver a seamless shopping experience, 
+                offering affordable luxury watches that reflect both classic and modern styles. Whether you're 
+                seeking a timeless statement piece or a trendy accessory, our collection caters to a wide range 
+                of tastes and budgets. We strive to ensure each customer leaves feeling stylish and valued.
+            </p>
+            <p class="home"><strong>Mission:</strong> At Eternity, we make luxury timepieces more accessible. 
+                We handpick the best affordable luxury brands, ensuring they offer both quality and value. Our 
+                mission is to present watches that represent craftsmanship and elegance, all at a price point 
+                that feels comfortable for online shoppers.
+            </p>
+            <p class="home"><strong>Vision:</strong> Our vision is to become a premier destination for those 
+                seeking affordable luxury watches, offering a wide range of timeless designs from prestigious 
+                luxury brands. We aim to be the go-to store for customers who want the best luxury watches 
+                without compromising on quality or price.
+            </p>
+        </div>
     </div>
-</div>
-<div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
-    <div class="about-us text-center mt-3 mx-2 mx-lg-5">
-            <h4 class="our-values text-center my-3 my-lg-5">Our Values</h3>
+
+    <!-- Our Values Section -->
+    <div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
+        <div class="about-us text-center mt-3 mx-2 mx-lg-5">
+            <!-- Our Values Heading and List -->
+            <h3 class="our-values text-center my-3 my-lg-5">Our Values</h3>
             <ul class="values ps-2">
-                <li class="pb-2"><strong>Quality:</strong> We focus on reselling high-end luxury watches
-                    from trusted brands, ensuring each piece reflects the highest standards of craftsmanship.</li>
-                <li class="pb-2"><strong>Affordability:</strong>  We carefully curate our collection to provide
-                    luxury watches that offer excellent value, making high-end style more attainable.</li>
-                <li class="pb-2"><strong>Customer Satisfaction:</strong> Your satisfaction is our top priority.
-                    We are committed to delivering excellent customer service and ensuring a
-                    seamless shopping experience from start to finish.</li>
-                <li class="pb-2"><strong>Transparency:</strong> We are open and transparent
-                    about our pricing, shipping, and return policies, giving
-                    you confidence and peace of mind with every purchase.</li>
+                <li class="pb-2"><strong>Quality:</strong> We focus on reselling high-end luxury watches 
+                    from trusted brands, ensuring each piece reflects the highest standards of craftsmanship.
+                </li>
+                <li class="pb-2"><strong>Affordability:</strong> We carefully curate our collection to 
+                    provide luxury watches that offer excellent value, making high-end style more attainable.
+                </li>
+                <li class="pb-2"><strong>Customer Satisfaction:</strong> Your satisfaction is our top priority. 
+                    We are committed to delivering excellent customer service and ensuring a seamless shopping 
+                    experience from start to finish.
+                </li>
+                <li class="pb-2"><strong>Transparency:</strong> We are open and transparent about our pricing, 
+                    shipping, and return policies, giving you confidence and peace of mind with every purchase.
+                </li>
             </ul>
+        </div>
     </div>
-</div>
-<div class="col-12 home-bottom-image"></div>
+
+    <!-- Bottom Image Section -->
+    <div class="col-12 home-bottom-image"></div>
 {% endblock %}

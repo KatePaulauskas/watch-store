@@ -45,7 +45,6 @@ h6
     font-style: normal;
     font-size: 180% !important;
     color: #E4C58A;
-
  }
 
 /* Paragraph style */
@@ -80,13 +79,13 @@ header {
     background-color: #113227; 
     border-bottom: 1px solid #AA9159;
 }
+
 /* Style header text */
 header p {
     font-family: "Antic", sans-serif !important;
 }
 
 /* Style navbar text */
-
 .nav-link {
     color: #E4C58A !important;
     font-size: 16px;
@@ -170,15 +169,25 @@ input::placeholder {
     font-weight: 200;
 }
 
+input:focus, 
+textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 input.search-bar {
     border-bottom: 1px solid #E4C58A !important;
+}
+
+/* Cursor color. Source: GeeksforGeeks*/
+input[type="text"], input[type="search"] {
+    caret-color: #E4C58A !important;
 }
 
 .alert-error {
     background-color: #FC7C73 !important;
     margin: 0 !important;
 }
-
 
 /* Style dropdown account menu */
 .dropdown-menu,
@@ -592,7 +601,8 @@ ul.errorlist li {
 }
 
 /* Quantity form */
-.form-group {
+
+input[id^="id_qty_"] {
     width: 70px !important;
 }
 
@@ -612,7 +622,6 @@ ul.errorlist li {
 }
 
 /* Style Cart Page */
-
 .table {
     --bs-table-bg: #113227 !important;
     --bs-table-color: #E4C58A !important;
@@ -913,6 +922,29 @@ ul.list-unstyled {
     color: #FBFAF8 !important;
 }
 
+/* Manage products page */
+
+.product-card-manage {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.product-card-manage img.small-img {
+    height: 100px;
+    object-fit: contain;
+}
+
+.product-card-manage .product-name {
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+
+.product-card-manage .admin-actions {
+    font-size: 1rem;
+    color: #FBFAF8 !important;
+}
+
 /* Style Contact page */
 
 .contact-form input,
@@ -1185,6 +1217,10 @@ font-size: 100% !important;
 
     .form-control {
         width: 250px !important;
+    }
+
+    .form-control .qty_input {
+        width: 60px !important;
     }
 
     /* Style Forms */

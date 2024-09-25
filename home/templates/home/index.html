@@ -85,7 +85,7 @@
                             {% if request.user.is_superuser %}
                                 <div class="admin mt-2 mt-md-3">
                                     <a href="{% url 'edit_product' product.id %}" class="mx-1 update-link product-edit">Edit</a>
-                                    <a href="{% url 'delete_product' product.id %}" class="remove-item product-delete" product-id="{{ product.id }}">Delete</a>
+                                    <a href="{% url 'delete_product' product.id %}" class="remove-item product-delete" data-product-id="{{ product.id }}" data-product-name="{{ product.name }}">Delete</a>
                                 </div>
                             {% endif %}
                         </div>
@@ -153,4 +153,64 @@
 
     <!-- Bottom Image Section -->
     <div class="col-12 home-bottom-image"></div>
+
+    <!-- Delete confirmation modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete product?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Are you sure you want to delete <strong id="productName"></strong> product? This action cannot be undone.</div>
+                <div class="modal-footer">
+                    <a href="{% url 'cancel_action' %}" class="btn btn-secondary">Close</a>
+                    <a id="deleteConfirm" href="#" class="btn btn-delete">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script>
+        /**
+         * Source: Code Institute: I Think Therefore I Blog walk through
+         */
+        const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+        const deleteButtons = document.getElementsByClassName("product-delete");
+        const deleteConfirm = document.getElementById("deleteConfirm");
+        const productNameElement = document.getElementById("productName");
+
+                /**
+         * Initializes deletion functionality for the delete buttons.
+         * 
+         * For each button in the `deleteButtons` collection:
+         * - Adds a click event listener.
+         * - Retrieves the associated product ID using the button's `product-id` attribute.
+         * - Checks if the product ID exists:
+         *   - If valid, updates the `deleteConfirm` href to the deletion endpoint
+         *     for the specific product.
+         *   - If no product ID is found, logs an error.
+         * - Displays the confirmation modal (`deleteModal`) to prompt the user 
+         *   for confirmation before proceeding with the deletion.
+         */
+
+        for (let button of deleteButtons) {
+            button.addEventListener("click", (e) => {
+                e.preventDefault();
+                let productId = e.target.getAttribute("data-product-id");
+                let productName = e.target.getAttribute("data-product-name");
+                if (productId) {
+                    deleteConfirm.href = `/shop/delete/${productId}/`;
+                    // Set the product name in the modal
+                    productNameElement.textContent = productName;
+                    deleteModal.show();
+                } else {
+                    console.error('Product ID not found');
+                }
+            });
+        }
+    </script>
 {% endblock %}

@@ -4,86 +4,86 @@
 {% load humanize %}
 
 {% block content %}
-<div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
-    <div class="text-center mt-3">
-        <h1>Our Products</h1>
-        {% include 'includes/shop_filters_and_sorting.html' %}
-    </div>
-    <div class="product-grid">
-        {% for product in products %}
-            <div class="product-card">
-                <div class="card py-3">
-                    {% if product.image %}
-                        <a href="{% url 'product_page' product.id %}">
-                            <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
-                        </a>
-                    {% else %}
-                        <a href="{% url 'product_page' product.id %}">
-                            <img class="card-img" src="https://res.cloudinary.com/dmqcpnmy9/image/upload/v1725639955/noimage_xtufio.png" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
-                    <div class="card-body text-center py-1">
-                        <a href="{% url 'product_page' product.id %}" style="text-decoration: none;">
-                            <p class="product-name mb-0">{{ product.name }}</p>
-                        </a>
-                    </div>
-                    <div class="card-footer py-0">
-                        <p class="m-0 py-0">€{{ product.price|intcomma }}</p>
-                        {% if product.rating %}
-                            <p class="rating m-0 py-0">
-                                <iconify-icon icon="rivet-icons:star"  style="color: #AA9159"></iconify-icon>
-                                {% if product.rating|floatformat:"0" == product.rating|stringformat:"d" %}
-                                    {{ product.rating|floatformat:"0" }} / 5
-                                {% else %}
-                                    {{ product.rating|floatformat:"1" }} / 5
-                                {% endif %}
-                            </p>
+    <div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
+        <div class="text-center mt-3">
+            <h1>Our Products</h1>
+            {% include 'includes/shop_filters_and_sorting.html' %}
+        </div>
+        <div class="product-grid">
+            {% for product in products %}
+                <div class="product-card">
+                    <div class="card py-3">
+                        {% if product.image %}
+                            <a href="{% url 'product_page' product.id %}">
+                                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
                         {% else %}
-                            <p class="rating">No Rating</p>
+                            <a href="{% url 'product_page' product.id %}">
+                                <img class="card-img" src="https://res.cloudinary.com/dmqcpnmy9/image/upload/v1725639955/noimage_xtufio.png" alt="{{ product.name }}">
+                            </a>
                         {% endif %}
-                        <!-- Add to Cart Form (for Shop Page) -->
-                        {% if product.availability %}
-                        <form action="{% url 'shop_page_add_to_cart' product.id %}" method="POST">
-                            {% csrf_token %}
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            <div class="col-12 d-flex justify-content-center">
-                                <button type="submit" class="btn btn-add text-uppercase mt-4">Add to Cart</button>
-                            </div>
-                        </form>
-                        {% else %}
-                            <div class="col-12 d-flex justify-content-center">
-                                <button type="button" class="btn btn-add text-uppercase mt-4" disabled style="background-color: #ccc;">Out of Stock</button>
-                            </div>
-                        {% endif %}
-                        <br>
-                        {% if request.user.is_superuser %}
-                        <div class="admin mt-2 mt-md-3">
-                            <a href="{% url 'edit_product' product.id %}" class="mx-1 update-link product-edit">Edit</a>
-                            <a href="{% url 'delete_product' product.id %}" class="remove-item product-delete" data-product-id="{{ product.id }}" data-product-name="{{ product.name }}">Delete</a>
+                        <div class="card-body text-center py-1">
+                            <a href="{% url 'product_page' product.id %}" style="text-decoration: none;">
+                                <p class="product-name mb-0">{{ product.name }}</p>
+                            </a>
                         </div>
-                        {% endif %}
+                        <div class="card-footer py-0">
+                            <p class="m-0 py-0">€{{ product.price|intcomma }}</p>
+                            {% if product.rating %}
+                                <p class="rating m-0 py-0">
+                                    <iconify-icon icon="rivet-icons:star"  style="color: #AA9159"></iconify-icon>
+                                    {% if product.rating|floatformat:"0" == product.rating|stringformat:"d" %}
+                                        {{ product.rating|floatformat:"0" }} / 5
+                                    {% else %}
+                                        {{ product.rating|floatformat:"1" }} / 5
+                                    {% endif %}
+                                </p>
+                            {% else %}
+                                <p class="rating">No Rating</p>
+                            {% endif %}
+                            <!-- Add to Cart Form (for Shop Page) -->
+                            {% if product.availability %}
+                            <form action="{% url 'shop_page_add_to_cart' product.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-add text-uppercase mt-4">Add to Cart</button>
+                                </div>
+                            </form>
+                            {% else %}
+                                <div class="col-12 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-add text-uppercase mt-4" disabled style="background-color: #ccc;">Out of Stock</button>
+                                </div>
+                            {% endif %}
+                            <br>
+                            {% if request.user.is_superuser %}
+                            <div class="admin mt-2 mt-md-3">
+                                <a href="{% url 'edit_product' product.id %}" class="mx-1 update-link product-edit">Edit</a>
+                                <a href="{% url 'delete_product' product.id %}" class="remove-item product-delete" data-product-id="{{ product.id }}" data-product-name="{{ product.name }}">Delete</a>
+                            </div>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
-</div>
-<!-- Delete confirmation modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Delete product?</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">Are you sure you want to delete <strong id="productName"></strong> product? This action cannot be undone.</div>
-            <div class="modal-footer">
-                <a href="{% url 'cancel_action' %}" class="btn btn-secondary">Close</a>
-                <a id="deleteConfirm" href="#" class="btn btn-delete">Delete</a>
+    <!-- Delete confirmation modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete product?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Are you sure you want to delete <strong id="productName"></strong> product? This action cannot be undone.</div>
+                <div class="modal-footer">
+                    <a href="{% url 'cancel_action' %}" class="btn btn-secondary">Close</a>
+                    <a id="deleteConfirm" href="#" class="btn btn-delete">Delete</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block postloadjs %}

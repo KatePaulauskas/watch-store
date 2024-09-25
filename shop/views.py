@@ -185,7 +185,7 @@ def delete_product(request, product_id):
 
 @login_required
 def cancel_action(request):
-    """ Cancel delete action on she shop page """
+    """ Cancel delete action on the shop page """
     messages.add_message(request, messages.INFO,
                          "Action cancelled. No changes were made.")
 
@@ -195,6 +195,7 @@ def cancel_action(request):
 def cancel_action_manage_products(request):
     """Cancel the action and redirect to the manage products page with a notification."""
     messages.add_message(request, messages.INFO, "Action was canceled. No changes were made.")
+
     return redirect('manage_products')
 
 @login_required

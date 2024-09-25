@@ -1189,6 +1189,27 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 To ensure adherence to web standards and improve accessibility, the site's HTML was submitted to [W3C validation testing]().
 
+* **Home Page**
+
+     On the home page, the following issues were identified:
+
+     **Error 1:**
+
+     ![Home Page Errors Part One](/media/html-checker-home-page-errors-part-one.jpeg)
+
+     **Error 2:**
+
+     ![Home Page Errors Part One](/media/html-checker-home-page-errors-part-two.jpeg)
+
+     **Error 3:**
+
+     ![Home Page Errors Part One](/media/html-checker-home-page-errors-part-three.jpeg)
+
+     Upon fixing the issues home pages successfully passed the HTML checker: 
+     ![html-checker-home-page-final.jpeg](/media/html-checker-home-page-final.jpeg)
+
+
+
 </details>
 
 #### CSS

@@ -45,6 +45,7 @@ h6
     font-style: normal;
     font-size: 180% !important;
     color: #E4C58A;
+
  }
 
 /* Paragraph style */
@@ -79,13 +80,13 @@ header {
     background-color: #113227; 
     border-bottom: 1px solid #AA9159;
 }
-
 /* Style header text */
 header p {
     font-family: "Antic", sans-serif !important;
 }
 
 /* Style navbar text */
+
 .nav-link {
     color: #E4C58A !important;
     font-size: 16px;
@@ -169,25 +170,15 @@ input::placeholder {
     font-weight: 200;
 }
 
-input:focus, 
-textarea:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
 input.search-bar {
     border-bottom: 1px solid #E4C58A !important;
-}
-
-/* Cursor color. Source: GeeksforGeeks*/
-input[type="text"], input[type="search"] {
-    caret-color: #E4C58A !important;
 }
 
 .alert-error {
     background-color: #FC7C73 !important;
     margin: 0 !important;
 }
+
 
 /* Style dropdown account menu */
 .dropdown-menu,
@@ -398,6 +389,43 @@ input[type="checkbox"] {
     border: solid #230903;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
+}
+
+/* Remove box shadow and outline from all input, textarea, and select elements */
+input, 
+textarea, 
+select,
+.form-control {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Remove box shadow and outline when the element is focused */
+input:focus, 
+textarea:focus, 
+select:focus, 
+.form-control:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/*  Remove box shadow and outline for specific input types */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"] {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus {
+    box-shadow: none !important;
+    outline: none !important;
 }
 
 /* Style Sign Up and Login forms */

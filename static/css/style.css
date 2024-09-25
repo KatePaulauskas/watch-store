@@ -391,6 +391,43 @@ input[type="checkbox"] {
     transform: rotate(45deg);
 }
 
+/* Remove box shadow and outline from all input, textarea, and select elements */
+input, 
+textarea, 
+select,
+.form-control {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Remove box shadow and outline when the element is focused */
+input:focus, 
+textarea:focus, 
+select:focus, 
+.form-control:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/*  Remove box shadow and outline for specific input types */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="search"] {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
 /* Style Sign Up and Login forms */
 .signup ul {
     text-align: center;

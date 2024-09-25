@@ -176,8 +176,8 @@
                                 {% if request.user.is_superuser %}
                                 {% url 'add_product' as add_product_url %}
                                 <a class="dropdown-item {% if request.path == add_product_url %}active{% endif %}" href="{{ add_product_url }}">Add Product</a>
-                                {% url 'shop' as shop_url %}
-                                <a class="dropdown-item {% if request.path == shop_url %}active{% endif %}" href="{{ shop_url }}">Manage Products</a>
+                                {% url 'manage_products' as manage_products_url %}
+                                <a class="dropdown-item {% if request.path == manage_products_url %}active{% endif %}" href="{{ manage_products_url }}">Manage Products</a>
                                 {% url 'policies' as policies_url %}
                                 <a class="dropdown-item {% if request.path == policies_url %}active{% endif %}" href="{{ policies_url }}">Manage Policies</a>
                                 {% endif %}

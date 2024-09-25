@@ -4,13 +4,13 @@ from .models import Product, Category
 class ProductForm(forms.ModelForm):
     # Display friendly names for categories dropdowns
     category_1 = forms.ModelChoiceField(
-        queryset=Category.objects.all(),
+        queryset=Category.objects.all().order_by('name'),
         label="Category 1",
         widget=forms.Select
     )
     
     category_2 = forms.ModelChoiceField(
-        queryset=Category.objects.all(),
+        queryset=Category.objects.all().order_by('name'),
         label="Category 2",
         widget=forms.Select
     )

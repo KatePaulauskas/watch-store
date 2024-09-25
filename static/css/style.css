@@ -913,6 +913,29 @@ ul.list-unstyled {
     color: #FBFAF8 !important;
 }
 
+/* Manage products page */
+
+.product-card-manage {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.product-card-manage img.small-img {
+    height: 100px;
+    object-fit: contain;
+}
+
+.product-card-manage .product-name {
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+
+.product-card-manage .admin-actions {
+    font-size: 1rem;
+    color: #FBFAF8 !important;
+}
+
 /* Style Contact page */
 
 .contact-form input,

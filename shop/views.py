@@ -125,6 +125,17 @@ def add_product(request):
     return render(request, template, context)
 
 @login_required
+def manage_products(request):
+    """A view to show all products for managing, including filtering and search."""
+    products = Product.objects.all()
+    
+    context = {
+        'products': products,
+    }
+    return render(request, 'shop/manage_products.html', context)
+
+
+@login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
@@ -172,6 +183,7 @@ def delete_product(request, product_id):
 
     return redirect(reverse('shop'))
 
+@login_required
 def cancel_action(request):
     """ Cancel delete action on she shop page """
     messages.add_message(request, messages.INFO,
@@ -179,6 +191,13 @@ def cancel_action(request):
 
     return redirect('shop')
 
+@login_required
+def cancel_action_manage_products(request):
+    """Cancel the action and redirect to the manage products page with a notification."""
+    messages.add_message(request, messages.INFO, "Action was canceled. No changes were made.")
+    return redirect('manage_products')
+
+@login_required
 def cancel_action_product_page(request, product_id):
     """ Cancel delete action on she product page """
     product = get_object_or_404(Product, pk=product_id)

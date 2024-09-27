@@ -329,16 +329,45 @@ The Eternity Luxury Watch Store comprises of several key pages, each designed to
 
 **Checkout Page**
 
-* The final step in the purchasing process, where customers enter shipping and payment details, review their order, and complete their purchase securely.
+* The final step in the purchasing process, where customers enter shipping and payment details, review their order, and complete their purchase securely.  Logged-in users get their shipping details prefilled if address exists. Users are also presented with additional add-ons: extended warranties and shipping insurance, and they can choose the shipping method.
+
+**Thank You Page**
+
+* Displays a confirmation of the successful purchase, including an order details summary.
+
+**Policies Page**
+
+* This page contains essential store policies such as terms and conditions, return policy, and privacy policy, ensuring transparency and customer trust.
 
 **Contact Page:**
 
-* Contains a contact form for inquiries, collaborations and feedback.
+* Contains a contact form for inquiries, collaborations, and feedback, offering users a direct channel to communicate with the store.
 
 **Log In and Sign Up Pages:**
 
-* Enables users to create an account or log in to access personalised experience.
-* Facilitates order management tracking.
+* Enables users to create an account or log in to access a personalised experience and allows superuser to manage store products and policies.
+
+**Orders and Address**
+
+* Allows users to manage their default delivery address and view their order history.
+
+**Log Out**
+
+* A confirmation page allowing users to log out of their account and return to the home page or browse anonymously.
+
+Admin pages: 
+
+**Add Product**
+
+* Enables superuser to add new products, including details like name, price, description, and images, to ensure the product catalog stays up-to-date.
+
+**Manage Products**
+
+* Provides functionality for superuser to delete products from the store or edit them via a hidden page, ensuring easy updates and management of the available products.
+
+**Manage Policies**
+
+* Is the regular Policies Page with additional functionality for superuser, ehich allows superuser to update existing policies via hidden Edit Policy Page, ensuring compliance with business and legal standards.
 
 #### - Database Structure -
 
@@ -411,13 +440,19 @@ The initial layout of the interface and navigation for the Eternity Luxury Watch
 ![Shop Page Wireframe](/media/wireframe-shop-page.jpeg)
 
 **Product Page:**
-![Product Page Wireframe](/media/wireframe-shop-page.jpeg)
+![Product Page Wireframe](/media/wireframe-product-page.jpeg)
 
 **Cart Page**
-![Cart Page Wireframe](/media/wireframe-cart-page.webp)
+![Cart Page Wireframe](/media/wireframe-cart-page.jpeg)
 
 **Checkout Page**
-![Checkout Page Wireframe](/media/wireframe-checkout-page.webp)
+![Checkout Page Wireframe](/media/wireframe-checkout-page.jpeg)
+
+**Thank You Page**
+![Thank You Page Wireframe](/media/wireframe-thank-you-page.jpeg)
+
+**Policies Page**
+![Policies Page Wireframe](/media/wireframe-policies-page.jpeg)
 
 **Contact page:**
 ![Contact Page Wireframe](/media/wireframe-contact-page.webp)
@@ -427,6 +462,26 @@ The initial layout of the interface and navigation for the Eternity Luxury Watch
 
 **Sign Up page:**
 ![Sign Up Page Wireframe](/media/wireframe-sign-up-page.webp)
+
+**Orders and Address**
+![Orders and Address Page Wireframe](/media/wireframe-orders-and-address-page.webp)
+
+**Log Out**
+![Log Out Page Wireframe](/media/wireframe-log-out-page.webp)
+
+Admin pages: 
+
+**Add Product**
+![Add Product Page Wireframe](/media/wireframe-add-product-page.jpeg)
+
+**Manage Products**
+![Manage Products Page Wireframe](/media/wireframe-manage-products-page.jpeg)
+
+**Edit Product**
+![Edit Product Page Wireframe](/media/wireframe-edit-product-page.jpeg)
+
+**Manage Policies**
+![Manage Policie Page Wireframe](/media/wireframe-smanage-policies-page.webp)
 
 
 ### Surface
@@ -538,7 +593,7 @@ The fully responsive navigation bar is displayed across all site pages, allowing
 
   ### User Account
 
-  User account dropdown menu  changes based on the user's authentication status. When clicked, the menu reveals different options:
+  User account dropdown menu changes based on the user's authentication status. When clicked, the menu reveals different options:
 
 **If the user is logged in:**
 
@@ -624,15 +679,25 @@ If a customer visits the Cart Page before adding any items to the cart, they rec
 
 ![Checkout Page](/media/checkout-page.jpeg)
 
-
+The Checkout Page allows users to finalise their purchases by filling out necessary information, including shipping details, payment methods, and selecting add-ons like extended warranties. Logged-in users benefit from having their information prefilled, speeding up the checkout process. Users can also log in at checkout if not already signed in. The page is designed to provide a secure, seamless user experience, ensuring that customers can complete their transactions with confidence. Upon successful checkout, an order confirmation is displayed, summarizing the order and providing the estimated delivery time.
 
 ### Thank You Page
 
+The Thank You Page provides users with a confirmation that their order has been successfully processed. It displays a summary of the order, including product details, the total cost, shipping information. This page reassures customers that their payment has been securely processed and provides them with an order number.
+
+One product in the order: 
+
 ![Thank You Page.jpeg](/media/thank-you-page.jpeg)
 
-![thank-you-page-multiple-products](/media/thank-you-page-multiple-products.jpeg)
+Multiple products in the order: 
+
+![Thank You Page Multiple Products](/media/thank-you-page-multiple-products.jpeg)
+
+Customers also receive an email confirmation with the same information for their records.
 
 ![Order Confirmation Email](/media/order-confirmation-email.jpeg)
+
+The Thank You Page serves as the final step in ensuring a smooth and transparent checkout experience.
 
 ### Contact Us Page
 
@@ -704,14 +769,27 @@ Upon confirmation, the user is redirected to the homepage and notified of the su
 
 ### Store Policies
 
+Contains the store’s terms and conditions, return policy, and privacy policy, ensuring customers are well-informed about their rights and the store’s practices.
 
 ### Admin Access
 
-#### Manage Products
+#### Add Product
+
+The "Add Product" page allows superusers to expand the product catalog by uploading new items, including details such as product name, price, description, and images. This ensures that the catalog stays updated with the latest offerings. The form is straightforward, with fields to ensure all necessary information is included to provide customers with comprehensive product details.
 
 The product availability feature allows for effective management and display of the stock status of products in the store. Admins can mark products as either "available" or "out of stock" based on their current inventory status in the admin panel or through the "Manage Products" page in their account. When a product is marked as "out of stock," an "Out of Stock" button is displayed on the Product Page instead of "Add to Cart." This button is disabled and styled differently to indicate that the product cannot be purchased.
 
+Featured products: 
+
+### Manage Products
+
+The "Manage Products" page offers superusers a streamlined interface for editing or removing existing products from the store. Products can be quickly located and edited through a hidden page accessible only to authorized personnel, making it easier to maintain an up-to-date inventory. Superusers can modify product details like name, price, images, and availability or remove products entirely if necessary. This page helps ensure efficient management of the product catalog.
+
 ### Manage Policies
+
+The "Manage Policies" page is essentially the Policies Page with extended functionality for superusers. It allows superusers to update the site's policies, such as Terms & Conditions, Return Policy, and Privacy Policy, through a hidden "Edit Policy" page. This feature helps maintain the store’s compliance with business and legal requirements, ensuring policies are always current and aligned with the latest regulations.
+
+
 
 ![Edit Policies Terms and Conditions](/media/edit-policies-terms-and-conditions.jpeg)
 
@@ -1191,24 +1269,51 @@ To ensure adherence to web standards and improve accessibility, the site's HTML 
 
 * **Home Page**
 
-     On the home page, the following issues were identified:
+     On the home page, the following issues and warning were identified: 
 
      **Error 1:**
 
-     ![Home Page Errors Part One](/media/html-checker-home-page-errors-part-one.jpeg)
-
-     **Error 2:**
+     Attribute `product-name` not allowed on element `a` at this point.
 
      ![Home Page Errors Part One](/media/html-checker-home-page-errors-part-two.jpeg)
 
-     **Error 3:**
+     **Solution:** since HTML strictly defines which attributes are allowed on `<a>` tags, to resolve the issue `data-*` attributes were used, therefore `product-name` was replaced with `data-product-name`. Source [Stack Overflow](/media/https://stackoverflow.com/questions/4962070/attribute-name-not-allowed-on-element-div-at-this-point).
+
+     **Error 2:**
+
+     Attribute `product-id` not allowed on element `a` at this point.
 
      ![Home Page Errors Part One](/media/html-checker-home-page-errors-part-three.jpeg)
 
-     Upon fixing the issues home pages successfully passed the HTML checker: 
-     ![html-checker-home-page-final.jpeg](/media/html-checker-home-page-final.jpeg)
+     **Solution:** similar to previouse issue, `data-*` attributes were used on `<a>` tags, therefore `product-id` was replaced with `data-product-id`.
 
+     **Warning 1:**
 
+     Warning: The `type` attribute is unnecessary for JavaScript resources:
+
+     ![Home Page Errors Part One](/media/html-checker-home-page-errors-part-one.jpeg)
+
+     **Solution:** the `type` attribute was removed.
+
+     Upon fixing the issues and warning home pages successfully passed the HTML checker:
+     
+     ![Home page HTML Validator](/media/html-checker-home-page-final.jpeg)
+
+The rest of the pages passed validation with no errors.
+
+* **Shop Page**
+     ![Shop page HTML Validator](/media/html-checker-shop-page.jpeg)
+
+* **Policies Page**
+
+     ![Policies page HTML Validator](/media/html-checker-policies-page.jpeg)
+
+* **Contact Page**
+     ![Contact page HTML Validator](/media/html-checker-contact-page.jpeg)
+
+* **Edit Policies Page**
+
+     ![Policies page HTML Validator](/media/html-checker-edit-policies-page.jpeg)   
 
 </details>
 
@@ -1217,8 +1322,25 @@ To ensure adherence to web standards and improve accessibility, the site's HTML 
 <details>
   <summary>CSS Testing</summary>
 
-For compliance with web standards and accessibility guidelines, the site's CSS code was checked using the [(Jigsaw) validator](). 
+For compliance with web standards and accessibility guidelines, the site's CSS code was checked using the [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Feternity-watch-store-1f855f4289ad.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors). 
 
+No errors were identified:
+
+![CSS Validation](/media/css-validation.png)
+
+However, 19 warnings were identified by the CSS Validator:
+
+![css-validation-warnings.png](/media/css-validation-warnings.png)
+
+Although these warnings were flagged, the use of vendor-prefixed properties and other CSS features was intentional to ensure cross-browser compatibility and a consistent user experience (UX) across different platforms. These warnings do not negatively impact the site's functionality or design. Here is a summary of the key issues and why they were implemented:
+
+- **Vendor-Prefixed Properties** (-webkit, -moz, etc.): These are necessary to ensure that the design elements like shadows, transitions, and input autofill work correctly across browsers such as Chrome, Safari, and Firefox. Each browser may interpret CSS properties slightly differently, and vendor prefixes help maintain consistency. 
+
+- **CSS Pseudo-Classes** (:-webkit-autofill): This was used specifically to style form fields that browsers automatically fill, ensuring they retain the site's design when a user’s browser autofills a form.
+
+- **CSS Grid and Clamps** (-webkit-line-clamp): This property is used to control text overflow and ensure that long product names are truncated gracefully, improving readability and maintaining a clean UI layout.
+
+These warnings do not affect the website’s performance and are essential to delivering a consistent design and experience across all devices and platforms.
 </details>
 
 #### JavaScript
@@ -1568,6 +1690,8 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
   - [Wix Blog: Return Policy](https://www.wix.com/blog/ecommerce/2020/08/return-policy)
   - [Wix Support: Creating a Privacy Policy](https://support.wix.com/en/article/creating-a-privacy-policy)
 - Error pages 404 and 500 were set up using instructions provided by the Code Institute course facilitator: "Error Pages in Django."
+- Cursor color change instructions were implemented based on guidelines from: [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-change-cursor-color-using-css/).
+- Cloudinary setup in the `settings.py` file followed the steps from [Cloudinary](https://cloudinary.com/blog/managing-media-files-in-django)
 
 
 
@@ -1583,11 +1707,26 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 - SEO keywords were selcted using [Semrush](https://www.semrush.com/).
 - Sitemap was created using [XML Sitemaps Generator](https://www.xml-sitemaps.com).
 - Entity-Relationship Diagrams were created using [QuickDBD](https://www.quickdatabasediagrams.com/).
+- Product information was sourced from the official websites of the following brands:
+     - [Citizen](https://www.citizenwatch.com/)
+     - [Frederique Constant](https://frederiqueconstant.com/)
+     - [Hamilton](https://www.hamiltonwatch.com/)
+     - [Seiko](https://www.seikoboutique.ie/)
+     - [Tissot](https://www.tissotwatches.com/en-en/).
 
 
 ### Media
-- The hero image was sourced from [Freepik](https://www.freepik.com/).
+- The hero image and Contact page image were sourced from [Freepik](https://www.freepik.com/).
+- The Home page image above the footer was sourced from [Vecteezy](https://www.vecteezy.com/).
+- Product images were sourced from the official websites of the following brands:
+     - [Citizen](https://www.citizenwatch.com/)
+     - [Frederique Constant](https://frederiqueconstant.com/)
+     - [Hamilton](https://www.hamiltonwatch.com/)
+     - [Seiko](https://www.seikoboutique.ie/)
+     - [Tissot](https://www.tissotwatches.com/en-en/).
 
 ### Fixing bugs
+
+- To resolve the issue with certain attributes not being allowed on anchor elements [Stack Overflow](/media/https://stackoverflow.com/questions/4962070/attribute-name-not-allowed-on-element-div-at-this-point) instructions were followed.
 
 ## Acknowledgements

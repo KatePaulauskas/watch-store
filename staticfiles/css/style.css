@@ -51,7 +51,6 @@ h6
 /* Paragraph style */
 p {
     font-family: "Muli", sans-serif !important;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 120% !important;
@@ -1142,13 +1141,16 @@ font-size: 100% !important;
     }
     
     /* Style Checkout Page */
-    #payment-form input,
-    .StripeElement,
-    .stripe-style-input,
     #id-country,
     .profile-form-input {
         width: 250px !important;
         height: 35px !important;
+    }
+
+    .StripeElement,
+    #payment-form input,
+    .stripe-style-input {
+        width: 300px !important;
     }
 
     #payment-form input[type="radio"] {

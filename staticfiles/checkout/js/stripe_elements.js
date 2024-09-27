@@ -15,7 +15,7 @@ var style = {
         color: '#AA9159',
         fontFamily: '"Antic", Antic, sans-serif',
         fontSmoothing: 'antialiased',
-        fontSize: '16px',
+        fontSize: '14px',
         '::placeholder': {
             color: '#AA9159',
             fontWeight: '100',

@@ -3,14 +3,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container">
+<div class="container mx-0 px-0">
     <div class="row">
         <div class="col-12 text-center">
             <h1 class="h1 m-4">Edit Product</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center py-0">
             <form action="{% url 'edit_product' product.id %}" method="POST" id="add-product-form" enctype="multipart/form-data" class="w-75 text-center my-3">
                 {% csrf_token %}
                 {{ form.name | as_crispy_field }}

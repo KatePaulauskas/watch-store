@@ -22,9 +22,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = [
+    '8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
     '.herokuapp.com',
-    'localhost', 
+    'localhost',
     '127.0.0.1']
 
 # Application definition
@@ -81,7 +82,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # Required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'cart.contexts.cart_contents',
@@ -120,7 +121,8 @@ LOGOUT_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'watch_store.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net',
+    'https://8003-katepaulausk-watchstore-26htz3q089y.ws.'
+    'codeinstitute-ide.net',
     'https://eternity-watch-store-1f855f4289ad.herokuapp.com',
 ]
 
@@ -140,16 +142,28 @@ else:
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'UserAttributeSimilarityValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'MinimumLengthValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'CommonPasswordValidator'
+        ),
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': (
+            'django.contrib.auth.password_validation.'
+            'NumericPasswordValidator'
+        ),
     },
 ]
 
@@ -160,7 +174,10 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-X_FRAME_OPTIONS = 'ALLOW-FROM https://eternity-watch-store-1f855f4289ad.herokuapp.com/'
+# Set the X-Frame-Options header value
+X_FRAME_OPTIONS = (
+    'ALLOW-FROM https://eternity-watch-store-1f855f4289ad.herokuapp.com/'
+)
 
 # Static files storage with WhiteNoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

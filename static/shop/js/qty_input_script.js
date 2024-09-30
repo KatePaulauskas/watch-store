@@ -1,5 +1,5 @@
 /**
-*Source: Code Institute Boutique Ado walk through
+*Source: code adapted from Code Institute Boutique Ado walk-through
 */
 
     // Disable +/- buttons outside 1-10 range

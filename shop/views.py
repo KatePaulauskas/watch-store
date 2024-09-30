@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404
+)
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -15,20 +17,15 @@ def shop(request):
     direction = None
     selected_brand = None
     selected_gender = None
-    # Track if filters are applied
-    filters_applied = False
-    # Initialise reset_filters
-    reset_filters = False
+    filters_applied = False  # Track if filters are applied
+    reset_filters = False  # Initialize reset_filters
     brand_friendly_name = None
     gender_friendly_name = None
 
-    # Check if the reset button was clicked
     if 'reset' in request.GET:
-        # Add a Django message to show that filters were reset
         messages.info(request, 'Filters have been reset')
-        return redirect('shop')  # Redirect to remove the `reset` parameter from the UR
+        return redirect('shop')
 
-    # Mapping of sorting keys to model fields
     sort_mapping = {
         'name': 'name',
         'price': 'price',
@@ -39,41 +36,55 @@ def shop(request):
         # Handle sorting
         sort = request.GET.get('sort', None)
         direction = request.GET.get('direction', 'asc')
-        
+
         if sort in sort_mapping:
             sortkey = sort_mapping[sort]
             if direction == 'desc':
                 sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-        
+
         # Handle filtering by brand and gender
         selected_brand = request.GET.get('brand', None)
         selected_gender = request.GET.get('gender', None)
-        
+
         if selected_brand:
-            brand_category = Category.objects.filter(name__iexact=selected_brand).first()
+            brand_category = Category.objects.filter(
+                name__iexact=selected_brand
+            ).first()
             if brand_category:
                 brand_friendly_name = brand_category.get_friendly_name()
-                products = products.filter(categories__name__iexact=selected_brand)
-        
+                products = products.filter(
+                    categories__name__iexact=selected_brand
+                )
+
         if selected_gender:
-            gender_category = Category.objects.filter(name__iexact=selected_gender).first()
+            gender_category = Category.objects.filter(
+                name__iexact=selected_gender
+            ).first()
             if gender_category:
                 gender_friendly_name = gender_category.get_friendly_name()
-                products = products.filter(categories__name__iexact=selected_gender)
-        
+                products = products.filter(
+                    categories__name__iexact=selected_gender
+                )
+
         # Handle search
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                )
                 return redirect(reverse('shop'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = (
+                Q(name__icontains=query) |
+                Q(description__icontains=query)
+            )
             products = products.filter(queries)
 
-    # Only show sorting if it's applied
-    current_sorting = f'{sort}_{direction}' if sort else None
+    current_sorting = (
+        f'{sort}_{direction}' if sort else None
+    )
 
     context = {
         'products': products,
@@ -93,45 +104,53 @@ def product_page(request, product_id):
     """ A view to show individual product pages """
     product = get_object_or_404(Product, pk=product_id)
 
-    context = {
-        'product': product,
-    }
+    context = {'product': product}
 
     return render(request, 'shop/product_page.html', context)
+
 
 @login_required
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Only store owners has access to this action.')
+        messages.error(
+            request, 'Only store owner has access to this action.'
+        )
         return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Product is added successfully!')
+            messages.success(request, 'Product added successfully!')
             return redirect(reverse('product_page', args=[product.id]))
         else:
-            messages.error(request, 'There was a problem adding your product, ensure the form is valid.')
+            messages.error(
+                request,
+                'There was a problem adding your product, '
+                'ensure the form is valid.'
+            )
     else:
         form = ProductForm()
 
     template = 'shop/add_product.html'
-    context = {
-        'form': form,
-    }
+    context = {'form': form}
 
     return render(request, template, context)
 
+
 @login_required
 def manage_products(request):
-    """A view to show all products for managing, including filtering and search."""
+    """A view to show all products for managing"""
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Only store owner has access to this action.'
+        )
+        return redirect(reverse('home'))
+
     products = Product.objects.all()
-    
-    context = {
-        'products': products,
-    }
+    context = {'products': products}
+
     return render(request, 'shop/manage_products.html', context)
 
 
@@ -139,16 +158,21 @@ def manage_products(request):
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Only store owners has access to this action.')
+        messages.error(
+            request, 'Only store owner has access to this action.'
+        )
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
 
-    # Pre-select categories
-    product_categories = list(product.categories.all())  # Get all categories assigned to the product
+    product_categories = list(product.categories.all())
     initial_data = {
-        'category_1': product_categories[0] if len(product_categories) > 0 else None,
-        'category_2': product_categories[1] if len(product_categories) > 1 else None,
+        'category_1': (
+            product_categories[0] if len(product_categories) > 0 else None
+        ),
+        'category_2': (
+            product_categories[1] if len(product_categories) > 1 else None
+        ),
     }
 
     if request.method == 'POST':
@@ -158,50 +182,64 @@ def edit_product(request, product_id):
             messages.success(request, 'Product updated successfully!')
             return redirect(reverse('product_page', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update product. '
+                'Please ensure the form is valid.'
+            )
     else:
         form = ProductForm(instance=product, initial=initial_data)
 
     template = 'shop/edit_product.html'
-    context = {
-        'form': form,
-        'product': product,
-    }
+    context = {'form': form, 'product': product}
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Only store owners has access to this action.')
+        messages.error(
+            request, 'Only store owner has access to this action.'
+        )
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted successfully!')
 
     return redirect(reverse('shop'))
 
+
 @login_required
 def cancel_action(request):
     """ Cancel delete action on the shop page """
-    messages.add_message(request, messages.INFO,
-                         "Action cancelled. No changes were made.")
+    messages.add_message(
+        request, messages.INFO,
+        "Action cancelled. No changes were made."
+    )
 
     return redirect('shop')
 
+
 @login_required
 def cancel_action_manage_products(request):
-    """Cancel the action and redirect to the manage products page with a notification."""
-    messages.add_message(request, messages.INFO, "Action was canceled. No changes were made.")
+    """Cancel the action and redirect to the manage products page."""
+    messages.add_message(
+        request, messages.INFO,
+        "Action was canceled. No changes were made."
+    )
 
     return redirect('manage_products')
 
+
 @login_required
 def cancel_action_product_page(request, product_id):
-    """ Cancel delete action on she product page """
+    """ Cancel delete action on the product page """
     product = get_object_or_404(Product, pk=product_id)
-    messages.add_message(request, messages.INFO, "Action cancelled. No changes were made.")
+    messages.add_message(
+        request, messages.INFO,
+        "Action cancelled. No changes were made."
+    )
 
     return redirect(reverse('product_page', args=[product.id]))

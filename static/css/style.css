@@ -261,7 +261,7 @@ input.search-bar {
     color: #e4c58a !important;
     border: 1px solid #E4C58A !important;
     font-family: "Cormorant Unicase", sans-serif !important;
-    font-size: 110%;
+    font-size: 95%;
     outline: 1px solid #230903 !important;
     width: 165px !important;
     min-height: 30px !important;
@@ -759,6 +759,10 @@ hr {
     font-weight: 100 !important;
 }
 
+.__PrivateStripeElement {
+    padding: 5px 2px !important;
+}
+
 .StripeElement {
     height: 40px;
     padding: 6px 12px;
@@ -1160,7 +1164,7 @@ font-size: 100% !important;
     .StripeElement,
     #payment-form input,
     .stripe-style-input {
-        width: 300px !important;
+        width: 270px !important;
     }
 
     #payment-form input[type="radio"] {

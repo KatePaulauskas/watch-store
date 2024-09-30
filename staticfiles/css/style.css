@@ -157,6 +157,7 @@ p.icon-text {
 /* Style search bar */
 .search-bar {
     background: #113227;
+    caret-color: #E4C58A !important;
 }
 
 .search-bar:focus {
@@ -178,7 +179,6 @@ input.search-bar {
     margin: 0 !important;
 }
 
-
 /* Style dropdown account menu */
 .dropdown-menu,
 .dropdown-item:hover,
@@ -199,7 +199,7 @@ input.search-bar {
 
 /* Above fold style */
 .above-fold {
-    background: url('https://res.cloudinary.com/dmqcpnmy9/image/upload/v1727478386/wrsmopcdpebj1i1osds8.webp');
+    background: url('/images/home_page/home_abovefold_image.webp');
     background-size: cover;
     background-position: center top;
     height: 400px;
@@ -237,7 +237,7 @@ input.search-bar {
 }
 
 .home-bottom-image {
-    background: url('https://res.cloudinary.com/dmqcpnmy9/image/upload/v1727478332/b5sbv3xpw0riv8xtnpvx.webp');
+    background: url('/images/home_page/home_bottom_image.webp');
     background-size: cover;
     background-position: center center;
     height: 350px;
@@ -261,7 +261,7 @@ input.search-bar {
     color: #e4c58a !important;
     border: 1px solid #E4C58A !important;
     font-family: "Cormorant Unicase", sans-serif !important;
-    font-size: 70%;
+    font-size: 95%;
     outline: 1px solid #230903 !important;
     width: 165px !important;
     min-height: 30px !important;
@@ -394,7 +394,8 @@ input[type="checkbox"] {
 input, 
 textarea, 
 select,
-.form-control {
+.form-control,
+.list-inline-item {
     box-shadow: none !important;
     outline: none !important;
 }
@@ -481,6 +482,16 @@ ul.errorlist li {
     width: 160px !important;
     color: #FBFAF8 !important;
     outline-color: #113227 !important;
+}
+
+.password-reset:hover,
+.password-reset:active,
+.password-reset:focus,
+.password-reset:visited 
+ {
+    width: 160px !important;
+    color: #FBFAF8 !important;
+    outline-color: #E4C58A !important;
 }
 
 /* Style Shop page */
@@ -660,9 +671,8 @@ input[id^="id_qty_"] {
 }
 
 table tr {
-    border-bottom: 0.2px solid #230903 !important;
+    border-bottom: 0.2px solid #aa9159 !important;
 }
-
 
 /* Ensure images vertically aligned in the center */
 .img-col {
@@ -747,6 +757,10 @@ hr {
 .form-check-label {
     font-size: small !important;
     font-weight: 100 !important;
+}
+
+.__PrivateStripeElement {
+    padding: 5px 2px !important;
 }
 
 .StripeElement {
@@ -980,7 +994,7 @@ ul.list-unstyled {
 }
 
 .contact-bottom-image {
-    background: url('https://res.cloudinary.com/dmqcpnmy9/image/upload/v1727478348/dkiakzrdkqhvenuhzdpg.webp');
+    background: url('/images/contact_page/contact-page-bottom.webp');
     background-size: cover;
     background-position: center center;
     height:400px;
@@ -1150,7 +1164,7 @@ font-size: 100% !important;
     .StripeElement,
     #payment-form input,
     .stripe-style-input {
-        width: 300px !important;
+        width: 270px !important;
     }
 
     #payment-form input[type="radio"] {

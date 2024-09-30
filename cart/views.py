@@ -56,15 +56,23 @@ def adjust_cart(request, item_id):
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart', {})
 
+    # Set the maximum allowed quantity
+    max_quantity = 10
+
     if quantity > 0:
-        cart[item_id] = quantity
-        messages.success(request, f'{product.name} quantity was updated to {cart[item_id]}')
+        if quantity > max_quantity:
+            messages.error(request, f"You cannot add more than {max_quantity} items of {product.name}.")
+        else:
+            cart[item_id] = quantity
+            messages.success(request, f'{product.name} quantity was updated to {cart[item_id]}')
+            request.session['cart'] = cart
     else:
         cart.pop(item_id)
         messages.success(request, f'{product.name} was removed from the cart!')
+        request.session['cart'] = cart
 
-    request.session['cart'] = cart
-    return redirect(reverse('view_cart'))
+    return redirect('view_cart')
+
 
 def remove_from_cart(request, item_id):
     """Remove item from the shopping cart"""

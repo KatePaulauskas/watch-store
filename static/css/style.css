@@ -157,6 +157,7 @@ p.icon-text {
 /* Style search bar */
 .search-bar {
     background: #113227;
+    caret-color: #E4C58A !important;
 }
 
 .search-bar:focus {
@@ -177,7 +178,6 @@ input.search-bar {
     background-color: #FC7C73 !important;
     margin: 0 !important;
 }
-
 
 /* Style dropdown account menu */
 .dropdown-menu,
@@ -261,7 +261,7 @@ input.search-bar {
     color: #e4c58a !important;
     border: 1px solid #E4C58A !important;
     font-family: "Cormorant Unicase", sans-serif !important;
-    font-size: 70%;
+    font-size: 110%;
     outline: 1px solid #230903 !important;
     width: 165px !important;
     min-height: 30px !important;
@@ -394,7 +394,8 @@ input[type="checkbox"] {
 input, 
 textarea, 
 select,
-.form-control {
+.form-control,
+.list-inline-item {
     box-shadow: none !important;
     outline: none !important;
 }
@@ -481,6 +482,16 @@ ul.errorlist li {
     width: 160px !important;
     color: #FBFAF8 !important;
     outline-color: #113227 !important;
+}
+
+.password-reset:hover,
+.password-reset:active,
+.password-reset:focus,
+.password-reset:visited 
+ {
+    width: 160px !important;
+    color: #FBFAF8 !important;
+    outline-color: #E4C58A !important;
 }
 
 /* Style Shop page */
@@ -660,9 +671,8 @@ input[id^="id_qty_"] {
 }
 
 table tr {
-    border-bottom: 0.2px solid #230903 !important;
+    border-bottom: 0.2px solid #aa9159 !important;
 }
-
 
 /* Ensure images vertically aligned in the center */
 .img-col {

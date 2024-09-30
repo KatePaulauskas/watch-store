@@ -18,7 +18,7 @@
             <table class="table cart-table">
                 <thead>
                     <tr>
-                        <th scope="col" class="text-center d-none d-sm-block">Item</th>
+                        <th scope="col" class="text-center">Item</th>
                         <th scope="col"></th>
                         <th scope="col" class="d-none d-sm-block">Subtotal</th>
                     </tr>
@@ -27,7 +27,7 @@
                     <tr>
                         <td class="img-col p-0 w-25">
                             <a href="{% url 'product_page' item.product.id %}">
-                                <img class="img-fluid cart-img" src="{{ item.product.image.url }}">
+                                <img class="img-fluid cart-img" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             </a>
                         </td>
                         <td class="py-0">
@@ -42,17 +42,19 @@
                                 <div class="form-row align-items-center">
                                     <div class="col-12">
                                         <div class="col w-25 mt-2">
-                                            <div class="d-flex">
-                                                <button type="button" class="decrement-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}">
-                                                    <iconify-icon icon="heroicons-outline:minus" style="color: #e4c58a"></iconify-icon>
-                                                </button>
-                                                <input class="form-control qty_input text-center mx-2" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="10" id="id_qty_{{ item.product.id }}" style="width: 60px;">
-                                                <button type="button" class="increment-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}">
-                                                    <iconify-icon icon="heroicons-outline:plus" style="color: #e4c58a"></iconify-icon>
-                                                </button>
-                                            </div>
-                                            <div class="d-flex justify-content-between justify-content-md-center px-0">
-                                                <a class="remove-item" style="text-decoration: none;" data-item_id="{{ item.product.id }}">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <!-- Quantity controls -->
+                                                <div class="d-flex">
+                                                    <button type="button" class="decrement-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}">
+                                                        <iconify-icon icon="heroicons-outline:minus" style="color: #e4c58a"></iconify-icon>
+                                                    </button>
+                                                    <input class="form-control qty_input text-center mx-2" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="10" id="id_qty_{{ item.product.id }}" style="width: 60px;">
+                                                    <button type="button" class="increment-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}">
+                                                        <iconify-icon icon="heroicons-outline:plus" style="color: #e4c58a"></iconify-icon>
+                                                    </button>
+                                                </div>
+                                                <!-- "Remove" link -->
+                                                <a class="remove-item mt-2 mt-md-0 ml-md-3" style="text-decoration: none;" data-item_id="{{ item.product.id }}">
                                                     <small>Remove</small>
                                                 </a>
                                             </div>
@@ -60,6 +62,8 @@
                                     </div>
                                 </div>
                             </form>
+                            
+                            
                         </td>
                         <td class="py-3 d-none d-sm-block">
                             <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</p>
@@ -67,7 +71,7 @@
                     </tr>
                 {% endfor %}
                 <tr>
-                    <td colspan="5" class="pt-5 px-2 px-md-4 px-lg-5 text-start text-sm-end">
+                    <td colspan="3" class="pt-5 px-2 px-md-4 px-lg-5 text-start text-sm-end">
                         <p class="mb-0"><strong>Order Summary:</strong></p>
                         <p class="mb-1"><small>Subtotal: €{{ total|floatformat:2|intcomma }}</small></p>
                         <p class="mb-1"><small>Delivery: €{{ delivery|floatformat:2|intcomma }}</small></p>
@@ -75,7 +79,7 @@
                     </td>
                 </tr>
             </table>
-            <div class="d-flex justify-content-center my-3 mx-0 mx-sm-3">
+            <div class="mt-auto d-flex flex-column align-items-center flex-sm-row justify-content-center my-3 mx-0 mx-sm-3">
                 <a href="{% url 'shop' %}" class="btn btn-cart">
                     <iconify-icon icon="typcn:arrow-back" style="color: #e4c58a" aria-hidden="true"></iconify-icon>
                     Back to Shop
@@ -111,14 +115,9 @@
             // Get the previous sibling (quantity input)
             const qtyInput = button.previousElementSibling;
             let currentValue = parseInt(qtyInput.value);
-            if (currentValue < 10) {
-                qtyInput.value = currentValue + 1;
-                // Submit the form automatically after updating the quantity
-                button.closest('form').submit();
-            } else {
-                // Display a message if the quantity is more than 10
-                alert("You cannot add more than 10 items.");
-            }
+            qtyInput.value = currentValue + 1;
+            // Submit the form automatically after updating the quantity
+             button.closest('form').submit();
         });
     });
 
@@ -131,6 +130,11 @@
             if (currentValue > 1) {
                 qtyInput.value = currentValue - 1;
                 // Submit the form automatically after updating the quantity
+                button.closest('form').submit();
+            } else {
+                // Remove the item if quantity is less than 1
+                qtyInput.value = 0;
+                // Submit the form to remove the item
                 button.closest('form').submit();
             }
         });

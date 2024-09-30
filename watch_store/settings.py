@@ -123,7 +123,7 @@ WSGI_APPLICATION = 'watch_store.wsgi.application'
 CSRF_TRUSTED_ORIGINS = [
     'https://8003-katepaulausk-watchstore-26htz3q089y.ws.'
     'codeinstitute-ide.net',
-    'https://eternity-watch-store-1f855f4289ad.herokuapp.com',
+    'https://eternity-watch-store-1f855f4289ad.herokuapp.com/',
 ]
 
 # Database configuration

@@ -1,5 +1,14 @@
 # Eternity - Luxury Watch Store
 
+
+Eternity Watch Store is an online platform for an imaginary luxury watch retailer, specialising in affordable luxury watches from established quality brands, with uniquely selected collections.
+
+The website provides a sleek and user-friendly interface, enabling customers to browse through exclusive watch collections, explore featured products, view high-resolution images, and filter watches by gender and brand. Sorting options further enhance the shopping experience.
+
+Through the platform, users can create personal accounts to manage purchases, view past orders, and store default addresses, or proceed as guests through a streamlined checkout process.
+
+Additionally, customers have access to a contact form for enquiries and support, ensuring a smooth and personalised shopping journey.
+
 ![Responsive Mockup](media/responsive-mockup.jpeg)
 
 ### Project Link
@@ -868,11 +877,58 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 
 ### Future Features
 
-1. Enhanced Sorting Based on Selected Filters. Currently, sorting resets applied filters (like brand or gender). This future feature can ensure sorting respects active filters, keeping them intact and sorting within the filtered results only.
+**1. Enhanced Sorting Based on Selected Filters**
 
-2. Inventory Tracking System. Introduce an inventory tracking system that automatically updates stock levels as products are sold. When inventory reaches zero, the product will automatically display an "Out of Stock" notification, preventing further purchases until stock is replenished. This feature will help maintain accurate stock levels and provide real-time availability information to shoppers.
+Currently, sorting resets applied filters (like brand or gender). A future improvement would ensure that sorting respects active filters, maintaining them while sorting within the filtered results. This feature will allow users to apply multiple criteria simultaneously, offering a more personalised browsing experience.
 
-3. Sort search results by criteria like rating, price, and name to be ablr to view search results in preferred order.
+**2. Inventory Tracking System**
+
+Implementing an inventory tracking system that automatically updates stock levels as products are sold. When inventory reaches zero, the product will display an "Out of Stock" notification, preventing further purchases until stock is replenished. This system will ensure real-time stock accuracy, improve user experience, and allow for back-in-stock notifications.
+
+**3. Sorting and Filtering Search Results**
+
+Improve the search functionality by allowing users to sort search results based on criteria like rating, price, and name. This feature will make it easier for users to organise results based on their preferences, helping them find the perfect watch more efficiently.
+
+**4. Customised Shipping Rates by Country and Region**
+
+Instead of offering two flat shipping rates for all countries, this feature will allow the superuser to define specific countries and regions for delivery and set customised shipping rates accordingly. This will provide flexibility for international shipping, enabling the store to adjust prices based on shipping distance, partner carriers, and the complexity of delivering to various regions. Additionally, countries or regions where shipping isn’t available can be excluded, ensuring clarity for customers during checkout.
+
+**5. Shipping to Multiple Destinations**
+
+Introduce multi-destination shipping, allowing customers to send products to multiple addresses within a single order. This feature will be especially useful during holidays or special events, where customers want to send gifts to different people at once, streamlining the process and improving convenience.
+
+**6. Integration with Shipping Apps**
+
+To further enhance shipping management, integrating with apps like Shippo, ShipStation, Easyship, or other shipping solutions will enable automated label generation, shipment tracking, and customer notifications. These tools can be used in tandem with custom shipping rates to ensure cost-effective and reliable delivery.
+
+**7. Tax Integration Based on Shipping Destination**
+
+Introduce automated tax calculations that adjust based on the customer’s shipping location. Integration with tax platforms like Avalara or TaxJar will help apply the correct taxes based on region, country, or state, ensuring compliance with international and regional tax laws and providing customers with accurate costs during checkout.
+
+**8. Product Reviews and Ratings**
+Adding a review system will allow customers to leave feedback on purchased products. Shoppers will be able to rate products and write reviews, helping future buyers make informed decisions. Verified purchase badges and sorting by highest-rated products will enhance credibility and trust.
+
+**9. Discounts, Coupons, and Promotions**
+
+Implementing a system to offer discount codes, coupons, and promotions will drive sales and boost customer loyalty. Features like seasonal promotions, percentage discounts on bulk purchases, or limited-time offers will encourage more frequent visits and higher conversion rates.
+
+**10. Improved Product Upload with Defined Categories**
+Future updates to the product upload system will ensure categories are clearly defined, making it easier for admins to manage products and assign them to the correct categories. Dropdowns for pre-defined product categories, subcategories, and brand names will streamline the upload process, reducing errors and improving consistency across the store.
+
+**11. Wishlist Feature**
+Introduce a wishlist option, allowing users to save products they are interested in for future purchases. This feature will encourage users to return to the store, increase engagement, and provide a better understanding of customer preferences for marketing purposes.
+
+**12. Loyalty Program**
+
+A loyalty program will reward repeat customers with points for each purchase, which can be redeemed for discounts or exclusive offers. This feature will help increase customer retention and drive repeat business.
+
+**13. Order Tracking**
+
+Integration of an order tracking system will allow customers to track the status of their orders in real-time from dispatch to delivery. This will provide greater transparency and peace of mind to customers, ensuring they are informed about their shipment's location at all times.
+
+**14. Storing Multiple Default Addresses**
+
+Users will be able to store multiple default shipping addresses in their account, allowing them to quickly select from saved locations during checkout. This feature will be convenient for frequent shoppers or those who send gifts to multiple recipients, reducing the need to re-enter addresses for each purchase.
 
 ## E-commerce Business Model
 
@@ -1414,6 +1470,7 @@ The rest of the pages passed validation with no errors.
      ![Policies page HTML Validator](/media/html-checker-edit-policies-page.jpeg)
 
 * **Contact Request App**
+
      - **Contact Page**
      ![Contact page HTML Validator](/media/html-checker-contact-page.jpeg)  
 

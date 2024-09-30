@@ -357,13 +357,17 @@ The Eternity Luxury Watch Store comprises of several key pages, each designed to
 
 Admin pages: 
 
+**Manage Products**
+
+* Provides functionality for superuser to delete products from the store or edit them via a hidden page, ensuring easy updates and management of the available products.
+
 **Add Product**
 
 * Enables superuser to add new products, including details like name, price, description, and images, to ensure the product catalog stays up-to-date.
 
-**Manage Products**
+**Edit Product**
 
-* Provides functionality for superuser to delete products from the store or edit them via a hidden page, ensuring easy updates and management of the available products.
+* Enables superuser to edit existing products and all their details to ensure the product catalog stays up-to-date, the page is hidden and accessable only via 'Edit' buttons displayed on the following pages: Manage Products, Home, Shop, Product Page.
 
 **Manage Policies**
 
@@ -471,11 +475,11 @@ The initial layout of the interface and navigation for the Eternity Luxury Watch
 
 Admin pages: 
 
-**Add Product**
-![Add Product Page Wireframe](/media/wireframe-add-product-page.jpeg)
-
 **Manage Products**
 ![Manage Products Page Wireframe](/media/wireframe-manage-products-page.jpeg)
+
+**Add Product**
+![Add Product Page Wireframe](/media/wireframe-add-product-page.jpeg)
 
 **Edit Product**
 ![Edit Product Page Wireframe](/media/wireframe-edit-product-page.jpeg)
@@ -773,23 +777,35 @@ Contains the store’s terms and conditions, return policy, and privacy policy, 
 
 ### Admin Access
 
+#### Manage Products
+
+The "Manage Products" page provides superusers with a streamlined interface to edit or remove existing products from the store. Products can be quickly located and modified through a secure page accessible only to authorized personnel, making it easier to maintain an up-to-date inventory. Superusers can adjust product details, including name, price, images, and availability, or remove products entirely if needed. This page ensures efficient management of the product catalog.
+
+In addition to the "Manage Products" page, 'Edit' and 'Delete' buttons are also displayed on the Home, Shop, and Product Page. This allows superusers to have quick and easy access to editing or deleting products directly from those pages, ensuring seamless updates without navigating to the "Manage Products" section.
+
+![Manage Products Page](/media/manage-products-page.jpeg)
+
 #### Add Product
 
-The "Add Product" page allows superusers to expand the product catalog by uploading new items, including details such as product name, price, description, and images. This ensures that the catalog stays updated with the latest offerings. The form is straightforward, with fields to ensure all necessary information is included to provide customers with comprehensive product details.
+The "Add Product" page allows superusers to expand the catalog by uploading new items. They can input essential details, such as product name, price, description, and images, ensuring the catalog stays updated with the latest offerings. The form is user-friendly, with fields to ensure all necessary information is provided, offering customers a comprehensive view of each product.
 
-The product availability feature allows for effective management and display of the stock status of products in the store. Admins can mark products as either "available" or "out of stock" based on their current inventory status in the admin panel or through the "Manage Products" page in their account. When a product is marked as "out of stock," an "Out of Stock" button is displayed on the Product Page instead of "Add to Cart." This button is disabled and styled differently to indicate that the product cannot be purchased.
+Superusers also have the option to mark any product as a Featured Product. Featured products will be prominently displayed on the homepage in the featured product gallery, giving them higher visibility to customers.
 
-Featured products: 
+The availability feature allows for effective stock management. Admins can mark products as either "available" or "out of stock" through the admin panel or the "Manage Products" page. When a product is marked as "out of stock," an "Out of Stock" button replaces the "Add to Cart" button on the Product Page. This button is disabled and styled to indicate the product is unavailable for purchase.
 
-### Manage Products
+![Edit Product Page](/media/add-product-page.jpeg)
 
-The "Manage Products" page offers superusers a streamlined interface for editing or removing existing products from the store. Products can be quickly located and edited through a hidden page accessible only to authorized personnel, making it easier to maintain an up-to-date inventory. Superusers can modify product details like name, price, images, and availability or remove products entirely if necessary. This page helps ensure efficient management of the product catalog.
+#### Edit Product
+
+The "Edit Product" page enables superusers to make changes to existing products. Superusers can update essential product details, such as name, price, description, images, and availability. This functionality allows for the smooth maintenance of the product catalog, ensuring all product information remains accurate and up-to-date.
+
+Additionally, superusers can mark any product as a Featured Product to be displayed on the homepage in the featured product gallery. This option helps highlight key products and increase their visibility to potential customers.
+
+![Edit Product Page](/media/edit-product-page.jpeg)
 
 ### Manage Policies
 
 The "Manage Policies" page is essentially the Policies Page with extended functionality for superusers. It allows superusers to update the site's policies, such as Terms & Conditions, Return Policy, and Privacy Policy, through a hidden "Edit Policy" page. This feature helps maintain the store’s compliance with business and legal requirements, ensuring policies are always current and aligned with the latest regulations.
-
-
 
 ![Edit Policies Terms and Conditions](/media/edit-policies-terms-and-conditions.jpeg)
 
@@ -1169,21 +1185,91 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 |-------------------------|-------------------------|----------------|
 | Click on the Account icon while beign logged in as superuser | Dropdown appears with the following pages: Manage Products, Manage Policies, Profile and Logout | Pass |
 
-
 ##### Manage Products Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Access the "Manage Products" page from the admin account | The page loads successfully, displaying a form to add a new product to the store | Pass |
-| Locate any available product on the Home Page, Shop Page, or from the Product Page and click on 'Edit" button. When the page loads remove tick from the field "availability" and click on "Update Product" button | Admin is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!". Product shows as "Out of Stock" on the Product Page. The same product is displayed as "Out of Stock" on the Shop Page and Home Page, if the product included into the featured products gallery. This product can't be added to the cart from any page | Pass |
+| Click the "Edit" button on any product from the "Manage Products" page | The admin is taken to the "Edit Product" page for the selected product  | Pass  |
+| Click the "Delete" button on any product from the "Manage Products" page | A confirmation modal appears asking if the admin wants to delete the product. If confirmed, the product is deleted, and the list is updated | Pass  |
+| Access "Manage Products" page as a regular user | Regular users are denied access and redirected to the home page with an error message: "Only store owners have access to this action" | Pass  |
+
+
+##### Add Product Page
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Access the "Add Product" page from the admin account dropdown | The page loads successfully, displaying a form to add a new product to the store | Pass  |
+| Submit the form with incomplete or invalid data  | The form displays error messages for fields that are required or have invalid data, and the product is not added until all fields are filled correctly | Pass   |
+| Validation for each field: |   |
+| Name (required, text input) | An error is displayed if left empty, asking to fill out the field | Pass   |
+| SKU (optional, text input)  | The product SKU can be added or left blank. No errors for empty input | Pass   |
+| Description (required, text input)   | An error is displayed if left empty, sking to fill out the field | Pass   |
+| Category 1 (required, dropdown) | An error is displayed if no category is selected: 'Please select an item in the list | Pass   |
+| Category 2 (required, dropdown) | An error is displayed if no category is selected: 'Please select an item in the list  | Pass   |
+| *Price Validation* |  | |
+| - Input a value less than 1 (e.g., 0.99, -5)     | Error: "Ensure this value is greater than or equal to 1." The form should not submit  | Pass    |
+| - Input a non-numeric value (e.g., "abc")| Error: "Enter a number." The form should not submit | Pass    |
+| - Input a valid price (e.g., 50.99)  | The form accepts the value, and no errors are displayed  | Pass  |
+| - Input a price exceeding 8 digits (e.g., 9999999.99) | Error: "Ensure that there are no more than 8 digits in total." The form should not submit | Pass    |
+| - Input a valid price with exactly 8 digits (e.g., 999999.99) | The form accepts the value, and no errors are displayed  | Pass    |
+| *Rating Validation*   |  |  |
+| - Input a value less than 1 (e.g., 0.5)  | Error: "Ensure this value is greater than or equal to 1." The form should not submit   | Pass    |
+| - Input a value greater than 5 (e.g., 5.5, 6)    | Error: "Ensure this value is less than or equal to 5." The form should not submit  | Pass    |
+| - Input a valid rating (e.g., 4.5)  | The form accepts the value, and no errors are displayed  | Pass    |
+| - Input a non-numeric value (e.g., "bad")| Error: "Enter a number." The form should not submit  | Pass    |
+| *Weight Validation*  | |  |
+| - Input a value less than 0.05 (e.g., 0.04, 0)   | Error: "Ensure this value is greater than or equal to 0.05." The form should not submit | Pass    |
+| - Input a value greater than 1.5 (e.g., 2, 10)   | Error: "Ensure this value is less than or equal to 1.5." The form should not submit | Pass    |
+| - Input a valid weight (e.g., 1.25) | The form accepts the value, and no errors are displayed   | Pass    |
+| - Input a non-numeric value (e.g., "heavy") | Error: "Enter a number." The form should not submit   | Pass    |
+| Image (optional, file upload)| Image file can be uploaded. No error is displayed if left empty. | Pass   |
+| - Availability (optional, checkbox) | No error is displayed if unchecked | Pass   |
+| - Featured Product (optional, checkbox) | No error is displayed if unchecked | Pass   |
+| Fill out the form with valid product details and submit | The product is added to the catalog and is now visible on the Shop, Product Manage Product Pages, notification displayed: 'Product added successfully!' | Pass  |
+| Access the "Add Product" page as a regular user | Regular users are denied access and redirected to the home page with an error message: "Only store owners have access to this action". | Pass   |
+| Mark the added product as "Featured" in the form and submit | The product is added to the homepage as a featured product in the featured product gallery | Pass  |
+| Click on 'Cancel' at the bottom of the form | The superuser is redirected back to the shop page without saving any product details, notification displayed: 'ction cancelled. No changes were made.' | Pass   |
+
+##### Edit Product Page
+
+| Action/Feature | Expected Behavior | Status |
+|-------------------------|-------------------------|----------------|
+| Locate any available product on the Home Page, Shop Page, Manage Products, or Product Page and click on the 'Edit' button | The admin is taken to the "Edit Product" page for the selected product | Pass |
+| **Price Validation** | | |
+| - Input a value less than 1 (e.g., 0.99, -5) | Error: "Ensure this value is greater than or equal to 1." The form should not submit. | Pass |
+| - Input a non-numeric value (e.g., "abc") | Error: "Enter a number." The form should not submit. | Pass |
+| - Input a valid price (e.g., 50.99) | The form accepts the value, and no errors are displayed. | Pass |
+| - Input a price exceeding 8 digits (e.g., 9999999.99) | Error: "Ensure that there are no more than 8 digits in total." The form should not submit. | Pass |
+| - Input a valid price with exactly 8 digits (e.g., 999999.99) | The form accepts the value, and no errors are displayed. | Pass |
+| **Rating Validation** | | |
+| - Input a value less than 1 (e.g., 0.5) | Error: "Ensure this value is greater than or equal to 1." The form should not submit. | Pass |
+| - Input a value greater than 5 (e.g., 5.5, 6) | Error: "Ensure this value is less than or equal to 5." The form should not submit. | Pass |
+| - Input a valid rating (e.g., 4.5) | The form accepts the value, and no errors are displayed. | Pass |
+| - Input a non-numeric value (e.g., "bad") | Error: "Enter a number." The form should not submit. | Pass |
+| **Weight Validation** | | |
+| - Input a value less than 0.05 (e.g., 0.04, 0) | Error: "Ensure this value is greater than or equal to 0.05." The form should not submit. | Pass |
+| - Input a value greater than 1.5 (e.g., 2, 10) | Error: "Ensure this value is less than or equal to 1.5." The form should not submit. | Pass |
+| - Input a valid weight (e.g., 1.25) | The form accepts the value, and no errors are displayed. | Pass |
+| - Input a non-numeric value (e.g., "heavy") | Error: "Enter a number." The form should not submit. | Pass |
+| **General Form Functionality** | | |
+| Locate any available product on the Home Page, Shop Page, Manage Products or from the Product Page and click on 'Edit" button. When the page loads remove tick from the field "availability" and click on "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!". Product shows as "Out of Stock" on the Product Page. The same product is displayed as "Out of Stock" on the Shop Page and Home Page, if the product included into the featured products gallery. This product can't be added to the cart from any page | Pass |
 | Click the "Out of Stock" button on the Product Page, Shop Page or Home Page| The button is disabled, and clicking it results in no action | Pass |
-| Locate any out of stock product on the Home Page, Shop Page, or from the Product Page and click on 'Edit" button. When the page loads tick the field "availability" and click on "Update Prpduct" button | Admin is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!". Product becomes available and  "Add to Cart" button appears on the Product Page, Shop Page and Home Page, if the product is included into the featured products gallery | Pass |
-| Locate any product on the Home Page, Shop Page, or from the Product Page and click on 'Edit" button. When the page loads, edit any product details (e.g., name, collections, price, description or upload a new image), then click on "Update Prpduct" button | Notification is displayed "Product updated successfully!" and changes are reflected correctly on all the pages, where product is displayed: in a galleries (Shop and Home pages if relevant) as well as on the Product Page | Pass   |
-| Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete" | A pop-up window appears, asking, 'Delete product? Are you sure you want to delete this product? This action cannot be undone.' Options to close or confirm delete are available | Pass |
+| Locate any out of stock product on the Home Page, Shop Page, or from the Product Page and click on 'Edit" button. When the page loads tick the field "availability" and click on "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!". Product becomes available and "Add to Cart" button appears on the Product Page, Shop Page and Home Page, if the product is included into the featured products gallery | Pass |
+| Leave a required field empty (e.g., Name or Price) | Error messages are displayed, and the form cannot be submitted until all required fields are filled out correctly. | Pass |
+| Upload a new image | The new image is uploaded, and the old one is replaced. No error is displayed if no image is uploaded (optional). | Pass |
+| Click on "Cancel" | The superuser is redirected back to the product page, and no changes are saved. Notification "Action cancelled. No changes were made." is displayed. | Pass |
+| Locate any product on the Home Page, Shop Page, Manage Products or from the Product Page and click on 'Edit" button. When the page loads, edit any product details (e.g., name, collections, price, description or upload a new image) and enter valid parametres, then click on "Update Prpduct" button | Notification is displayed "Product updated successfully!" and changes are reflected correctly on all the pages, where product is displayed: in a galleries (Shop and Home pages if relevant) as well as on the Product Page | Pass |
+| Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/edit/45/) | The user is redirected to the login page with a message indicating that they need to log in | Pass |
+| Attempt to access the edit URL as a regular user | Regular users are denied access to editing product, redirected to the home page and shown an error message: "Only store owner has access to this action" | Pass |
+
+##### Delete Product Functionality
+
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+| Locate any product on the Home Page, Shop Page, Manage Products or from the Product Page and click on "Delete" | A pop-up window appears, asking, 'Delete product? Are you sure you want to delete this product? This action cannot be undone.' Options to close or confirm delete are available | Pass |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Delete' button | The product is removed from the store and no longer appears on any store pages, and the user is redirected to the "Shop Page"  with a confirmation message: "Prpduct deleted successfully!"| Pass |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Close' button | The pop-up window is closed, the admin remains on the same page with a confirmation message: "Action cancelled. No changes were made. " | Pass |
-| Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/edit/45/) | The user is redirected to the login page with a message indicating that they need to log in | Pass | 
-| Attempt to access the edit URL as a regular user | Regular users are denied access to editing product, redirected to the home page and shown an error message: "Only store owners has access to this action" | Pass |
 | Log out and try to access the delete URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/delete/42/) | The user is redirected to the login page with a message indicating that they need to log in  | Pass | 
 | Attempt to access the delete URL as a regular user | Regular users are denied access to deleting product, redirected to the home page and shown an error message: "Only store owners has access to this action" | Pass |
 
@@ -1267,7 +1353,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 To ensure adherence to web standards and improve accessibility, the site's HTML was submitted to [W3C validation testing]().
 
-* **Home Page**
+* **Home App**
 
      On the home page, the following issues and warning were identified: 
 
@@ -1301,19 +1387,35 @@ To ensure adherence to web standards and improve accessibility, the site's HTML 
 
 The rest of the pages passed validation with no errors.
 
-* **Shop Page**
+* **Shop App**
+
+     - **Shop Page**
      ![Shop page HTML Validator](/media/html-checker-shop-page.jpeg)
 
-* **Policies Page**
+     - **Product Page**
+     ![Product page HTML Validator](/media/html-checker-product-page.jpeg)
 
+     - **Manage Products**
+     ![Manage Products page HTML Validator](/media/html-checker-manage-products-page.jpeg)
+
+     - **Add Product**
+     ![Add Product page HTML Validator](/media/html-checker-add-product-page.jpeg)
+
+     - **Edit Product**
+     ![Edit Product page HTML Validator](/media/html-checker-edit-product-page.jpeg)
+
+* **Policies App**
+
+     - **Policies Page**
      ![Policies page HTML Validator](/media/html-checker-policies-page.jpeg)
 
-* **Contact Page**
-     ![Contact page HTML Validator](/media/html-checker-contact-page.jpeg)
+     - **Edit Policies Page**
 
-* **Edit Policies Page**
+     ![Policies page HTML Validator](/media/html-checker-edit-policies-page.jpeg)
 
-     ![Policies page HTML Validator](/media/html-checker-edit-policies-page.jpeg)   
+* **Contact Request App**
+     - **Contact Page**
+     ![Contact page HTML Validator](/media/html-checker-contact-page.jpeg)  
 
 </details>
 
@@ -1348,7 +1450,25 @@ These warnings do not affect the website’s performance and are essential to de
 <details>
   <summary>JavaScript Testing</summary>
 
-To enhance adherence to web standards and ensure accessibility, the site's JavaScript code was validated using the [JSHint Validator](https://jshint.com/). 
+To enhance adherence to web standards and ensure accessibility, the site's JavaScript code was validated using the [JSHint Validator](https://jshint.com/).
+
+Only warnings were idenitified, no errors.
+
+**Confirmation Modal** 
+Java Script for confirmation modal when deleting products is used on the Home, Shop, Product and Manage Products pages:
+
+![JavaScript Validation Modal](/media/js-validator-modal.jpeg)
+
+
+**Product Page Quanitiy Input**
+
+![JavaScript Validation Product Page Quanitiy Input](/media/js-validator-product-page-quanitiy-input.jpeg)
+
+All the warnings are **ES6 Features Warnings**
+
+- Description: These warnings indicate that the JavaScript code uses features that are only available in ECMAScript 6 (ES6) or later versions.
+
+- Solution: The code should be interpreted as ES6. Having the Python runtime version specified in the runtime.txt file helps to address this warning. 
 
 </details>
 
@@ -1358,6 +1478,27 @@ To enhance adherence to web standards and ensure accessibility, the site's JavaS
   <summary>Python Testing</summary>
 
 To ensure conformity with web standards and accessibility requirements, the site's Python code from every relevant file was tested using the [PEP8 Python Validator](https://pep8ci.herokuapp.com). 
+
+After ensuring that there are two blank lines before each top-level function or class, that no line exceeds the recommended maximum length of 79 characters, and that there are no blank lines containing whitespace, each major file in the project was tested with PEP8 Python Validator, and no further errors were found.
+
+**Project URLs & Views**
+
+![Project URLs](/media/python-validation-project-settings.py-file.jpeg)
+![Progect Views](/media/python-validation-project-view.jpeg)
+![Project URLs](/media/python-validation-project-urls.jpeg)
+
+**Home app:**
+
+![Home Views](/media/python-validation-home-view.jpeg)
+![Home URLs](/media/python-validation-home-urls.jpeg)
+
+**Shop app:**
+
+![Shop Models](/media/python-validation-shop-models.jpeg)
+![Shop Admin](/media/python-validation-shop-admin.jpeg)
+![Shop Forms](/media/python-validation-shop-forms.jpeg)
+![Shop Views](/media/python-validation-shop-views.jpeg)
+![Shop URLs](/media/python-validation-shop-urls.jpeg)
 
 </details>
 
@@ -1373,7 +1514,41 @@ To ensure conformity with web standards and accessibility requirements, the site
 <details>
   <summary>Lighthouse Testing</summary>
 
-To ensure the accessibility requirements are met for the current project, Lighthouse testing was conducted for the site
+To ensure the accessibility requirements are met for the current project, Lighthouse testing was conducted for the site:
+
+* **Home App**
+     - **Home Page:**
+     ![Improved Home Page Lighthouse Results](/media/lighthouse-home-page.jpeg)
+
+
+* **Shop App**
+
+     - **Shop Page**
+     ![Shop Page Lighthouse Results](/media/lighthouse-shop-page.jpeg)
+
+     - **Product page:**
+     ![Product Page Lighthouse Results](/media/lighthouse-product-page.jpeg)
+
+     - **Manage Products**
+     ![Manage Products Lighthouse Results](/media/lighthouse-manage-products-page.jpeg)
+
+     - **Add Product**
+     ![Add Product Lighthouse Results](/media/lighthouse-add-product-page.jpeg)
+
+     - **Edit Product**
+     ![Edit Product Lighthouse Results](/media/lighthouse-edit-product-page.jpeg)
+
+* **Best Practicies**
+
+     Certain Best Practices scores cannot be fully optimised on some pages due to the integration of essential third-party services. For example, pages that display images hosted on Cloudinary encounter specific issues that are inherent to Cloudinary's image handling and cannot be resolved without moving to a different image hosting service.
+
+     Similarly, the use of Stripe for payment processing and Mailchimp for newsletter subscription introduces third-party cookies and external scripts that are required for their functionality. These cookies are necessary for secure transactions and user tracking but negatively impact the Best Practices score.
+
+     Given the importance of these services for key site features—such as secure payments and marketing outreach—these issues will not be addressed at this time, as the benefits of using Cloudinary, Stripe, and Mailchimp outweigh the minor performance impacts they cause.
+
+     ![Best Practices Issue](/media/lighthouse-home-page-best-practices-issue.jpeg)
+
+All other pages showed positive results:
 
 </details>
 

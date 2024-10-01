@@ -1460,6 +1460,11 @@ The rest of the pages passed validation with no errors.
      - **Edit Product**
      ![Edit Product page HTML Validator](/media/html-checker-edit-product-page.jpeg)
 
+* **Cart App**
+
+     - **Cart Page
+     ![Cart page HTML Validator](/media/html-checker-cart-page.jpeg)
+
 * **Policies App**
 
      - **Policies Page**
@@ -1509,17 +1514,27 @@ These warnings do not affect the website’s performance and are essential to de
 
 To enhance adherence to web standards and ensure accessibility, the site's JavaScript code was validated using the [JSHint Validator](https://jshint.com/).
 
-Only warnings were idenitified, no errors.
+**Shop App**
 
-**Confirmation Modal** 
+Only warnings were idenitified on Shop app pages, no errors.
+
+- **Confirmation Modal** 
 Java Script for confirmation modal when deleting products is used on the Home, Shop, Product and Manage Products pages:
 
 ![JavaScript Validation Modal](/media/js-validator-modal.jpeg)
 
 
-**Product Page Quanitiy Input**
+- **Product Page Quanitiy Input**
 
 ![JavaScript Validation Product Page Quanitiy Input](/media/js-validator-product-page-quanitiy-input.jpeg)
+
+**Cart App**
+
+Only warnings were idenitified on Cart page, no errors.
+
+![JavaScript Validation Cart Page](/media/js-validator-cart-page.jpeg)
+
+
 
 All the warnings are **ES6 Features Warnings**
 
@@ -1556,6 +1571,13 @@ After ensuring that there are two blank lines before each top-level function or 
 ![Shop Forms](/media/python-validation-shop-forms.jpeg)
 ![Shop Views](/media/python-validation-shop-views.jpeg)
 ![Shop URLs](/media/python-validation-shop-urls.jpeg)
+
+**Cart app:**
+
+![Cart Contexts](/media/python-validation-cart-contexts.jpeg)
+![Cart Tools](/media/python-validation-cart-tools.jpeg)
+![Cart Views](/media/python-validation-cart-views.jpeg)
+![Cart URLs](/media/python-validator-cart-urls.jpeg)
 
 </details>
 
@@ -1594,6 +1616,11 @@ To ensure the accessibility requirements are met for the current project, Lighth
 
      - **Edit Product**
      ![Edit Product Lighthouse Results](/media/lighthouse-edit-product-page.jpeg)
+
+* **Cart App**
+
+     - **Cart Page**
+     ![Cart Page Lighthouse Results](/media/lighthouse-cart-page.jpeg)
 
 * **Best Practicies**
 

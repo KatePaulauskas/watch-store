@@ -41,7 +41,10 @@ var style = {
         iconColor: '#FC7C73'
     }
 };
-var card = elements.create('card', {style: style});
+var card = elements.create('card', {
+    style: style,
+    ariaLabel: 'Credit or debit card',
+});
 card.mount('#card-element');
 
 // Handle realtime validation errors on the card element
@@ -131,5 +134,5 @@ form.addEventListener('submit', function(ev) {
     }).fail(function () {
         // just reload the page, the error will be in django messages
         location.reload();
-    })
+    });
 });

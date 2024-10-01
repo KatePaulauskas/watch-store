@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Order, OrderLineItem, AddOn
 
+
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
+
 
 class OrderAdmin(admin.ModelAdmin):
     inlines = (OrderLineItemAdminInline,)
@@ -22,8 +24,8 @@ class OrderAdmin(admin.ModelAdmin):
               'stripe_pid')
 
     list_display = ('order_number', 'date', 'full_name',
-                    'order_total', 'add_ons_cost', 'display_add_ons', 'delivery_cost',
-                    'grand_total')
+                    'order_total', 'add_ons_cost', 'display_add_ons',
+                    'delivery_cost', 'grand_total')
 
     ordering = ('-date',)
 
@@ -36,8 +38,10 @@ class OrderAdmin(admin.ModelAdmin):
         # Recalculate the add_ons_cost and grand_total when add-ons are updated
         form.instance.update_total()
 
+
 class AddOnAdmin(admin.ModelAdmin):
     list_display = ('name', 'price',)
+
 
 admin.site.register(Order, OrderAdmin)
 admin.site.register(AddOn, AddOnAdmin)

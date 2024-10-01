@@ -2,6 +2,7 @@
 {% load static %}
 {% load cart_tools %}
 {% load humanize %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container-fluid">
@@ -19,7 +20,7 @@
         </div>
         <div class="col-12 col-lg-6 order-lg-last mb-5 p-3">
             <div class="d-flex justify-content-start">
-                <h5 class="mb-0">Order Summary ({{ product_count }})</h5>
+                <h2 class="mb-0 fs-5">Order Summary ({{ product_count }})</h2>
             </div>
             <div class="row mt-3">
                 <div class="col-6 offset-2">
@@ -35,23 +36,23 @@
                 <div class="col-2 my-2">
                     <a href="{% url 'product_page' item.product.id %}">
                         {% if item.product.image %}
-                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            <img class="w-100" src="{{ item.product.image.url }}" alt="View details for {{ item.product.name }}">
                         {% else %}
-                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="No image available for {{ item.product.name }}">
                         {% endif %}
                     </a>
                 </div>
                 <div class="col-7 p-0 p-xs-2">
                     <p class="my-0 px-1"><small>{{ item.product.name }}</small></p>
                     <p class="my-0 px-0 item-quantity"><small>Qty: {{ item.quantity }}</small></p>
-                    <!-- Hidden input to store the total product count for use in JavaScript -->
-                    <input type="hidden" id="product-count" value="{{ product_count }}">
                 </div>
                 <div class="col-3 px-0 p-xs-1 p-sm-2 text-end">
                     <p class="my-0"><small>€{{ item.product.price | calc_subtotal:item.quantity | intcomma }}</small></p>
                 </div>
             </div>
             {% endfor %}
+            <!-- Hidden input to store the total product count for use in JavaScript -->
+            <input type="hidden" id="product-count" value="{{ product_count }}">
             <hr class="my-0">
             <div class="row text-end">
                 <div class="col-7 offset-1 offset-sm-2">
@@ -95,7 +96,7 @@
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
                         <div class="select-container">
                         {{ order_form.country | as_crispy_field }}
-                        </div> 
+                        </div>
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.town_or_city | as_crispy_field }}
@@ -122,7 +123,7 @@
                     <!-- Add-ons -->
                     <div class="mb-3">
                         <h5 class="px-2 text-center text-lg-start">Add-ons</h5>
-                        <div id="add-ons">
+                        <div class="add-ons">
                             {% if add_ons %}
                                 {% for add_on in add_ons %}
                                     <div class="text-start px-5">
@@ -159,12 +160,11 @@
     </div>
 </div>
 <div id="loading-overlay">
-    <h1 class="loading-spinner text-center">The payment is being processed, please wait.
+    <h1 class="loading-spinner text-center">The payment is being processed, please wait.</h1>
         <hr>
         <span>
             <iconify-icon icon="svg-spinners:tadpole"  style="color: #e4c58a"></iconify-icon>
         </span>
-    </h1>
 </div>
 {% endblock %}
 

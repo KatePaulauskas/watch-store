@@ -166,7 +166,6 @@ p.icon-text {
 
 input::placeholder {
     color: #E4C58A !important;
-    font-style: italic;
     font-weight: 200;
 }
 
@@ -712,10 +711,13 @@ table tr {
     color: #FBFAF8 !important;
 }
 
+input {
+    caret-color: #E4C58A !important;
+}
+
 select,
 select option {
     color: #e4c58a !important;
-    font-style: italic;
 }
 
 select:invalid,
@@ -725,7 +727,7 @@ input[type="checkbox"] + label,
 #card-element {
     color: #AA9159!important;
     font-weight: 100 !important;
-    font-style: italic !important;
+    font-size: 16px !important;
 }
 
 input[type="radio"] + label {
@@ -772,7 +774,6 @@ hr {
     transition: box-shadow 150ms ease;
     color: #AA9159!important;
     font-weight: 100 !important;
-    font-style: italic !important;
 }
 
 .StripeElement--focus,
@@ -783,7 +784,6 @@ hr {
     box-shadow: 0 1px 3px 0 #E4C58A !important;
     color: #AA9159!important;
     font-weight: 100 !important;
-    font-style: italic !important;
 }
 
 .StripeElement--webkit-autofill {

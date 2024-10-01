@@ -24,12 +24,12 @@ class ProductForm(forms.ModelForm):
         decimal_places=2,
     )
 
-    # Ensure weight is greater than zero
+    # Ensure weight is between 0.05 and 1.5 kgs
     weight = forms.DecimalField(
         label="Weight (kg)",
         min_value=0.05,
         max_value=1.5,
-        max_digits=5,
+        max_digits=3,
         decimal_places=2,
     )
 

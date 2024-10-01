@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from shop.models import Product
 from delivery_method.models import DeliveryMethod
 
+
 def cart_contents(request):
 
     cart_items = []
@@ -29,18 +30,22 @@ def cart_contents(request):
         if product.weight is not None:
             product_weight = product.weight
         else:
-            product_weight = Decimal('1.00')
+            # Average watch weight on a higher side
+            product_weight = Decimal('0.50')
         cart_weight += product_weight * quantity
 
     # Default to standard delivery method
-    standard_delivery = DeliveryMethod.objects.filter(name='Standard: 5-10 days').first()
+    standard_delivery = DeliveryMethod.objects.filter(
+        name='Standard: 5-10 days'
+    ).first()
+
     if standard_delivery:
         delivery = round(standard_delivery.rate * cart_weight)
     else:
         delivery = Decimal(settings.STANDARD_DELIVERY)
 
     grand_total = total + delivery
-    
+
     context = {
         'cart_items': cart_items,
         'total': total,

@@ -680,7 +680,11 @@ At the top of the page on the left, a "Back to Shop" button allows customers to 
 
 ### Cart Page
 
-The Cart Page provides an overview of the items a customer intends to purchase. It displays the product name, SKU, image, price, quantity, subtotal, standard delivery cost, and total cost, allowing customers to review their selections before proceeding to checkout. The page also offers options to update quantities or remove items.
+The Cart Page provides an overview of the items a customer plans to purchase, including the product name, SKU, image, price, quantity, subtotal, standard delivery cost, and total cost, allowing customers to review and adjust their selections before proceeding to checkout. By default, the standard delivery rate is applied, calculated as:
+
+Delivery cost = Delivery method rate x Total cart weight
+
+At checkout, customers have the option to switch to a priority delivery rate. Delivery rates can be configured through the admin dashboard.
 
 ![Cart Page](/media/cart-page.jpeg)
 
@@ -692,11 +696,30 @@ If a customer visits the Cart Page before adding any items to the cart, they rec
 
 ![Checkout Page](/media/checkout-page.jpeg)
 
-The Checkout Page allows users to finalise their purchases by filling out necessary information, including shipping details, payment methods, and selecting add-ons like extended warranties. Logged-in users benefit from having their information prefilled, speeding up the checkout process. Users can also log in at checkout if not already signed in. The page is designed to provide a secure, seamless user experience, ensuring that customers can complete their transactions with confidence. Upon successful checkout, an order confirmation is displayed, summarizing the order and providing the estimated delivery time.
+The Checkout Page allows users to finalise their purchases by filling out necessary information, including customer details, delivery details and payment details. It supports logged-in users with prefilled delivery addresses, and also provides the option to log in at checkout.
+
+Customers can select add-ons like extended warranty or shipping insurance, which are applied to each item in the cart.
+
+Delivery Methods calculated based on delivery rate × cart weight.
+
+Available Delivery Methods:
+
+- Standard (5-10 days): Selected by default.
+- Priority (3-5 days): Available for faster shipping.
+
+Superuser can add more options through the admin dashboard.
+
+If a product has no weight set, it defaults to 0.5 kg. If shipping cost calculation fails for any reason, a flat rate of €15 is applied to the order. 
+
+While an order is being process, customer gets a notification: 
+
+Upon successful checkout, users are directed to 'Thank You' page with the order number and summary.
+
+This setup ensures a secure and efficient checkout process, allowing customers to review their purchases, choose the preferred delivery method, opt in for add-ons and securely checkout. 
 
 ### Thank You Page
 
-The Thank You Page provides users with a confirmation that their order has been successfully processed. It displays a summary of the order, including product details, the total cost, shipping information. This page reassures customers that their payment has been securely processed and provides them with an order number.
+The Thank You Page provides users with a confirmation that their order has been successfully processed. It displays a summary of the order, including order number, notification about confirmation email, products with quantities and charges breakdown. This page reassures customers that their payment has been securely processed and provides them with an order number.
 
 One product in the order: 
 
@@ -1165,7 +1188,22 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 ##### Checkout Page
 
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+Visit the checkout page with items in the cart	The page loads with the correct customer, delivery, and order summary information displayed.	Pass
+Submit the checkout form with all fields filled correctly	The form submits, Stripe payment intent is initiated, and the user is redirected to the Thank You page.	Pass
+Submit the checkout form with invalid email	An error message appears below the email field: "Please enter a valid email address."	Pass
+Select Priority shipping
+Click the "Complete Order" button with the Stripe card fields filled	The payment is processed via Stripe, the order is created, and the user is redirected to the Thank You page.	Pass
+Submit the form with valid but minimal data (no add-ons)	The order is created, with no add-ons included in the order, and the payment proceeds successfully.	Pass
+Add add-ons and submit the form	The order includes the selected add-ons, and the total reflects the correct updated amount.	Pass
+
 ##### Thank You Page
+| Action/Feature          | Expected Behavior       | Status         |
+|-------------------------|-------------------------|----------------|
+After a successful payment, redirect to the Thank You page	The Thank You page loads with a confirmation message, order number, and summary details.	Pass
+The "Thank You" page displays the correct order number	The order number corresponds to the order placed and is displayed prominently.	Pass
+The order summary on the Thank You page is accurate	The products, quantities, add-ons, delivery method, and total amount match the order placed.	Pass
 
 ##### Contact Page
 

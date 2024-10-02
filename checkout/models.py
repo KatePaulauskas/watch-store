@@ -72,6 +72,7 @@ class Order(models.Model):
         self.order_total = self.lineitems.aggregate(
             Sum('lineitem_total'))['lineitem_total__sum'] or Decimal('0')
 
+        # Calculate total add-ons applied to each line item based on quantity
         add_ons_cost = Decimal('0')
         for lineitem in self.lineitems.all():
             for add_on in self.add_ons.all():
@@ -79,17 +80,21 @@ class Order(models.Model):
 
         self.add_ons_cost = add_ons_cost
 
+        # Fallback to standard delivery method if no method selected
         if not self.delivery_method:
             self.delivery_method = self.get_standard_delivery_method()
 
+        # Calculate delivery cost (shipping rate * total cart weight)
         cart_weight = sum(
             [lineitem.product.weight * lineitem.quantity
              for lineitem in self.lineitems.all()])
         if self.delivery_method:
             self.delivery_cost = round(self.delivery_method.rate * cart_weight)
         else:
-            self.delivery_cost = Decimal(0)
+            # Default to 15 if no delivery method is available
+            self.delivery_cost = Decimal(15)
 
+        # Calculate the grand total (order total + delivery cost + add-ons)
         self.grand_total = (self.order_total + self.delivery_cost +
                             self.add_ons_cost)
         self.save()

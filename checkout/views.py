@@ -42,6 +42,7 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+    # Fetch available add-ons
     add_ons = AddOn.objects.all()
 
     if request.method == 'POST':
@@ -81,7 +82,7 @@ def checkout(request):
             cart_weight = sum([
                 item_data * get_object_or_404(Product, pk=item_id).weight
                 if get_object_or_404(Product, pk=item_id).weight is not None
-                else Decimal('1.00')
+                else Decimal('0.50')
                 for item_id, item_data in cart.items()
             ])
 
@@ -95,6 +96,7 @@ def checkout(request):
                     pk__in=selected_add_ons)
                 order.add_ons.set(add_ons_queryset)
 
+            # Create order line items and save the order
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -136,6 +138,7 @@ def checkout(request):
             payment_method_types=['card'],
         )
 
+        # Attempt to prefill the form with any info user maintains in profile
         if request.user.is_authenticated:
             profile, created = UserProfile.objects.get_or_create(
                 user=request.user)

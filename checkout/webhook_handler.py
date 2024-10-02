@@ -59,11 +59,13 @@ class StripeWH_Handler:
         cart = intent.metadata.cart
         save_info = intent.metadata.get('save_info', 'false').lower() == 'true'
 
+        # Get the Charge object
         stripe_charge = stripe.Charge.retrieve(intent.latest_charge)
         billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2)
 
+        # Clean data in the shipping details
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
@@ -135,6 +137,7 @@ class StripeWH_Handler:
                 time.sleep(1)
 
         if order_exists:
+            # If the order exists, send a confirmation email
             self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: \
@@ -167,12 +170,13 @@ class StripeWH_Handler:
                     order_line_item.save()
             except Exception as e:
                 if order:
-                    order.delete()
+                    order.delete()  # Rollback if there's an error
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500
                 )
 
+        # Send confirmation email after the order is created
         self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: \

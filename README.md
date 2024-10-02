@@ -1518,8 +1518,21 @@ The rest of the pages passed validation with no errors.
 
 * **Cart App**
 
-     - **Cart Page
+     - **Cart Page**
      ![Cart page HTML Validator](/media/html-checker-cart-page.jpeg)
+
+* **Checkout App**
+
+     - **Checkout Page**
+     ![Checkout page HTML Validator](/media/html-checker-checkout-page.jpeg)
+
+     - **Thank You Page**
+     ![Thank You page HTML Validator](/media/html-checker-thank-you-page.jpeg)
+
+* **Profile App**
+
+     - **Orders and Address page**
+     ![Orders and Address page HTML Validator](/media/html-checker-orders-and-address.jpeg)
 
 * **Policies App**
 
@@ -1590,6 +1603,13 @@ Only warnings were idenitified on Cart page, no errors.
 
 ![JavaScript Validation Cart Page](/media/js-validator-cart-page.jpeg)
 
+**Checkout App**
+
+Only warnings were idenitified on Checkout page, no errors.
+
+![JavaScript Validation Checkout Page Calculate Total](/media/js-validator-checkout-page-calculate-total.jpeg)
+
+![JavaScript Validation Checkout Page Stripe Elements](/media/js-validator-checkout-page-stripe.jpeg)
 
 
 All the warnings are **ES6 Features Warnings**
@@ -1635,6 +1655,18 @@ After ensuring that there are two blank lines before each top-level function or 
 ![Cart Views](/media/python-validation-cart-views.jpeg)
 ![Cart URLs](/media/python-validator-cart-urls.jpeg)
 
+
+**Checkout app:**
+
+![Checkout Models](/media/python-validation-checkout-models.jpeg)
+![Checkout Admin](/media/python-validator-checkout-admin.jpeg)
+![Checkout Views](/media/python-validation-checkout-views.jpeg)
+![Checkout Forms](/media/python-validation-checkout-forms.jpeg)
+![Checkout Signals](/media/python-validation-checkout-signals.jpeg)
+![Checkout Webhook Handler](/media/python-validator-checkout-webhook-handler.jpeg)
+![Checkout Webhooks](/media/python-validation-checkout-webhooks.jpeg)
+![Checkout URLs](/media/python-validator-checkout-urls.jpeg)
+
 </details>
 
 ### Responsivness
@@ -1677,6 +1709,19 @@ To ensure the accessibility requirements are met for the current project, Lighth
 
      - **Cart Page**
      ![Cart Page Lighthouse Results](/media/lighthouse-cart-page.jpeg)
+
+* **Checkout App**
+
+     - **Checkout Page**
+     ![Checkout Page Lighthouse Results](/media/lighthouse-checkout-page.jpeg)
+
+     - **Thank You Page**
+     ![Thank You Page Lighthouse Results](/media/lighthouse-thank-you-page.jpeg)
+
+* **Profile App**
+
+     - **Orders and Address page**
+     ![Orders and Address Page Lighthouse Results](/media/lighthouse-orders-and-address-page.jpeg)
 
 * **Best Practicies**
 

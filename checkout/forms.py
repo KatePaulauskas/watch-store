@@ -15,7 +15,12 @@ class OrderForm(forms.ModelForm):
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
         """
+
         super().__init__(*args, **kwargs)
+
+        # Ensure 'postcode' is mandatory
+        self.fields['postcode'].required = True
+
         placeholders = {
             'full_name': 'Full Name',
             'email': 'Email Address',
@@ -57,62 +62,3 @@ class OrderForm(forms.ModelForm):
         self.fields['delivery_method'].widget.attrs.update({
             'aria-label': 'Delivery Method'
         })
-
-    def clean_full_name(self):
-        """
-        Custom validation for the 'full_name' field
-        """
-        full_name = self.cleaned_data.get('full_name')
-
-        # Check that full name has both first and last names
-        if len(full_name.split()) < 2:
-            raise forms.ValidationError(
-                'Please enter your full name (first and last).'
-            )
-
-        # Check that full name contains only letters, apostrophes, and dashes
-        if not re.match(r"^[\p{L}'-\s]+$", full_name, re.UNICODE):
-            raise forms.ValidationError(
-                "Only letters, apostrophes, and dashes are allowed."
-            )
-
-        return full_name
-
-    def clean_email(self):
-        """
-        Custom validation for email
-        """
-        email = self.cleaned_data.get('email')
-        if not email.endswith('@example.com'):
-            raise forms.ValidationError(
-                "Email must end with '@example.com'."
-            )
-        return email
-
-    def clean_phone_number(self):
-        """
-        Custom validation for phone number
-        """
-        phone_number = self.cleaned_data.get('phone_number')
-        if not phone_number.isdigit():
-            raise forms.ValidationError(
-                "Phone number must contain only digits."
-            )
-        if len(phone_number) != 10:
-            raise forms.ValidationError(
-                "Phone number must be 10 digits long."
-            )
-        return phone_number
-
-    def clean(self):
-        """
-        Custom Validation for Street Address 1 and Postal code
-        """
-        cleaned_data = super().clean()
-        street_address1 = cleaned_data.get('street_address1')
-        postcode = cleaned_data.get('postcode')
-
-        if not street_address1:
-            raise forms.ValidationError("Street Address 1 is required.")
-        if not postcode:
-            raise forms.ValidationError("Postal code is required.")

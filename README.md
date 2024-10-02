@@ -1190,20 +1190,38 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-Visit the checkout page with items in the cart	The page loads with the correct customer, delivery, and order summary information displayed.	Pass
-Submit the checkout form with all fields filled correctly	The form submits, Stripe payment intent is initiated, and the user is redirected to the Thank You page.	Pass
-Submit the checkout form with invalid email	An error message appears below the email field: "Please enter a valid email address."	Pass
-Select Priority shipping
-Click the "Complete Order" button with the Stripe card fields filled	The payment is processed via Stripe, the order is created, and the user is redirected to the Thank You page.	Pass
-Submit the form with valid but minimal data (no add-ons)	The order is created, with no add-ons included in the order, and the payment proceeds successfully.	Pass
-Add add-ons and submit the form	The order includes the selected add-ons, and the total reflects the correct updated amount.	Pass
+| Visit the checkout page with items in the cart by clicking on Checkout button in the cart | The page loads displaying Order summary and checkout fields | Pass |
+| Click Edit Cart link | Cart page loads | Pass |
+| Click on Login in the section: 'Have an account? Login to prefill your details or register' | The user is directed to the Login page | Pass |
+| Log in from the Checkout page | After logging in, the user is redirected back to the Checkout page | Pass |
+| Click on Register in the section: 'Have an account? Login to prefill your details or register' | The user is directed to the Registration page | Pass |
+| Log in as a user with saved delivery details | The Checkout page loads with delivery address prefilled | Pass |
+| Submit the form without entering a country | User is taken to the country field for selection and order cannot be completed | Pass |
+| Submit the form without entering a street address | Error message: "This field is required." | Pass |
+| Submit the form without entering a town or city | Error message: "This field is required." | Pass |
+| Submit the form without entering a postcode | Error message: "This field is required." | Pass |
+| Submit the form with valid delivery address details | No error message, form is submitted successfully | Pass |
+| Select Priority shipping | Shipping charge updates to reflect the higher Priority shipping cost and the total is recalculated accordingly | Pass |
+| Select Standard shipping after selecting Priority | Shipping charge updates to reflect Standard rate and the total is recalculated accordingly | Pass |
+| Add one add-on (Shipping insurance) | The add-on is applied to each product and is reflected in the summary under add-ons and the total is recalculated accordingly | Pass |
+| Add two add-ons (Shipping insurance + Extended warranty) | Both add-ons are applied to each product and are reflected in the summary under add-ons and the total is recalculated accordingly | Pass |
+| Remove one add-on | Add-ons are removed, and the total is recalculated accordingly | Pass |
+| Remove both add-ons | Add-ons are removed, and the total is recalculated accordingly | Pass |
+| Submit the form without entering a card number | Error message: "Your card number is incomplete." | Pass |
+| Enter card number but no expiration date  | Error message: "Your card's expiration date is incomplete." | Pass |
+| Enter card number and expiration date, but no security code | Error message: "Your card's security code is incomplete." | Pass |
+| Enter card number, expiration date, and security code, but no postal code | Error message: "Your postal code is incomplete." | Pass |
+| Submit the form with valid card details (4242 4242 4242 4242, valid date, CVC and zip code) | Stripe processes the payment, and the user is redirected to the Thank You page | Pass |
+| Submit the checkout form with all fields filled correctly | Stripe payment intent is initiated, the user is redirected to the Thank You page | Pass |
+| Submit the form with no add-ons | The order is created without add-ons, and payment proceeds successfully | Pass |
+
 
 ##### Thank You Page
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-After a successful payment, redirect to the Thank You page	The Thank You page loads with a confirmation message, order number, and summary details.	Pass
-The "Thank You" page displays the correct order number	The order number corresponds to the order placed and is displayed prominently.	Pass
-The order summary on the Thank You page is accurate	The products, quantities, add-ons, delivery method, and total amount match the order placed.	Pass
+| After a successful payment, user is redirected to the Thank You page |	The Thank You page loads with a confirmation message, order number, and summary details |	Pass |
+| The "Thank You" page displays the correct order number	| The order number corresponds to the order placed and is displayed prominently | Pass |
+| The order summary on the Thank You page is accurate | The products, quantities, add-ons, delivery method, and total amount match the order placed |	Pass |
 
 ##### Contact Page
 

@@ -3,6 +3,7 @@
 {% load cart_tools %}
 {% load humanize %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block content %}
 <div class="container-fluid">
@@ -82,7 +83,7 @@
                     <div class="text-center px-2">
                         <p class="fs-6">Have an account?
                         <br>
-                        <a class="text-info" href="{% url 'account_login' %}">Login</a> to prefill your details or
+                        <a class="text-info" href="{% url 'account_login' %}?next={{ request.path }}">Login</a> to prefill your details or
                         <a class="text-info" href="{% url 'account_signup' %}">register</a></p>
                     </div>
                     {% endif %}
@@ -90,7 +91,7 @@
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
-                        {{ order_form.phone_number | as_crispy_field }}
+                        {{ order_form.phone_number| as_crispy_field }}
                     </fieldset>
                     <h5 class="px-2 text-center text-lg-start">Delivery Details</h5>
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">

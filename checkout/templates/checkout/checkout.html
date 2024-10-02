@@ -91,7 +91,7 @@
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
-                        {{ order_form.phone_number| as_crispy_field }}
+                        {{ order_form.phone_number | as_crispy_field }}
                     </fieldset>
                     <h5 class="px-2 text-center text-lg-start">Delivery Details</h5>
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
@@ -111,7 +111,7 @@
                         </div>
                     </fieldset>
                     <h5 class="px-2 text-center text-lg-start">Delivery Method</h5>
-                    <fieldset class="rounded mb-5 px-5 py-1 align-items-start">
+                    <fieldset class="rounded mb-5 ps-5 py-1 align-items-start">
                         <div id="delivery-methods">
                             {% for method in order_form.fields.delivery_method.queryset %}
                                 <div>
@@ -127,7 +127,7 @@
                         <div class="add-ons">
                             {% if add_ons %}
                                 {% for add_on in add_ons %}
-                                    <div class="text-start px-5">
+                                    <div class="text-start ps-5">
                                         <input type="checkbox" class="form-check-input mt-1" value="{{ add_on.id }}" data-price="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}">
                                         <label class="mb-3" for="addon{{ add_on.id }}">
                                             {{ add_on.name }}

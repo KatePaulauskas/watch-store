@@ -166,7 +166,7 @@ p.icon-text {
 
 input::placeholder {
     color: #E4C58A !important;
-    font-weight: 200;
+    font-weight: 300 !important;
 }
 
 input.search-bar {
@@ -331,7 +331,10 @@ label {
 
 input,
 select,
-textarea {
+textarea,
+input:focus, 
+select:focus, 
+textarea:focus {
     font-size: 100% !important;
     background-color: #113227 !important;
     color: #E4C58A !important;
@@ -394,7 +397,9 @@ input,
 textarea, 
 select,
 .form-control,
-.list-inline-item {
+.list-inline-item,
+.dropdown-options,
+#user-options {
     box-shadow: none !important;
     outline: none !important;
 }
@@ -670,7 +675,7 @@ input[id^="id_qty_"] {
 }
 
 table tr {
-    border-bottom: 0.2px solid #aa9159 !important;
+    border-bottom: 0.2px solid #230903 !important;
 }
 
 /* Ensure images vertically aligned in the center */
@@ -726,7 +731,7 @@ input[type="radio"] + label,
 input[type="checkbox"] + label,
 #card-element {
     color: #AA9159!important;
-    font-weight: 100 !important;
+    font-weight: 300 !important;
     font-size: 16px !important;
 }
 
@@ -1124,6 +1129,7 @@ font-size: 100% !important;
     
     .search-bar {
         width: 50px !important;
+        font-style: italic !important;
     }
     /* Above Fold Style */
     .home-h1 {

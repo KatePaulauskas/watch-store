@@ -24,9 +24,9 @@ def profile(request):
 
     # Check if the user is a superuser
     if request.user.is_superuser:
-        orders = Order.objects.all()  # Retrieve all orders for superusers
+        orders = Order.objects.all().order_by('-date')  # Retrieve all orders for superusers
     else:
-        orders = profile.orders.all()  # Retrieve only specific user's orders
+        orders = profile.orders.all().order_by('-date')  # Retrieve only specific user's orders
 
     template = 'profiles/profile.html'
     context = {

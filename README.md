@@ -807,6 +807,12 @@ Upon confirmation, the user is redirected to the homepage and notified of the su
 
 Contains the store’s terms and conditions, return policy, and privacy policy, ensuring customers are well-informed about their rights and the store’s practices.
 
+### Profile - Orders and Address
+
+[Orders and Address Page](/media/profile-orders-and-address.jpeg)
+
+[Past Order Confirmation Page](/media/thank-you-page-past-order.jpeg)
+
 ### Admin Access
 
 #### Manage Products
@@ -883,6 +889,44 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 
 ![Product Page Admin](/media/product-page-admin.jpeg)
 
+#### Admin Panel Features
+
+A superuser, who is presumably the owner of a site, can access the admin panel, where they get additional functionalities.
+
+The superuser can create new orders, view the list of all orders and edit existing orders, including all the order details:
+
+![Admin Orders Overview](/media/admin-orders-management.jpeg)
+
+Individual order editing: 
+
+![Admin Order Editing](/media/admin-order-editing.jpeg)
+
+The superuser can create new products, view the list of all the esiting products, edit and filter them:
+
+![Admin Product Management](/media/admin-product-management.jpeg)
+
+The superuser can manage existing categories by clicking on each of then and create new categories:
+
+![Admin Categories Management](/media/admin-categories-management.jpeg)
+
+The superuser can edit existing policies and create new policies: 
+![Admin Policies Management](/media/admin-policies-management.jpeg)
+
+The superuser can manage existing Shipping Method and adjust rates, as well as create mew Shipping Methods with rates: 
+
+![Admin Shipping Methods and Rates Management](/media/admin-shipping-management.jpeg)
+
+The superuser can manage existing add-ons and create new add-ons:
+
+![Admin Add-ons Management](/media/admin-add-ons-management.jpeg)
+
+Superuser can review, mark as read and delete store contact form requests:
+
+![Admin Contact Request Management](/media/admin-contact-request-management.jpeg)
+
+The superuser can view existing users, edit or update their details by clicking on the name of the individual user, and manually add new users. This is a part of the existing User model functionality:
+
+![Admin Panel Users View](/media/admin-user-view.jpeg)
 
 #### Store Policies Admin
 

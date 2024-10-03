@@ -145,14 +145,14 @@
                     <h5 class="px-2 text-center text-lg-start">Payment</h5>
                     <fieldset class="rounded px-3 mb-1 d-flex flex-column align-items-center">
                         <!-- A Stripe card element will go here -->
-                        <div class="mb-3" id="card-element"></div>
+                        <div class="pt-2" id="card-element"></div>
 
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                         <!-- Pass the client secret to the view to get the payment intent id -->
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
-                    <div class="submit-button text-end mt-2 mt-md-5 mb-2 d-flex flex-column align-items-center">
+                    <div class="submit-button text-end my-2 d-flex flex-column align-items-center">
                         <button id="submit-button" class="btn btn-cart my-2">Complete Order</button>
                     </div>
                 </form>

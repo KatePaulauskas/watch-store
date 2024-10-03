@@ -160,13 +160,12 @@ p.icon-text {
     caret-color: #E4C58A !important;
 }
 
-.search-bar:focus {
-    color: #e4c58a !important;
+.search-bar::placeholder {
+    font-style: italic !important;
 }
 
-input::placeholder {
-    color: #E4C58A !important;
-    font-weight: 300 !important;
+.search-bar:focus {
+    color: #e4c58a !important;
 }
 
 input.search-bar {
@@ -331,16 +330,18 @@ label {
 
 input,
 select,
-textarea,
-input:focus, 
-select:focus, 
-textarea:focus {
+textarea {
     font-size: 100% !important;
     background-color: #113227 !important;
     color: #E4C58A !important;
     border-radius: 5px !important;
     border-color: #E4C58A !important;
     width: 250px !important;
+}
+
+input::placeholder {
+    color: #E4C58A !important;
+    font-weight: 400 !important;
 }
 
 /* Override background color in forms when autifilled in browser. Source: CSS Tricks */
@@ -397,9 +398,7 @@ input,
 textarea, 
 select,
 .form-control,
-.list-inline-item,
-.dropdown-options,
-#user-options {
+.list-inline-item {
     box-shadow: none !important;
     outline: none !important;
 }
@@ -409,8 +408,10 @@ input:focus,
 textarea:focus, 
 select:focus, 
 .form-control:focus {
+    background-color: #113227 !important;
     box-shadow: none !important;
     outline: none !important;
+    font-weight: 400 !important;
 }
 
 /*  Remove box shadow and outline for specific input types */
@@ -675,7 +676,7 @@ input[id^="id_qty_"] {
 }
 
 table tr {
-    border-bottom: 0.2px solid #230903 !important;
+    border-bottom: 0.2px solid #aa9159 !important;
 }
 
 /* Ensure images vertically aligned in the center */
@@ -731,12 +732,12 @@ input[type="radio"] + label,
 input[type="checkbox"] + label,
 #card-element {
     color: #AA9159!important;
-    font-weight: 300 !important;
-    font-size: 16px !important;
 }
 
-input[type="radio"] + label {
-    font-weight: 200;
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    font-weight: 400;
+    font-size: 100%;
 }
 
 input[type="radio"] {
@@ -750,6 +751,11 @@ label[for^="addon"] {
 .stripe-style-input,
 .profile-form-input {
     border: 1px solid #aa9159 !important;
+    font-weight: 400 !important;
+}
+
+#payment-form input:focus {
+    font-weight: 400 !important;
 }
 
 .stripe-style-input::placeholder,
@@ -762,12 +768,8 @@ hr {
 }
 
 .form-check-label {
-    font-size: small !important;
+    font-size: 90% !important;
     font-weight: 100 !important;
-}
-
-.__PrivateStripeElement {
-    padding: 5px 2px !important;
 }
 
 .StripeElement {
@@ -1129,7 +1131,6 @@ font-size: 100% !important;
     
     .search-bar {
         width: 50px !important;
-        font-style: italic !important;
     }
     /* Above Fold Style */
     .home-h1 {

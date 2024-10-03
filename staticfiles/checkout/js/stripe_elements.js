@@ -15,15 +15,15 @@ var style = {
         color: '#AA9159',
         fontFamily: '"Antic", Antic, sans-serif',
         fontSmoothing: 'antialiased',
-        fontSize: '14px',
+        fontSize: '16px',
         '::placeholder': {
             color: '#AA9159',
-            fontWeight: '100',
-            fontStyle: 'italic',
+            fontWeight: '500',
         },
         '::selection': {
             background: '#000000',
             color: '#AA9159',
+            fontWeight: '500',
         },
         ':-webkit-autofill': {
             color: '#AA9159',
@@ -33,6 +33,7 @@ var style = {
         },
         ':focus': {
             caretColor: '#AA9159',
+            fontWeight: '500',
         },
 
     },
@@ -43,6 +44,7 @@ var style = {
 };
 var card = elements.create('card', {
     style: style,
+    hidePostalCode: true,
     ariaLabel: 'Credit or debit card',
 });
 card.mount('#card-element');

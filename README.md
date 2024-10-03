@@ -739,6 +739,10 @@ Upon successful checkout, users are directed to 'Thank You' page with the order 
 
 This setup ensures a secure and efficient checkout process, allowing customers to review their purchases, choose the preferred delivery method, opt in for add-ons and securely checkout. 
 
+The owner who has access to Stripe account can also see the details of the events happening on the payment provider side: 
+
+![Stripe Events](/media/stripe-events.jpeg)
+
 ### Thank You Page
 
 The Thank You Page provides users with a confirmation that their order has been successfully processed. It displays a summary of the order, including order number, notification about confirmation email, products with quantities and charges breakdown. This page reassures customers that their payment has been securely processed and provides them with an order number.
@@ -823,13 +827,27 @@ Upon confirmation, the user is redirected to the homepage and notified of the su
 
 ### Store Policies
 
-Contains the store’s terms and conditions, return policy, and privacy policy, ensuring customers are well-informed about their rights and the store’s practices.
+Store Policies page can be accessed in the footer of the site and the page contains the store’s Return policy, Privacy policy, and Terms and conditions ensuring customers are well-informed about their rights and the store’s practices.
+
+**Return Policy**
+![Return Policy](/media/return-policy.jpeg)
+
+**Privacy Policy**
+![Privacy Policy](/media/privacy-policy.jpeg)
+
+**Terms and Conditions**
+![Store Policies](/media/terms-and-conditions.jpeg)
 
 ### Profile - Orders and Address
 
-[Orders and Address Page](/media/profile-orders-and-address.jpeg)
+If a user is logged in, they can access the "Orders and Address" page via the account menu in the header. This page functions as a profile, allowing users to view their past orders and update their default delivery address:
 
-[Past Order Confirmation Page](/media/thank-you-page-past-order.jpeg)
+
+![Orders and Address Page](/media/profile-orders-and-address.jpeg)
+
+Users can also click on any order number in the "Order History" table, which will redirect them to a past order confirmation page, commonly referred to as the "Thank You" page. This provides a detailed view of the specific order and its confirmation:
+
+![Past Order Confirmation Page](/media/thank-you-page-past-order-user.jpeg)
 
 ### Admin Access
 
@@ -840,6 +858,23 @@ The "Manage Products" page provides superusers with a streamlined interface to e
 In addition to the "Manage Products" page, 'Edit' and 'Delete' buttons are also displayed on the Home, Shop, and Product Page. This allows superusers to have quick and easy access to editing or deleting products directly from those pages, ensuring seamless updates without navigating to the "Manage Products" section.
 
 ![Manage Products Page](/media/manage-products-page.jpeg)
+
+Additionally, the superuser has three extra entry points to manage products:
+
+- Featured Products Gallery on the Home Page
+
+     This allows the superuser to quickly adjust which products are displayed in the gallery by selecting a product and unchecking its "featured" status. This feature provides a convenient way to manage the visibility of highlighted products directly from the homepage, ensuring that the gallery remains up-to-date with minimal effort.
+
+     ![Manage Products Featured Products Gallery](/media/manage-products-featured.jpeg)
+
+- Shop page
+
+     ![Manage Products Featured Products Gallery](/media/manage-products-shop.jpeg)
+
+- Product Pages
+
+     ![Manage Products Featured Products Gallery](/media/manage-products-product-page.jpeg)
+
 
 #### Add Product
 
@@ -867,6 +902,28 @@ The "Manage Policies" page is essentially the Policies Page with extended functi
 
 ![Policy Updated Successfully Notification](/media/policy-updated-successfully.jpeg)
 
+
+#### Store Policies Admin
+
+![Terms & onditions Eedit.jpeg](/media/terms-and-conditions-edit.jpeg)
+
+![Return Policy Edit.jpeg](/media/return-policy-edit.jpeg)
+
+![Privacy Policy Edit.jpeg](/media/privacy-policy-edit.jpeg)
+
+
+### Profile - Orders and Address
+
+The admin also has access to the "Orders and Address" page but with additional functionality. The admin can see a list of all orders placed by all customers, including the clients' names. This allows the admin to oversee every order that goes through the system, offering a broader view of the store's activity. This enhanced view helps the admin maintain oversight and quickly locate any order in question to see the details by clicking on the order number:
+
+![Orders and Address Page](/media/profile-orders-and-address-admin.jpeg)
+
+**Restrickted Access**
+
+Pages that are exclusive to the superuser are restricted for regular users. When a non-superuser attempts to access these pages; URLs, they are met with a notification that informs them that the page is reserved for store owner. This prevents unauthorised access and ensures that only the superuser can manage specific areas, such as product management or order overview pages.
+
+![Superuser Access Only](/media/superuser-access-only.jpeg)
+
 ### Footer
 
 The footer is displayed at the bottom of every page and contains essential information and links:
@@ -875,13 +932,17 @@ The footer is displayed at the bottom of every page and contains essential infor
 * **Social Media Links:** Icons linking to Eternity's Instagram and Facebook pages, allowing customers to connect with the brand on social platforms.
 * **Subscribe Form:** A subscription form where users can enter their email addresses to receive newsletters, promotions, and updates from Eternity. This helps build a loyal customer base and keeps users informed about new arrivals and special offers.
 
-     Users are rewquired to add their email address for the subscription: 
+     Users are required to add their email address for the subscription: 
 
      ![Subscribe Form Email Required](/media/subscribe-email-required.jpeg)
 
-     Upon clicking submit button they receive a confirmation:
+     Upon clicking submit button they receive a confirmation message:
 
      ![Subscribe Form Confirmation](/media/subscribe-confirmation.jpeg)
+
+The submitted contacts can be seen in Mailchimp dashboard: 
+
+![Mailchimp Contacts](/media/mailchimp-contacts.jpeg)
 
 * **Footer Menu:** A compact menu providing quick links to important pages such as Home, Shop, Contact, Terms & Conditions, Return Policy and Privacy Policy. This menu ensures that users can easily navigate to key sections of the site from any page.
 
@@ -902,10 +963,6 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 
 **500 Error Page**
 ![500 Error Page](/media/500-error-page.jpeg)
-
-### Admin Access Features
-
-![Product Page Admin](/media/product-page-admin.jpeg)
 
 #### Admin Panel Features
 
@@ -945,20 +1002,6 @@ Superuser can review, mark as read and delete store contact form requests:
 The superuser can view existing users, edit or update their details by clicking on the name of the individual user, and manually add new users. This is a part of the existing User model functionality:
 
 ![Admin Panel Users View](/media/admin-user-view.jpeg)
-
-#### Store Policies Admin
-
-![Terms & onditions Eedit.jpeg](/media/terms-and-conditions-edit.jpeg)
-
-![Return Policy Edit.jpeg](/media/return-policy-edit.jpeg)
-
-![Privacy Policy Edit.jpeg](/media/privacy-policy-edit.jpeg)
-
-![Edit Policies Terms and Conditions](/media/edit-policies-terms-and-conditions.jpeg)
-
-![Policy Updated Successfully Notification](/media/policy-updated-successfully.jpeg)
-
-![Superuser Access Only](/media/superuser-access-only.jpeg)
 
 ### Future Features
 
@@ -1033,7 +1076,9 @@ TThe primary focus of the Eternity - Luxury Watch Store application is Business-
 
 **Search Engine Optimization (SEO)**
 
-- **Keyword Targeting:** Eternity optimizes its website using relevant regular and long-tailed keywords such as "luxury watches," "affordable watches," "branded watches," and "timeless designs." This ensures high visibility in organic search results, attracting users searching for affordable luxury watch options.
+- **Keyword Targeting:** Eternity optimises its website using relevant regular and long-tailed keywords such as "luxury watches," "affordable watches," "branded watches," and "timeless designs." This ensures high visibility in organic search results, attracting users searching for affordable luxury watch options.
+
+    <br>
 
      <details>
      <summary>List of all keywords</summary>
@@ -1074,6 +1119,16 @@ TThe primary focus of the Eternity - Luxury Watch Store application is Business-
      </details>
      <br>
 
+The keywords were selcted using Semrush platform based on two locations: Ireland and the US: 
+
+![SEO Keywords Ireland](/media/seo-keywords-ireland-1.jpeg)
+
+![SEO Keywords Ireland](/media/seo-keywords-ireland-2.jpeg)
+
+![SEO Keywords Ireland](/media/seo-keywords-us-1.jpeg)
+
+![SEO Keywords Ireland](/media/seo-keywords-us-2.jpeg)
+
 - **On-page SEO:** Meta descriptions and title tags, such as "Eternity | Luxury Watch Store," are crafted to reflect the core offerings of high-quality, affordable luxury watches. By including relevant keywords like "timeless designs" and "online watch shopping," the site becomes more attractive to search engines. Additionally, each page features a single H1 tag to reinforce relevance and improve search engine rankings.
 
 - **Image SEO:** All images on the website include descriptive alt-text to enhance accessibility and improve search engine visibility, ensuring that search engines and visually impaired users can understand the content of the images.
@@ -1084,11 +1139,11 @@ TThe primary focus of the Eternity - Luxury Watch Store application is Business-
 
 **Facebook Business Page**
 
-- **Social Engagement:** Eternity's Facebook page is leveraged to engage with potential and existing customers. The page regularly posts about new products, collections, and promotions, building a community of watch enthusiasts.
+- **Social Engagement:** Eternity's [Facebook page](https://www.facebook.com/profile.php?id=61564422000153) is leveraged to engage with potential and existing customers. The page regularly posts about new products, collections, and promotions, building a community of watch enthusiasts.
 
-- **Customer Service:** The Facebook page serves as a platform for customer inquiries and support, ensuring that the brand is responsive and accessible.
+- **Customer Service:** The Facebook page serves as a platform for customer inquiries and support as well through Facebook Messanger, ensuring that the brand is responsive and accessible.
 
-![Facebook Page](/media)
+     ![Facebook Page](/media/facebook-page.jpeg)
 
 **Subscribe Form & Newsletter Marketing (Mailchimp)**
 
@@ -1272,8 +1327,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Submit the form without entering a card number | Error message: "Your card number is incomplete." | Pass |
 | Enter card number but no expiration date  | Error message: "Your card's expiration date is incomplete." | Pass |
 | Enter card number and expiration date, but no security code | Error message: "Your card's security code is incomplete." | Pass |
-| Enter card number, expiration date, and security code, but no postal code | Error message: "Your postal code is incomplete." | Pass |
-| Submit the form with valid card details (4242 4242 4242 4242, valid date, CVC and zip code) | Stripe processes the payment, and the user is redirected to the Thank You page | Pass |
+| Submit the form with valid card details (4242 4242 4242 4242, valid date and CVC) | Stripe processes the payment, and the user is redirected to the Thank You page | Pass |
 | Submit the checkout form with all fields filled correctly | Stripe payment intent is initiated, the user is redirected to the Thank You page | Pass |
 | Submit the form with no add-ons | The order is created without add-ons, and payment proceeds successfully | Pass |
 

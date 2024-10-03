@@ -30,17 +30,17 @@ Each user story was documented using custom templates, which included sections s
 
 **MoSCoW Prioritisation:**
 
-To prioritise tasks, the MoSCoW method (Must have, Should have, Could have, and Won’t have) was utilised with labels. This prioritisation method helped categorise the importance of each user story, ensuring that essential features were developed first within an iteration, while less critical features were scheduled for later development if necessary. The implementation can be reviewed [here](https://github.com/KatePaulauskas/watch-store/issues).
+To prioritise tasks, the MoSCoW method (Must have, Should have, Could have, and Won’t have) was utilised with labels. This prioritisation method helped categorise the importance of each user story, ensuring that essential features were developed first within an iteration, while less critical features were scheduled for later development if necessary. The implementation can be reviewed [here](https://github.com/KatePaulauskas/watch-store/issues?q=is%3Aissue+is%3Aclosed).
 
 **Kanban Board Management:** 
 
-A Kanban board within GitHub Projects was used to manage user stories, divided into three columns: Todo, In Progress, and Done. This provided clear visibility into the project's status at any given time. The board can be viewed [here](https://github.com/users/KatePaulauskas/projects/4).
+A Kanban board within GitHub Projects was used to manage user stories, divided into four columns: Todo, In Progress, Done and Backlog. This provided clear visibility into the project's status at any given time. The board can be viewed [here](https://github.com/users/KatePaulauskas/projects/4).
 
 **Milestones and Iterative Progress:**
 
-Milestones were established to define the project's iterations and were linked to the project epics. Each user story was allocated to one of six iterations, ensuring a structured development process and smooth progress tracking. The project milestones can be seen [here](https://github.com/KatePaulauskas/watch-store/milestones).
+Project milestones were carefully aligned with the established project epics to guide its development in structured phases. Each user story was assigned to one of six iterations, ensuring clear progress tracking and facilitating a smooth workflow throughout the project. The project milestones can be seen [here](https://github.com/KatePaulauskas/watch-store/milestones).
 
-By leveraging these Agile practices and tools, the project maintained a clear and organised structure, allowing for effective tracking and timely completion of all 41 user stories.
+By leveraging these Agile practices and tools, the project maintained a clear and organised structure, allowing for effective tracking and timely completion of 42 user stories.
 
 ## User Experience Design
 
@@ -332,19 +332,19 @@ The Eternity Luxury Watch Store comprises of several key pages, each designed to
 
 * Offers a detailed view of each watch, including descriptions, specifications, images, price, and customer ratings. It also includes options for selecting quantity and adding the product to the cart.
 
-**Cart Page**
+**Cart Page:**
 
 * Provides an overview of selected items, allowing users to review, update quantities, remove products, and view the total cost before proceeding to checkout.
 
-**Checkout Page**
+**Checkout Page:**
 
 * The final step in the purchasing process, where customers enter shipping and payment details, review their order, and complete their purchase securely.  Logged-in users get their shipping details prefilled if address exists. Users are also presented with additional add-ons: extended warranties and shipping insurance, and they can choose the shipping method.
 
-**Thank You Page**
+**Thank You Page:**
 
 * Displays a confirmation of the successful purchase, including an order details summary.
 
-**Policies Page**
+**Policies Page:**
 
 * This page contains essential store policies such as terms and conditions, return policy, and privacy policy, ensuring transparency and customer trust.
 
@@ -356,7 +356,7 @@ The Eternity Luxury Watch Store comprises of several key pages, each designed to
 
 * Enables users to create an account or log in to access a personalised experience and allows superuser to manage store products and policies.
 
-**Orders and Address**
+**Orders and Address:**
 
 * Allows users to manage their default delivery address and view their order history.
 
@@ -455,46 +455,46 @@ The initial layout of the interface and navigation for the Eternity Luxury Watch
 **Product Page:**
 ![Product Page Wireframe](/media/wireframe-product-page.jpeg)
 
-**Cart Page**
+**Cart Page:**
 ![Cart Page Wireframe](/media/wireframe-cart-page.jpeg)
 
-**Checkout Page**
+**Checkout Page:**
 ![Checkout Page Wireframe](/media/wireframe-checkout-page.jpeg)
 
-**Thank You Page**
+**Thank You Page:**
 ![Thank You Page Wireframe](/media/wireframe-thank-you-page.jpeg)
 
-**Policies Page**
+**Policies Page:**
 ![Policies Page Wireframe](/media/wireframe-policies-page.jpeg)
 
 **Contact page:**
-![Contact Page Wireframe](/media/wireframe-contact-page.webp)
+![Contact Page Wireframe](/media/wireframe-contact-page.jpeg)
 
 **Log In page:**
-![Log In Page Wireframe](/media/wireframe-log-in-page.webp)
+![Log In Page Wireframe](/media/wireframe-log-in-page.jpeg)
 
-**Sign Up page:**
-![Sign Up Page Wireframe](/media/wireframe-sign-up-page.webp)
+**Registration page:**
+![Registration Page Wireframe](/media/wireframe-register-page.jpeg)
 
-**Orders and Address**
-![Orders and Address Page Wireframe](/media/wireframe-orders-and-address-page.webp)
+**Orders and Address:**
+![Orders and Address Page Wireframe](/media/wireframe-orders-and-address-page.jpeg)
 
-**Log Out**
-![Log Out Page Wireframe](/media/wireframe-log-out-page.webp)
+**Admin pages**
 
-Admin pages: 
-
-**Manage Products**
+**Manage Products:**
 ![Manage Products Page Wireframe](/media/wireframe-manage-products-page.jpeg)
 
-**Add Product**
+**Add Product:**
 ![Add Product Page Wireframe](/media/wireframe-add-product-page.jpeg)
 
-**Edit Product**
+**Edit Product:**
 ![Edit Product Page Wireframe](/media/wireframe-edit-product-page.jpeg)
 
-**Manage Policies**
-![Manage Policie Page Wireframe](/media/wireframe-smanage-policies-page.webp)
+**Manage Policies:**
+![Manage Policie Page Wireframe](/media/wireframe-manage-policies-page.jpeg)
+
+**Orders and Address Admin view:**
+![Orders and Address Admin Page Wireframe](/media/wireframe-orders-and-address-page-admin.jpeg)
 
 
 ### Surface
@@ -560,7 +560,9 @@ In addition to the selected fonts, the backdrop font across the website is also 
 
 ### Header
 
-The header of the Eternity Luxury Watch Store website is designed to provide essential functionality and enhance user experience. It includes navigation bar, search bar, shopping cart icon, and account icon, all prominently positioned for easy access. The logo, representing the brand's identity, is centered in the header to ensure strong brand recognition.
+The header of the Eternity Luxury Watch Store website is designed to provide essential functionality and enhance user experience. It includes navigation bar, search bar, shopping cart icon, and account icon, all prominently positioned for easy access. 
+
+The logo with tagline, representing the brand's identity, is centered in the header to ensure strong brand recognition.
 
 ![Eternity Watch Store Logo](/media/logo.webp)
 
@@ -600,7 +602,7 @@ The fully responsive navigation bar is displayed across all site pages, allowing
 
   ![search-bar-result-found.png](/media/search-bar-result-found.png)
   
-  Search Results: The products that match the search are shown on the shop page. If no products match, the page will display no results.
+  **Search Results:** The products that match the search are shown on the shop page. If no products match, the page will display no results.
 
   ![search-bar-no-results.jpeg](/media/search-bar-no-results.jpeg)
 
@@ -646,15 +648,35 @@ The About Us section provides visitors with a comprehensive overview of the bran
 
 The Shop Page is the central hub where customers can browse Eternity's curated collection of luxury watches. The page features a clean and intuitive layout designed to make the shopping experience seamless and enjoyable, helping customers find the perfect timepiece with ease.
 
-![Shop Page](/media/) 
-
-Customers can filter products by brand and gender or sort them by price, rating, or name, and add them directly to the cart. A reset button is also available next to the filters, allowing users to reset the filters and view all store products.
-
-![Shop Filters](/media/)
+![Shop Page](/media/shop-page.jpeg)
 
 Each watch is displayed with a high-quality image, name, price, and rating, providing a general overview. Customers can click on the product image or name to view detailed information or click on the "Add to Cart" button to add the item directly to the cart from the shop page. This allows for a quick purchasing flow for those who already know what brand and model they are looking for.
 
-![Shop Page](/media/shop-page-add-to cart)
+Furthermore, customers can filter products by brand and gender or sort them by price, rating, or name. 
+
+Brand Filter:
+
+![Shop Filters](/media/brand-filter.jpeg)
+
+Gender Filters:
+
+![Gender Filters](/media/gender-filter.jpeg)
+
+Sorting Options:
+
+![Sorting Options](/media/sorting-options.jpeg)
+
+Brand and gender filters work together helping to narrow down the search:
+
+![Brand and Gender Filters](/media/brand-and-gender-filter-applied.jpeg)
+
+Whereas the sorting function works at the moment independently from the brand and gender filters. 
+
+![Sorting Results](/media/sorting-results.jpeg)
+
+A reset button is also available next to the filters, allowing users to reset the filters and view all store products.
+
+![Reset Appplied](/media/reset-filters-applied.jpeg)
 
 ### Product Page
 
@@ -668,15 +690,15 @@ This page allows customers to explore the finer details of the timepieces, inclu
 
 A prominently placed "Add to Cart" button ensures that customers can easily proceed with their purchase, making the shopping experience seamless and straightforward. Once an item is added to the cart, the customer receives a notification.
 
-![Product Added to the Cart](/media/)
+![Product Added to the Cart](/media/product-added-to-the-cart.jpeg)
 
 At the top of the page on the left, a "Back to Shop" button allows customers to return to the shop and browse through other products if needed.
 
-![Back to Shop](/media/)
+![Back to Shop](/media/back-to-shop.jpeg)
 
  When a product is marked as unavailable by Admin, an "Out of Stock" button is displayed on the Product Page instead of "Add to Cart" button. This button is disabled and styled differently to indicate that the product cannot be purchased. The presence of the "Out of Stock" button ensures that customers are informed about the unavailability of the product, enhancing the shopping experience by setting clear expectations.
 
-![Out of Stock](/media/out-of-stock.webp)
+![Out of Stock](/media/out-of-stock.jpeg)
 
 ### Cart Page
 
@@ -724,10 +746,6 @@ The Thank You Page provides users with a confirmation that their order has been 
 One product in the order: 
 
 ![Thank You Page.jpeg](/media/thank-you-page.jpeg)
-
-Multiple products in the order: 
-
-![Thank You Page Multiple Products](/media/thank-you-page-multiple-products.jpeg)
 
 Customers also receive an email confirmation with the same information for their records.
 

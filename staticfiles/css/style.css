@@ -195,6 +195,15 @@ input.search-bar {
     text-decoration: underline;
 }
 
+.list-inline-item,
+.dropdown,
+.nav-link,
+.dropdown-options,
+.dropdown-toggle {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
 /* Above fold style */
 .above-fold {
     background: url('https://res.cloudinary.com/dmqcpnmy9/image/upload/v1727478386/wrsmopcdpebj1i1osds8.webp');
@@ -566,15 +575,37 @@ ul.errorlist li {
 
 /* Style Shop page filers and sorting */
 .category-menu .nav-link,
-.sort-menu .nav-link,
+.sort-menu .nav-link {
+    font-size: 90% !important;
+    font-family: "Antic", sans-serif !important;
+    background-color: #230903;
+    color: #FBFAF8 !important;
+}
+
 .products-count {
     font-size: 90% !important;
     font-family: "Antic", sans-serif !important;
+    background-color: #113227;
+}
+
+/* Style Filters */
+.nav-item.dropdown {
+    border: 1px solid #AA9159;
+    border-radius: 4px;
+}
+
+#reset {
     color: #AA9159 !important;
 }
 
+/* Center filters dropdowns */
+.filters-menu .dropdown-menu {
+    margin-top: 10px !important; 
+}
+
 .category-menu .dropdown-menu {
-    min-width: 80px !important;
+    min-width: 150px !important;
+    font-size: 14px !important;
 }
 
 .sort-select-wrapper select {
@@ -769,7 +800,7 @@ hr {
 
 .form-check-label {
     font-size: 90% !important;
-    font-weight: 100 !important;
+    font-weight: 200 !important;
 }
 
 .StripeElement {
@@ -1289,6 +1320,22 @@ font-size: 100% !important;
     /* Style Shop page */
     .card-body, .card-footer {
         font-size: 85% !important;
+    }
+
+    /* Style Shop page filers and sorting */
+    .category-menu,
+    .products-count {
+        font-size: 100% !important;
+    }
+
+    /* Center filters dropdowns */
+    .filters-menu .dropdown-menu {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 100% !important;
+        margin-top: 10px !important;
+        min-width: 180px !important;
+        font-size: 16px !important;
     }
 
     /* 2 products per row */

@@ -3,17 +3,22 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
+
+    name = forms.CharField(
+        error_messages={'required': 'Please enter the product name.'}
+    )
+    
     # Display friendly names for categories dropdowns
     category_1 = forms.ModelChoiceField(
         queryset=Category.objects.all().order_by('name'),
         label="Category 1",
-        widget=forms.Select
+        widget=forms.Select,
     )
 
     category_2 = forms.ModelChoiceField(
         queryset=Category.objects.all().order_by('name'),
         label="Category 2",
-        widget=forms.Select
+        widget=forms.Select,
     )
 
     # Ensure price is greater than zero

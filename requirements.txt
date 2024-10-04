@@ -23,5 +23,5 @@ requests-oauthlib==2.0.0
 s3transfer==0.10.2
 sqlparse==0.5.1
 stripe==10.8.0
-whitenoise==5.3.0
 urllib3==1.26.20
+whitenoise==5.3.0

@@ -69,6 +69,11 @@ card.addEventListener('change', function (event) {
 var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
+    if (!form.reportValidity()) {
+        // If form is not valid, do nothing; errors will show
+        return;
+    }
+    // If valid, proceed with Stripe processing
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);

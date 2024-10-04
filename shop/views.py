@@ -114,7 +114,7 @@ def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
         messages.error(
-            request, 'Only store owner has access to this action.'
+            request, 'Only store owner has access to this page.'
         )
         return redirect(reverse('home'))
 
@@ -144,7 +144,7 @@ def manage_products(request):
     """A view to show all products for managing"""
     if not request.user.is_superuser:
         messages.error(
-            request, 'Only store owner has access to this action.'
+            request, 'Only store owner has access to this page.'
         )
         return redirect(reverse('home'))
 
@@ -159,7 +159,7 @@ def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
         messages.error(
-            request, 'Only store owner has access to this action.'
+            request, 'Only store owner has access to this page.'
         )
         return redirect(reverse('home'))
 

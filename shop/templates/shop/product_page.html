@@ -21,15 +21,9 @@
         <!-- Product Image -->
         <div class="col-12 col-md-6 mb-3 mb-md-0 px-0">
             <div class="product-img-container d-flex justify-content-center align-items-center">
-                {% if product.image %}
-                    <a href="{{ product.image.url }}" target="_blank">
-                        <img src="{{ product.image.url }}" class="product-img" alt="{{ product.name }}">
-                    </a>
-                {% else %}
-                    <a href="">
-                        <img src="{{ MEDIA_URL }}noimage.png" class="product-img" alt="{{ product.name }}">
-                    </a>
-                {% endif %}
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img src="{{ product.image.url }}" class="product-img" alt="{{ product.name }}">
+                </a>
             </div>
         </div>
 

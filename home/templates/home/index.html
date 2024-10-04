@@ -34,16 +34,9 @@
                 <div class="product-card">
                     <div class="card py-3">
                         <!-- Product Image -->
-                        {% if product.image %}
-                            <a href="{% url 'product_page' product.id %}">
-                                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                        {% else %}
-                            <!-- Fallback image if the product has no image -->
-                            <a href="{% url 'product_page' product.id %}">
-                                <img class="card-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            </a>
-                        {% endif %}
+                        <a href="{% url 'product_page' product.id %}">
+                            <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
                         <!-- Product details (name, rating, price) -->
                         <div class="card-body text-center py-1">
                             <a href="{% url 'product_page' product.id %}" style="text-decoration: none;">

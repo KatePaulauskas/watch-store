@@ -22,7 +22,7 @@ def index(request):
 def delete_product_home(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Only store owners has access to this action.')
+        messages.error(request, 'Only store owner has access to this action.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)

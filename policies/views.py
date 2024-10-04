@@ -14,7 +14,7 @@ def edit_policy(request, pk):
     """ View to edit store policies """
     policy = get_object_or_404(Policy, pk=pk)
     if not request.user.is_superuser:
-        messages.error(request, 'Only store owners has access to this action.')
+        messages.error(request, 'Only store owner has access to this page.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -28,6 +28,7 @@ def edit_policy(request, pk):
     
     return render(request, 'policies/edit_policy.html', {'form': form, 'policy': policy})
 
+@login_required
 def cancel_editing(request):
     """ Cancel delete action on she shop page """
     messages.add_message(request, messages.INFO,

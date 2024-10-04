@@ -34,7 +34,10 @@ class Product(models.Model):
     image_url = models.URLField(
         max_length=1024, null=True, blank=True
     )
-    image = CloudinaryField('image', default='placeholder')
+    image = CloudinaryField(
+    'image',
+    default='https://res.cloudinary.com/dmqcpnmy9/image/upload/v1728019511/22204581_6605550_yg5rag.jpg'  # noqa
+    )
     availability = models.BooleanField(default=True)
     weight = models.DecimalField(
         max_digits=6, decimal_places=2, blank=True, null=True

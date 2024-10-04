@@ -1,6 +1,5 @@
 # Eternity - Luxury Watch Store
 
-
 Eternity Watch Store is an online platform for an imaginary luxury watch retailer, specialising in affordable luxury watches from established quality brands, with uniquely selected collections.
 
 The website provides a sleek and user-friendly interface, enabling customers to browse through exclusive watch collections, explore featured products, view high-resolution images, and filter watches by gender and brand. Sorting options further enhance the shopping experience.
@@ -11,7 +10,7 @@ Additionally, customers have access to a contact form for enquiries and support,
 
 ![Responsive Mockup](media/responsive-mockup.jpeg)
 
-### Project Link
+## Project Link
 
 The live store is located at the following [address](https://eternity-watch-store-1f855f4289ad.herokuapp.com/).
 
@@ -114,7 +113,7 @@ Returning customers can quickly log in to their accounts to view and manage thei
 
 **Potential Partners:**
 
-Jewelers, boutiques, and other potential partners can find comprehensive information about the store's offerings and expertise. They can view the quality of the watches through the gallery and contact the store for potential collaborations using the dedicated contact form.
+Jewellers, boutiques, and other potential partners can find comprehensive information about the store's offerings and expertise. They can view the quality of the watches through the gallery and contact the store for potential collaborations using the dedicated contact form.
 
 #### - User Stories -
 
@@ -163,7 +162,7 @@ Jewelers, boutiques, and other potential partners can find comprehensive informa
 
 - **User Story: Account Creation**
 
-     As a **new customer**, I can **create a new account through the Log In bar** so that **I can view my profile and past purchases**.
+     As a **new customer**, I can **create a new account through the Login bar** so that **I can view my profile and past purchases**.
 
 - **User Story: Account Creation Email Confirmation**
 
@@ -318,7 +317,7 @@ At the Structure Plane, the information organisation and interaction design were
 
 #### - Site Pages -
 
-The Eternity Luxury Watch Store comprises of several key pages, each designed to provide essential information and facilitate positive and engaging user experience:
+The Eternity Luxury Watch Store comprises several key pages, each designed to provide essential information and facilitate a positive and engaging user experience:
 
 **Home Page:**
 
@@ -338,7 +337,7 @@ The Eternity Luxury Watch Store comprises of several key pages, each designed to
 
 **Checkout Page:**
 
-* The final step in the purchasing process, where customers enter shipping and payment details, review their order, and complete their purchase securely.  Logged-in users get their shipping details prefilled if address exists. Users are also presented with additional add-ons: extended warranties and shipping insurance, and they can choose the shipping method.
+* The final step in the purchasing process, where customers enter shipping and payment details, review their order and complete their purchase securely.  Logged-in users get their shipping details prefilled if the address exists. Users are also presented with additional add-ons: extended warranties and shipping insurance, and they can choose the shipping method.
 
 **Thank You Page:**
 
@@ -376,15 +375,15 @@ Admin pages:
 
 **Edit Product**
 
-* Enables superuser to edit existing products and all their details to ensure the product catalog stays up-to-date, the page is hidden and accessable only via 'Edit' buttons displayed on the following pages: Manage Products, Home, Shop, Product Page.
+* Enables superuser to edit existing products and all their details to ensure the product catalog stays up-to-date, the page is hidden and accessible only via 'Edit' buttons displayed on the following pages: Manage Products, Home, Shop, and Product Page.
 
 **Manage Policies**
 
-* Is the regular Policies Page with additional functionality for superuser, ehich allows superuser to update existing policies via hidden Edit Policy Page, ensuring compliance with business and legal standards.
+* Is the regular Policies Page with additional functionality for the superuser, which allows the superuser to update existing policies via hidden Edit Policy Page, ensuring compliance with business and legal standards.
 
 #### - Database Structure -
 
-The Database Structure below visualises the relationships between the key models of the project. The database schema is designed to effectively manage purchasing process.
+The Database Structure below visualises the relationships between the key models of the project. The database schema is designed to effectively manage the purchasing process.
 
 ![Database Structure](/media/database-structure.png)
 
@@ -409,7 +408,7 @@ The Database Structure below visualises the relationships between the key models
      Represents a specific product within an order. Each order can have multiple line items, tracking the quantity and total price of each product purchased.
 
 * **AddOnOrder:**
-     A junction table connecting AddOn and Order in a many-to-many relationship, allowing the system to track the quantity of each add-on purchased with an order.
+     A junction table connecting AddOn and Order in a many-to-many relationship, allows the system to track the quantity of each add-on purchased with an order.
 
 * **DeliveryMethod:**
      Defines the delivery options available for an order, including the name of the method and its associated rate.
@@ -491,13 +490,14 @@ The initial layout of the interface and navigation for the Eternity Luxury Watch
 ![Edit Product Page Wireframe](/media/wireframe-edit-product-page.jpeg)
 
 **Manage Policies:**
-![Manage Policie Page Wireframe](/media/wireframe-manage-policies-page.jpeg)
+![Manage Policies Page Wireframe](/media/wireframe-manage-policies-page.jpeg)
 
 **Orders and Address Admin view:**
 ![Orders and Address Admin Page Wireframe](/media/wireframe-orders-and-address-page-admin.jpeg)
 
 
 ### Surface
+
 At the Surface Plane, the visual design of the site was developed, with a strong focus on the overall look and feel of the site.
 
 #### Colour Scheme
@@ -521,7 +521,6 @@ The combination of these carefully selected colors creates a cohesive and luxuri
 The fonts for the Eternity Luxury Watch Store site were thoughtfully chosen using the font pairing service [Font Joy](https://fontjoy.com/) to ensure a visually appealing and cohesive design. Each font was selected to enhance the user experience and reflect the brand's identity.
 
 ![Typography Font Paring](/media/typography-font-paring.webp)
-
 
 Choosing the right fonts is essential for conveying the luxury and sophistication that aligns with the brand's identity. The selected fonts for the Eternity Luxury Watch Store have been chosen to reflect elegance, readability, and a modern aesthetic. Below is an explanation of the selected fonts and why they are suitable for the site:
 
@@ -558,11 +557,11 @@ In addition to the selected fonts, the backdrop font across the website is also 
 
 ### Existing Features
 
-### Header
+#### Header
 
-The header of the Eternity Luxury Watch Store website is designed to provide essential functionality and enhance user experience. It includes navigation bar, search bar, shopping cart icon, and account icon, all prominently positioned for easy access. 
+The header of the Eternity Luxury Watch Store website is designed to provide essential functionality and enhance user experience. It includes a navigation bar, search bar, shopping cart icon, and account icon, all prominently positioned for easy access. 
 
-The logo with tagline, representing the brand's identity, is centered in the header to ensure strong brand recognition.
+The logo with a tagline, representing the brand's identity, is centered in the header to ensure strong brand recognition.
 
 ![Eternity Watch Store Logo](/media/logo.webp)
 
@@ -570,7 +569,7 @@ On the left side of the header, the navigation bar allows users to explore the s
 
 ![Header](/media/header.jpeg)
 
-### Navigation Bar
+#### Navigation Bar
 
 The fully responsive navigation bar is displayed across all site pages, allowing seamless navigation throughout the website. It includes links to the main site sections: Home, Shop and Contact. The design remains consistent across all devices, ensuring a cohesive user experience.
 
@@ -582,7 +581,7 @@ The fully responsive navigation bar is displayed across all site pages, allowing
 
 * **Mobile View:**
   
-  On tablets and mobile devices, the navigation bar is represented by a hamburger icon. 
+ On tablets and mobile devices, the navigation bar is represented by a hamburger icon. 
 
   ![Mobile Navbar Closed](/media/navbar-mob-closed.jpeg)
 
@@ -590,25 +589,25 @@ The fully responsive navigation bar is displayed across all site pages, allowing
 
   ![Mobile Navbar Opened](/media/navbar-mob.jpeg)
 
-  ### Search Bar
+#### Search Bar
 
-  The search bar lets users search for products in the store by typing a search term (like a product name or description) and submitting it.
+The search bar lets users search for products in the store by typing a search term (like a product name or description) and submitting it.
   
-  If no term is entered, an error message appears.
+If no term is entered, an error message appears.
 
-  ![search-bar-no-search-criteria.jpeg](/media/search-bar-no-search-criteria.jpeg)
+![search-bar-no-search-criteria.jpeg](/media/search-bar-no-search-criteria.jpeg)
   
-  If a term is provided, the system looks for products that match the search term in either the product name or description.
+If a term is provided, the system looks for products that match the search term in either the product name or description.
 
-  ![search-bar-result-found.png](/media/search-bar-result-found.png)
+![search-bar-result-found.png](/media/search-bar-result-found.png)
   
-  **Search Results:** The products that match the search are shown on the shop page. If no products match, the page will display no results.
+**Search Results:** The products that match the search are shown on the shop page. If no products match, the page will display no results.
 
-  ![search-bar-no-results.jpeg](/media/search-bar-no-results.jpeg)
+![search-bar-no-results.jpeg](/media/search-bar-no-results.jpeg)
 
-  ### User Account
+###¢ User Account
 
-  User account dropdown menu changes based on the user's authentication status. When clicked, the menu reveals different options:
+The user account dropdown menu changes based on the user's authentication status. When clicked, the menu reveals different options:
 
 **If the user is logged in:**
 
@@ -616,7 +615,7 @@ The fully responsive navigation bar is displayed across all site pages, allowing
 
 ![Account Menu Superuser](/media/account-menu-superuser.jpeg)
 
-**Regular User:** The dropdown shows options for "Profile" and "Logout," allowing regular users to view their prders and manage delivery details.
+**Regular User:** The dropdown shows options for "Profile" and "Logout," allowing regular users to view their orders and manage delivery details.
 
 ![Account Menu Regular User](/media/account-menu-reg-user.jpeg)
 
@@ -626,25 +625,25 @@ The fully responsive navigation bar is displayed across all site pages, allowing
 
 The account icon changes based on the user's login status, with different icons for logged-in and logged-out states, making the navigation more intuitive. The current page is also highlighted in the dropdown menu to improve user experience.
 
-### Home Page
+#### Home Page
 
-#### Above the Fold
+##### Above the Fold
 
 When users first visit the Eternity Luxury Watch Store website, they are greeted with an inviting hero image featuring a luxury watch. This section is designed to captivate the user’s attention immediately, creating a strong first impression of the store's curated selection of high-quality timepieces.
 
 ![Above Fold](/media/above-fold.jpeg)
 
-#### Featured Products
+##### Featured Products
 
 ![Popular products](/media/featured-products.jpeg)
 
-#### About Us
+##### About Us
 
 The About Us section provides visitors with a comprehensive overview of the brand's mission and vision. It emphasizes Eternity's commitment to offering affordable luxury watches. This section builds trust and fosters a connection with potential customers by highlighting the brand’s dedication to quality and customer satisfaction.
 
 ![About Us](/media/about-us.jpeg)
 
-### Shop Page
+#### Shop Page
 
 The Shop Page is the central hub where customers can browse Eternity's curated collection of luxury watches. The page features a clean and intuitive layout designed to make the shopping experience seamless and enjoyable, helping customers find the perfect timepiece with ease.
 
@@ -678,7 +677,7 @@ A reset button is also available next to the filters, allowing users to reset th
 
 ![Reset Appplied](/media/reset-filters-applied.jpeg)
 
-### Product Page
+#### Product Page
 
 The Product Page offers a detailed view of each watch, showcasing comprehensive descriptions, specifications, and high-resolution images. 
 
@@ -696,11 +695,11 @@ At the top of the page on the left, a "Back to Shop" button allows customers to 
 
 ![Back to Shop](/media/back-to-shop.jpeg)
 
- When a product is marked as unavailable by Admin, an "Out of Stock" button is displayed on the Product Page instead of "Add to Cart" button. This button is disabled and styled differently to indicate that the product cannot be purchased. The presence of the "Out of Stock" button ensures that customers are informed about the unavailability of the product, enhancing the shopping experience by setting clear expectations.
+ When a product is marked as unavailable by Admin, an "Out of Stock" button is displayed on the Product Page instead of the "Add to Cart" button. This button is disabled and styled differently to indicate that the product cannot be purchased. The presence of the "Out of Stock" button ensures that customers are informed about the unavailability of the product, enhancing the shopping experience by setting clear expectations.
 
 ![Out of Stock](/media/out-of-stock.jpeg)
 
-### Cart Page
+#### Cart Page
 
 The Cart Page provides an overview of the items a customer plans to purchase, including the product name, SKU, image, price, quantity, subtotal, standard delivery cost, and total cost, allowing customers to review and adjust their selections before proceeding to checkout. By default, the standard delivery rate is applied, calculated as:
 
@@ -714,7 +713,7 @@ If a customer visits the Cart Page before adding any items to the cart, they rec
 
 ![Empty Cart](/media/empty-cart.jpeg)
 
-### Checkout Page
+#### Checkout Page
 
 ![Checkout Page](/media/checkout-page.jpeg)
 
@@ -722,7 +721,7 @@ The Checkout Page allows users to finalise their purchases by filling out necess
 
 Customers can select add-ons like extended warranty or shipping insurance, which are applied to each item in the cart.
 
-Delivery Methods calculated based on delivery rate × cart weight.
+Delivery Methods are calculated based on delivery rate × cart weight.
 
 Available Delivery Methods:
 
@@ -733,19 +732,21 @@ Superuser can add more options through the admin dashboard.
 
 If a product has no weight set, it defaults to 0.5 kg. If shipping cost calculation fails for any reason, a flat rate of €15 is applied to the order. 
 
-While an order is being process, customer gets a notification: 
+While an order is being processed, the customer gets a notification:
 
-Upon successful checkout, users are directed to 'Thank You' page with the order number and summary.
+![Order being processed](/media/payment-processing-notification.jpeg)
 
-This setup ensures a secure and efficient checkout process, allowing customers to review their purchases, choose the preferred delivery method, opt in for add-ons and securely checkout. 
+Upon successful checkout, users are directed to the 'Thank You' page with the order number and summary.
 
-The owner who has access to Stripe account can also see the details of the events happening on the payment provider side: 
+This setup ensures a secure and efficient checkout process, allowing customers to review their purchases, choose the preferred delivery method, opt-in for add-ons and securely checkout. 
+
+The owner who has access to their Stripe account can also see the details of the events happening on the payment provider side: 
 
 ![Stripe Events](/media/stripe-events.jpeg)
 
-### Thank You Page
+#### Thank You Page
 
-The Thank You Page provides users with a confirmation that their order has been successfully processed. It displays a summary of the order, including order number, notification about confirmation email, products with quantities and charges breakdown. This page reassures customers that their payment has been securely processed and provides them with an order number.
+The Thank You Page provides users with a confirmation that their order has been successfully processed. It displays a summary of the order, including the order number, notification about confirmation email, products with quantities and charges breakdown. This page reassures customers that their payment has been securely processed and provides them with an order number.
 
 One product in the order: 
 
@@ -757,7 +758,7 @@ Customers also receive an email confirmation with the same information for their
 
 The Thank You Page serves as the final step in ensuring a smooth and transparent checkout experience.
 
-### Contact Us Page
+#### Contact Us Page
 
 The Contact Page provides a user-friendly contact form for inquiries, collaborations and feedback. This page is designed to facilitate smooth communication between Eternity Luxury Watch Store and its customers and potential partners, allowing them to easily reach out with any questions or concerns regarding their purchases or collaboration offers.
 
@@ -767,11 +768,11 @@ Upon submitting a request through the form, the user receives a notification con
 
 ![Contact Us Page - Submission Confirmation](/media/contact-us-page-submission-confirmation.jpeg)
 
-### Log In Page
+#### Log In Page
 
-To access the Log In page, users need to click on the account menu in the header, indicated by an icon and the words "Log In." A dropdown will appear with the option to "Login/Register."
+To access the Login page, users need to click on the account menu in the header, indicated by an icon and the words "Login." A dropdown will appear with the option to "Login/Register."
 
-The Log In page allows existing customers to securely access their accounts and view their orders. This page provides a straightforward and safe way for users to log in and enjoy a personalized experience. If needed, users can also reset their passwords through the provided link.
+The Login page allows existing customers to securely access their accounts and view their orders. This page provides a straightforward and safe way for users to log in and enjoy a personalised experience. If needed, users can also reset their passwords through the provided link.
 
 ![Account Login Page](/media/account-login-page.png)
 
@@ -789,7 +790,11 @@ After entering the email associated with their account and clicking "Reset My Pa
 
 ![Password Reset Link Sent](/media/password-reset-link.jpeg)
 
-### Register an Account Page
+And they receive the following email:
+
+![Password Reset Email](/media/password-reset-email.jpeg)
+
+#### Register an Account Page
 
 If a customer does not have an existing account, they can click the "Register" link on the Log In page. They will be redirected to the Register page, where new users can create an account, enabling them to track their orders and manage their account details online.
 
@@ -803,19 +808,27 @@ After signing up, customers are prompted to verify their email address by follow
 
 ![Request to Verify Email](/media/account-verify-email.jpeg)
 
-Upon clicking the link, the user is directed to a page requesting email confirmation:
+Email example: 
+
+![Email to Confirmation Registration](/media/email-confirmation-request.jpeg)
+
+Upon clicking the link in the email, the user is directed to a page requesting email confirmation:
 
 ![Request to Confirm Email](/media/account-confirm-email.jpeg)
 
-Once the email address is confirmed, the user is redirected to login page where they need to enter thei credential to log in:
+Once the email address is confirmed, the user is redirected to login page where they need to enter their credentials to log in:
 
 ![Email Confirmed Login Page](/media/email-confirmed-login-page.jpeg)
 
-Once user loogs in with their credentials, a result they are redirected to the homepage and notified of their successful sign-in:
+Once user log in with their credentials, a result they are redirected to the homepage and notified of their successful sign-in:
 
 ![Successful Signin - Redirect to Home Page](/media/account-sign-in-confirmation.jpeg)
 
-### Log Out Page
+In case a user has previously registered, they will receive an email notifying them that the account already exists and are guided to reset their password if it has been forgotten.
+
+![Email - Account Exists](/media/account-exists.jpeg)
+
+#### Log Out Page
 
 To log out, the user must click the account dropdown and select the "Log Out" option. The log out page then loads, where the user must confirm their intent to log out:
 
@@ -825,7 +838,7 @@ Upon confirmation, the user is redirected to the homepage and notified of the su
 
 ![Sign Out Confirmation](/media/sign-out-confirmation.jpeg)
 
-### Store Policies
+#### Store Policies
 
 Store Policies page can be accessed in the footer of the site and the page contains the store’s Return policy, Privacy policy, and Terms and conditions ensuring customers are well-informed about their rights and the store’s practices.
 
@@ -842,12 +855,41 @@ Store Policies page can be accessed in the footer of the site and the page conta
 
 If a user is logged in, they can access the "Orders and Address" page via the account menu in the header. This page functions as a profile, allowing users to view their past orders and update their default delivery address:
 
-
 ![Orders and Address Page](/media/profile-orders-and-address.jpeg)
 
 Users can also click on any order number in the "Order History" table, which will redirect them to a past order confirmation page, commonly referred to as the "Thank You" page. This provides a detailed view of the specific order and its confirmation:
 
 ![Past Order Confirmation Page](/media/thank-you-page-past-order-user.jpeg)
+
+#### Footer
+
+The footer is displayed at the bottom of every page and contains essential information and links:
+
+* **Contact Information:** Phone number and email address for customer inquiries. Generic email address is used info@eternity.ie.
+* **Social Media Links:** Icons linking to Eternity's Instagram and Facebook pages, allowing customers to connect with the brand on social platforms.
+* **Subscribe Form:** A subscription form where users can enter their email addresses to receive newsletters, promotions, and updates from Eternity. This helps build a loyal customer base and keeps users informed about new arrivals and special offers.
+
+     Users are required to add their email address for the subscription: 
+
+     ![Subscribe Form Email Required](/media/subscribe-email-required.jpeg)
+
+     Upon clicking the submit button they receive a confirmation message:
+
+     ![Subscribe Form Confirmation](/media/subscribe-confirmation.jpeg)
+
+The submitted contacts can be seen in the Mailchimp dashboard: 
+
+![Mailchimp Contacts](/media/mailchimp-contacts.jpeg)
+
+* **Footer Menu:** A compact menu providing quick links to important pages such as Home, Shop, Contact, Terms & Conditions, Return Policy and Privacy Policy. This menu ensures that users can easily navigate to key sections of the site from any page.
+
+     Footer Mobile and Tablet view: 
+
+     ![Footer](/media/footer-mobile-and-tablet.jpeg)
+
+     Footer Desktop view:
+
+     ![Footer](/media/footer-desktop.jpeg)
 
 ### Admin Access
 
@@ -855,7 +897,7 @@ Users can also click on any order number in the "Order History" table, which wil
 
 The "Manage Products" page provides superusers with a streamlined interface to edit or remove existing products from the store. Products can be quickly located and modified through a secure page accessible only to authorized personnel, making it easier to maintain an up-to-date inventory. Superusers can adjust product details, including name, price, images, and availability, or remove products entirely if needed. This page ensures efficient management of the product catalog.
 
-In addition to the "Manage Products" page, 'Edit' and 'Delete' buttons are also displayed on the Home, Shop, and Product Page. This allows superusers to have quick and easy access to editing or deleting products directly from those pages, ensuring seamless updates without navigating to the "Manage Products" section.
+In addition to the "Manage Products" page, the 'Edit' and 'Delete' buttons are also displayed on the Home, Shop, and Product Pages. This allows superusers to have quick and easy access to editing or deleting products directly from those pages, ensuring seamless updates without navigating to the "Manage Products" section.
 
 ![Manage Products Page](/media/manage-products-page.jpeg)
 
@@ -875,7 +917,6 @@ Additionally, the superuser has three extra entry points to manage products:
 
      ![Manage Products Featured Products Gallery](/media/manage-products-product-page.jpeg)
 
-
 #### Add Product
 
 The "Add Product" page allows superusers to expand the catalog by uploading new items. They can input essential details, such as product name, price, description, and images, ensuring the catalog stays updated with the latest offerings. The form is user-friendly, with fields to ensure all necessary information is provided, offering customers a comprehensive view of each product.
@@ -894,14 +935,13 @@ Additionally, superusers can mark any product as a Featured Product to be displa
 
 ![Edit Product Page](/media/edit-product-page.jpeg)
 
-### Manage Policies
+#### Manage Policies
 
 The "Manage Policies" page is essentially the Policies Page with extended functionality for superusers. It allows superusers to update the site's policies, such as Terms & Conditions, Return Policy, and Privacy Policy, through a hidden "Edit Policy" page. This feature helps maintain the store’s compliance with business and legal requirements, ensuring policies are always current and aligned with the latest regulations.
 
 ![Edit Policies Terms and Conditions](/media/edit-policies-terms-and-conditions.jpeg)
 
 ![Policy Updated Successfully Notification](/media/policy-updated-successfully.jpeg)
-
 
 #### Store Policies Admin
 
@@ -912,7 +952,7 @@ The "Manage Policies" page is essentially the Policies Page with extended functi
 ![Privacy Policy Edit.jpeg](/media/privacy-policy-edit.jpeg)
 
 
-### Profile - Orders and Address
+#### Profile - Orders and Address
 
 The admin also has access to the "Orders and Address" page but with additional functionality. The admin can see a list of all orders placed by all customers, including the clients' names. This allows the admin to oversee every order that goes through the system, offering a broader view of the store's activity. This enhanced view helps the admin maintain oversight and quickly locate any order in question to see the details by clicking on the order number:
 
@@ -920,39 +960,9 @@ The admin also has access to the "Orders and Address" page but with additional f
 
 **Restrickted Access**
 
-Pages that are exclusive to the superuser are restricted for regular users. When a non-superuser attempts to access these pages; URLs, they are met with a notification that informs them that the page is reserved for store owner. This prevents unauthorised access and ensures that only the superuser can manage specific areas, such as product management or order overview pages.
+Pages that are exclusive to the superuser are restricted to regular users. When non-superuser attempts to access these pages URLs, they are met with a notification that informs them that the page is reserved for the store owner. This prevents unauthorised access and ensures that only the superuser can manage specific areas, such as product management or order overview pages.
 
 ![Superuser Access Only](/media/superuser-access-only.jpeg)
-
-### Footer
-
-The footer is displayed at the bottom of every page and contains essential information and links:
-
-* **Contact Information:** Phone number and email address for customer inquiries.
-* **Social Media Links:** Icons linking to Eternity's Instagram and Facebook pages, allowing customers to connect with the brand on social platforms.
-* **Subscribe Form:** A subscription form where users can enter their email addresses to receive newsletters, promotions, and updates from Eternity. This helps build a loyal customer base and keeps users informed about new arrivals and special offers.
-
-     Users are required to add their email address for the subscription: 
-
-     ![Subscribe Form Email Required](/media/subscribe-email-required.jpeg)
-
-     Upon clicking submit button they receive a confirmation message:
-
-     ![Subscribe Form Confirmation](/media/subscribe-confirmation.jpeg)
-
-The submitted contacts can be seen in Mailchimp dashboard: 
-
-![Mailchimp Contacts](/media/mailchimp-contacts.jpeg)
-
-* **Footer Menu:** A compact menu providing quick links to important pages such as Home, Shop, Contact, Terms & Conditions, Return Policy and Privacy Policy. This menu ensures that users can easily navigate to key sections of the site from any page.
-
-     Footer Mobile and Tablet view: 
-
-     ![Footer](/media/footer-mobile-and-tablet.jpeg)
-
-     Footer Desktop view:
-
-     ![Footer](/media/footer-desktop.jpeg)
 
 ### Custom Error Pages
 
@@ -964,7 +974,7 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 **500 Error Page**
 ![500 Error Page](/media/500-error-page.jpeg)
 
-#### Admin Panel Features
+### Admin Panel Features
 
 A superuser, who is presumably the owner of a site, can access the admin panel, where they get additional functionalities.
 
@@ -976,18 +986,18 @@ Individual order editing:
 
 ![Admin Order Editing](/media/admin-order-editing.jpeg)
 
-The superuser can create new products, view the list of all the esiting products, edit and filter them:
+The superuser can create new products, view the list of all the exiting products, and edit and filter them:
 
 ![Admin Product Management](/media/admin-product-management.jpeg)
 
-The superuser can manage existing categories by clicking on each of then and create new categories:
+The superuser can manage existing categories by clicking on each of them as well as create new categories:
 
 ![Admin Categories Management](/media/admin-categories-management.jpeg)
 
 The superuser can edit existing policies and create new policies: 
 ![Admin Policies Management](/media/admin-policies-management.jpeg)
 
-The superuser can manage existing Shipping Method and adjust rates, as well as create mew Shipping Methods with rates: 
+The superuser can manage existing Shipping Methods and adjust rates, as well as create new Shipping Methods with rates: 
 
 ![Admin Shipping Methods and Rates Management](/media/admin-shipping-management.jpeg)
 
@@ -1058,11 +1068,17 @@ Integration of an order tracking system will allow customers to track the status
 
 Users will be able to store multiple default shipping addresses in their account, allowing them to quickly select from saved locations during checkout. This feature will be convenient for frequent shoppers or those who send gifts to multiple recipients, reducing the need to re-enter addresses for each purchase.
 
+**15. Hide Products from the Live Site**
+Introduce a feature that allows the admin to hide specific products from the live site without deleting them from the inventory. This will be useful for products that are temporarily unavailable or seasonal, enabling store admins to control visibility and manage stock effectively. Admins can easily toggle products on or off from the storefront as needed.
+
+**16. Email Confirmation and Campaigns for Subscribers**
+Implement an automated email system that sends a confirmation email when users subscribe to the newsletter. Additionally, introduce the ability to send out email campaigns to the subscribers list directly from the admin dashboard. This feature will support targeted marketing, allowing the store to share new arrivals, exclusive deals, and personalized recommendations with subscribed users.
+
 ## E-commerce Business Model
 
 **Purpose of the Application:** B2C Focused
 
-TThe primary focus of the Eternity - Luxury Watch Store application is Business-to-Consumer (B2C). The website is designed to cater directly to end customers who are looking for high-quality yet affordable luxury watches. By offering a seamless online shopping experience, Eternity aims to attract individual consumers from various demographics, including watch collectors, fashion enthusiasts, and gift buyers.
+The primary focus of the Eternity - Luxury Watch Store application is Business-to-Consumer (B2C). The website is designed to cater directly to end customers who are looking for high-quality yet affordable luxury watches. By offering a seamless online shopping experience, Eternity aims to attract individual consumers from various demographics, including watch collectors, fashion enthusiasts, and gift buyers.
 
 **Core Business Intent:**
 
@@ -1119,7 +1135,7 @@ TThe primary focus of the Eternity - Luxury Watch Store application is Business-
      </details>
      <br>
 
-The keywords were selcted using Semrush platform based on two locations: Ireland and the US: 
+The keywords were selected using the Semrush platform based on two locations: Ireland and the US: 
 
 ![SEO Keywords Ireland](/media/seo-keywords-ireland-1.jpeg)
 
@@ -1165,11 +1181,62 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 ### Languages
 
+* **Python (version 3.12.2):** The primary programming language used for backend logic in this project.
+
+* **HTML, CSS & Django Template Language:** Employed for structuring and designing the webpages, ensuring a seamless user interface.
+
+* **JavaScript:** Used to add interactivity for editing or deleting products, adjusting quantities on the Product and Cart pages, as well as calculating total of the order and handeling Stripe.
+
 ### Libraries and Frameworks
+
+* **Django (version 5.1):** The primary framework used to build this project, providing a robust back-end platform that includes an automatically configured admin panel and numerous helper template tags for efficient coding.
+
+* **Bootstrap (version 5.3.3):** The base front-end framework is used to create a responsive and visually appealing design that works seamlessly with Django's backend functionalities.
+
+* **Django Allauth (version 0.57.2):** Integrated for authentication processes, enhancing the site with login/logout capabilities and social account integration.
+
 
 ### Technologies
 
+* **ElephantSQL:** Acts as the PostgreSQL hosting service, managing the project's database operations.
+
+* **Cloudinary (version 1.36.0):** Provides a solution for hosting and managing static and media files, optimising content delivery.
+
+* **Heroku:** The platform for hosting the application, offering robust deployment capabilities.
+
+* **GitHub:** It is used for source code management and as a collaborative platform, also facilitating project tracking through its Kanban board.
+
+* **Gitpod:** A cloud-based IDE that supports coding, running, and debugging the project directly within the browser.
+
 #### Dependencies
+
+- asgiref==3.8.1
+- boto3==1.35.12
+- botocore==1.35.12
+- cloudinary==1.36.0
+- crispy-bootstrap5==2024.2
+- dj-database-url==0.5.0
+- dj3-cloudinary-storage==0.0.6
+- Django==5.1
+- django-allauth==0.57.2
+- django-cloudinary-storage==0.3.0
+- django-countries==7.6.1
+- django-crispy-forms==2.3
+- django-storages==1.14.4
+- gunicorn==20.1.0
+- jmespath==1.0.1
+- oauthlib==3.2.2
+- pillow==10.4.0
+- psycopg2==2.9.9
+- PyJWT==2.9.0
+- python3-openid==3.2.0
+- pytz==2024.1
+- requests-oauthlib==2.0.0
+- s3transfer==0.10.2
+- sqlparse==0.5.1
+- stripe==10.8.0
+- urllib3==1.26.20
+- whitenoise==5.3.0
 
 ## Testing
 
@@ -1187,12 +1254,12 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Hamburger menu icon on larger screens | Hidden | Pass |
 | Header icons and logo were tested on all pages of the site on mobile, tablet, and desktop |  |  |
 | Click on the logo | Home page loads | Pass |
-| Click on the Lig In icon while being logged out | Login/Register dropdown appears | Pass |
-| Click on the Account icon while beign logged in | Dropdown appears with the following pages: Profile and Logout | Pass |
+| Click on the Log In icon while being logged out | Login/Register dropdown appears | Pass |
+| Click on the Account icon while being logged in | Dropdown appears with the following pages: Profile and Logout | Pass |
 | Click on the Cart Icon | Cart page loads | Pass |
 | Notification about user login status | Correctly displays user login status | Pass |
 
-##### Search Bar
+#### Search Bar
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
@@ -1201,15 +1268,15 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Submit the search bar with no term entered   | An error message is displayed: "You didn't enter any search criteria!" | Pass |
 | Enter a partial search term | Products whose names or descriptions contain the partial term are displayed | Pass    |
 | Search term with special characters | The system correctly processes the special characters and shows results or an error if no match is found | Pass    |
-| Search term with uppercase letters | The search is case-insensitive, and products matching the term are displayed regardless of capitaliSation | Pass    |
+| Search term with uppercase letters | The search is case-insensitive, and products matching the term are displayed regardless of capitalisation | Pass    |
 | Search bar usability with keyboard shortcuts | The search bar is usable with the "Tab" and "Enter" keys for accessibility | Pass |
 
-##### Home Page
+#### Home Page
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Click on the 'Explore' button on the Home Page | Shop page loads | Pass |
 
-#### Log In Page
+#### Log In and Reset Password Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
@@ -1220,17 +1287,16 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Enter an invalid username and password, click Log In | Error message "The username and/or password you specified are not correct" is displayed | Pass |
 | Enter an invalid username or password, click Log In | Error message "The username and/or password you specified are not correct" is displayed | Pass |
 | Enter valid username and password, click Log In | User is redirected to Home page. The following message displayed "Successfully signed in as 'username'" | Pass |
-| Enter valid username and password, tick 'Remember me' click Log In | User is redirected to Home page. The following message is displayed: "Successfully signed in as 'username'". On subsequent visits to the site, the user remains logged in without needing to enter credentials again | Pass |
+| Enter a valid username and password, tick 'Remember me' click Log In | User is redirected to Home page. The following message is displayed: "Successfully signed in as 'username'". On subsequent visits to the site, the user remains logged in without needing to enter credentials again | Pass |
 | Click 'Forgot password?' | Password Reset page loads | Pass |
 | On the Password Reset page enter an invalid email format missing @ | "Please include an '@' in the email address. 'email' is missing an '@'" notification appears | Pass |
-| On the Password Reset page enter a valid email address | A confirmation stating that reset email has been sent is displayed | Pass |
-
+| On the Password Reset page enter a valid email address | A confirmation stating that the reset email has been sent is displayed | Pass |
 
 #### Register Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-| Click 'Register' link on the Login Page | Sign Up page loads | Pass |
+| Click the 'Register' link on the Login Page | Sign Up page loads | Pass |
 | Leave required fields empty and click Register | Error messages "Please fill in this field" are displayed next to the email field | Pass |
 | Enter only the email and click Register | Error message "Please fill in this field" is displayed next to the email again field | Pass |
 | Enter only the email into the email again field and click Register | Error message "Please fill in this field" is displayed next to the email field | Pass |
@@ -1238,18 +1304,18 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Enter only the password and click Register | Error message "Please fill in this field" is displayed next to the email field | Pass |
 | Enter only the email and email again and click Register | Error message "Please fill in this field" is displayed next to the username field | Pass |
 | Enter only the email, email again and username and click Register | Error message "Please fill in this field" is displayed next to the password field | Pass |
-| Enter email, email again, username and password, click Register | Error message "Please fill in this field" is displayed next to the password (again) field | Pass |
-| Enter already registered email, email again, username, password, password (again) and click Register | Verify Your Email Address page loads. User receives email stating that an account with that email address already exists and offering to recover account with password reset link | Pass |
+| Enter the email, email again, username and password, and click Register | Error message "Please fill in this field" is displayed next to the password (again) field | Pass |
+| Enter already registered email, email again, username, password, password (again) and click Register | Verify Your Email Address page loads. The user receives an email stating that an account with that email address already exists and offering to recover the account with a password reset link | Pass |
 | Enter email, email again, but use different emails, enter username, password, password (again) and click Register | Error message "You must type the same email each time." is displayed | Pass |
-| Enter email, email again, username three or less characters, a password, and a password (again) and click Register | "Please lengthen this text to 4 characters or more (you are currently using 3 characters)" notification is displayed next tothe username field | Pass |
-| Enter email, email again, username, a password, and a password (again) that is less than 8 characters and click Register | Error message "This password is too short. It must contain at least 8 characters." is displayed | Pass |
-| Enter email, email again, username, password, and password (again), use a common password, and click Register | Error message "This password is too common." is displayed | Pass |
-| Enter email, email again, username, password, and password (again), use a numeric password, and click Register | Error message "This password is entirely numeric." is displayed | Pass |
-| Enter email, email again, username, password, and password (again), use a password similar to personal information and click Register | Error message "Your password can’t be too similar to your other personal information." is displayed | Pass |
-| Enter email, email again, username, password, and password (again), use different passwords for password and password (again), and click Register | Error message "You must type the same password each time." is displayed | Pass |
-| Fill out all fields correctly: enter  email, email again, username (four or more characters), password, and password (again), use the same passwords; if adding email, add email that was not previously registered; and click Register | Verify Your Email Address page loads with a message: 'We have sent an email to you for verification. Follow the link provided to finalise the signup process. If you do not see the verification email in your main inbox, check your spam folder. Please contact us via email at: eternitywatchstore0@gmail.com if you do not receive the verification email within a few  | Pass |
-| Open the email received as a result of the registration process: '[Eternity Watch Store] Please Confirm Your Email Address' and click the link to confirm | Page loads asking to confirm email address for the user | Pass |
-| Click confirm button on the loaded page to confirm email address for the user | 'You have confirmed -email address-" notification is displayed and the user is redirected to the Log In page | Pass |
+| Enter the email, email again, username three or fewer characters, a password, and a password (again) and click Register | "Please lengthen this text to 4 characters or more (you are currently using 3 characters)" notification is displayed next to the username field | Pass |
+| Enter the email, email again, username, password, and a password (again) that is less than 8 characters and click Register | Error message "This password is too short. It must contain at least 8 characters." is displayed | Pass |
+| Enter the email, email again, username, password, and password (again) use a common password, and click Register | Error message "This password is too common." is displayed | Pass |
+| Enter the email, email again, username, password, and password (again), use a numeric password, and click Register | Error message "This password is entirely numeric." is displayed | Pass |
+| Enter the email, email again, username, password, and password (again), use a password similar to personal information and click Register | Error message "Your password can’t be too similar to your other personal information." is displayed | Pass |
+| Enter the email, email again, username, password, and password (again), use different passwords for password and password (again), and click Register | Error message "You must type the same password each time." is displayed | Pass |
+| Fill out all fields correctly: enter email, email again, username (four or more characters), password, and password (again), use the same passwords; if adding email, add email that was not previously registered; and click Register | Verify Your Email Address page loads with a message: 'We have sent an email to you for verification. Follow the link provided to finalise the signup process. If you do not see the verification email in your main inbox, check your spam folder. Please contact us via email at: eternitywatchstore0@gmail.com if you do not receive the verification email within a few  | Pass |
+| Open the email received as a result of the registration process: '[Eternity Watch Store] Please Confirm Your Email Address' and click the link to confirm | Page loads asking to confirm the email address for the user | Pass |
+| Click confirm button on the loaded page to confirm the email address for the user | 'You have confirmed -email address-" notification is displayed and the user is redirected to the login page | Pass |
 | Enter the login and password details for the registered account |  'Successfully signed in as -username-" notification is displayed and the user is redirected to the home page | Pass |
 
 #### Log Out Page
@@ -1259,8 +1325,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Click 'Log Out' button in the header | Redirects to the Log Out confirmation page | Pass |
 | Confirm logout by clicking on the 'Log Out' button | Redirects to Home page; notification about successful logout displayed | Pass |
 
-
-##### Shop Page 
+#### Shop Page 
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
@@ -1279,19 +1344,17 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Click on any product image | The user is directed to the Product Page for that specific product | Pass   |
 | Click on any product name | The user is directed to the Product Page for that specific product | Pass   |
 
-
-##### Product Page 
+#### Product Page 
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-| Visit the Product Page by clicking on product name on the Shop page | The page loads successfully, displaying the product details, images, and price, quantity and "Add to Cart" button | Pass   |
-| Select product quantity (up to 10) | Quantity can be adjusted by clicking on plus or minus icons, and the plus icon is disabled when the quantity reaches 10 | Pass |
-| Click "Add to cart" button  | The product is added to the cart, and a confirmation message is displayed "-Product Name- was added to your cart" | Pass   |
+| Visit the Product Page by clicking on the product name on the Shop page | The page loads successfully, displaying the product details, images, price, quantity and "Add to Cart" button | Pass   |
+| Select product quantity (up to 10) | Quantity can be adjusted by clicking on the plus or minus icons, and the plus icon is disabled when the quantity reaches 10 | Pass |
+| Click the "Add to cart" button  | The product is added to the cart, and a confirmation message is displayed "-Product Name- was added to your cart" | Pass   |
 | Product is marked "Out of Stock" | The "Add to Cart" button is replaced with an "Out of Stock" button that is disabled | Pass   |
 | Click "Back to Shop" button  | The user is redirected back to the Shop Page  | Pass   |
 
-
-##### Cart Page
+#### Cart Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
@@ -1300,20 +1363,19 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Visit the Cart Page by clicking on the cart icon in the header, when items are added to the cart | The page loads, showing all products added to the cart, with image, name, SKU, quantity, price, subtotal, and order summary, which includes subtotal, standard delivery, and total cost | Pass   |
 | Adjust product quantity with plus/minus buttons | Quantity is updated, the subtotal and order summary are recalculated automatically, and a notification is displayed: "-Product name- was updated to -product number-" | Pass   |
 | Click "Remove" on a product | The product is removed from the cart, the page reloads with the updated list of items or an empty cart, and a notification is displayed: "-Product name- was removed from the cart!" | Pass   |
-| Click "Checkout" button  | The user is redirected to the checkout page to complete the purchase  | Pass   |
+| Click the "Checkout" button  | The user is redirected to the checkout page to complete the purchase  | Pass   |
 | While being on the cart page when products are added to the cart, click on the "Back to Shop" button | The Shop page loads, displaying all the products  | Pass |
 
-##### Checkout Page
-
+#### Checkout Page
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-| Visit the checkout page with items in the cart by clicking on Checkout button in the cart | The page loads displaying Order summary and checkout fields | Pass |
+| Visit the checkout page with items in the cart by clicking on the Checkout button in the cart | The page loads displaying the Order summary and checkout fields | Pass |
 | Click Edit Cart link | Cart page loads | Pass |
 | Click on Login in the section: 'Have an account? Login to prefill your details or register' | The user is directed to the Login page | Pass |
 | Log in from the Checkout page | After logging in, the user is redirected back to the Checkout page | Pass |
-| Click on Register in the section: 'Have an account? Login to prefill your details or register' | The user is directed to the Registration page | Pass |
+| Click on Register in the section: 'Have an account? Login to prefill your details or register | The user is directed to the Registration page | Pass |
 | Log in as a user with saved delivery details | The Checkout page loads with delivery address prefilled | Pass |
-| Submit the form without entering a country | User is taken to the country field for selection and order cannot be completed | Pass |
+| Submit the form without entering a country | The User is taken to the country field for selection and the order cannot be completed | Pass |
 | Submit the form without entering a street address | Error message: "This field is required." | Pass |
 | Submit the form without entering a town or city | Error message: "This field is required." | Pass |
 | Submit the form without entering a postcode | Error message: "This field is required." | Pass |
@@ -1326,20 +1388,19 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Remove both add-ons | Add-ons are removed, and the total is recalculated accordingly | Pass |
 | Submit the form without entering a card number | Error message: "Your card number is incomplete." | Pass |
 | Enter card number but no expiration date  | Error message: "Your card's expiration date is incomplete." | Pass |
-| Enter card number and expiration date, but no security code | Error message: "Your card's security code is incomplete." | Pass |
+| Enter the card number and expiration date, but no security code | Error message: "Your card's security code is incomplete." | Pass |
 | Submit the form with valid card details (4242 4242 4242 4242, valid date and CVC) | Stripe processes the payment, and the user is redirected to the Thank You page | Pass |
 | Submit the checkout form with all fields filled correctly | Stripe payment intent is initiated, the user is redirected to the Thank You page | Pass |
 | Submit the form with no add-ons | The order is created without add-ons, and payment proceeds successfully | Pass |
 
-
 ##### Thank You Page
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-| After a successful payment, user is redirected to the Thank You page |	The Thank You page loads with a confirmation message, order number, and summary details |	Pass |
-| The "Thank You" page displays the correct order number	| The order number corresponds to the order placed and is displayed prominently | Pass |
-| The order summary on the Thank You page is accurate | The products, quantities, add-ons, delivery method, and total amount match the order placed |	Pass |
+| After a successful payment, the user is redirected to the Thank You page |   The Thank You page loads with a confirmation message, order number, and summary details | Pass |
+| The "Thank You" page displays the correct order number    | The order number corresponds to the order placed and is displayed prominently | Pass |
+| The order summary on the Thank You page is accurate | The products, quantities, add-ons, delivery method, and total amount match the order placed | Pass |
 
-##### Contact Page
+#### Contact Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
@@ -1347,30 +1408,30 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Fill out only the name, and click submit | "Please fill in this field" appears in the 'Email' field | Pass |
 | Fill out the name and email fields without the '@' sign, and click submit | "Please include an '@' in the email address. 'email' is missing an '@'" appears in the 'Email' field | Pass |
 | Fill out the name and email address with the '@' sign, and click submit | "Please fill in this field" appears in the 'Message' field | Pass |
-| Fill out the name, email address with the '@' sign, message, and remove 'General Enquiry' from the subject, and click submit	| "Please fill in this field" appears in the 'Subject' field | Pass |
+| Fill out the name, email address with the '@' sign, message, and remove 'General Enquiry' from the subject, and click submit    | "Please fill in this field" appears in the 'Subject' field | Pass |
 " Fill out all fields except for the 'Subject' (delete prefilled text "General Enquiry"), and click submit | "Please fill in this field" appears in the 'Subject' field | Pass |
-| Fill out the name, email address with the '@'sign, add subject or keep the default prefilled text "General Enquiry", and add a message, click submit | The notification "Thanks for reaching out! We got your message and will be in touch within 24 hours." displayed at the top of the screen | Pass |
+| Fill out the name, and email address with the '@'sign, add a subject or keep the default prefilled text "General Enquiry", and add a message, click submit | The notification "Thanks for reaching out! We got your message and will be in touch within 24 hours." displayed at the top of the screen | Pass |
 
-##### Policies Page
+#### Policies Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Click on "Terms" link in the footer menu | The user is navigated to the Terms & Conditions section on the Store Policies page | Pass |
-| Click on "Return Policy" link in the footer menu | The user is navigated to the Return Policy section  on the Store Policies page | Pass |
-| Click on "Privacy Policy" link in the footer menu | The user is navigated to the Privacy Policy section  on the Store Policies page | Pass |	
+| Click on the "Return Policy" link in the footer menu | The user is navigated to the Return Policy section on the Store Policies page | Pass |
+| Click on the "Privacy Policy" link in the footer menu | The user is navigated to the Privacy Policy section on the Store Policies page | Pass |   
 | Verify content for "Terms & Conditions" | The "Terms & Conditions" policy content is visible and formatted correctly | Pass |
-| Verify content for "Return Policy" | The "Return Policy" content is displayed and properly formatted	| Pass |
-| Verify content for "Privacy Policy"	| The "Privacy Policy" content is visible and formatted correctly	| Pass |
-| Log in as a regular user and view policies	| Edit buttons are not visible to regular users	| Pass |
+| Verify content for "Return Policy" | The "Return Policy" content is displayed and properly formatted   | Pass |
+| Verify content for "Privacy Policy"   | The "Privacy Policy" content is visible and formatted correctly     | Pass |
+| Log in as a regular user and view policies | Edit buttons are not visible to regular users   | Pass |
 
-##### Footer
+#### Footer
 
 **Newsletter Subscription Form Testing**
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Navigate to the site footer from any page of the site | The form is visible to the user in the footer | Pass |
-| Click submit button without addign an email | An error message appears 'This field is required' requesting the user to enter an email | Pass |
+| Click the submit button without adding an email | An error message appears 'This field is required' requesting the user to enter an email | Pass |
 | Input an invalid email format missing @ | An error message appears 'Please enter a valid email address' requesting the user to enter a valid email | Pass |
 | Input valid email in the form and submit | The user is shown a confirmation message of successful subscription: 'Thank you for subscribing!' | Pass |
 | Verify Mailchimp list includes the submitted email | The email appears in the Mailchimp list under the correct audience | Pass    |
@@ -1380,8 +1441,8 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Ensure the phone number and email are visible | Contact details are displayed correctly in the footer | Pass |
-| Verify phone number is clickable on mobile devices | The phone number is clickable, allowing users to call directly when tapped on mobile devices |	Pass |
-| Verify email address is clickable | Clicking the email address opens the default email client with the 'to' field populated with the Eternity email	| Pass |
+| Verify phone number is clickable on mobile devices | The phone number is clickable, allowing users to call directly when tapped on mobile devices | Pass |
+| Verify email address is clickable | Clicking the email address opens the default email client with the 'to' field populated with the Eternity email | Pass |
 
 **Follow Us (Social Media Links)**
 
@@ -1397,10 +1458,10 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 |-------------------------|-------------------------|----------------|
 | Click on "Home" link in the footer menu | The user is navigated to the homepage | Pass |
 | Click on "Shop" link in the footer menu | The user is navigated to the shop page | Pass |
-| Click on "Get In Touch" link in the footer menu | The user is navigated to the contact page | Pass |
+| Click on the "Get In Touch" link in the footer menu | The user is navigated to the contact page | Pass |
 | Click on "Terms" link in the footer menu | The user is navigated to the Terms & Conditions section on the Store Policies page | Pass |
-| Click on "Return Policy" link in the footer menu | The user is navigated to the Return Policy section  on the Store Policies page | Pass |
-| Click on "Privacy Policy" link in the footer menu | The user is navigated to the Privacy Policy section  on the Store Policies page | Pass |
+| Click on the "Return Policy" link in the footer menu | The user is navigated to the Return Policy section on the Store Policies page | Pass |
+| Click on the "Privacy Policy" link in the footer menu | The user is navigated to the Privacy Policy section on the Store Policies page | Pass |
 
 **Footer Disclaimer**
 
@@ -1408,22 +1469,21 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 |-------------------------|-------------------------|----------------|
 | Verify that the disclaimer text is visible | The text '* *This website is created for educational and training purposes only*' is displayed in the footer | Pass |
 
-##### Features and Pages with Admin Access
+#### Features and Pages with Admin Access
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-| Click on the Account icon while beign logged in as superuser | Dropdown appears with the following pages: Manage Products, Manage Policies, Profile and Logout | Pass |
+| Click on the Account icon while being logged in as a superuser | A Dropdown appears with the following pages: Manage Products, Manage Policies, Profile and Logout | Pass |
 
-##### Manage Products Page
+#### Manage Products Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Access the "Manage Products" page from the admin account | The page loads successfully, displaying a form to add a new product to the store | Pass |
 | Click the "Edit" button on any product from the "Manage Products" page | The admin is taken to the "Edit Product" page for the selected product  | Pass  |
 | Click the "Delete" button on any product from the "Manage Products" page | A confirmation modal appears asking if the admin wants to delete the product. If confirmed, the product is deleted, and the list is updated | Pass  |
-| Access "Manage Products" page as a regular user | Regular users are denied access and redirected to the home page with an error message: "Only store owners have access to this action" | Pass  |
+| Access the "Manage Products" page as a regular user | Regular users are denied access and redirected to the home page with an error message: "Only store owners have access to this action" | Pass  |
 
-
-##### Add Product Page
+#### Add Product Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
@@ -1432,100 +1492,100 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Validation for each field: |   |
 | Name (required, text input) | An error is displayed if left empty, asking to fill out the field | Pass   |
 | SKU (optional, text input)  | The product SKU can be added or left blank. No errors for empty input | Pass   |
-| Description (required, text input)   | An error is displayed if left empty, sking to fill out the field | Pass   |
+| Description (required, text input)   | An error is displayed if left empty, asking to fill out the field | Pass   |
 | Category 1 (required, dropdown) | An error is displayed if no category is selected: 'Please select an item in the list | Pass   |
 | Category 2 (required, dropdown) | An error is displayed if no category is selected: 'Please select an item in the list  | Pass   |
 | *Price Validation* |  | |
-| - Input a value less than 1 (e.g., 0.99, -5)     | Error: "Ensure this value is greater than or equal to 1." The form should not submit  | Pass    |
-| - Input a non-numeric value (e.g., "abc")| Error: "Enter a number." The form should not submit | Pass    |
+| - Input a value less than 1 (e.g., 0.99, -5)     | Error: "Ensure this value is greater than or equal to 1." The form should not be submitted | Pass    |
+| - Input a non-numeric value (e.g., "abc")| Error: "Enter a number." The form should not be submitted | Pass    |
 | - Input a valid price (e.g., 50.99)  | The form accepts the value, and no errors are displayed  | Pass  |
-| - Input a price exceeding 8 digits (e.g., 9999999.99) | Error: "Ensure that there are no more than 8 digits in total." The form should not submit | Pass    |
+| - Input a price exceeding 8 digits (e.g., 9999999.99) | Error: "Ensure that there are no more than 8 digits in total." The form should not be submitted | Pass    |
 | - Input a valid price with exactly 8 digits (e.g., 999999.99) | The form accepts the value, and no errors are displayed  | Pass    |
-| *Rating Validation*   |  |  |
-| - Input a value less than 1 (e.g., 0.5)  | Error: "Ensure this value is greater than or equal to 1." The form should not submit   | Pass    |
-| - Input a value greater than 5 (e.g., 5.5, 6)    | Error: "Ensure this value is less than or equal to 5." The form should not submit  | Pass    |
+| *Rating Validation* |  |  |
+| - Input a value less than 1 (e.g., 0.5)  | Error: "Ensure this value is greater than or equal to 1." The form should not be submitted | Pass    |
+| - Input a value greater than 5 (e.g., 5.5, 6)    | Error: "Ensure this value is less than or equal to 5." The form should not be submitted | Pass    |
 | - Input a valid rating (e.g., 4.5)  | The form accepts the value, and no errors are displayed  | Pass    |
-| - Input a non-numeric value (e.g., "bad")| Error: "Enter a number." The form should not submit  | Pass    |
-| *Weight Validation*  | |  |
-| - Input a value less than 0.05 (e.g., 0.04, 0)   | Error: "Ensure this value is greater than or equal to 0.05." The form should not submit | Pass    |
-| - Input a value greater than 1.5 (e.g., 2, 10)   | Error: "Ensure this value is less than or equal to 1.5." The form should not submit | Pass    |
+| - Input a non-numeric value (e.g., "bad")| Error: "Enter a number." The form should not be submitted | Pass    |
+| *Weight Validation* | |  |
+| - Input a value less than 0.05 (e.g., 0.04, 0)   | Error: "Ensure this value is greater than or equal to 0.05." The form should not be submitted | Pass    |
+| - Input a value greater than 1.5 (e.g., 2, 10)   | Error: "Ensure this value is less than or equal to 1.5." The form should not be submitted | Pass    |
 | - Input a valid weight (e.g., 1.25) | The form accepts the value, and no errors are displayed   | Pass    |
-| - Input a non-numeric value (e.g., "heavy") | Error: "Enter a number." The form should not submit   | Pass    |
+| - Input a non-numeric value (e.g., "heavy") | Error: "Enter a number." The form should not be submitted | Pass    |
 | Image (optional, file upload)| Image file can be uploaded. No error is displayed if left empty. | Pass   |
 | - Availability (optional, checkbox) | No error is displayed if unchecked | Pass   |
 | - Featured Product (optional, checkbox) | No error is displayed if unchecked | Pass   |
 | Fill out the form with valid product details and submit | The product is added to the catalog and is now visible on the Shop, Product Manage Product Pages, notification displayed: 'Product added successfully!' | Pass  |
 | Access the "Add Product" page as a regular user | Regular users are denied access and redirected to the home page with an error message: "Only store owners have access to this action". | Pass   |
 | Mark the added product as "Featured" in the form and submit | The product is added to the homepage as a featured product in the featured product gallery | Pass  |
-| Click on 'Cancel' at the bottom of the form | The superuser is redirected back to the shop page without saving any product details, notification displayed: 'ction cancelled. No changes were made.' | Pass   |
+| Click on 'Cancel' at the bottom of the form | The superuser is redirected back to the shop page without saving any product details, notification is displayed: 'action cancelled. No changes were made.' | Pass   |
 
-##### Edit Product Page
+#### Edit Product Page
 
 | Action/Feature | Expected Behavior | Status |
 |-------------------------|-------------------------|----------------|
 | Locate any available product on the Home Page, Shop Page, Manage Products, or Product Page and click on the 'Edit' button | The admin is taken to the "Edit Product" page for the selected product | Pass |
 | **Price Validation** | | |
-| - Input a value less than 1 (e.g., 0.99, -5) | Error: "Ensure this value is greater than or equal to 1." The form should not submit. | Pass |
-| - Input a non-numeric value (e.g., "abc") | Error: "Enter a number." The form should not submit. | Pass |
+| - Input a value less than 1 (e.g., 0.99, -5) | Error: "Ensure this value is greater than or equal to 1." The form should not be submitted. | Pass |
+| - Input a non-numeric value (e.g., "abc") | Error: "Enter a number." The form should not be submitted. | Pass |
 | - Input a valid price (e.g., 50.99) | The form accepts the value, and no errors are displayed. | Pass |
-| - Input a price exceeding 8 digits (e.g., 9999999.99) | Error: "Ensure that there are no more than 8 digits in total." The form should not submit. | Pass |
+| - Input a price exceeding 8 digits (e.g., 9999999.99) | Error: "Ensure that there are no more than 8 digits in total." The form should not be submitted. | Pass |
 | - Input a valid price with exactly 8 digits (e.g., 999999.99) | The form accepts the value, and no errors are displayed. | Pass |
 | **Rating Validation** | | |
-| - Input a value less than 1 (e.g., 0.5) | Error: "Ensure this value is greater than or equal to 1." The form should not submit. | Pass |
-| - Input a value greater than 5 (e.g., 5.5, 6) | Error: "Ensure this value is less than or equal to 5." The form should not submit. | Pass |
+| - Input a value less than 1 (e.g., 0.5) | Error: "Ensure this value is greater than or equal to 1." The form should not be submitted. | Pass |
+| - Input a value greater than 5 (e.g., 5.5, 6) | Error: "Ensure this value is less than or equal to 5." The form should not be submitted. | Pass |
 | - Input a valid rating (e.g., 4.5) | The form accepts the value, and no errors are displayed. | Pass |
-| - Input a non-numeric value (e.g., "bad") | Error: "Enter a number." The form should not submit. | Pass |
+| - Input a non-numeric value (e.g., "bad") | Error: "Enter a number." The form should not be submitted. | Pass |
 | **Weight Validation** | | |
-| - Input a value less than 0.05 (e.g., 0.04, 0) | Error: "Ensure this value is greater than or equal to 0.05." The form should not submit. | Pass |
-| - Input a value greater than 1.5 (e.g., 2, 10) | Error: "Ensure this value is less than or equal to 1.5." The form should not submit. | Pass |
+| - Input a value less than 0.05 (e.g., 0.04, 0) | Error: "Ensure this value is greater than or equal to 0.05." The form should not be submitted. | Pass |
+| - Input a value greater than 1.5 (e.g., 2, 10) | Error: "Ensure this value is less than or equal to 1.5." The form should not be submitted. | Pass |
 | - Input a valid weight (e.g., 1.25) | The form accepts the value, and no errors are displayed. | Pass |
-| - Input a non-numeric value (e.g., "heavy") | Error: "Enter a number." The form should not submit. | Pass |
+| - Input a non-numeric value (e.g., "heavy") | Error: "Enter a number." The form should not be submitted. | Pass |
 | **General Form Functionality** | | |
-| Locate any available product on the Home Page, Shop Page, Manage Products or from the Product Page and click on 'Edit" button. When the page loads remove tick from the field "availability" and click on "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!". Product shows as "Out of Stock" on the Product Page. The same product is displayed as "Out of Stock" on the Shop Page and Home Page, if the product included into the featured products gallery. This product can't be added to the cart from any page | Pass |
+| Locate any available product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads remove the tick from the field "availability" and click on the "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!" The product shows as "Out of Stock" on the Product Page. The same product is displayed as "Out of Stock" on the Shop Page and Home Page if the product is included in the featured products gallery. This product can't be added to the cart from any page | Pass |
 | Click the "Out of Stock" button on the Product Page, Shop Page or Home Page| The button is disabled, and clicking it results in no action | Pass |
-| Locate any out of stock product on the Home Page, Shop Page, or from the Product Page and click on 'Edit" button. When the page loads tick the field "availability" and click on "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!". Product becomes available and "Add to Cart" button appears on the Product Page, Shop Page and Home Page, if the product is included into the featured products gallery | Pass |
+| Locate any out-of-stock product on the Home Page, Shop Page, or from the Product Page and click on the 'Edit" button. When the page loads tick the field "availability" and click on the "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!" The product becomes available and the "Add to Cart" button appears on the Product Page, Shop Page and Home Page if the product is included in the featured products gallery | Pass |
 | Leave a required field empty (e.g., Name or Price) | Error messages are displayed, and the form cannot be submitted until all required fields are filled out correctly. | Pass |
 | Upload a new image | The new image is uploaded, and the old one is replaced. No error is displayed if no image is uploaded (optional). | Pass |
 | Click on "Cancel" | The superuser is redirected back to the product page, and no changes are saved. Notification "Action cancelled. No changes were made." is displayed. | Pass |
-| Locate any product on the Home Page, Shop Page, Manage Products or from the Product Page and click on 'Edit" button. When the page loads, edit any product details (e.g., name, collections, price, description or upload a new image) and enter valid parametres, then click on "Update Prpduct" button | Notification is displayed "Product updated successfully!" and changes are reflected correctly on all the pages, where product is displayed: in a galleries (Shop and Home pages if relevant) as well as on the Product Page | Pass |
+| Locate any product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads, edit any product details (e.g., name, collections, price, description or upload a new image) and enter valid parameters, then click on the "Update Product" button | Notification is displayed "Product updated successfully!" and changes are reflected correctly on all the pages, where the product is displayed: in galleries (Shop and Home pages if relevant) as well as on the Product Page | Pass |
 | Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/edit/45/) | The user is redirected to the login page with a message indicating that they need to log in | Pass |
 | Attempt to access the edit URL as a regular user | Regular users are denied access to editing product, redirected to the home page and shown an error message: "Only store owner has access to this action" | Pass |
 
-##### Delete Product Functionality
+#### Delete Product Functionality
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Locate any product on the Home Page, Shop Page, Manage Products or from the Product Page and click on "Delete" | A pop-up window appears, asking, 'Delete product? Are you sure you want to delete this product? This action cannot be undone.' Options to close or confirm delete are available | Pass |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Delete' button | The product is removed from the store and no longer appears on any store pages, and the user is redirected to the "Shop Page"  with a confirmation message: "Prpduct deleted successfully!"| Pass |
-| Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Close' button | The pop-up window is closed, the admin remains on the same page with a confirmation message: "Action cancelled. No changes were made. " | Pass |
+| Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Close' button | The pop-up window is closed, and the admin remains on the same page with a confirmation message: "Action cancelled. No changes were made. " | Pass |
 | Log out and try to access the delete URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/delete/42/) | The user is redirected to the login page with a message indicating that they need to log in  | Pass | 
-| Attempt to access the delete URL as a regular user | Regular users are denied access to deleting product, redirected to the home page and shown an error message: "Only store owners has access to this action" | Pass |
+| Attempt to access the delete URL as a regular user | Regular users are denied access to deleting a product, redirected to the home page and shown an error message: "Only store owners have access to this action" | Pass |
 
-##### Manage Policies Page
+#### Manage Policies Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-| Access the "Manage Policies" page from the admin account dropdown | 	Redirects the superuser to the "Store Policies" page with visible "Edit" buttons for each policy |	Pass |
-| Log out and try to access the edit URL directly	| The user is redirected to the login page | Pass | 
-| Click the "Edit" button for "Terms & Conditions" policy	| The superuser is redirected to the policy editing form for the "Terms & Conditions" policy	| Pass |
-| Update the content of the "Terms & Conditions" and click "Save Changes" |	The policy content is updated, and a success message "Terms & Conditions updated successfully!" is displayed	| Pass |
-| Verify that the updated policy content appears on the "Store Policies" page	| The new content for "Terms & Conditions" is visible on the main policies page	| Pass |
-| Click the "Edit" button for "Return Policy" policy | The superuser is redirected to the policy editing form for the "Return Policy" policy |	Pass |
-| Update the content of the "Return Policy" and click "Save Changes"	| The policy content is updated, and a success message "Return Policy updated successfully!" is displayed	| Pass | 
-| Verify that the updated policy content appears on the "Store Policies" page	| The new content for "Return Policy" is visible on the main policies page	| Pass |
-| Click the "Edit" button for "Privacy Policy" policy	| The superuser is redirected to the policy editing form for the "Privacy Policy" policy	| Pass |
-| Update the content of the "Privacy Policy" and click "Save Changes"	| The policy content is updated, and a success message "Privacy Policy updated successfully!" is displayed	| Pass |
-| Verify that the updated policy content appears on the "Store Policies" page	| The new content for "Privacy Policy" is visible on the main policies page | Pass |
-| Click "Edit" for any policy and then click the "Cancel" button	| The user is redirected back to the "Store Policies" page with a message "Action cancelled. No changes were made."	| Pass |
-| Attempt to submit a policy title with less than 5 characters (e.g., "ABC") | Validation error is raised. Error message like "Ensure this value has at least 5 characters" is displayed | Pass   |
+| Access the "Manage Policies" page from the admin account dropdown |      Redirects the superuser to the "Store Policies" page with visible "Edit" buttons for each policy |  Pass |
+| Log out and try to access the edit URL directly | The user is redirected to the login page | Pass | 
+| Click the "Edit" button for "Terms & Conditions" policy   | The superuser is redirected to the policy editing form for the "Terms & Conditions" policy   | Pass |
+| Update the content of the "Terms & Conditions" and click "Save Changes" |     The policy content is updated, and a success message "Terms & Conditions updated successfully!" is displayed  | Pass |
+| Verify that the updated policy content appears on the "Store Policies" page   | The new content for "Terms & Conditions" is visible on the main policies page | Pass |
+| Click the "Edit" button for the "Return Policy" policy | The superuser is redirected to the policy editing form for the "Return Policy" policy |   Pass |
+| Update the content of the "Return Policy" and click "Save Changes"  | The policy content is updated, and a success message "Return Policy updated successfully!" is displayed     | Pass | 
+| Verify that the updated policy content appears on the "Store Policies" page   | The new content for "Return Policy" is visible on the main policies page | Pass |
+| Click the "Edit" button for the "Privacy Policy" policy  | The superuser is redirected to the policy editing form for the "Privacy Policy" policy  | Pass |
+| Update the content of the "Privacy Policy" and click "Save Changes" | The policy content is updated, and a success message "Privacy Policy updated successfully!" is displayed    | Pass |
+| Verify that the updated policy content appears on the "Store Policies" page   | The new content for "Privacy Policy" is visible on the main policies page | Pass |
+| Click "Edit" for any policy and then click the "Cancel" button | The user is redirected back to the "Store Policies" page with the message "Action cancelled. No changes were made."     | Pass |
+| Attempt to submit a policy title with less than 5 characters (e.g., "ABC") | Validation error is raised. An error message like "Ensure this value has at least 5 characters" is displayed | Pass   |
 | Attempt to submit a policy title with characters between 5 and 30 | The title is accepted, and the policy is saved successfully | Pass   |
-| Attempt to submit a policy title with more than 30 characters | Superuser is prevented from typling more than 30 characters | Pass   |
- Attempt to submit a policy content with less than 50 characters | Validation error is raised. Error message "Ensure this value has at least 50 characters" is displayed | Pass   |
+| Attempt to submit a policy title with more than 30 characters | Superuser is prevented from typing more than 30 characters | Pass   |
+ Attempt to submit policy content with less than 50 characters | Validation error is raised. Error message "Ensure this value has at least 50 characters" is displayed | Pass   |
 | Attempt to submit a policy content with 50 or more characters | The content is accepted, and the policy is saved successfully | Pass   |
 | Attempt to submit a policy with an empty title | Validation error is raised. Error message "This field is required" is displayed | Pass   |
 | Attempt to submit a policy with empty content | Validation error is raised. Error message "This field is required" is displayed | Pass   |
 | Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/policies/edit/2/) | The user is redirected to the login page with a message indicating that they need to log in to edit policies | Pass | 
-| Attempt to access the edit URL as a regular user | Regular users are denied access to the policy editing page, redirected to the home page and shown an error message: "Only store owners has access to this action" | Pass |
+| Attempt to access the edit URL as a regular user | Regular users are denied access to the policy editing page, redirected to the home page and shown an error message: "Only the store owner has access to this action" | Pass |
 
 #### User Stories
 | User Story | Expected Behaviour | Actual Behaviour | Status |
@@ -1542,10 +1602,10 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Submit Contact Form Request | User can submit a contact request via the contact form on the Contact page | Form submits successfully and records request in the database | Pass |
 | Account Creation | User can create a new account through the Log In icon | New account created successfully and user is redirected to the home page after confirming email | Pass |
 | Account Creation Email Confirmation | User receives a confirmation email after creating an account | Email confirmation sent after registration | Pass |
-| Login Access | User can log in to their account via Log In icon | User successfully logs in and is redirected to the home page | Pass |
+| Login Access | User can log in to their account via the Log In icon | User successfully logs in and is redirected to the home page | Pass |
 | Password Reset | User can reset their password if forgotten | Password reset link sent via email successfully and allows for easy password reset | Pass |
-| Update Personal Details | User can update default delivery details via the Profile Page under the account icon in the header | User's personal details are updated and saved succcessfully | Pass |
-| View Order History | User can view their previous orders on the Profile Page | If user has past order, the user successfully sees past order details on the Profile Page | Pass |
+| Update Personal Details | User can update default delivery details via the Profile Page under the account icon in the header | User's personal details are updated and saved successfully | Pass |
+| View Order History | User can view their previous orders on the Profile Page | If the user has a past order, the user successfully sees past order details on the Profile Page | Pass |
 | Shop Page | User can access all products from the Shop page | Shop page displays all products | Pass |
 | Category Browsing | User can browse products by categories such as brand and gender | Categories work correctly and filter results as expected | Pass |
 | Product Sorting | User can sort products by price, name, or popularity | Sorting options work correctly | Pass |
@@ -1560,16 +1620,16 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Enter Shipping Address at Checkout | User can enter a shipping address during checkout | Shipping details form works as expected | Pass |
 | Offer Login at Checkout | User is offered to log in during checkout if not logged in | Login prompt appears correctly during checkout | Pass |
 | Prefill Customer and Shipping Details | Logged-in users have customer and shipping details prefilled | Logged-in user's details are prefilled automatically at checkout | Pass |
-| Choose the Shipping Method at Checkout | User can select shipping method at checkout | Shipping methods are displayed and selectable at the checkout and price adjusts accordingly | Pass |
+| Choose the Shipping Method at Checkout | User can select the shipping method at checkout | Shipping methods are displayed and selectable at the checkout and price adjusts accordingly | Pass |
 | Add-Ons at Checkout | User can choose add-ons like extended warranty or shipping insurance during checkout | Add-ons are offered during the checkout process and displays price adjusts accordingly | Pass |
 | Add Payment Information at Checkout | User can enter payment details easily and quickly | Payment form is working and submits payment details securely | Pass |
 | Payment Security | User feels confident their personal and payment details are secure | Payment forms are secure and encrypted | Pass |
 | Order Confirmation Page | User is shown an order confirmation page after successful checkout | Confirmation page displays order details after successful checkout | Pass |
 | Order Email Confirmation | User receives an order confirmation email upon placing an order | Order confirmation email is sent after successful purchase | Pass |
-| Add a Product as Admin | Admin can add new products to the inventory via front end | Front end allows product addition without errors by clicking on Account icon, selecting Manage Products page, filling in 'Add a Product' the form and savign it | Pass |
-| Edit/Update a Product as Admin | Admin can update any product information via Shop page or Product page by clicking 'Edit' next to the relevant product | Admin can successfully edit product details via the front end | Pass |
+| Add a Product as Admin | Admin can add new products to the inventory via front end | Front end allows product addition without errors by clicking on the Account icon, selecting the Manage Products page, filling in the 'Add a Product' form and saving it | Pass |
+| Edit/Update a Product as Admin | Admin can update any product information via the Shop page or Product page by clicking 'Edit' next to the relevant product | Admin can successfully edit product details via the front end | Pass |
 | Delete a Product as Admin | Admin can remove products from the store via Shop page or Product page by clicking 'Delete' next to the relevant product | Admin can successfully delete a product via the front end | Pass |
-| Store Policies Management | Admin can edit store policies for Terms & Conditions, Return Policy, and Privacy Policy by click on Manage Policies under the Account icon, navigating to the relevant policy and clicking 'Edit' button | Admin can successfully update store policies via the front end | Pass |
+| Store Policies Management | Admin can edit store policies for Terms & Conditions, Return Policy, and Privacy Policy by clicking on Manage Policies under the Account icon, navigating to the relevant policy and clicking the 'Edit' button | Admin can successfully update store policies via the front end | Pass |
 | Store Contact Form Requests | Admin can view and store contact form submissions via admin panel| Contact form submissions are stored and accessible by the admin via admin panel | Pass |
 | Track Contact Form Submissions | Admin can mark contact form submissions as "read" or delete them via admin panel | Admin can successfully track or delete contact form submissions from the dashboard via admin panel| Pass |
 
@@ -1599,7 +1659,7 @@ To ensure adherence to web standards and improve accessibility, the site's HTML 
 
      ![Home Page Errors Part One](/media/html-checker-home-page-errors-part-three.jpeg)
 
-     **Solution:** similar to previouse issue, `data-*` attributes were used on `<a>` tags, therefore `product-id` was replaced with `data-product-id`.
+     **Solution:** similar to the previous issue, `data-*` attributes were used on `<a>` tags, therefore `product-id` was replaced with `data-product-id`.
 
      **Warning 1:**
 
@@ -1613,7 +1673,7 @@ To ensure adherence to web standards and improve accessibility, the site's HTML 
      
      ![Home page HTML Validator](/media/html-checker-home-page-final.jpeg)
 
-The rest of the pages passed validation with no errors.
+The rest of the pages passed validation with no errors apart from the Register an account page.
 
 * **Shop App**
 
@@ -1656,13 +1716,33 @@ The rest of the pages passed validation with no errors.
      ![Policies page HTML Validator](/media/html-checker-policies-page.jpeg)
 
      - **Edit Policies Page**
-
      ![Policies page HTML Validator](/media/html-checker-edit-policies-page.jpeg)
 
 * **Contact Request App**
 
      - **Contact Page**
      ![Contact page HTML Validator](/media/html-checker-contact-page.jpeg)  
+
+* **Account Pages**
+
+     - **Log In Page**
+      ![Log In Page HTML Validator](/media/html-checker-log-in.jpeg)  
+
+     - **Password Reset Page**
+      ![Password Reset Page HTML Validator](/media/html-checker-password-reset.jpeg)
+
+     - **Password Reset Verification Sent Page**
+      ![Password Reset Verification Sent Page HTML Validator](/media/html-checker-password-reset-verification-sent.jpeg)
+     
+     - **Registration Page**
+
+     This page has 4 errors: 
+     ![Registration Page HTML Validator](/media/html-checker-register.jpeg)
+     
+     From the screenshot of the code causing the errors, we can see that the code is coming from the AllAuth template help text. Therefore, the errors cannot be fixed.
+
+     ![Registration Page HTML Validator](/media/registration-helptext-error.jpeg)
+
 
 </details>
 
@@ -1701,7 +1781,7 @@ To enhance adherence to web standards and ensure accessibility, the site's JavaS
 
 **Shop App**
 
-Only warnings were idenitified on Shop app pages, no errors.
+Only warnings were identified on the Shop app pages, no errors.
 
 - **Confirmation Modal** 
 Java Script for confirmation modal when deleting products is used on the Home, Shop, Product and Manage Products pages:
@@ -1715,16 +1795,19 @@ Java Script for confirmation modal when deleting products is used on the Home, S
 
 **Cart App**
 
-Only warnings were idenitified on Cart page, no errors.
+Only warnings were identified on the Cart page, no errors.
 
+- **Items Quantity Input and Removal**
 ![JavaScript Validation Cart Page](/media/js-validator-cart-page.jpeg)
 
 **Checkout App**
 
-Only warnings were idenitified on Checkout page, no errors.
+Only warnings were identified on the Checkout page, no errors.
 
-![JavaScript Validation Checkout Page Calculate Total](/media/js-validator-checkout-page-calculate-total.jpeg)
+- **Checkout Page Calculate Total**
+![JavaScript Validation Checkout Page Calculate Total](/media/js-validator-checkout-page.jpeg)
 
+- **Checkout Page Stripe Elements**
 ![JavaScript Validation Checkout Page Stripe Elements](/media/js-validator-checkout-page-stripe.jpeg)
 
 
@@ -1747,48 +1830,119 @@ After ensuring that there are two blank lines before each top-level function or 
 
 **Project URLs & Views**
 
+- **Project URLs**
 ![Project URLs](/media/python-validation-project-settings.py-file.jpeg)
+
+- **Progect Views**
 ![Progect Views](/media/python-validation-project-view.jpeg)
+
+- **Project URLs**
 ![Project URLs](/media/python-validation-project-urls.jpeg)
 
 **Home app:**
 
+- **Home Views**
 ![Home Views](/media/python-validation-home-view.jpeg)
+
+- **Home URLs**
 ![Home URLs](/media/python-validation-home-urls.jpeg)
 
 **Shop app:**
 
+- **Shop Models**
 ![Shop Models](/media/python-validation-shop-models.jpeg)
+
+- **Shop Admin**
 ![Shop Admin](/media/python-validation-shop-admin.jpeg)
+
+- **Shop Forms**
 ![Shop Forms](/media/python-validation-shop-forms.jpeg)
+
+- **Shop Views**
 ![Shop Views](/media/python-validation-shop-views.jpeg)
+
+- **Shop URLs**
 ![Shop URLs](/media/python-validation-shop-urls.jpeg)
 
 **Cart app:**
 
+- **Cart Contexts**
 ![Cart Contexts](/media/python-validation-cart-contexts.jpeg)
+
+- **Cart Tools**
 ![Cart Tools](/media/python-validation-cart-tools.jpeg)
+
+- **Cart Views**
 ![Cart Views](/media/python-validation-cart-views.jpeg)
+
+- **Cart URLs**
 ![Cart URLs](/media/python-validator-cart-urls.jpeg)
 
 
 **Checkout app:**
 
+- **Checkout Models**
 ![Checkout Models](/media/python-validation-checkout-models.jpeg)
+
+- **Checkout Admin**
 ![Checkout Admin](/media/python-validator-checkout-admin.jpeg)
+
+- **Checkout Views**
 ![Checkout Views](/media/python-validation-checkout-views.jpeg)
+
+- **Checkout Forms**
 ![Checkout Forms](/media/python-validation-checkout-forms.jpeg)
+
+- **Checkout Signals**
 ![Checkout Signals](/media/python-validation-checkout-signals.jpeg)
+
+-**Checkout Webhook Handler**
 ![Checkout Webhook Handler](/media/python-validator-checkout-webhook-handler.jpeg)
+
+- **Checkout Webhooks**
 ![Checkout Webhooks](/media/python-validation-checkout-webhooks.jpeg)
+
+- **Checkout Webhooks**
 ![Checkout URLs](/media/python-validator-checkout-urls.jpeg)
 
 </details>
 
-### Responsivness
+### Responsiveness
 
 <details>
   <summary>Responsivness Testing</summary>
+
+| Device/Browser             | Chrome | Firefox | Safari | Edge  |
+|----------------------------|--------|---------|--------|-------|
+| MacBook Pro                | Pass   | Pass    | Pass   | Pass  |
+| MacBook Air                | Pass   | Pass    | Pass   | Pass  |
+| Windows 10 Desktop         | Pass   | Pass    | N/A    | Pass  |
+| Windows 11 Laptop          | Pass   | Pass    | N/A    | Pass  |
+| iMac                       | Pass   | Pass    | Pass   | Pass  |
+| iPad Pro                   | Pass   | N/A     | Pass   | N/A   |
+| iPad Air                   | Pass   | N/A     | Pass   | N/A   |
+| iPhone 12                  | Pass   | N/A     | Pass   | N/A   |
+| iPhone 11                  | Pass   | N/A     | Pass   | N/A   |
+| Samsung Galaxy S21         | Pass   | Pass    | N/A    | Pass  |
+| Samsung Galaxy Tab         | Pass   | N/A     | N/A    | Pass  |
+| Google Pixel 5             | Pass   | Pass    | N/A    | Pass  |
+| Huawei P40                 | Pass   | Pass    | N/A    | N/A   |
+| OnePlus 9                  | Pass   | Pass    | N/A    | Pass  |
+| Microsoft Surface          | Pass   | Pass    | N/A    | Pass  |
+| iPhone SE                  | Pass   | N/A     | Pass   | N/A   |
+| iPhone XR                  | Pass   | N/A     | Pass   | N/A   |
+| iPhone 12 Pro              | Pass   | N/A     | Pass   | N/A   |
+| iPhone 14 Pro Max          | Pass   | N/A     | Pass   | N/A   |
+| iPhone 15 Pro              | Pass   | N/A     | Pass   | N/A   |
+| Pixel 3 XL                 | Pass   | Pass    | N/A    | Pass  |
+| Pixel 7                    | Pass   | Pass    | N/A    | Pass  |
+| Samsung Galaxy S8+         | Pass   | Pass    | N/A    | Pass  |
+| Samsung Galaxy S20 Ultra   | Pass   | Pass    | N/A    | Pass  |
+| iPad Mini                  | Pass   | N/A     | Pass   | N/A   |
+| Surface Pro 7              | Pass   | Pass    | N/A    | Pass  |
+| Surface Duo                | Pass   | Pass    | N/A    | Pass  |
+| Galaxy Z Fold 5            | Pass   | Pass    | N/A    | Pass  |
+| Samsung Galaxy A51/71      | Pass   | Pass    | N/A    | Pass  |
 
 </details>
 
@@ -2053,11 +2207,11 @@ To ensure the deployed app looks as nicely styled as the local development versi
 
 1. **Set Up Gmail Account:**
    - Go to Gmail and create a new account - eternitywatchstore0@gmail.com
-   - In the account settigns enable 2-factor authentication.
+   - In the account settings enable 2-factor authentication.
    - Create an App password in the security settings of Gmail account.
 
 2. **Set Up Environment Variables in Heroku:**
-   - In Heroku app, under 'Config Vars', add the following:
+   - In the Heroku app, under 'Config Vars', add the following:
      - `EMAIL_HOST = smtp.gmail.com`
      - `EMAIL_PORT = 587`
      - `EMAIL_USE_TLS = True`
@@ -2097,7 +2251,7 @@ To ensure the deployed app looks as nicely styled as the local development versi
    - In the Stripe dashboard, go to 'Developers' > 'Webhooks'.
    - Create new endpoint and select all events.
    - Add endpoint URL `https://eternity-watch-store-1f855f4289ad.herokuapp.com/checkout/wh/`.
-   - Copy Signing secret and add it to in 'Config Vars' on Heroku: 
+   - Copy the Signing secret and add it to 'Config Vars' on Heroku: 
    - `STRIPE_WH_SECRET`
 
 4. **Add Stripe Settings in Django:**
@@ -2180,7 +2334,7 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 - The logo idea was created using [Wix Logo Maker](https://www.wix.com/logo/maker).
 - Favicon files were created using [Favicon.io](https://favicon.io/favicon-converter/).
 - Images for the site were converted and compressed using [11zon](hhttps://converter.11zon.com/) tool.
-- SEO keywords were selcted using [Semrush](https://www.semrush.com/).
+- SEO keywords were selected using [Semrush](https://www.semrush.com/).
 - Sitemap was created using [XML Sitemaps Generator](https://www.xml-sitemaps.com).
 - Entity-Relationship Diagrams were created using [QuickDBD](https://www.quickdatabasediagrams.com/).
 - Product information was sourced from the official websites of the following brands:

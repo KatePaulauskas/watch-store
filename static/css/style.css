@@ -959,6 +959,7 @@ ul.list-unstyled {
     height: 38px !important;
 }
 
+#id_name_helptext,
 #id_rating_helptext {
     color: #AA9159 !important;
     font-style: italic;

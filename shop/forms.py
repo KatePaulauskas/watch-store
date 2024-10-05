@@ -1,24 +1,29 @@
 from django import forms
 from .models import Product, Category
+import re
 
 
 class ProductForm(forms.ModelForm):
 
     name = forms.CharField(
-        error_messages={'required': 'Please enter the product name.'}
+        error_messages={'required': 'Please enter the product name.'},
+        max_length=255,
+        help_text="Name should be between 3 and 255 characters."
     )
     
     # Display friendly names for categories dropdowns
     category_1 = forms.ModelChoiceField(
-        queryset=Category.objects.all().order_by('name'),
-        label="Category 1",
+        queryset=Category.objects.exclude(name__in=['women', 'men']).order_by('name'),
+        label="Brand Category",
         widget=forms.Select,
+        error_messages={'required': 'Please select brand category.'},
     )
 
     category_2 = forms.ModelChoiceField(
-        queryset=Category.objects.all().order_by('name'),
-        label="Category 2",
+        queryset=Category.objects.filter(name__in=['women', 'men']).order_by('name'),
+        label="Gender Category",
         widget=forms.Select,
+        error_messages={'required': 'Please select gender category.'},
     )
 
     # Ensure price is greater than zero
@@ -58,6 +63,36 @@ class ProductForm(forms.ModelForm):
         model = Product
         exclude = ('categories',)
 
+    def clean_name(self):
+        # Validate product name
+        name = self.cleaned_data.get('name').strip()
+
+        # Ensure name is not too short
+        if len(name) < 3:
+            raise forms.ValidationError("Product name must be at least 3 characters long.")
+
+        # Ensure name does not exceed max length (handled by CharField)
+        if len(name) > 255:
+            raise forms.ValidationError("Product name cannot exceed 255 characters.")
+        
+        # Ensure name contains at least one letter
+        if not re.search(r'[a-zA-Z]', name):
+            raise forms.ValidationError("Product name must contain leasts.")
+
+        # Ensure name is not numbers only
+        if name.isdigit():
+            raise forms.ValidationError("Product name cannot consist of numbers only.")
+
+        # List of characters to exclude
+        invalid_chars = set('<>!@#$%^&*()_+[]{}|;:\'",.?/~`\\=')
+
+        # Check for invalid characters in the product name
+        if any(char in invalid_chars for char in name):
+            raise forms.ValidationError(
+                "Product name contains invalid characters. Please avoid using special symbols."
+            )
+        return name
+
     def save(self, commit=True):
         # Override save method to handle the many-to-many relationship
         instance = super().save(commit=False)
@@ -68,3 +103,4 @@ class ProductForm(forms.ModelForm):
                 self.cleaned_data['category_2']
             ])
         return instance
+

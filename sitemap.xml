@@ -9,252 +9,427 @@
 
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/contact/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/cart/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/1/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/45/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/4/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/47/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/50/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/3/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/47/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/54/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/58/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/61/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/cancel_action_home/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/policies/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=citizen</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=frederique_constant</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=hamilton</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=seiko</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=tissot</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=men</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=women</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?sort=price&amp;direction=asc</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?sort=price&amp;direction=desc</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?sort=rating&amp;direction=desc</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?sort=rating&amp;direction=asc</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?sort=name&amp;direction=asc</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?sort=name&amp;direction=desc</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/49/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/53/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/77/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/48/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/49/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/53/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/55/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/56/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/57/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/1/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/45/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/64/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/63/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/62/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/3/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/59/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/60/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/4/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/cancel_action/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/50/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/47/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/54/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/58/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/61/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=men&amp;brand=citizen</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=women&amp;brand=citizen</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=men&amp;brand=frederique_constant</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=women&amp;brand=frederique_constant</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=men&amp;brand=hamilton</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=women&amp;brand=hamilton</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=men&amp;brand=seiko</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=women&amp;brand=seiko</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=men&amp;brand=tissot</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?gender=women&amp;brand=tissot</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=citizen&amp;gender=men</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=frederique_constant&amp;gender=men</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=hamilton&amp;gender=men</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=seiko&amp;gender=men</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=tissot&amp;gender=men</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=citizen&amp;gender=women</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=frederique_constant&amp;gender=women</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=hamilton&amp;gender=women</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=seiko&amp;gender=women</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/shop/?brand=tissot&amp;gender=women</loc>
-  <lastmod>2024-09-22T18:26:13+00:00</lastmod>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/77/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/48/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/49/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/53/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/55/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/56/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/57/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/1/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/45/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/64/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/63/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/62/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/3/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/59/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/60/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://eternity-watch-store-1f855f4289ad.herokuapp.com/accounts/login/?next=/shop/product/4/cancel/</loc>
+  <lastmod>2024-10-04T15:37:40+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 

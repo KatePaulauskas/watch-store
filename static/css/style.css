@@ -960,6 +960,9 @@ ul.list-unstyled {
 }
 
 #id_name_helptext,
+#id_sku_helptext,
+#id_description_helptext,
+#id_weight_helptext,
 #id_rating_helptext {
     color: #AA9159 !important;
     font-style: italic;

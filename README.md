@@ -1551,6 +1551,62 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/edit/45/) | The user is redirected to the login page with a message indicating that they need to log in | Pass |
 | Attempt to access the edit URL as a regular user | Regular users are denied access to editing product, redirected to the home page and shown an error message: "Only store owner has access to this action" | Pass |
 
+#### Edit Product Page
+
+| Action/Feature | Expected Behavior | Status |
+|-------------------------|-------------------------|----------------|
+| Locate any available product on the Home Page, Shop Page, Manage Products, or Product Page and click on the 'Edit' button | The admin is taken to the "Edit Product" page for the selected product | Pass |
+| **Edit Product Name**	|||
+| Change the product name to a valid one (letters, numbers, spaces), click Update Product	| The form accepts the value, and no errors are displayed |	Pass |
+| Submit the form with invalid characters in the product name (e.g., @, #, $, %, ^, &, *, (, ), _, +, [, ], {, }, ;, :, /, ~, `, \, =, <, >) | 'Product name contains invalid characters. Please avoid using special symbols' is displayed	| Pass |
+| Submit the form with only numbers or symbols in the product name | 'Product name must contain letters.' is displayed	| Pass |
+| Submit the form with a valid product name	| The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed	| Pass |
+| **Edit SKU**	| | |	
+| Submit the form with invalid characters in the SKU (e.g., @, #, $, %, etc.)	| 'SKU can only contain letters, numbers, and dashes.' is displayed	| Pass |
+|Submit the form with a valid SKU	| The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed	| Pass |
+| **Edit Description** |||
+| Change the description to less than 100 characters, click Update Product |	Superuser is prevented from submittign the form. 'Please lengthen this text to 100 characters or more' is displayed on hover and help text is displayed: 'Description should be between 100 and 3000 characters.' | Pass |
+| Change the description to a valid one (between 100 and 3000 characters), click Update Product	| The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed | Pass |
+|**Edit Brand Category** |||
+|Select a new Brand Category from the dropdown, click Update Product | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed | Pass |
+| **Edit Gender Category** |||	
+| Select a new Gender Category from the dropdown click Update Product | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed | Pass |
+| **Edit Image** |||
+|Upload a new image,  click Update Product  | Superuser redirected to Product Page, 'Product updated successfully!' displayed. The new image is uploaded, and the old one is replaced | Pass |
+| **Edit Price** | | |
+| Input a value less than 1 (e.g., 0.99, -5) in the price input field | 'Value must be greater or equal to 1.' is displayed | Pass    |
+| Input a non-numeric value (e.g., "abc") in the price input field  | Superuser is prevented from entering non-numeric value in the price input field | Pass    |
+| Input a valid price (e.g., 50.99) in the price input field, try to submit the form  | The form accepts the value, and no errors are displayed.  Superuser redirected to Product Page, 'Product updated successfully!' displayed.| Pass |
+| Input a price exceeding 8 digits (e.g., 9999999.99) | 'Ensure that there are no more than 8 digits in total.' is displayed. The form is not be submitted. | Pass |
+| Input a valid price with exactly 8 digits (e.g., 999999.99) | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed.| Pass |
+| **Edit Rating** | | |
+| Input a value less than 1 (e.g., 0.5) | 'Ensure this value is greater than or equal to 1.' The is not be submitted. | Pass |
+| Input a value greater than 5 (e.g., 5.5, 6) | 'Ensure this value is less than or equal to 5.' is displayed. The form is not be submitted. | Pass |
+| Input a valid rating (e.g., 4.5) | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed. | Pass |
+| Input a non-numeric value (e.g., "bad") | Superuser is prevented from entering non-numeric value | Pass    |
+| **Edit Weight** | | |
+| Input a value less than 0.05 (e.g., 0.04, 0) | 'Ensure this value is greater than or equal to 0.05.' is displayed. The form is not be submitted. | Pass |
+| Input a value greater than 1.5 (e.g., 2, 10) | 'Ensure this value is less than or equal to 1.5.' is displayed. The form is not be submitted. | Pass |
+| Input a valid weight (e.g., 1.25) | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed. | Pass |
+| Input a non-numeric value (e.g., "heavy") | Superuser is prevented from entering non-numeric value | Pass |
+| **Edit Availability** | | |
+| Locate any available product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads remove the tick from the field "availability" and click on the "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!" The product shows as "Out of Stock" on the Product Page. The same product is displayed as "Out of Stock" on the Shop Page and Home Page if the product is included in the featured products gallery. This product can't be added to the cart from any page | Pass |
+| Click the "Out of Stock" button on the Product Page, Shop Page or Home Page| The button is disabled, and clicking it results in no action | Pass |
+| Locate any out-of-stock product on the Home Page, Shop Page, or from the Product Page and click on the 'Edit" button. When the page loads tick the field "availability" and click on the "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!" The product becomes available and the "Add to Cart" button appears on the Product Page, Shop Page and Home Page if the product is included in the featured products gallery | Pass |
+| **Edit Featured Product** | | |
+| Locate a product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads, mark the product as "Featured" in the form and submit |  Notification displayed: 'Product updated successfully!'. Superuser Redirected to the Product page. The product is added to the Featured Products gallery on the Home Page | Pass  |
+| Locate a product on the Home Page in the Featured Products gallery and click on the 'Edit" button. When the page loads, unmark the product as "Featured" in the form and submit |  Notification displayed: 'Product updated successfully!'. Superuser Redirected to the Product page. The product is removed from the Featured Products gallery on the Home Page | Pass  |
+| **General testing** |||
+| Leave a required field empty (e.g., Name or Price) | Error messages are displayed, and the form cannot be submitted until all required fields are filled out correctly. | Pass |
+| Click on "Cancel" | The superuser is redirected back to the product page, and no changes are saved. Notification "Action cancelled. No changes were made." is displayed. | Pass |
+| Locate any product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads, edit any product details (e.g., name, collections, price, description or upload a new image) and enter valid parameters, then click on the "Update Product" button | Notification is displayed "Product updated successfully!" and changes are reflected correctly on all the pages, where the product is displayed: in galleries (Shop and Home pages if relevant) as well as on the Product Page | Pass |
+| Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/edit/45/) | The user is redirected to the login page with a message indicating that they need to log in | Pass |
+| Attempt to access the edit URL as a regular user | Regular users are denied access to editing product, redirected to the home page and shown an error message: "Only store owner has access to this action" | Pass |
+
+
+
+
+
 #### Delete Product Functionality
 
 | Action/Feature          | Expected Behavior       | Status         |

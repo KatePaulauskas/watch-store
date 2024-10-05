@@ -1488,105 +1488,95 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Access the "Add Product" page from the admin account dropdown | The page loads successfully, displaying a form to add a new product to the store | Pass  |
-| Submit the form with incomplete or invalid data  | The form displays error messages for fields that are required or have invalid data, and the product is not added until all fields are filled correctly | Pass   |
-| Validation for each field: |   |
-| Name (required, text input) | An error is displayed if left empty, asking to fill out the field | Pass   |
-| SKU (optional, text input)  | The product SKU can be added or left blank. No errors for empty input | Pass   |
-| Description (required, text input)   | An error is displayed if left empty, asking to fill out the field | Pass   |
-| Category 1 (required, dropdown) | An error is displayed if no category is selected: 'Please select an item in the list | Pass   |
-| Category 2 (required, dropdown) | An error is displayed if no category is selected: 'Please select an item in the list  | Pass   |
-| *Price Validation* |  | |
-| - Input a value less than 1 (e.g., 0.99, -5)     | Error: "Ensure this value is greater than or equal to 1." The form should not be submitted | Pass    |
-| - Input a non-numeric value (e.g., "abc")| Error: "Enter a number." The form should not be submitted | Pass    |
-| - Input a valid price (e.g., 50.99)  | The form accepts the value, and no errors are displayed  | Pass  |
-| - Input a price exceeding 8 digits (e.g., 9999999.99) | Error: "Ensure that there are no more than 8 digits in total." The form should not be submitted | Pass    |
-| - Input a valid price with exactly 8 digits (e.g., 999999.99) | The form accepts the value, and no errors are displayed  | Pass    |
-| *Rating Validation* |  |  |
-| - Input a value less than 1 (e.g., 0.5)  | Error: "Ensure this value is greater than or equal to 1." The form should not be submitted | Pass    |
-| - Input a value greater than 5 (e.g., 5.5, 6)    | Error: "Ensure this value is less than or equal to 5." The form should not be submitted | Pass    |
-| - Input a valid rating (e.g., 4.5)  | The form accepts the value, and no errors are displayed  | Pass    |
-| - Input a non-numeric value (e.g., "bad")| Error: "Enter a number." The form should not be submitted | Pass    |
-| *Weight Validation* | |  |
-| - Input a value less than 0.05 (e.g., 0.04, 0)   | Error: "Ensure this value is greater than or equal to 0.05." The form should not be submitted | Pass    |
-| - Input a value greater than 1.5 (e.g., 2, 10)   | Error: "Ensure this value is less than or equal to 1.5." The form should not be submitted | Pass    |
-| - Input a valid weight (e.g., 1.25) | The form accepts the value, and no errors are displayed   | Pass    |
-| - Input a non-numeric value (e.g., "heavy") | Error: "Enter a number." The form should not be submitted | Pass    |
+| Submit the empty form by clicking on 'Add Product'  | The superuser is taken to the Name field, and the help text is displayed" 'Name should be between 3 and 60 characters.'. Upon clicking Enter, the superuser gets a notification: 'Please fill in this field' | Pass   |
+| **Name**| | |
+| Add at least 3 characters to the product name | Error does not appear anymore, superuser can proceed to other fields | Pass |
+| SKU input field  | The product SKU can be added or left blank. No errors for empty input | Pass   |
+| Add at least 3 characters to the product name, try to submit the form | 'Please fill in this field' appears in the product description field | Pass |
+| **Description** | | |
+| Add one character to the product description field | 'Please lengthen this text to 100 characters or more (you are currently using 1 character).' is displayed | Pass |
+| Add 100 or more characters to the product description field |  Error does not appear anymore, superuser can proceed to other fields | Pass |
+|**Brand Category** | | |
+| Add at least 3 characters to the product name and at least 100 characters to the product description, try to submit the form | 'Please select an item in the list' displayed on the brand category dropdown | Pass |
+| **Gender Category** | | |
+| Add at least 3 characters to the product name, and at least 100 characters to the product description, select a brand from the brand category dropdown, and try to submit the form | 'Please select an item in the list' displayed on the gender category dropdown | Pass |
+| Add at least 3 characters to the product name, and at least 100 characters to the product description, select a brand from the brand category dropdown, select gender from the brand category dropdown, and try to submit the form | 'Please fill in this field' appears in the price field | Pass |
+|**Price** | | |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select a gender from the brand category dropdown, and input a value less than 1 (e.g., 0.99, -5) in the price input field  | 'Value must be greater or equal to 1.' is displayed | Pass    |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select a gender from the brand category dropdown, and try to input a non-numeric value (e.g., "abc") in the price input field  | The superuser is prevented from entering a non-numeric value in the price input field | Pass    |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select a gender from the brand category dropdown, and input a valid price (e.g., 50.99) in the price input field, try to submit the form  | 'Please fill in this field' appears in the rating field | Pass |
+|**Rating**| | |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select a gender from the brand category dropdown, and input a valid price (e.g., 50.99) in the price input field, input a value less than 1 (e.g., 0.5) in the rating validation field, try to submit the form  | 'Value must be greater or equal to 1.' is displayed | Pass    |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select a gender from the brand category dropdown, and input a valid price (e.g., 50.99) in the price input field, input a value greater than 5 (e.g., 5.5, 6) in the rating validation field, try to submit the form  | 'Value must be less or equal to 5.' is displayed | Pass    |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select a gender from the brand category dropdown, and input a valid price (e.g., 50.99) in the price input field, try to input a non-numeric value (e.g., "abc") in the rating validation field  | Superuser is prevented from entering a non-numeric value in the rating field | Pass    |
+| Add at least 3 characters to the product name, and at least 100 characters to the product description, select a brand from the brand category dropdown, select a gender from the brand category dropdown, and input a valid price (e.g., 50.99) in the price input field, input a valid rating (e.g., 4.5) in the rating validation field, try to submit the form  | 'Please fill in this field' appears in the weight field | Pass |
+| **Image** | | |
 | Image (optional, file upload)| Image file can be uploaded. No error is displayed if left empty. | Pass   |
-| - Availability (optional, checkbox) | No error is displayed if unchecked | Pass   |
-| - Featured Product (optional, checkbox) | No error is displayed if unchecked | Pass   |
-| Fill out the form with valid product details and submit | The product is added to the catalog and is now visible on the Shop, Product Manage Product Pages, notification displayed: 'Product added successfully!' | Pass  |
-| Access the "Add Product" page as a regular user | Regular users are denied access and redirected to the home page with an error message: "Only store owners have access to this action". | Pass   |
-| Mark the added product as "Featured" in the form and submit | The product is added to the homepage as a featured product in the featured product gallery | Pass  |
+| **Weight** | | |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select gender from the brand category dropdown, and input a valid price (e.g., 50.99) in the price input field,  a valid rating (e.g., 4.5) in the rating validation field, input a value less than 0.05 (e.g., 0.04, 0) in the weight input field, try to submit the form  | 'Value must be greater or equal to 0.05.' is displayed | Pass    |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select gender from the brand category dropdown, input a valid price (e.g., 50.99) in the price input field,  a valid rating (e.g., 4.5) in the rating validation field,  input a value greater than 1.5 (e.g., 2, 10) in the weight input field, try to submit the form  | 'Value must be greater or equal to 1.' is displayed | Pass    |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select gender from the brand category dropdown, input a valid price (e.g., 50.99) in the price input field,  a valid rating (e.g., 4.5) in the rating validation field, try to enter a non-numeric value (e.g., "abc") in the weight input field  | Superuser is prevented from entering non-numeric value in the rating field | Pass    |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select gender from the brand category dropdown, input a valid price (e.g., 50.99) in the price input field,  a valid rating (e.g., 4.5) in the rating validation field, try to enter a valid weight (e.g., 0.5) in the weight input field, try to submit the form  | The form accepts the value, and no errors are displayed | Pass    |
+| **Availability** | | |
+| Availability (optional, checkbox) | No error is displayed if unchecked | Pass   |
+| Add at least 3 characters to the product name, and at least 100 characters to the product description, select a brand from the brand category dropdown, select gender from the brand category dropdown, and input a valid price (e.g., 50.99) in the price input field,  a valid rating (e.g., 4.5) in the rating validation field, try to enter a valid weight (e.g., 0.5) in the weight input field, check the "Availability" checkbox and submit the form|  Notification displayed: 'Product added successfully!'. The superuser is Redirected to the Product page and the 'Add to Cart' button is active. The product is added to the catalog and is now visible on the Shop, Product Manage Product Pages. | Pass  |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select gender from the brand category dropdown, and input a valid price (e.g., 50.99) in the price input field,  a valid rating (e.g., 4.5) in the rating validation field, try to enter a valid weight (e.g., 0.5) in the weight input field, do not check the "Availability" checkbox and submit the form |  Notification displayed: 'Product added successfully!'. The superuser is redirected to the Product page, 'Out of Stock' unclickable button appears instead of the button 'Add to Cart'. The product is added to the catalog and is now visible on the Shop, Product Manage Product Pages. | Pass  |
+| **Featured Product** | | |
+| Featured Product (optional, checkbox) | No error is displayed if unchecked | Pass   |
+| Add at least 3 characters to the product name, at least 100 characters to the product description, select a brand from the brand category dropdown, select gender from the brand category dropdown, input a valid price (e.g., 50.99) in the price input field,  a valid rating (e.g., 4.5) in the rating validation field, try to enter a valid weight (e.g., 0.5) in the weight input field, mark the product as "Featured" in the form and submit |  Notification displayed: 'Product added successfully!'. The superuser is Redirected to the Product page. The product is added to the catalog and is now visible on the Shop, Product Manage Product Pages, and on the homepage as a featured product in the featured product gallery | Pass  |
+| **Additional validation**| | |
+| Fill in all fields correctly, but for the product name add letters and at least one of the following characters: <, >, !, @, #, $, %, ^, &, *, (, ), _, +, [, ], {, }, ;, :, ', ", ,, ., ?, /, ~, `, submit the form | 'Product name contains invalid characters. Please avoid using special symbols.' displayed | Pass    |
+| Fill in all fields correctly, but for the product name add only digits or symbols, submit the form | 'Product name must contain letters.' displayed | Pass    |
+| Fill in all fields correctly, but for the product name add only digits at least three characters, submit the form | 'Product name must contain letters.' displayed | Pass    |
+| Try to submit the form with an empty name field | The superuser is taken to the name field and upon clicking Enter asked to fill in the field. | Pass  |
+| Submit the form with only spaces in the name field | The form displays an error message: 'Please enter the product name.' The form does not submit. | Pass  |
+| Submit the form with a name that is too short (less than 3 characters) | The form displays an error message: 'Please enter the product name.' Help text displayed: Name should be between 3 and 60 characters. The form does not submit. | Pass  |
+| Submit the form with a name that is too long (more than 60 characters)| The form displays an error message:'Ensure this value has at most 60 characters (it has 255).' The form does not submit. | Pass  |
+| Fill in all fields correctly, but for the SKU use at least one character that is not letter, number or dash (e.g., @, #, $, %, ^, &, *, (, ), _, +, [, ], {, }, ;, :, /, ~, `, \, =, <, >), submit the form | SKU can only contain letters, numbers, and dashes.' displayed | Pass    |
+| Fill in all fields correctly, in the price input add a price exceeding 8 digits (e.g., 9999999.99), and submit the form | 'Ensure that there are no more than 8 digits in total.' displayed | Pass    |
+| **General testing** |||
+| Submit the form with invalid data in one or more fields | The form is not submitted. Error messages are displayed for the specific fields that have invalid input, and the user is prompted to correct the errors. | Pass  |
+| Fill out the form with valid product details and submit | The product is added to the catalog, the superuser is redirected to the Product page, notification is displayed: 'Product added successfully!' and is now visible on the Shop, Product, Manage Product Pages | Pass  |
+| Fill out the form with valid product details, add extra spaces in any field,  for instance before and after the product name and submit the form | Any leading or trailing whitespaces are removed from the input. For example, "  Product Name  " is saved as "Product Name". | Pass  |
 | Click on 'Cancel' at the bottom of the form | The superuser is redirected back to the shop page without saving any product details, notification is displayed: 'action cancelled. No changes were made.' | Pass   |
+| Access the "Add Product" page as a regular user following this URL: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/add/ | Regular users are denied access and redirected to the home page with an error message: "Only store owner has access to this page". | Pass   |
 
 #### Edit Product Page
 
 | Action/Feature | Expected Behavior | Status |
 |-------------------------|-------------------------|----------------|
 | Locate any available product on the Home Page, Shop Page, Manage Products, or Product Page and click on the 'Edit' button | The admin is taken to the "Edit Product" page for the selected product | Pass |
-| **Price Validation** | | |
-| - Input a value less than 1 (e.g., 0.99, -5) | Error: "Ensure this value is greater than or equal to 1." The form should not be submitted. | Pass |
-| - Input a non-numeric value (e.g., "abc") | Error: "Enter a number." The form should not be submitted. | Pass |
-| - Input a valid price (e.g., 50.99) | The form accepts the value, and no errors are displayed. | Pass |
-| - Input a price exceeding 8 digits (e.g., 9999999.99) | Error: "Ensure that there are no more than 8 digits in total." The form should not be submitted. | Pass |
-| - Input a valid price with exactly 8 digits (e.g., 999999.99) | The form accepts the value, and no errors are displayed. | Pass |
-| **Rating Validation** | | |
-| - Input a value less than 1 (e.g., 0.5) | Error: "Ensure this value is greater than or equal to 1." The form should not be submitted. | Pass |
-| - Input a value greater than 5 (e.g., 5.5, 6) | Error: "Ensure this value is less than or equal to 5." The form should not be submitted. | Pass |
-| - Input a valid rating (e.g., 4.5) | The form accepts the value, and no errors are displayed. | Pass |
-| - Input a non-numeric value (e.g., "bad") | Error: "Enter a number." The form should not be submitted. | Pass |
-| **Weight Validation** | | |
-| - Input a value less than 0.05 (e.g., 0.04, 0) | Error: "Ensure this value is greater than or equal to 0.05." The form should not be submitted. | Pass |
-| - Input a value greater than 1.5 (e.g., 2, 10) | Error: "Ensure this value is less than or equal to 1.5." The form should not be submitted. | Pass |
-| - Input a valid weight (e.g., 1.25) | The form accepts the value, and no errors are displayed. | Pass |
-| - Input a non-numeric value (e.g., "heavy") | Error: "Enter a number." The form should not be submitted. | Pass |
-| **General Form Functionality** | | |
-| Locate any available product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads remove the tick from the field "availability" and click on the "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!" The product shows as "Out of Stock" on the Product Page. The same product is displayed as "Out of Stock" on the Shop Page and Home Page if the product is included in the featured products gallery. This product can't be added to the cart from any page | Pass |
-| Click the "Out of Stock" button on the Product Page, Shop Page or Home Page| The button is disabled, and clicking it results in no action | Pass |
-| Locate any out-of-stock product on the Home Page, Shop Page, or from the Product Page and click on the 'Edit" button. When the page loads tick the field "availability" and click on the "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!" The product becomes available and the "Add to Cart" button appears on the Product Page, Shop Page and Home Page if the product is included in the featured products gallery | Pass |
-| Leave a required field empty (e.g., Name or Price) | Error messages are displayed, and the form cannot be submitted until all required fields are filled out correctly. | Pass |
-| Upload a new image | The new image is uploaded, and the old one is replaced. No error is displayed if no image is uploaded (optional). | Pass |
-| Click on "Cancel" | The superuser is redirected back to the product page, and no changes are saved. Notification "Action cancelled. No changes were made." is displayed. | Pass |
-| Locate any product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads, edit any product details (e.g., name, collections, price, description or upload a new image) and enter valid parameters, then click on the "Update Product" button | Notification is displayed "Product updated successfully!" and changes are reflected correctly on all the pages, where the product is displayed: in galleries (Shop and Home pages if relevant) as well as on the Product Page | Pass |
-| Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/edit/45/) | The user is redirected to the login page with a message indicating that they need to log in | Pass |
-| Attempt to access the edit URL as a regular user | Regular users are denied access to editing product, redirected to the home page and shown an error message: "Only store owner has access to this action" | Pass |
-
-#### Edit Product Page
-
-| Action/Feature | Expected Behavior | Status |
-|-------------------------|-------------------------|----------------|
-| Locate any available product on the Home Page, Shop Page, Manage Products, or Product Page and click on the 'Edit' button | The admin is taken to the "Edit Product" page for the selected product | Pass |
-| **Edit Product Name**	|||
-| Change the product name to a valid one (letters, numbers, spaces), click Update Product	| The form accepts the value, and no errors are displayed |	Pass |
-| Submit the form with invalid characters in the product name (e.g., @, #, $, %, ^, &, *, (, ), _, +, [, ], {, }, ;, :, /, ~, `, \, =, <, >) | 'Product name contains invalid characters. Please avoid using special symbols' is displayed	| Pass |
-| Submit the form with only numbers or symbols in the product name | 'Product name must contain letters.' is displayed	| Pass |
-| Submit the form with a valid product name	| The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed	| Pass |
-| **Edit SKU**	| | |	
-| Submit the form with invalid characters in the SKU (e.g., @, #, $, %, etc.)	| 'SKU can only contain letters, numbers, and dashes.' is displayed	| Pass |
-|Submit the form with a valid SKU	| The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed	| Pass |
+| **Edit Product Name** |||
+| Change the product name to a valid one (letters, numbers, spaces), click Update Product | The form accepts the value, and no errors are displayed | Pass |
+| Submit the form with invalid characters in the product name (e.g., @, #, $, %, ^, &, *, (, ), _, +, [, ], {, }, ;, :, /, ~, `, \, =, <, >) | 'Product name contains invalid characters. Please avoid using special symbols' is displayed | Pass |
+| Submit the form with only numbers or symbols in the product name | 'Product name must contain letters.' is displayed  | Pass |
+| Submit the form with a valid product name  | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed  | Pass |
+| **Edit SKU** | | |     
+| Submit the form with invalid characters in the SKU (e.g., @, #, $, %, etc.)   | 'SKU can only contain letters, numbers, and dashes.' is displayed   | Pass |
+|Submit the form with a valid SKU  | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed  | Pass |
 | **Edit Description** |||
-| Change the description to less than 100 characters, click Update Product |	Superuser is prevented from submittign the form. 'Please lengthen this text to 100 characters or more' is displayed on hover and help text is displayed: 'Description should be between 100 and 3000 characters.' | Pass |
-| Change the description to a valid one (between 100 and 3000 characters), click Update Product	| The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed | Pass |
+| Change the description to less than 100 characters, click Update Product |    Superuser is prevented from submitting the form. 'Please lengthen this text to 100 characters or more' is displayed on hover and help text is displayed: 'Description should be between 100 and 3000 characters.' | Pass |
+| Change the description to a valid one (between 100 and 3000 characters), click Update Product     | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed | Pass |
 |**Edit Brand Category** |||
 |Select a new Brand Category from the dropdown, click Update Product | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed | Pass |
-| **Edit Gender Category** |||	
-| Select a new Gender Category from the dropdown click Update Product | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed | Pass |
+| **Edit Gender Category** |||     
+| Select a new Gender Category from the dropdown and click Update Product | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed | Pass |
 | **Edit Image** |||
 |Upload a new image,  click Update Product  | Superuser redirected to Product Page, 'Product updated successfully!' displayed. The new image is uploaded, and the old one is replaced | Pass |
 | **Edit Price** | | |
 | Input a value less than 1 (e.g., 0.99, -5) in the price input field | 'Value must be greater or equal to 1.' is displayed | Pass    |
-| Input a non-numeric value (e.g., "abc") in the price input field  | Superuser is prevented from entering non-numeric value in the price input field | Pass    |
+| Input a non-numeric value (e.g., "abc") in the price input field  | Superuser is prevented from entering a non-numeric value in the price input field | Pass    |
 | Input a valid price (e.g., 50.99) in the price input field, try to submit the form  | The form accepts the value, and no errors are displayed.  Superuser redirected to Product Page, 'Product updated successfully!' displayed.| Pass |
-| Input a price exceeding 8 digits (e.g., 9999999.99) | 'Ensure that there are no more than 8 digits in total.' is displayed. The form is not be submitted. | Pass |
+| Input a price exceeding 8 digits (e.g., 9999999.99) | 'Ensure that there are no more than 8 digits in total.' is displayed. The form is not to be submitted. | Pass |
 | Input a valid price with exactly 8 digits (e.g., 999999.99) | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed.| Pass |
 | **Edit Rating** | | |
-| Input a value less than 1 (e.g., 0.5) | 'Ensure this value is greater than or equal to 1.' The is not be submitted. | Pass |
-| Input a value greater than 5 (e.g., 5.5, 6) | 'Ensure this value is less than or equal to 5.' is displayed. The form is not be submitted. | Pass |
+| Input a value less than 1 (e.g., 0.5) | 'Ensure this value is greater than or equal to 1.' The is not to be submitted. | Pass |
+| Input a value greater than 5 (e.g., 5.5, 6) | 'Ensure this value is less than or equal to 5.' is displayed. The form is not to be submitted. | Pass |
 | Input a valid rating (e.g., 4.5) | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed. | Pass |
 | Input a non-numeric value (e.g., "bad") | Superuser is prevented from entering non-numeric value | Pass    |
 | **Edit Weight** | | |
-| Input a value less than 0.05 (e.g., 0.04, 0) | 'Ensure this value is greater than or equal to 0.05.' is displayed. The form is not be submitted. | Pass |
-| Input a value greater than 1.5 (e.g., 2, 10) | 'Ensure this value is less than or equal to 1.5.' is displayed. The form is not be submitted. | Pass |
+| Input a value less than 0.05 (e.g., 0.04, 0) | 'Ensure this value is greater than or equal to 0.05.' is displayed. The form is not submitted. | Pass |
+| Input a value greater than 1.5 (e.g., 2, 10) | 'Ensure this value is less than or equal to 1.5.' is displayed. The form is not submitted. | Pass |
 | Input a valid weight (e.g., 1.25) | The form accepts the value, and no errors are displayed. Superuser redirected to Product Page, 'Product updated successfully!' displayed. | Pass |
 | Input a non-numeric value (e.g., "heavy") | Superuser is prevented from entering non-numeric value | Pass |
 | **Edit Availability** | | |
@@ -1594,18 +1584,14 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Click the "Out of Stock" button on the Product Page, Shop Page or Home Page| The button is disabled, and clicking it results in no action | Pass |
 | Locate any out-of-stock product on the Home Page, Shop Page, or from the Product Page and click on the 'Edit" button. When the page loads tick the field "availability" and click on the "Update Product" button | Superuser is redirected to the relevant Product Page. Notification is displayed "Product updated successfully!" The product becomes available and the "Add to Cart" button appears on the Product Page, Shop Page and Home Page if the product is included in the featured products gallery | Pass |
 | **Edit Featured Product** | | |
-| Locate a product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads, mark the product as "Featured" in the form and submit |  Notification displayed: 'Product updated successfully!'. Superuser Redirected to the Product page. The product is added to the Featured Products gallery on the Home Page | Pass  |
-| Locate a product on the Home Page in the Featured Products gallery and click on the 'Edit" button. When the page loads, unmark the product as "Featured" in the form and submit |  Notification displayed: 'Product updated successfully!'. Superuser Redirected to the Product page. The product is removed from the Featured Products gallery on the Home Page | Pass  |
+| Locate a product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads, mark the product as "Featured" in the form and submit |  Notification displayed: 'Product updated successfully!'. The superuser Redirected to the Product page. The product is added to the Featured Products gallery on the Home Page | Pass  |
+| Locate a product on the Home Page in the Featured Products gallery and click on the 'Edit" button. When the page loads, unmark the product as "Featured" in the form and submit |  Notification displayed: 'Product updated successfully!'. The superuser Redirected to the Product page. The product is removed from the Featured Products gallery on the Home Page | Pass  |
 | **General testing** |||
 | Leave a required field empty (e.g., Name or Price) | Error messages are displayed, and the form cannot be submitted until all required fields are filled out correctly. | Pass |
 | Click on "Cancel" | The superuser is redirected back to the product page, and no changes are saved. Notification "Action cancelled. No changes were made." is displayed. | Pass |
 | Locate any product on the Home Page, Shop Page, Manage Products or from the Product Page and click on the 'Edit" button. When the page loads, edit any product details (e.g., name, collections, price, description or upload a new image) and enter valid parameters, then click on the "Update Product" button | Notification is displayed "Product updated successfully!" and changes are reflected correctly on all the pages, where the product is displayed: in galleries (Shop and Home pages if relevant) as well as on the Product Page | Pass |
 | Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/edit/45/) | The user is redirected to the login page with a message indicating that they need to log in | Pass |
 | Attempt to access the edit URL as a regular user | Regular users are denied access to editing product, redirected to the home page and shown an error message: "Only store owner has access to this action" | Pass |
-
-
-
-
 
 #### Delete Product Functionality
 

@@ -963,7 +963,9 @@ ul.list-unstyled {
 #id_sku_helptext,
 #id_description_helptext,
 #id_weight_helptext,
-#id_rating_helptext {
+#id_rating_helptext,
+#id_title_helptext,
+#id_content_helptext {
     color: #AA9159 !important;
     font-style: italic;
     font-size: 12px;

@@ -3,11 +3,11 @@ from django.core.validators import MinLengthValidator
 
 class Policy(models.Model):
     title = models.CharField(
-        max_length=30,
+        max_length=150,
         validators=[MinLengthValidator(5)]
     )
     content = models.TextField(
-        validators=[MinLengthValidator(50)]
+        validators=[MinLengthValidator(100)]
     )
     updated_at = models.DateTimeField(auto_now=True)
     position = models.PositiveIntegerField(default=0)

@@ -5,37 +5,15 @@
     <h1 class="text-center">Store Policies</h1>
     <ul class="px-0">
         {% for policy in policies %}
-            {% if policy.title == "Terms & Conditions" %}
-                <li id="terms">
-                    <h2 class="text-center">{{ policy.title }}</h2>
-                    {% if user.is_superuser %}
-                        <div class="d-flex justify-content-center mt-4">
-                            <a href="{% url 'edit_policy' policy.pk %}" class="btn btn-profile">Edit</a>
-                        </div>
-                    {% endif %}
-                    {{ policy.content|linebreaks }}
-                </li>
-            {% elif policy.title == "Return Policy" %}
-                <li id="return-policy">
-                    <h2 class="text-center">{{ policy.title }}</h2>
-                    {% if user.is_superuser %}
-                        <div class="d-flex justify-content-center mt-4">
-                            <a href="{% url 'edit_policy' policy.pk %}" class="btn btn-profile">Edit</a>
-                        </div>
-                    {% endif %}
-                    {{ policy.content|linebreaks }}
-                </li>
-            {% elif policy.title == "Privacy Policy" %}
-                <li id="privacy-policy">
-                    <h2 class="text-center">{{ policy.title }}</h2>
-                    {% if user.is_superuser %}
-                        <div class="d-flex justify-content-center mt-4">
-                            <a href="{% url 'edit_policy' policy.pk %}" class="btn btn-profile">Edit</a>
-                        </div>
-                    {% endif %}
-                    {{ policy.content|linebreaks }}
-                </li>
-            {% endif %}
+            <li id="{{ policy.title|slugify }}">
+                <h2 class="text-center">{{ policy.title }}</h2>
+                {% if user.is_superuser %}
+                    <div class="d-flex justify-content-center mt-4">
+                        <a href="{% url 'edit_policy' policy.pk %}" class="btn btn-profile">Edit</a>
+                    </div>
+                {% endif %}
+                {{ policy.content|linebreaks }}
+            </li>
         {% endfor %}
     </ul>
 </div>

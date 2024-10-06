@@ -851,7 +851,7 @@ Store Policies page can be accessed in the footer of the site and the page conta
 **Terms and Conditions**
 ![Store Policies](/media/terms-and-conditions.jpeg)
 
-### Profile - Orders and Address
+#### Profile - Orders and Address
 
 If a user is logged in, they can access the "Orders and Address" page via the account menu in the header. This page functions as a profile, allowing users to view their past orders and update their default delivery address:
 
@@ -937,13 +937,7 @@ Additionally, superusers can mark any product as a Featured Product to be displa
 
 #### Manage Policies
 
-The "Manage Policies" page is essentially the Policies Page with extended functionality for superusers. It allows superusers to update the site's policies, such as Terms & Conditions, Return Policy, and Privacy Policy, through a hidden "Edit Policy" page. This feature helps maintain the store’s compliance with business and legal requirements, ensuring policies are always current and aligned with the latest regulations.
-
-![Edit Policies Terms and Conditions](/media/edit-policies-terms-and-conditions.jpeg)
-
-![Policy Updated Successfully Notification](/media/policy-updated-successfully.jpeg)
-
-#### Store Policies Admin
+The "Manage Policies" page is essentially the Policies Page with extended functionality for superuser. It allows the superuser to update the site's policies, including the Terms & Conditions, Return Policy, and Privacy Policy, via "Edit" buttons visible only to superuser:
 
 ![Terms & onditions Eedit.jpeg](/media/terms-and-conditions-edit.jpeg)
 
@@ -951,6 +945,15 @@ The "Manage Policies" page is essentially the Policies Page with extended functi
 
 ![Privacy Policy Edit.jpeg](/media/privacy-policy-edit.jpeg)
 
+ These buttons direct the superuser to a hidden "Edit Policies" page, where changes can be made:
+
+![Edit Policies Terms and Conditions](/media/edit-policies-terms-and-conditions.jpeg)
+
+Upon saving the updates, a notification is displayed to confirm the changes:
+
+![Policy Updated Successfully Notification](/media/policy-updated-successfully.jpeg)
+
+This feature ensures the store remains compliant with business and legal requirements, keeping policies up-to-date with the latest regulations.
 
 #### Profile - Orders and Address
 
@@ -986,7 +989,7 @@ Individual order editing:
 
 ![Admin Order Editing](/media/admin-order-editing.jpeg)
 
-The superuser can create new products, view the list of all the exiting products, and edit and filter them:
+The superuser can create new products, view the list of all the exiting products, edit, filter and delete them:
 
 ![Admin Product Management](/media/admin-product-management.jpeg)
 
@@ -994,7 +997,7 @@ The superuser can manage existing categories by clicking on each of them as well
 
 ![Admin Categories Management](/media/admin-categories-management.jpeg)
 
-The superuser can edit existing policies and create new policies: 
+The superuser can edit and delete existing policies and create new policies: 
 ![Admin Policies Management](/media/admin-policies-management.jpeg)
 
 The superuser can manage existing Shipping Methods and adjust rates, as well as create new Shipping Methods with rates: 
@@ -1491,8 +1494,9 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Submit the empty form by clicking on 'Add Product'  | The superuser is taken to the Name field, and the help text is displayed" 'Name should be between 3 and 60 characters.'. Upon clicking Enter, the superuser gets a notification: 'Please fill in this field' | Pass   |
 | **Name**| | |
 | Add at least 3 characters to the product name | Error does not appear anymore, superuser can proceed to other fields | Pass |
-| SKU input field  | The product SKU can be added or left blank. No errors for empty input | Pass   |
 | Add at least 3 characters to the product name, try to submit the form | 'Please fill in this field' appears in the product description field | Pass |
+| **SKU input field** |||
+| SKU input field  | The product SKU can be added or left blank. No errors for empty input | Pass   |
 | **Description** | | |
 | Add one character to the product description field | 'Please lengthen this text to 100 characters or more (you are currently using 1 character).' is displayed | Pass |
 | Add 100 or more characters to the product description field |  Error does not appear anymore, superuser can proceed to other fields | Pass |

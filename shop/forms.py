@@ -97,9 +97,9 @@ class ProductForm(forms.ModelForm):
                 "Product name must be at least 3 characters long."
             )
 
-        if len(name) > 255:
+        if len(name) > 60:
             raise forms.ValidationError(
-                "Product name cannot exceed 255 characters."
+                "Product name cannot exceed 60 characters."
             )
 
         if not re.search(r'[a-zA-Z]', name):

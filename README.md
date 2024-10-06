@@ -1374,15 +1374,23 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 |-------------------------|-------------------------|----------------|
 | Visit the checkout page with items in the cart by clicking on the Checkout button in the cart | The page loads displaying the Order summary and checkout fields | Pass |
 | Click Edit Cart link | Cart page loads | Pass |
+| **Existing User with saved address** |||
 | Click on Login in the section: 'Have an account? Login to prefill your details or register' | The user is directed to the Login page | Pass |
 | Log in from the Checkout page | After logging in, the user is redirected back to the Checkout page | Pass |
 | Click on Register in the section: 'Have an account? Login to prefill your details or register | The user is directed to the Registration page | Pass |
 | Log in as a user with saved delivery details | The Checkout page loads with delivery address prefilled | Pass |
-| Submit the form without entering a country | The User is taken to the country field for selection and the order cannot be completed | Pass |
-| Submit the form without entering a street address | Error message: "This field is required." | Pass |
-| Submit the form without entering a town or city | Error message: "This field is required." | Pass |
-| Submit the form without entering a postcode | Error message: "This field is required." | Pass |
-| Submit the form with valid delivery address details | No error message, form is submitted successfully | Pass |
+|**Anonimous User** |||
+| Submit the checkout form with empty fields | The user is taken to the Full Name field. Upon clicking Enter or hovering on the field, the user gets a notification: 'Please fill in this field' | Pass |
+| Add name and submit the checkout form | The user is taken to the Email Address field. Upon clicking Enter or hovering on the field, the user gets a notification: 'Please fill in this field' | Pass |
+| Fill out the Full Name, add Email Address without the '@' sign, and click Complete Order | "Please include an '@' in the email address. 'email' is missing an '@'" appears in the 'Email Address' field | Pass |
+| Fill out the Full Name, add Email Address with the '@' sign (e.g., "test@"), and click Complete Order | "Please enter a part following '@'. 'test@' is incomplete' appears in the 'Email Address' field | Pass |
+| Fill out the Full Name, add full Email Address with the '@' sign and a part following '@' test@example.com, and click Complete Order | The user is taken to the Phone Number field. Upon clicking Enter or hovering on the field, the user gets a notification: 'Please fill in this field'  | Pass |
+| Fill out the Full Name, and full Email Address and add a Phone Number, click Complete Order | The user is taken to the Country field. Upon clicking Enter or hovering on the field, the user gets a notification: 'Please fill in this field'  | Pass |
+| Fill out the Full Name, and full Email Address, add a Phone Number, select a Country from the dropdown, and click Complete Order | The user is taken to the 'Street Address 1' field. Upon clicking Enter or hovering on the field, the user gets a notification: 'Please fill in this field'  | Pass |
+| Fill out the Full Name, and full Email Address, add a Phone Number, select a Country from the dropdown, fill in 'Street Address 1', and click Complete Order | The user is taken to the 'Town or City' field. Upon clicking Enter or hovering on the field, the user gets a notification: 'Please fill in this field'  | Pass |
+notification: 'Please fill in this field'  | Pass |
+| Fill out the Full Name, and full Email Address, add a Phone Number, select a Country from the dropdown, fill in 'Street Address 1', 'Town or City' and click Complete Order | The user is taken to the 'Postal Code' field. Upon clicking Enter or hovering on the field, the user gets a notification: 'Please fill in this field'  | Pass |
+| Fill out the Full Name, and full Email Address, add a Phone Number, select a Country from the dropdown, fill in 'Street Address 1', 'Town or City', and 'Postal Code' and click Complete Order | The user gets a notification: 'You card number is incomplete'  | Pass |
 | Select Priority shipping | Shipping charge updates to reflect the higher Priority shipping cost and the total is recalculated accordingly | Pass |
 | Select Standard shipping after selecting Priority | Shipping charge updates to reflect Standard rate and the total is recalculated accordingly | Pass |
 | Add one add-on (Shipping insurance) | The add-on is applied to each product and is reflected in the summary under add-ons and the total is recalculated accordingly | Pass |
@@ -1390,9 +1398,43 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Remove one add-on | Add-ons are removed, and the total is recalculated accordingly | Pass |
 | Remove both add-ons | Add-ons are removed, and the total is recalculated accordingly | Pass |
 | Submit the form without entering a card number | Error message: "Your card number is incomplete." | Pass |
-| Enter card number but no expiration date  | Error message: "Your card's expiration date is incomplete." | Pass |
-| Enter the card number and expiration date, but no security code | Error message: "Your card's security code is incomplete." | Pass |
-| Submit the form with valid card details (4242 4242 4242 4242, valid date and CVC) | Stripe processes the payment, and the user is redirected to the Thank You page | Pass |
+| Enter card number (4242 4242 4242 4242) but no expiration date  | Error message: "Your card's expiration date is incomplete." | Pass |
+| Enter the card number (4242 4242 4242 4242) and any valid expiration date, but no security code | Error message: "Your card's security code is incomplete." | Pass |
+| Submit the form with valid card details (4242 4242 4242 4242, valid date and any CVC) | Stripe processes the payment, and the user is redirected to the Thank You page | Pass |
+| **Additional validation after submitting the checkout form**|||
+| **Full Name Validation** | | |
+| Enter a single word (e.g., "John") in the full name field and submit the form | Error message "Enter your full name (first and last)." is displayed | Pass |
+| Enter only digits in the full name field and submit the form | Error message "Full name can only contain letters, spaces, apostrophes, and dashes." is displayed | Pass |
+| Enter any of the following characters in the Full Name field: (<>!@#$%^&*()_+[]{}|;:\'",.?/~`\\=) and submit the form | Error message "Full name can only contain letters, spaces, apostrophes, and dashes." is displayed | Pass |
+| Enter a valid full name (e.g., "John Doe") | The error message disappears, and the form accepts the full name input | Pass |
+| **Phone Number Validation** | | |
+| Enter a phone number with less than 7 digits (e.g., "123456") | Error message "Phone number must be between 7 and 15 digits long." is displayed | Pass |
+| Enter a phone number with more than 15 digits (e.g., "1234567890123456") | Error message "Phone number must be between 7 and 15 digits long." is displayed | Pass |
+| Enter letters in the phone number input field | Error message "Phone number must contain only digits." is displayed | Pass |
+| Enter any of the following characters in the phone number input fields | Error message "Phone number must contain only digits." is displayed | Pass |
+| Enter a valid phone number (e.g., "1234567890") | The error message disappears, and the form accepts the phone number input | Pass |
+| **Street Address 1 Validation** | | |
+| Enter a street address without letters (e.g., "123456") | Error message "Street Address 1 must contain both letters and numbers." is displayed | Pass |
+| Enter a street address without a number (e.g., abc") | Error message "Street Address 1 must contain both letters and numbers." is displayed | Pass |
+| Enter a valid street address (e.g., "123 Main Street") | The error message disappears, and the form accepts the street address input | Pass |
+| **Street Address 2 Validation (Optional)** | | |
+| Leave the street address 2 field empty and submit the form | The form is accepted without errors | Pass |
+| Enter street address 2 without letters (e.g., "123456") | Error message "Street Address 2 must contain both letters and numbers." is displayed | Pass |
+| Enter street address 2 without number (e.g., abc") | Error message "Street Address 2 must contain both letters and numbers." is displayed | Pass |
+| Enter a valid street address 2 (e.g., "Apt 5B") | The error message disappears, and the form accepts the street address input | Pass |
+| **Town/City Validation** | | |
+| Enter a town name containing digits (e.g., "123City") | Error message "Town/City can only contain letters." is displayed | Pass |
+| Enter a town name containing any of the following characters (<>!@#$%^&*()_+[]{}|;:\'",.?/~`\\=) | Error message "Town/City can only contain letters." is displayed | Pass |
+| Enter a valid town name (e.g., "Cork") | The error message disappears, and the form accepts the town/city input | Pass |
+| **County Validation (Optional)** | | |
+| Enter an invalid county name containing digits (e.g., "123County") | Error message "County can only contain letters." is displayed | Pass |
+| Enter an invalid county name containing any of the following characters (<>!@#$%^&*()_+[]{}|;:\'",.?/~`\\=) | Error message "County can only contain letters." is displayed | Pass |
+| Enter a valid county name (e.g., "Los Angeles County") | The error message disappears, and the form accepts the county input | Pass |
+| **Postal Code Validation** | | |
+| Enter a postal code shorter than 3 characters (e.g., "12") | Error message "Please lengthen this text to 3 characters or more (you are currently using 2 characters)." is displayed | Pass |
+| Enter a postal code longer than 10 characters (e.g., "12345678901") | User is prevented from entering more than 10 characters | Pass |
+| Enter a valid postal code (e.g., "T56 T122") | The error message disappears, and the form accepts the postal code input | Pass |
+| **Final Testing** |||
 | Submit the checkout form with all fields filled correctly | Stripe payment intent is initiated, the user is redirected to the Thank You page | Pass |
 | Submit the form with no add-ons | The order is created without add-ons, and payment proceeds successfully | Pass |
 
@@ -1410,7 +1452,9 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Click submit without filling out fields | "Please fill in this field" appears in the 'Name' field | Pass |
 | Fill out only the name, and click submit | "Please fill in this field" appears in the 'Email' field | Pass |
 | Fill out the name and email fields without the '@' sign, and click submit | "Please include an '@' in the email address. 'email' is missing an '@'" appears in the 'Email' field | Pass |
-| Fill out the name and email address with the '@' sign, and click submit | "Please fill in this field" appears in the 'Message' field | Pass |
+| Fill out the name and email address with the '@' sign, and click submit | "Please enter a part following '@'. 'name@' is incomplete' appears in the 'Email' field | Pass |
+| Fill out the name and full email address with the '@' sign and a part following it, and click submit |"Please fill in this field" appears in the 'Message' field | Pass |
+| Fill out the Full Name, add Email Address with the '@' sign, and click submit | "Please enter a part following '@'. 'name@' is incomplete' appears in the 'Email Address' field | Pass |
 | Fill out the name, email address with the '@' sign, message, and remove 'General Enquiry' from the subject, and click submit    | "Please fill in this field" appears in the 'Subject' field | Pass |
 " Fill out all fields except for the 'Subject' (delete prefilled text "General Enquiry"), and click submit | "Please fill in this field" appears in the 'Subject' field | Pass |
 | Fill out the name, and email address with the '@'sign, add a subject or keep the default prefilled text "General Enquiry", and add a message, click submit | The notification "Thanks for reaching out! We got your message and will be in touch within 24 hours." displayed at the top of the screen | Pass |
@@ -2088,7 +2132,22 @@ The site's colours were also evaluated for accessibility to ensure they are safe
 
 #### Solved Bugs
 
+**Uninitialised Payment Intent on Form Validation Failure**
+
+During the implementation of additional input field validation in the checkout form, an issue arose where the `intent` variable was not properly initialised when form validation failed during a POST request. Specifically, if invalid data was submitted, the logic did not initialise intent, causing an exception during the rendering of the checkout page.
+
+![Uninitialised Payment Intent](/media/uninitialised-payment-intent-bug.jpeg)
+
+*Solution:*
+To resolve the issue, the initialisation of the `intent` variable was moved outside the conditional logic. This ensures that `intent` is always set, regardless of whether the form is valid or not.
+
 #### Remaining Bugs
+
+**Browser Validation Not Triggering for certain input fields**
+
+In the Add Product and Checkout forms, input fields do not trigger the browser's required field validation in Chrome, when left empty upon clicking the submit button. Instead, validation is only triggered when pressing the Enter key on the keyboard. To ensure users receive proper feedback when fields are not filled out correctly, server-side validation, the clean method, and help text were added.
+
+This issue may be related to how Crispy Forms handles fields, especially when displayed individually or when using uncommon field names. Rendering the entire form did not resolve the issue either. While this doesn't affect the application's functionality for data storage and retrieval, as server-side validation ensures completeness, it may impact user experience due to the lack of immediate browser feedback.
 
 ## Deployment
 

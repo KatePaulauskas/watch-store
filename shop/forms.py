@@ -133,8 +133,16 @@ class ProductForm(forms.ModelForm):
         instance = super().save(commit=False)
         if commit:
             instance.save()
-            instance.categories.set([
-                self.cleaned_data['category_1'],
-                self.cleaned_data['category_2']
-            ])
+            # Set both categories: brand and gender
+            categories = []
+            category_1 = self.cleaned_data.get('category_1')
+            category_2 = self.cleaned_data.get('category_2')
+
+            if category_1:
+                categories.append(category_1)
+            if category_2:
+                categories.append(category_2)
+
+            instance.categories.set(categories)
         return instance
+

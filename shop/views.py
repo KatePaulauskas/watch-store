@@ -165,14 +165,19 @@ def edit_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    product_categories = list(product.categories.all())
+    # Retrieve the brand category
+    brand_category = product.categories.filter(
+        id__in=Category.objects.exclude(name__in=['women', 'men']).values_list('id', flat=True)
+    ).first()
+
+    # Retrieve the gender category
+    gender_category = product.categories.filter(
+        name__in=['women', 'men']
+    ).first()
+
     initial_data = {
-        'category_1': (
-            product_categories[0] if len(product_categories) > 0 else None
-        ),
-        'category_2': (
-            product_categories[1] if len(product_categories) > 1 else None
-        ),
+        'category_1': brand_category,
+        'category_2': gender_category,
     }
 
     if request.method == 'POST':

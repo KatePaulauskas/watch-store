@@ -45,8 +45,24 @@ def checkout(request):
     # Fetch available add-ons
     add_ons = AddOn.objects.all()
 
+    # Ensure the cart is retrieved for both POST and GET methods
+    cart = request.session.get('cart', {})
+    if not cart:
+        messages.error(request, "There's nothing in your cart")
+        return redirect(reverse('shop'))
+
+    current_cart = cart_contents(request)
+    total = current_cart['grand_total']
+    stripe_total = round(total * 100)
+    stripe.api_key = stripe_secret_key
+
+    intent = stripe.PaymentIntent.create(
+        amount=stripe_total,
+        currency=settings.STRIPE_CURRENCY,
+        payment_method_types=['card'],
+    )
+
     if request.method == 'POST':
-        cart = request.session.get('cart', {})
         selected_delivery_method_id = request.POST.get('delivery_method')
 
         # Use the selected delivery method or fall back to standard
@@ -123,22 +139,7 @@ def checkout(request):
                 Please double check your information.')
 
     else:
-        cart = request.session.get('cart', {})
-        if not cart:
-            messages.error(request, "There's nothing in your cart")
-            return redirect(reverse('shop'))
-
-        current_cart = cart_contents(request)
-        total = current_cart['grand_total']
-        stripe_total = round(total * 100)
-        stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY,
-            payment_method_types=['card'],
-        )
-
-        # Attempt to prefill the form with any info user maintains in profile
+        # Prefill the form with user profile data, if available
         if request.user.is_authenticated:
             profile, created = UserProfile.objects.get_or_create(
                 user=request.user)

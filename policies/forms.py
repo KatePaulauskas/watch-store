@@ -3,12 +3,13 @@ from django.core import validators
 from .models import Policy
 import re
 
+
 class PolicyForm(forms.ModelForm):
 
     title = forms.CharField(
         error_messages={'required': 'Please enter the policy title.'},
         min_length=5,
-        max_length=150,
+        max_length=60,
         help_text="Title should be between 5 and 60 characters."
     )
 
@@ -27,7 +28,6 @@ class PolicyForm(forms.ModelForm):
         ]
     )
 
-
     class Meta:
         model = Policy
         fields = ['title', 'content']
@@ -40,9 +40,9 @@ class PolicyForm(forms.ModelForm):
                 "Policy title must be at least 5 characters long."
             )
 
-        if len(title) > 150:
+        if len(title) > 60:
             raise forms.ValidationError(
-                "Policy title cannot exceed 150 characters."
+                "Policy title cannot exceed 60 characters."
             )
 
         if not re.search(r'[a-zA-Z]', title):
@@ -62,4 +62,3 @@ class PolicyForm(forms.ModelForm):
             )
 
         return title
-

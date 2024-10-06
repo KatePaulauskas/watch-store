@@ -831,8 +831,19 @@ hr {
     transition: background-color 5000s ease-in-out 0s; 
 }
 
+/* Style Error Messages */
 .text-danger {
     color: #FC7C73 !important;
+}
+
+.invalid-feedback{
+    text-align: center !important;
+}
+
+[id^="div_id_"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
 #loading-overlay {
@@ -959,13 +970,7 @@ ul.list-unstyled {
     height: 38px !important;
 }
 
-#id_name_helptext,
-#id_sku_helptext,
-#id_description_helptext,
-#id_weight_helptext,
-#id_rating_helptext,
-#id_title_helptext,
-#id_content_helptext {
+[id^="id_"][id$="_helptext"] {
     color: #AA9159 !important;
     font-style: italic;
     font-size: 12px;

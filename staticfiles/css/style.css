@@ -838,12 +838,6 @@ hr {
     text-align: center !important;
 }
 
-[id^="div_id_"] {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-}
-
 #loading-overlay {
 	display: none;
 	position: fixed;
@@ -974,18 +968,24 @@ ul.list-unstyled {
     font-size: 12px;
 }
 
-/* Style availability checkbox and label */
+[id^="div_id_"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* Flexbox layout for checkbox and label */
 #div_id_availability,
 #div_id_featured_product {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 10px 0 !important;
 }
 
 #div_id_availability .form-check-label,
 #div_id_featured_product .form-check-label {
-    text-align: center;
     font-family: "Muli", sans-serif !important;
     font-weight: 400;
     font-size: 16px !important;

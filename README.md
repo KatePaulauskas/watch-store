@@ -1198,18 +1198,19 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 * **Django Allauth (version 0.57.2):** Integrated for authentication processes, enhancing the site with login/logout capabilities and social account integration.
 
+#### Python Libraries
 
-### Technologies
+- **Gunicorn:** Python HTTP server for WSGI applications.
+- **psycopg2:** PostgreSQL database adapter.
+- **Pillow:** Python Imaging Library.
+- **boto3:** AWS service integration.
+- **django-storages:** Custom storage backends for Django.
 
-* **ElephantSQL:** Acts as the PostgreSQL hosting service, managing the project's database operations.
+#### Django Libraries
 
-* **Cloudinary (version 1.36.0):** Provides a solution for hosting and managing static and media files, optimising content delivery.
-
-* **Heroku:** The platform for hosting the application, offering robust deployment capabilities.
-
-* **GitHub:** It is used for source code management and as a collaborative platform, also facilitating project tracking through its Kanban board.
-
-* **Gitpod:** A cloud-based IDE that supports coding, running, and debugging the project directly within the browser.
+- **django-allauth:** User authentication.
+- **django-crispy-forms:** Custom form rendering.
+- **crispy-bootstrap5:** Bootstrap 5 template for Django forms.
 
 #### Dependencies
 
@@ -1240,6 +1241,38 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 - stripe==10.8.0
 - urllib3==1.26.20
 - whitenoise==5.3.0
+
+### Technologies
+
+* **ElephantSQL:** Acts as the PostgreSQL hosting service, managing the project's database operations.
+
+* **Cloudinary (version 1.36.0):** Provides a solution for hosting and managing static and media files, optimising content delivery.
+
+* **Heroku:** The platform for hosting the application, offering robust deployment capabilities.
+
+* **GitHub:** It is used for source code management and as a collaborative platform, also facilitating project tracking through its Kanban board.
+
+* **Gitpod:** A cloud-based IDE that supports coding, running, and debugging the project directly within the browser.
+
+- **Balsamiq:** Used to design wireframes for the project.
+
+- **QuickDatabaseDiagrams.com:** Utilised to create Entity-Relationship Diagrams (ERDs).
+
+### Payment Processing
+
+- **Stripe:** An online payment platform for processing transactions.
+
+### Emails/Newsletter
+
+- **Gmail:** Used for account authentication and password resets.
+
+- **Mailchimp:** Utilised for the subscription form setup.
+
+### SEO/Marketing
+
+- **XML Sitemaps:** The tool was used for generating sitemaps to help search engines index the site.
+
+- **Semrush:** Was utilised for keyword research and website optimisation.
 
 ## Testing
 
@@ -2470,5 +2503,3 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 ### Fixing bugs
 
 - To resolve the issue with certain attributes not being allowed on anchor elements [Stack Overflow](/media/https://stackoverflow.com/questions/4962070/attribute-name-not-allowed-on-element-div-at-this-point) instructions were followed.
-
-## Acknowledgements

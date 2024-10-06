@@ -46,11 +46,6 @@ class OrderForm(forms.ModelForm):
         max_length=10,
     )
 
-    # Country Field
-    country = forms.CharField(
-        error_messages={'required': 'Please select your country.'},
-    )
-
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number', 'street_address1',

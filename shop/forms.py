@@ -110,7 +110,7 @@ class ProductForm(forms.ModelForm):
                 "Product name cannot consist of numbers only."
             )
 
-        invalid_chars = set('<>!@#$%^&*()_+[]{}|;:\'",.?/~`\\=')
+        invalid_chars = set('<>!@#$%^&*()_+[]{}|;:/?~`\\=')
 
         if any(char in invalid_chars for char in name):
             raise forms.ValidationError(

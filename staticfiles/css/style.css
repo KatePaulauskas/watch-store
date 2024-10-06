@@ -261,6 +261,7 @@ input.search-bar {
     min-height: 20px !important;
     font-family: "Cormorant Unicase", sans-serif !important;
     outline: 1px solid #230903 !important;
+    font-weight: 600 !important;
 }
 
 .btn-cart {
@@ -498,10 +499,7 @@ ul.errorlist li {
     outline-color: #113227 !important;
 }
 
-.password-reset:hover,
-.password-reset:focus,
-.password-reset:visited 
- {
+.password-reset:hover {
     width: 160px !important;
     color: #FBFAF8 !important;
     outline-color: #E4C58A !important;

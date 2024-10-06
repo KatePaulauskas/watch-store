@@ -1612,8 +1612,22 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Access the "Manage Policies" page from the admin account dropdown |      Redirects the superuser to the "Store Policies" page with visible "Edit" buttons for each policy |  Pass |
-| Log out and try to access the edit URL directly | The user is redirected to the login page | Pass | 
 | Click the "Edit" button for "Terms & Conditions" policy   | The superuser is redirected to the policy editing form for the "Terms & Conditions" policy   | Pass |
+| **Edit Title** |||
+| For the policy title add letters and at least one of the following characters: <, >, !, @, #, $, %, ^, &, *, (, ), _, +, [, ], {, }, ;, :, ', ", ,, ., ?, /, ~, `, submit the form | 'Policy title contains invalid characters. Please avoid using special symbols.' displayed | Pass    |
+| For the policy title add only digits or symbols, submit the form | 'Policy title must contain letters.' displayed | Pass    |
+| For the policy title add only digits at least five characters, submit the form | 'Policy title must contain letters.' displayed | Pass    |
+| Submit the form with only five spaces in the policy title field | The form displays an error message: 'Please enter the policy title.' The form does not submit. | Pass  |
+| Submit the form with a title that is too short (less than 5 characters) | The form displays an error message: 'Please lengthen this text to 5 characters or more (you are currently using 3 characters).' Help text displayed: The title should be between 5 and 60 characters. The form does not submit. | Pass  |
+| Submit the form with a title that is too long (more than 60 characters)| The form displays an error message:'Ensure this value has at most 60 characters (it has xxx).' The form does not submit. | Pass  |
+| Attempt to submit a policy title with characters between 5 and 60 | The title is accepted, and the policy is saved successfully | Pass   |
+| Attempt to submit a policy with an empty title | Validation error is raised. Error message "This field is required" is displayed | Pass   |
+| **Edit Content** |||
+| Change the content to less than 100 characters, click Save Changes |    Superuser is prevented from submitting the form. 'Please lengthen this text to 100 characters or more' is displayed and help text is displayed: 'Policy content should be between 100 and 7000 characters.' | Pass |
+| Change the content to more than 7000 characters, click Save Changes |    Superuser is prevented from submitting the form. 'Ensure this value has at most 7000 characters (it has xxxx).' is displayed and help text is displayed: 'Policy content should be between 100 and 7000 characters.' | Pass |
+| Attempt to submit a policy with empty content | Validation error is raised. Error message "This field is required" is displayed | Pass   |
+| Change the content to a valid one (between 100 and 7000 characters), click Save Changes | The form accepts the value, and no errors are displayed. Superuser redirected to Policies Page, 'Policy updated successfully!' displayed | Pass |
+| **General Testing** |||
 | Update the content of the "Terms & Conditions" and click "Save Changes" |     The policy content is updated, and a success message "Terms & Conditions updated successfully!" is displayed  | Pass |
 | Verify that the updated policy content appears on the "Store Policies" page   | The new content for "Terms & Conditions" is visible on the main policies page | Pass |
 | Click the "Edit" button for the "Return Policy" policy | The superuser is redirected to the policy editing form for the "Return Policy" policy |   Pass |
@@ -1623,13 +1637,6 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Update the content of the "Privacy Policy" and click "Save Changes" | The policy content is updated, and a success message "Privacy Policy updated successfully!" is displayed    | Pass |
 | Verify that the updated policy content appears on the "Store Policies" page   | The new content for "Privacy Policy" is visible on the main policies page | Pass |
 | Click "Edit" for any policy and then click the "Cancel" button | The user is redirected back to the "Store Policies" page with the message "Action cancelled. No changes were made."     | Pass |
-| Attempt to submit a policy title with less than 5 characters (e.g., "ABC") | Validation error is raised. An error message like "Ensure this value has at least 5 characters" is displayed | Pass   |
-| Attempt to submit a policy title with characters between 5 and 30 | The title is accepted, and the policy is saved successfully | Pass   |
-| Attempt to submit a policy title with more than 30 characters | Superuser is prevented from typing more than 30 characters | Pass   |
- Attempt to submit policy content with less than 50 characters | Validation error is raised. Error message "Ensure this value has at least 50 characters" is displayed | Pass   |
-| Attempt to submit a policy content with 50 or more characters | The content is accepted, and the policy is saved successfully | Pass   |
-| Attempt to submit a policy with an empty title | Validation error is raised. Error message "This field is required" is displayed | Pass   |
-| Attempt to submit a policy with empty content | Validation error is raised. Error message "This field is required" is displayed | Pass   |
 | Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/policies/edit/2/) | The user is redirected to the login page with a message indicating that they need to log in to edit policies | Pass | 
 | Attempt to access the edit URL as a regular user | Regular users are denied access to the policy editing page, redirected to the home page and shown an error message: "Only the store owner has access to this action" | Pass |
 

@@ -5,7 +5,7 @@
     <h1 class="text-center">Store Policies</h1>
     <ul class="px-0">
         {% for policy in policies %}
-            <li id="{{ policy.title|slugify }}">
+            <li id="{% if policy.title == 'Terms and Conditions' %}terms-and-conditions{% elif policy.title == 'Return Policy' %}return-policy{% elif policy.title == 'Privacy Policy' %}privacy-policy{% else %}{{ policy.title|slugify }}{% endif %}">
                 <h2 class="text-center">{{ policy.title }}</h2>
                 {% if user.is_superuser %}
                     <div class="d-flex justify-content-center mt-4">

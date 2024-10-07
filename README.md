@@ -2074,7 +2074,7 @@ After ensuring that there are two blank lines before each top-level function or 
 ### Responsiveness
 
 <details>
-  <summary>Responsivness Testing</summary>
+  <summary>Responsiveness Testing</summary>
 
 The site was tested on various devices using multiple browsers, including Chrome, Firefox, Microsoft Edge, and Safari. Testing was conducted to ensure consistent site layout, optimal loading times, and smooth navigation across different pages.
 

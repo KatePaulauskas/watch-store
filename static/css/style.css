@@ -1239,6 +1239,69 @@ font-size: 100% !important;
     }
 }
 
+/* Media query: mobile phones (390px and up) */
+@media screen and (min-width: 390px) {
+    /* H1 style */
+    h1 {
+        font-size: 210% !important;
+    }
+
+    /* H2-4 styles */
+    h2,
+    h3,
+    h4
+    {
+        font-size: 170% !important;
+    }
+
+    /* H5-6 styles */
+    h5,
+    h6
+    {
+        font-size: 120% !important;
+    }
+    
+    /* Paragraph style */
+    p {
+        font-size: 18px !important;
+    }
+
+    /* Style logo */
+    .img-logo {
+        width: 130px;
+    }
+    
+    /* Navbar toggler size */
+    .navbar-toggler {
+        height: 50px !important;
+        width: 50px !important;
+    }
+
+    /* Icons style */
+    iconify-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    p.icon-text {
+        font-size: 65% !important;
+    }
+    
+    .search-bar {
+        width: 60px !important;
+    }
+
+    /* Style Shop page */
+    .card-body, .card-footer {
+        font-size: 17px !important;
+    }
+    
+    /* Style Cart table */
+    .table {
+        font-size: 14px;
+    }
+}
+
 /* Media query: tablets and larger screens (576px and up) */
 @media screen and (min-width: 576px) {
     /* H1 style */
@@ -1279,7 +1342,7 @@ font-size: 100% !important;
 
     /* Style logo */
     .img-logo {
-        width: 120px;
+        width: 150px;
     }
     
     /* Style header icons */
@@ -1419,6 +1482,10 @@ font-size: 100% !important;
     /* Home page style */
     .values {
         font-size: 110%;
+    }
+
+    .nav-link {
+        font-size: 20px !important;
     }
     
     /* Style Product page */

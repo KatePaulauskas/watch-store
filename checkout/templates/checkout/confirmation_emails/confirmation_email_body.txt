@@ -27,6 +27,7 @@ We’ve also noted your contact number as {{ order.phone_number }}.
 If you have any questions or need assistance, please don't hesitate to reach out to us at {{ contact_email }}.
 
 Thank you for choosing Eternity Watch Store!
+https://eternity-watch-store-1f855f4289ad.herokuapp.com/
 
 Best regards,
 Eternity Watch Store Team

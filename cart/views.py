@@ -20,14 +20,24 @@ def add_to_cart(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
-    if item_id in cart:
-        cart[item_id] += quantity
-        messages.success(
-            request, f'{product.name} quantity was updated to {cart[item_id]}'
+    max_quantity = 10
+    current_quantity = cart.get(str(item_id), 0)
+    new_quantity = current_quantity + quantity
+
+    if new_quantity > max_quantity:
+        # Cap the quantity at max_quantity and inform the user
+        cart[str(item_id)] = max_quantity
+        messages.warning(
+            request,
+            f"The maximum amount of {max_quantity} for {product.name} has been added to your cart."
         )
     else:
-        cart[item_id] = quantity
-        messages.success(request, f'{product.name} was added to your cart')
+        # Update the cart with the new quantity
+        cart[str(item_id)] = new_quantity
+        messages.success(
+            request,
+            f'{product.name} quantity was updated to {cart[str(item_id)]}'
+        )
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -40,15 +50,24 @@ def shop_page_add_to_cart(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
-    if str(item_id) in cart:
-        cart[str(item_id)] += 1
+    max_quantity = 10
+    current_quantity = cart.get(str(item_id), 0)
+    new_quantity = current_quantity + 1
+
+    if new_quantity > max_quantity:
+        # Cap the quantity at max_quantity and inform the user
+        cart[str(item_id)] = max_quantity
+        messages.warning(
+            request,
+            f"The maximum amount of {max_quantity} for {product.name} has been added to your cart."
+        )
+    else:
+        # Update the cart with the new quantity
+        cart[str(item_id)] = new_quantity
         messages.success(
             request,
             f'{product.name} quantity was updated to {cart[str(item_id)]}'
         )
-    else:
-        cart[str(item_id)] = 1
-        messages.success(request, f'{product.name} was added to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)

@@ -44,7 +44,9 @@
                     </a>
                 </div>
                 <div class="col-7 p-0 p-xs-2">
-                    <p class="my-0 px-1"><small>{{ item.product.name }}</small></p>
+                    <a href="{% url 'product_page' item.product.id %}" style="text-decoration: none;">
+                        <p class="my-0 px-1"><small>{{ item.product.name }}</small></p>
+                    </a>
                     <p class="my-0 px-0 item-quantity"><small>Qty: {{ item.quantity }}</small></p>
                 </div>
                 <div class="col-3 px-0 p-xs-1 p-sm-2 text-end">

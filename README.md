@@ -2165,14 +2165,105 @@ The site's colours were also evaluated for accessibility to ensure they are safe
 
 #### Solved Bugs
 
-**Uninitialised Payment Intent on Form Validation Failure**
+**Bug 1: Uninitialised Payment Intent on Form Validation Failure**
 
+*Issue:*
 During the implementation of additional input field validation in the checkout form, an issue arose where the `intent` variable was not properly initialised when form validation failed during a POST request. Specifically, if invalid data was submitted, the logic did not initialise intent, causing an exception during the rendering of the checkout page.
 
 ![Uninitialised Payment Intent](/media/uninitialised-payment-intent-bug.jpeg)
 
 *Solution:*
 To resolve the issue, the initialisation of the `intent` variable was moved outside the conditional logic. This ensures that `intent` is always set, regardless of whether the form is valid or not.
+
+**Bug 2: Cart Behavior Inconsistency**
+
+*Issue 1:*
+
+"Add to Cart" on the Product Page did not add to the total number of existing items in the cart. Instead, each addition was treated as a fresh quantity rather than accumulating with items already in the cart.
+
+*Issue 2:*
+
+Users could add more than the allowed maximum of 10 items per product to the shopping cart from the Shop Page and the Home Page Featured Gallery. On these pages, the "Add to Cart" button automatically added 1 item per click but did not check if the cumulative total in the cart exceeded the 10-item maximum. This allowed users to exceed the quantity limit by repeatedly clicking the "Add to Cart" button.
+
+*Solution 1:*
+
+The following code changes were implemented in the `add_to_cart` function:
+
+- Checks the current quantity of the product in the cart.
+- Calculates the new quantity by adding the requested quantity to the existing total.
+- Enforces a maximum limit of 10 items per product. If the new quantity exceeds 10, the cart quantity is set to 10, and a warning message is displayed to inform the user.
+
+```
+def add_to_cart(request, item_id):
+    """Add a quantity of the specified product to the shopping cart"""
+
+    product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
+    cart = request.session.get('cart', {})
+
+    max_quantity = 10
+    current_quantity = cart.get(str(item_id), 0)
+    new_quantity = current_quantity + quantity
+
+    if new_quantity > max_quantity:
+        # Cap the quantity at max_quantity and inform the user
+        cart[str(item_id)] = max_quantity
+        messages.warning(
+            request,
+            f"The maximum amount of {max_quantity} for {product.name} has been added to your cart."
+        )
+    else:
+        # Update the cart with the new quantity
+        cart[str(item_id)] = new_quantity
+        messages.success(
+            request,
+            f'{product.name} quantity was updated to {cart[str(item_id)]}'
+        )
+
+    request.session['cart'] = cart
+    return redirect(redirect_url)
+```
+
+*Solution 2:*
+
+The `shop_page_add_to_cart` function was updated with similar logic to ensure the 10-item cap is enforced:
+
+- Adds 1 item at a time while checking the cumulative quantity.
+- Enforces the 10-item limit, ensuring that users cannot exceed this limit by repeatedly clicking the "Add to Cart" button.
+
+```
+def shop_page_add_to_cart(request, item_id):
+    """Add product to the shopping cart from the shop page"""
+
+    product = get_object_or_404(Product, pk=item_id)
+    redirect_url = request.POST.get('redirect_url')
+    cart = request.session.get('cart', {})
+
+    max_quantity = 10
+    current_quantity = cart.get(str(item_id), 0)
+    new_quantity = current_quantity + 1
+
+    if new_quantity > max_quantity:
+        # Cap the quantity at max_quantity and inform the user
+        cart[str(item_id)] = max_quantity
+        messages.warning(
+            request,
+            f"The maximum amount of {max_quantity} for {product.name} has been added to your cart."
+        )
+    else:
+        # Update the cart with the new quantity
+        cart[str(item_id)] = new_quantity
+        messages.success(
+            request,
+            f'{product.name} quantity was updated to {cart[str(item_id)]}'
+        )
+
+    request.session['cart'] = cart
+    return redirect(redirect_url)
+```
+
+These updates ensure that users cannot exceed the 10-item maximum per product. The total in the cart now updates correctly on the Product, Shop and Home pages, providing consistent behavior and clear feedback to users.
 
 #### Remaining Bugs
 

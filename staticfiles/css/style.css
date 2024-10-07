@@ -136,6 +136,16 @@ header p {
     border-color: #E4C58A;
     border-width: 2px;
     padding: 3px;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.navbar {
+    color: transparent !important;
+}
+
+.navbar .nav-link {
+    color: transparent !important;
 }
 
 /* Ensure logo is always in the center of the header */
@@ -309,6 +319,8 @@ input.search-bar {
 
 .btn-explore:hover,
 .btn-account:hover,
+.btn-account:active,
+.btn-account:visited,
 .btn-add:hover,
 .btn-cart:hover,
 .btn-profile:hover {
@@ -593,6 +605,7 @@ ul.errorlist li {
 
 #reset {
     color: #AA9159 !important;
+    font-weight: 300 !important;
 }
 
 /* Center filters dropdowns */
@@ -704,7 +717,7 @@ input[id^="id_qty_"] {
 }
 
 table tr {
-    border-bottom: 0.2px solid #aa9159 !important;
+    border-bottom: 0.2px solid #230903 !important;
 }
 
 /* Ensure images vertically aligned in the center */
@@ -836,6 +849,12 @@ hr {
 
 .invalid-feedback{
     text-align: center !important;
+    font-family: "Muli", sans-serif !important;
+    font-weight: 200;
+    font-size: 16px !important;
+    color: #FC7C73 !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
 }
 
 #loading-overlay {
@@ -889,6 +908,12 @@ hr {
     color: #E4C58A !important;
     -webkit-box-shadow: 0 0 0px 1000px #113227 inset !important;
     -webkit-text-fill-color: #E4C58A !important;
+}
+
+/* Ensure background color for the dropdown select */
+select[name="country"] {
+    background-color: #113227 !important;
+    color: #E4C58A !important;
 }
 
 /* Style Thank you page */
@@ -997,13 +1022,6 @@ ul.list-unstyled {
     margin: 0px 5px !important;
 }
 
-.invalid-feedback {
-    font-family: "Muli", sans-serif !important;
-    font-weight: 200;
-    font-size: 16px !important;
-    color: #FC7C73 !important;
-}
-
 .product-edit,
 .product-delete {
     color: #FBFAF8 !important;
@@ -1095,9 +1113,11 @@ font-size: 100% !important;
     width: 65px !important;
 }
 
-#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error,
+.response {
     background-color: #113227;
     color: #FC7C73;
+    font-weight: 300 !important;
 }
 
 #mc_embed_signup #mce-success-response {
@@ -1268,7 +1288,7 @@ font-size: 100% !important;
 
     /* Style logo */
     .img-logo {
-        width: 130px;
+        width: 120px;
     }
     
     /* Navbar toggler size */
@@ -1277,10 +1297,8 @@ font-size: 100% !important;
         width: 50px !important;
     }
 
-    /* Icons style */
-    iconify-icon {
-        width: 20px;
-        height: 20px;
+    .auth-mob {
+        font-size: 14px !important;
     }
 
     p.icon-text {
@@ -1294,6 +1312,13 @@ font-size: 100% !important;
     /* Style Shop page */
     .card-body, .card-footer {
         font-size: 17px !important;
+    }
+
+    #brand,
+    #gender,
+    #sort,
+    #reset {
+        width: 90px !important;
     }
     
     /* Style Cart table */
@@ -1397,6 +1422,13 @@ font-size: 100% !important;
     .category-menu,
     .products-count {
         font-size: 100% !important;
+    }
+
+    #brand,
+    #gender,
+    #sort,
+    #reset {
+        width: 100px !important;
     }
 
     /* Center filters dropdowns */
@@ -1515,7 +1547,7 @@ font-size: 100% !important;
     /* Style Contact page */
     .contact-form input,
     .contact-form textarea {
-        width: 400px !important;
+        width: 500px !important;
     }
 }
 
@@ -1552,7 +1584,7 @@ font-size: 100% !important;
     }
 
     /* Nav links style */
-    .menu {
+    .nav-link {
         font-size: 22px;
     }
 
@@ -1617,7 +1649,7 @@ font-size: 100% !important;
     /* Style Contact page */
     .contact-form input,
     .contact-form textarea {
-        width: 430px !important;
+        width: 700px !important;
     }
 
     /* Style Subscribe form */

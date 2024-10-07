@@ -8,14 +8,12 @@ class OrderForm(forms.ModelForm):
 
     # Full Name Field
     full_name = forms.CharField(
-        error_messages={'required': 'Please enter your full name.'},
         min_length=3,
         max_length=60,
     )
 
     # Street Address 1 Field
     street_address1 = forms.CharField(
-        error_messages={'required': 'Please enter your street address.'},
         min_length=5,
         max_length=100,
     )
@@ -28,7 +26,6 @@ class OrderForm(forms.ModelForm):
 
     # Town or City Field
     town_or_city = forms.CharField(
-        error_messages={'required': 'Please enter your town or city.'},
         min_length=2,
         max_length=60,
     )
@@ -41,7 +38,6 @@ class OrderForm(forms.ModelForm):
 
     # Postal Code Field
     postcode = forms.CharField(
-        error_messages={'required': 'Please enter your postal code.'},
         min_length=3,
         max_length=10,
     )

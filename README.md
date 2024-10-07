@@ -635,7 +635,13 @@ When users first visit the Eternity Luxury Watch Store website, they are greeted
 
 ##### Featured Products
 
+The Featured Products section showcases a curated selection of popular timepieces, highlighting the variety and elegance of Eternity Luxury Watch Store's offerings. This gallery allows customers to quickly browse and add best-selling items to their cart, providing a seamless shopping experience with easy access to favored products.
+
 ![Popular products](/media/featured-products.jpeg)
+
+If a customer attempts to add more than 10 pieces of the same product to the cart by clicking on 'Add to Cart" button more than 10 times, the notification: "The maximum amount of 10 for [Product Name] has been added to your cart." is displayed. This message indicates that the cart quantity for this product has been capped at the allowed maximum of 10 items.
+
+![Home Page Max Amount Warning.jpeg](/media/home-page-max-amount-warning.jpeg)
 
 ##### About Us
 
@@ -650,6 +656,10 @@ The Shop Page is the central hub where customers can browse Eternity's curated c
 ![Shop Page](/media/shop-page.jpeg)
 
 Each watch is displayed with a high-quality image, name, price, and rating, providing a general overview. Customers can click on the product image or name to view detailed information or click on the "Add to Cart" button to add the item directly to the cart from the shop page. This allows for a quick purchasing flow for those who already know what brand and model they are looking for.
+
+If a customer attempts to add more than 10 pieces of the same product to the cart by clicking on 'Add to Cart" button more than 10 times, the notification: "The maximum amount of 10 for [Product Name] has been added to your cart." is displayed. This message indicates that the cart quantity for this product has been capped at the allowed maximum of 10 items.
+
+![Shop Page Max Amount Warning.jpeg](/media/shop-page-max-amount-warning.jpeg)
 
 Furthermore, customers can filter products by brand and gender or sort them by price, rating, or name. 
 
@@ -687,6 +697,10 @@ This page allows customers to explore the finer details of the timepieces, inclu
 
 ![Product Page Max Amount.jpeg](/media/product-page-max-amount.jpeg)
 
+If a customer attempts to add more than 10 pieces of the same product to the cart, for example, by adding five items first and then seven items, the notification: "The maximum amount of 10 for [Product Name] has been added to your cart." is displayed. This message indicates that the cart quantity for this product has been capped at the allowed maximum of 10 items.
+
+![Product Page Max Amount Warning.jpeg](/media/product-page-max-amount-warning.jpeg)
+
 A prominently placed "Add to Cart" button ensures that customers can easily proceed with their purchase, making the shopping experience seamless and straightforward. Once an item is added to the cart, the customer receives a notification.
 
 ![Product Added to the Cart](/media/product-added-to-the-cart.jpeg)
@@ -701,13 +715,19 @@ At the top of the page on the left, a "Back to Shop" button allows customers to 
 
 #### Cart Page
 
-The Cart Page provides an overview of the items a customer plans to purchase, including the product name, SKU, image, price, quantity, subtotal, standard delivery cost, and total cost, allowing customers to review and adjust their selections before proceeding to checkout. By default, the standard delivery rate is applied, calculated as:
+The Cart Page provides an overview of the items a customer plans to purchase, including the product name, SKU, image, price, quantity, subtotal, standard delivery cost, and total cost, allowing customers to review and adjust their selections before proceeding to checkout:
+
+![Cart Page](/media/cart-page.jpeg)
+
+In case a customer attempts to increace the quanity of any product to more than 10 pieces in the cart, they gat a notification: 
+
+![Cart Page Max Amount Message.jpeg](/media/cart-page-max-amount.jpeg)
+
+By default, the standard delivery rate is applied, it is calculated as:
 
 Delivery cost = Delivery method rate x Total cart weight
 
 At checkout, customers have the option to switch to a priority delivery rate. Delivery rates can be configured through the admin dashboard.
-
-![Cart Page](/media/cart-page.jpeg)
 
 If a customer visits the Cart Page before adding any items to the cart, they receive a notification that their cart is empty, and a button is provided to return to the shop.
 
@@ -1282,13 +1302,13 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Enter site URL: <https://eternity-watch-store-1f855f4289ad.herokuapp.com/> | Home page loads | Pass |
-| Menu was tested on all pages of the site on multiple devices: mobile, tablet, and desktop |  |  |
+| **Menu was tested on all pages of the site on multiple devices: mobile, tablet, and desktop** |  |  |
 | Click on the Home page link in the site menu | Home page loads | Pass |
 | Click on the Shop page link in the site menu | Shop page loads | Pass |
 | Click on the Contact page link in the site menu | Contact page loads | Pass |
 | Click on the hamburger menu icon on a mobile device | Menu items expand inside the header in a dropdown | Pass |
 | Hamburger menu icon on larger screens | Hidden | Pass |
-| Header icons and logo were tested on all pages of the site on mobile, tablet, and desktop |  |  |
+| **Header icons and logo were tested on all pages of the site on mobile, tablet, and desktop** |  |  |
 | Click on the logo | Home page loads | Pass |
 | Click on the Log In icon while being logged out | Login/Register dropdown appears | Pass |
 | Click on the Account icon while being logged in | Dropdown appears with the following pages: Profile and Logout | Pass |
@@ -1310,7 +1330,16 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 #### Home Page
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-| Click on the 'Explore' button on the Home Page | Shop page loads | Pass |
+| Click on the "Explore" button on the Home Page | Shop page loads | Pass |
+| **Featured Products Gallery** | | |
+| Scroll past the above fold image | The Featured Products Gallery is displayed | Pass |
+| Click "Add to Cart" on any product in the gallery | The product is added to the cart, and a confirmation message is displayed: "-Product Name- was added to your cart" | Pass |
+| Click the "Add to Cart" button multiple times on the same product in the gallery | The cart quantity increases according to the number of times "Add to Cart" is clicked, without exceeding 10 | Pass |
+| Click the "Add to Cart" button 11 times on the same product in the gallery | The message 'The maximum amount of 10 for -Product Name- has been added to your cart.' is displayed | Pass |
+| Click on any product image in the gallery | The user is directed to the Product Page for that specific product | Pass |
+| Click on any product name in the gallery | The user is directed to the Product Page for that specific product | Pass |
+| **About Us** | | |
+| Scroll past the Featured Products Gallery | Text displaying About Us information and company values is shown | Pass |
 
 #### Log In and Reset Password Page
 
@@ -1377,6 +1406,8 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Sort products by name (Z-A) | Products are sorted alphabetically in reverse order  | Pass   |
 | Click "Reset" in the filters menu | All filters are cleared, and the full product list is displayed | Pass   |
 | Click "Add to Cart" on any product | The product is added to the cart, and a confirmation message is displayed: "-Product Name- was added to your cart" | Pass   |
+| Click the "Add to Cart" button multiple times on the same product | The cart quantity increases according to the number of times the "Add to Cart" button is clicked, without exceeding 10 | Pass |
+| Click the "Add to Cart" button 11 times on the same product | The message 'The maximum amount of 10 for -Product Name- has been added to your cart.' is displayed | Pass |
 | Click on any product image | The user is directed to the Product Page for that specific product | Pass   |
 | Click on any product name | The user is directed to the Product Page for that specific product | Pass   |
 
@@ -1384,11 +1415,14 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
-| Visit the Product Page by clicking on the product name on the Shop page | The page loads successfully, displaying the product details, images, price, quantity and "Add to Cart" button | Pass   |
-| Select product quantity (up to 10) | Quantity can be adjusted by clicking on the plus or minus icons, and the plus icon is disabled when the quantity reaches 10 | Pass |
-| Click the "Add to cart" button  | The product is added to the cart, and a confirmation message is displayed "-Product Name- was added to your cart" | Pass   |
-| Product is marked "Out of Stock" | The "Add to Cart" button is replaced with an "Out of Stock" button that is disabled | Pass   |
-| Click "Back to Shop" button  | The user is redirected back to the Shop Page  | Pass   |
+| Visit the Product Page by clicking on the product name on the Shop page | The page loads successfully, displaying the product details, images, price, quantity, and "Add to Cart" button | Pass |
+| Select product quantity (up to 10) | Quantity can be adjusted using the plus and minus icons, with the plus icon disabled when the quantity reaches 10 | Pass |
+| Click the "Add to Cart" button | The product is added to the cart, and a confirmation message is displayed: "-Product Name- was added to your cart" | Pass |
+| Click the "Add to Cart" button multiple times | The cart quantity increases according to the number of times the "Add to Cart" button is clicked, without exceeding 10 | Pass |
+| Click the "Add to Cart" button 11 times | The message 'The maximum amount of 10 for -Product Name- has been added to your cart.' is displayed | Pass |
+| Select product quantity (e.g., 5), then select the same product with a quantity that would exceed a total of 10 (e.g., 7), click "Add to Cart" | 'The maximum amount of 10 for -Product Name- has been added to your cart.' is displayed | Pass |
+| Product is marked "Out of Stock" | The "Add to Cart" button is replaced with a disabled "Out of Stock" button | Pass |
+| Click "Back to Shop" button | The user is redirected back to the Shop Page | Pass |
 
 #### Cart Page
 
@@ -2041,6 +2075,8 @@ After ensuring that there are two blank lines before each top-level function or 
 
 <details>
   <summary>Responsivness Testing</summary>
+
+The site was tested on various devices using multiple browsers, including Chrome, Firefox, Microsoft Edge, and Safari. Testing was conducted to ensure consistent site layout, optimal loading times, and smooth navigation across different pages.
 
 | Device/Browser             | Chrome | Firefox | Safari | Edge  |
 |----------------------------|--------|---------|--------|-------|

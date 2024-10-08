@@ -34,7 +34,7 @@
                                     {% for order in orders %}
                                         <tr>
                                             {% if user.is_superuser %}
-                                            <td>{{ order.user_profile.user.username }}</td>
+                                            <td>{{ order.full_name }}</td>
                                             {% endif %}
                                             <td>
                                                 <a href="{% url 'order_history' order.order_number %}"

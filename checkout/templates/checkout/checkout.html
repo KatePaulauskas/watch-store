@@ -118,7 +118,7 @@
                             {% for method in order_form.fields.delivery_method.queryset %}
                                 <div>
                                     <input type="radio" name="delivery_method" id="delivery_method_{{ method.pk }}" value="{{ method.pk }}" data-rate="{{ method.rate }}" {% if method.name == "Standard: 5-10 days" %} data-standard="true" {% endif %}>
-                                    <label for="delivery_method_{{ method.pk }}">{{ method.name }}</label>
+                                    <label for="delivery_method_{{ method.pk }}" class="mb-3">{{ method.name }}</label>
                                 </div>
                             {% endfor %}
                         </div>

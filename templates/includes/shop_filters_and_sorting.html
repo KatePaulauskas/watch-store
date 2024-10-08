@@ -41,6 +41,7 @@
                         <li><a href="{% url 'shop' %}?sort=name&direction=desc{% if current_filters %}&{{ current_filters }}{% endif %}" class="dropdown-item">Name (Z-A)</a></li>
                     </ul>
                 </li>
+                <!-- Reset button -->
                 <li class="nav-item dropdown filters-menu mx-sm-3 mx-md-4 mx-lg-5">
                     <a class="nav-link py-1 px-4" id="reset" href="{% url 'shop' %}?reset=true" class="nav-link">Reset</a>
                 </li>

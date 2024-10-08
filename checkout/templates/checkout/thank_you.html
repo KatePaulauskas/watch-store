@@ -10,28 +10,25 @@
         <div class="col-12">
             <div class="thank-you col-12 col-sm-10 col-md-8 offset-sm-1 offset-md-2 text-center">
                 <h1 class="h1 text-center mt-4">Thank you, {{ order.full_name }}!</h1>
-                <p>Your order successfully processed!</p>
+                <p>Your order has been successfully processed!</p>
                 <p>Order number: <strong>{{ order.order_number }}</strong>.</p>
                 <p>Order date: {{ order.date }}</p>
                 <p>A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
+        
         <!-- Order Summary -->
         <div class="col order-summary">
             <div class="col-12 col-sm-10 col-md-8 offset-sm-1 offset-md-2">
                 <div class="order-confirmation-wrapper p-2 border text-center text-md-start mx-1 mx-sm-3 my-5">
                     {% for item in order.lineitems.all %}
-                    <div class="row">
+                    <div class="row mb-5">
                         <div class="col-12 col-md-6">
                             <p class="small mb-0">
                                 {{ item.product.name }}
                             </p>
                             <a href="{% url 'product_page' item.product.id %}">
-                                {% if item.product.image %}
-                                <img class="w-50" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                                {% else %}
-                                <img class="w-50" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                {% endif %}
+                                <img class="w-50" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                             </a>
                         </div>
                         <div class="col-12 col-md-6 text-md-end">
@@ -40,6 +37,7 @@
                     </div>
                     {% endfor %}
                     <hr>
+                    <!-- Totals and details sections -->
                     <div class="row">
                         <div class="col-6 col-md-4 text-start">
                             <p class="mb-0">Order Total:</p>
@@ -163,17 +161,20 @@
                 </div>
             </div>
         </div>
-        <div class="mt-auto d-flex align-items-center my-3 mx-0 mx-sm-3">
-            <a href="{% url 'shop' %}" class="btn btn-profile">
-                <iconify-icon icon="typcn:arrow-back" style="color: #e4c58a" aria-hidden="true"></iconify-icon>
-                Back to Shop
-            </a>
-        </div>
+        <!-- Conditional back button section -->
         {% if from_profile %}
         <div class="row mx-0">
             <div class="col-12 d-flex justify-content-center mb-5">
                 <a href="{% url 'profile' %}" class="btn btn-profile">
                     <span class="text-uppercase">Back to Profile</span>
+                </a>
+            </div>
+        </div>
+        {% else %}
+        <div class="row mx-0">
+            <div class="col-12 d-flex justify-content-center mb-5">
+                <a href="{% url 'shop' %}" class="btn btn-profile">
+                    <span class="text-uppercase">Back to Shop</span>
                 </a>
             </div>
         </div>

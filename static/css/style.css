@@ -140,14 +140,6 @@ header p {
     outline: none !important;
 }
 
-.navbar {
-    color: transparent !important;
-}
-
-.navbar .nav-link {
-    color: transparent !important;
-}
-
 /* Ensure logo is always in the center of the header */
 .logo-container {
     position: absolute;
@@ -605,7 +597,10 @@ ul.errorlist li {
 
 #reset {
     color: #AA9159 !important;
-    font-weight: 300 !important;
+}
+
+.filters-menu .nav-link#reset {
+    font-weight: bold !important; 
 }
 
 /* Center filters dropdowns */
@@ -717,7 +712,7 @@ input[id^="id_qty_"] {
 }
 
 table tr {
-    border-bottom: 0.2px solid #230903 !important;
+    border-bottom: 0.1px solid #111111 !important;
 }
 
 /* Ensure images vertically aligned in the center */
@@ -886,8 +881,7 @@ hr {
 .select-container select {
     appearance: none;
     -webkit-appearance: none;
-    -moz-appearance: none; 
-    background: #f8f9fa;
+    -moz-appearance: none;
 }
 
 .select-container::after {
@@ -1234,15 +1228,15 @@ font-size: 100% !important;
     }
 
     #payment-form input[type="radio"] {
-        width: 20px !important;
-        height: 15px !important;
+        width: 25px !important;
+        height: 20px !important;
     }
 
     #payment-form #id-save-info,
     #payment-form #addon1,
     #payment-form #addon2 {
-        width: 15px !important;
-        height: 15px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
 
     /* Style Thank you page */
@@ -1302,7 +1296,7 @@ font-size: 100% !important;
     }
 
     p.icon-text {
-        font-size: 65% !important;
+        font-size: 80% !important;
     }
     
     .search-bar {
@@ -1376,7 +1370,7 @@ font-size: 100% !important;
     }
 
     p.icon-text {
-        font-size: 80% !important;
+        font-size: 100% !important;
     }
     
     /* Above Fold Style */
@@ -1533,6 +1527,10 @@ font-size: 100% !important;
         font-size: 110% !important;
     }
 
+    #brand, #gender, #sort, #reset {
+        width: 120px !important;
+    }
+
     /* Style Cart page */
     .table .product-name-wrap {
         max-width: 350px;
@@ -1595,7 +1593,7 @@ font-size: 100% !important;
 
     /* Style header icons */
     p.icon-text {
-        font-size: 100% !important;
+        font-size: 80% !important;
     }
 
     /* Above Fold Style */

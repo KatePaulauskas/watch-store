@@ -802,7 +802,7 @@ After logging in, customers are directed to the homepage and notified of a succe
 
 **Password Reset**
 
-If a registered user forgets their password, they can click the "Forgot Password?" link.
+If a registered user forgets their password, they can click the "Forgot Password?" link on the login page.
 
 ![Password Reset Page](/media/password-reset.jpeg)
 
@@ -810,15 +810,27 @@ After entering the email associated with their account and clicking "Reset My Pa
 
 ![Password Reset Link Sent](/media/password-reset-link.jpeg)
 
-And they receive the following email:
+The user then receives an email with instructions to reset their password:
 
 ![Password Reset Email](/media/password-reset-email.jpeg)
+
+Upon clicking the link, they are directed to a secure page where they can set a new password:
+
+![Password Reset Page](/media/password-reset-page.jpeg)
+
+After successfully resetting their password, they see a confirmation with an option to "Log In.":
+
+![Password Reset Success](/media/password-reset-success.jpeg)
+
+If a user attempts to reset a password for an email that does not match an existing account, they receive a notification indicating this, along with an option to create a new account.
+
+![Password Reset Email - Account Does not Exist](/media/password-reset-account-does-not-exist.png)
 
 #### Register an Account Page
 
 If a customer does not have an existing account, they can click the "Register" link on the Log In page. They will be redirected to the Register page, where new users can create an account, enabling them to track their orders and manage their account details online.
 
-![Register an Account Page](/media/register-account-page.png)
+![Register an Account Page](/media/register-account-page.jpeg)
 
 If a user does not follow the security recommendations for creating strong credentials, notifications will appear in a bright color to alert them to the issue and guide them to correct it.
 
@@ -2302,6 +2314,33 @@ def shop_page_add_to_cart(request, item_id):
 ```
 
 These updates ensure that users cannot exceed the 10-item maximum per product. The total in the cart now updates correctly on the Product, Shop and Home pages, providing consistent behavior and clear feedback to users.
+
+**Bug 3: Broken Border on Table Row in Cart**
+
+*Issue:* 
+
+On the Cart page, the bottom border of table row appeared broken or incomplete on mobile devices when set to dark colors such as Licorice (#230903) or Black (#111111). This inconsistency disrupted the layout's clean lines on smaller screens.
+
+```
+     table tr {
+          border-bottom: 0.1px solid #230903 !important;
+     }
+```
+
+![Table Row Broken Bottom Border](/media/table-row-broken-bottom-border.jpeg)
+
+*Solution:*
+
+Changing the border color to a lighter shade (Lion #AA9159) resolved the issue, allowing the border to display as a continuous line across all devices and screen sizes.
+
+```
+     table tr {
+          border-bottom: 0.1px solid #AA9159 !important;
+     }
+```
+![Tabble Row Fixed Bottom Border](/media/tabble-row-fixed-bottom-border.jpeg)
+
+This fix improved the visual consistency of the Cart page on mobile screens.
 
 #### Remaining Bugs
 

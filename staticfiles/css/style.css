@@ -315,10 +315,16 @@ input.search-bar {
 .btn-account:visited,
 .btn-add:hover,
 .btn-cart:hover,
-.btn-profile:hover {
+.btn-profile:hover,
+.password-reset:visited,
+.password-reset:active {
     background-color: #230903 !important;
     color: #e4c58a !important;
     border: 1px solid #e4c58a !important;
+}
+
+.btn-account:visited {
+    background-color: #AA9159 !important;
 }
 
 .btn-explore:active,

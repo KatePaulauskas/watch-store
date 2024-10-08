@@ -2338,7 +2338,7 @@ Changing the border color to a lighter shade (Lion #AA9159) resolved the issue, 
           border-bottom: 0.1px solid #AA9159 !important;
      }
 ```
-![Tabble Row Fixed Bottom Border](/media/tabble-row-fixed-bottom-border.jpeg)
+![Tabble Row Fixed Bottom Border](/media/table-row-fixed-bottom-border.jpeg)
 
 This fix improved the visual consistency of the Cart page on mobile screens.
 

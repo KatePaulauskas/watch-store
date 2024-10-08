@@ -1182,7 +1182,9 @@ The keywords were selected using the Semrush platform based on two locations: Ir
 
 - **Customer Service:** The Facebook page serves as a platform for customer inquiries and support as well through Facebook Messanger, ensuring that the brand is responsive and accessible.
 
-     ![Facebook Page](/media/facebook-page.jpeg)
+     ![Facebook Page](/media/facebook-page-overview.jpeg)
+     ![Facebook Page](/media/facebook-page-posts.jpeg)
+     ![Facebook Page](/media/facebook-page-about.jpeg)
 
 **Subscribe Form & Newsletter Marketing (Mailchimp)**
 

@@ -1583,12 +1583,12 @@ font-size: 100% !important;
 
     /* Nav links style */
     .nav-link {
-        font-size: 22px;
+        font-size: 22px !important;
     }
 
     /* Style logo */
     .img-logo {
-        width: 200px;
+        width: 200px !important;
     }
 
     /* Style header icons */

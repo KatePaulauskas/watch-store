@@ -94,6 +94,8 @@ def shop(request):
         'brand_friendly_name': brand_friendly_name,
         'gender_friendly_name': gender_friendly_name,
         'current_sorting': current_sorting,
+        'sort': sort,
+        'direction': direction,
         'reset_filters': reset_filters,
     }
 

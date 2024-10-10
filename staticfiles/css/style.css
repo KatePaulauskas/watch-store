@@ -551,7 +551,7 @@ ul.errorlist li {
 }
 
 .card-body {
-    height: 80px;
+    height: 85px;
     /* Limit product name to 3 lines. Source: MDN Web Docs */
     -webkit-line-clamp: 3;
 }
@@ -728,6 +728,12 @@ input[type="number"] {
 input[type="number"]::-ms-inner-spin-button,
 input[type="number"]::-ms-outer-spin-button {
     display: none;
+}
+
+/* Remove focus outline from increment and decrement buttons */
+.increment-qty:focus,
+.decrement-qty:focus {
+    outline: none !important;
 }
 
 /* Style Cart Page */

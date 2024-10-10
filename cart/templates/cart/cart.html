@@ -15,6 +15,7 @@
     <div class="row">
         {% if cart_items %}
         <div class="col-12 px-0 px-sm-2 px-lg-5">
+
             <!-- Cart items table here -->
             <table class="table cart-table">
                 <thead>
@@ -37,6 +38,7 @@
                             </a>
                             <p class="d-none d-sm-block my-0">SKU: {{ item.product.sku|upper }}</p>
                             <p class="my-0">€{{ item.product.price|intcomma }}</p>
+
                             <!-- Adjusted form for quantity update with plus and minus buttons -->
                             <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.product.id %}">
                                 {% csrf_token %}
@@ -44,6 +46,7 @@
                                     <div class="col-12">
                                         <div class="col w-25 mt-2">
                                             <div class="d-flex flex-column align-items-center">
+
                                                 <!-- Quantity controls -->
                                                 <div class="d-flex">
                                                     <button type="button" class="decrement-qty btn px-1 mb-1" data-item_id="{{ item.product.id }}">
@@ -54,6 +57,7 @@
                                                         <iconify-icon icon="heroicons-outline:plus" style="color: #e4c58a"></iconify-icon>
                                                     </button>
                                                 </div>
+
                                                 <!-- "Remove" link -->
                                                 <a class="remove-item mt-2 mt-md-0 ml-md-3" style="text-decoration: none;" data-item_id="{{ item.product.id }}">
                                                     <small>Remove</small>
@@ -69,9 +73,10 @@
                     </tr>
                     <tr><td colspan="3"><hr class="my-3"></td></tr>
                 {% endfor %}
+
+                <!-- Order Summary -->
                 <tr>
                     <td colspan="3" class="pt-5 px-2 px-md-4 px-lg-5 text-start text-sm-end">
-                        <hr>
                         <p class="mb-0"><strong>Order Summary:</strong></p>
                         <p class="mb-1"><small>Subtotal: €{{ total|floatformat:2|intcomma }}</small></p>
                         <p class="mb-1"><small>Delivery: €{{ delivery|floatformat:2|intcomma }}</small></p>
@@ -79,6 +84,8 @@
                     </td>
                 </tr>
             </table>
+
+            <!-- Cart Buttons -->
             <div class="mt-auto d-flex flex-column align-items-center flex-sm-row justify-content-center my-3 mx-0 mx-sm-3">
                 <a href="{% url 'shop' %}" class="btn btn-cart">
                     <iconify-icon icon="typcn:arrow-back" style="color: #e4c58a" aria-hidden="true"></iconify-icon>
@@ -91,6 +98,8 @@
             </div>
         </div>
     {% else %}
+
+    <!-- Empty Cart -->
     <div class="d-flex justify-content-center align-items-start">
         <div class="text-center">
             <p class="my-5">Your cart is empty.</p>

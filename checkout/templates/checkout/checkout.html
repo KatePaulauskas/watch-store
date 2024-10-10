@@ -13,12 +13,16 @@
         </div>
     </div>
     <div class="row">
+
+        <!-- Edir Cart Button -->
         <div class="d-flex justify-content-end me-5 p-0">
             <a href="{% url 'view_cart' %}" class="btn btn-back-to-shop text-decoration-underline m-0 p-1 p-sm-4 p-md-5">
                 <iconify-icon icon="typcn:arrow-back" style="color: #e4c58a" aria-hidden="true"></iconify-icon>
                 Edit Cart
             </a>
         </div>
+        
+        <!-- Order Summary -->
         <div class="col-12 col-lg-6 order-lg-last mb-5 p-3 px-sm-4 px-md-5">
             <div class="d-flex justify-content-start">
                 <h2 class="mb-0 fs-5">Order Summary ({{ product_count }})</h2>
@@ -77,6 +81,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Delivery Details -->
         <div class="col-12 col-lg-6 px-3 align-items-center">
             <div class="d-flex justify-content-center">
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
@@ -89,6 +95,8 @@
                         <a class="text-info" href="{% url 'account_signup' %}">register</a></p>
                     </div>
                     {% endif %}
+
+                    <!-- Contact Details -->
                     <h5 class="px-2 text-center text-lg-start">Customer Details</h5>
                     <fieldset class="rounded px-3 mb-5 d-flex flex-column align-items-center">
                         {{ order_form.full_name | as_crispy_field }}
@@ -112,6 +120,8 @@
                             {% endif %}
                         </div>
                     </fieldset>
+
+                    <!-- Delivery Method -->
                     <h5 class="px-2 text-center text-lg-start">Delivery Method</h5>
                     <fieldset class="rounded mb-5 ps-5 py-1 align-items-start">
                         <div id="delivery-methods">
@@ -123,6 +133,7 @@
                             {% endfor %}
                         </div>
                     </fieldset>
+
                     <!-- Add-ons -->
                     <div class="mb-3">
                         <h5 class="px-2 text-center text-lg-start">Add-ons</h5>
@@ -146,11 +157,13 @@
                     <p class="mb-5 text-center">Your card will be charged <span id="grand-total-payment"><strong>€{{ grand_total|floatformat:2 | intcomma }}</strong></span></p>
                     <h5 class="px-2 text-center text-lg-start">Payment</h5>
                     <fieldset class="rounded px-3 mb-1 d-flex flex-column align-items-center">
+
                         <!-- A Stripe card element will go here -->
                         <div class="pt-2" id="card-element"></div>
 
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+
                         <!-- Pass the client secret to the view to get the payment intent id -->
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
@@ -162,6 +175,8 @@
         </div>
     </div>
 </div>
+
+<!-- Loading Overlay for payment processing -->
 <div id="loading-overlay">
     <h1 class="loading-spinner text-center">The payment is being processed, please wait.
         <br>

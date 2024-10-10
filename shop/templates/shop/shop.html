@@ -4,6 +4,7 @@
 {% load humanize %}
 
 {% block content %}
+    <!-- Products Gallery -->
     <div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
         <div class="text-center mt-3">
             <h1>Our Products</h1>
@@ -35,10 +36,12 @@
                             {% else %}
                                 <p class="rating">No Rating</p>
                             {% endif %}
+
                             <!-- Add to Cart Form (for Shop Page) -->
                             {% if product.availability %}
                             <form action="{% url 'shop_page_add_to_cart' product.id %}" method="POST">
                                 {% csrf_token %}
+
                                 <!-- Use get_full_path to include query parameters. Source: GeeksforGeeks-->
                                 <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                                 <div class="col-12 d-flex justify-content-center">
@@ -63,6 +66,7 @@
             {% endfor %}
         </div>
     </div>
+
     <!-- Delete confirmation modal -->
     <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
         <div class="modal-dialog">

@@ -3,10 +3,12 @@
 {% load humanize %}
 
 {% block content %}
+
     <!-- Main container for the homepage section -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 above-fold">
+
                 <!-- Store Name and Button -->
                 <div class="col-12 col-sm-6">
                     <h1 class="home-h1 text-outline mt-4">
@@ -14,6 +16,7 @@
                     </h1>
                 </div>
                 <div>
+
                     <!-- Explore Button -->
                     <a href="{% url 'shop' %}" class="btn btn-explore py-1 px-2 mt-4">Explore</a>
                 </div>
@@ -24,6 +27,7 @@
     <!-- Featured Products Section -->
     <div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
         <div class="text-center mt-3">
+
             <!-- Heading for Featured Products -->
             <h2 class="text-center my-3 my-lg-5">Featured Products</h2>
         </div>
@@ -33,10 +37,12 @@
             {% for product in featured_products %}
                 <div class="product-card">
                     <div class="card py-3">
+
                         <!-- Product Image -->
                         <a href="{% url 'product_page' product.id %}">
                             <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
+
                         <!-- Product details (name, rating, price) -->
                         <div class="card-body text-center py-1">
                             <a href="{% url 'product_page' product.id %}" style="text-decoration: none;">
@@ -45,6 +51,7 @@
                         </div>
                         <div class="card-footer py-0">
                             <p class="m-0 py-0">€{{ product.price|intcomma }}</p>
+
                             <!-- Display product rating -->
                             {% if product.rating %}
                                 <p class="rating m-0 py-0">
@@ -58,6 +65,7 @@
                             {% else %}
                                 <p class="rating">No Rating</p>
                             {% endif %}
+
                             <!-- Add to Cart functionality for products -->
                             {% if product.availability %}
                                 <form action="{% url 'shop_page_add_to_cart' product.id %}" method="POST">
@@ -68,12 +76,14 @@
                                     </div>
                                 </form>
                             {% else %}
+
                                 <!-- Disabled button if the product is out of stock -->
                                 <div class="col-12 d-flex justify-content-center">
                                     <button type="button" class="btn btn-add text-uppercase mt-4" disabled style="background-color: #ccc;">Out of Stock</button>
                                 </div>
                             {% endif %}
                             <br>
+
                             <!-- Superuser admin options: Edit and Delete buttons -->
                             {% if request.user.is_superuser %}
                                 <div class="admin mt-2 mt-md-3">
@@ -85,6 +95,7 @@
                     </div>
                 </div>
             {% empty %}
+
                 <!-- Message if no featured products are available -->
                 <p class="text-center">No featured products available at the moment.</p>
             {% endfor %}
@@ -94,6 +105,7 @@
     <!-- About Us Section -->
     <div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
         <div class="about-us text-center mt-3 mx-lg-5">
+
             <!-- About Us Content -->
             <h2 class="text-center my-3 my-lg-5">About Us</h2>
             <p class="home">
@@ -124,6 +136,7 @@
     <!-- Our Values Section -->
     <div class="container justify-content-between m-0 py-0 px-3 px-lg-4 px-xl-5">
         <div class="about-us text-center mt-3 mx-2 mx-lg-5">
+            
             <!-- Our Values Heading and List -->
             <h3 class="our-values text-center my-3 my-lg-5">Our Values</h3>
             <ul class="values ps-2">

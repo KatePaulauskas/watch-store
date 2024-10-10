@@ -1225,7 +1225,9 @@ The keywords were selected using the Semrush platform based on two locations: Ir
 
 ![SEO Keywords Ireland](/media/seo-keywords-us-2.jpeg)
 
-- **On-page SEO:** Meta descriptions and title tags, such as "Eternity | Luxury Watch Store," are crafted to reflect the core offerings of high-quality, affordable luxury watches. By including relevant keywords like "timeless designs" and "online watch shopping," the site becomes more attractive to search engines. Additionally, each page features a single H1 tag to reinforce relevance and improve search engine rankings.
+- **On-page SEO:** Personalised and optimised meta descriptions and title tags have been crafted for all pages, enhancing search engine visibility and relevance to user queries. With comprehensive meta descriptions and title tags across each page, Eternity Watch Store reinforces its brand identity, ensuring visibility for both new and returning customers. Although admin pages are restricted to superusers, they include consistent SEO-friendly tags for a coherent site structure, contributing to clarity and alignment across all pages. 
+
+By incorporating keywords like "affordable luxury watch" and "online watch shopping," the site becomes more appealing to search engines. Additionally, each page includes a single H1 tag to reinforce relevance and improve search engine rankings, while other headings follow a clear, structured hierarchy.
 
 - **Image SEO:** All images on the website include descriptive alt-text to enhance accessibility and improve search engine visibility, ensuring that search engines and visually impaired users can understand the content of the images.
 

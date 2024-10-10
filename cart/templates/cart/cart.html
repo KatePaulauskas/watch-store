@@ -11,6 +11,7 @@
             <h1 class="h1 text-center mt-4">Cart</h1>
         </div>
     </div>
+    <hr>
     <div class="row">
         {% if cart_items %}
         <div class="col-12 px-0 px-sm-2 px-lg-5">
@@ -69,6 +70,7 @@
                 {% endfor %}
                 <tr>
                     <td colspan="3" class="pt-5 px-2 px-md-4 px-lg-5 text-start text-sm-end">
+                        <hr>
                         <p class="mb-0"><strong>Order Summary:</strong></p>
                         <p class="mb-1"><small>Subtotal: €{{ total|floatformat:2|intcomma }}</small></p>
                         <p class="mb-1"><small>Delivery: €{{ delivery|floatformat:2|intcomma }}</small></p>
@@ -76,6 +78,7 @@
                     </td>
                 </tr>
             </table>
+            <hr>
             <div class="mt-auto d-flex flex-column align-items-center flex-sm-row justify-content-center my-3 mx-0 mx-sm-3">
                 <a href="{% url 'shop' %}" class="btn btn-cart">
                     <iconify-icon icon="typcn:arrow-back" style="color: #e4c58a" aria-hidden="true"></iconify-icon>

@@ -753,10 +753,6 @@ input[id^="id_qty_"] {
     overflow-wrap: break-word;
 }
 
-table tr {
-    border-bottom: 0.1px solid #230903 !important;
-}
-
 /* Style Checkout and Profile Pages */
 
 .text-info {
@@ -1092,7 +1088,7 @@ font-size: 100% !important;
 .footer-heading {
     font-size: 16px !important;
     text-decoration: none !important;
-    color: #AA9159 !important;
+    color: #E4C58A !important;
 }
 
 /* Mailchimp style */
@@ -1224,7 +1220,12 @@ font-size: 100% !important;
     .table .product-name-wrap {
         max-width: 190px;
     }
-    
+
+    /* Remove border on the table sells that are hidden on mobile */
+    .table .d-none.d-sm-block {
+        border: none !important;
+    }
+
     /* Style Checkout Page */
     #id-country,
     .profile-form-input {
@@ -1521,7 +1522,7 @@ font-size: 100% !important;
         font-size: 110%;
     }
 
-    .nav-link {
+    .menu {
         font-size: 20px !important;
     }
     
@@ -1593,7 +1594,7 @@ font-size: 100% !important;
     }
 
     /* Nav links style */
-    .nav-link {
+    .menu {
         font-size: 24px !important;
     }
 

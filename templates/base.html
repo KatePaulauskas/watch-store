@@ -145,7 +145,7 @@
                     <ul class="header-icons d-flex flex-row mx-1">
                         <!-- Cart -->
                         <li class="list-inline-item cart mx-0">
-                            <a class="nav-link" href="{% url 'view_cart' %}">
+                            <a class="nav-link menu" href="{% url 'view_cart' %}">
                                 <div class="text-center">
                                     <div><iconify-icon icon="solar:cart-5-bold" width="20" height="20" aria-hidden="true"></iconify-icon></div>
                                     <p class="my-0 icon-text">
@@ -160,7 +160,7 @@
                         </li>
                         <!-- Account Dropdown -->
                         <li class="list-inline-item dropdown">
-                            <a class="nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link menu" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="dropdown-options text-center">
                                     {% if request.user.is_authenticated %}
                                     <div class="dropdown-options"><iconify-icon icon="mdi:account-arrow-down" width="20" height="20" aria-hidden="true"></iconify-icon></div>

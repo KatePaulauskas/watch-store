@@ -1,4 +1,11 @@
 {% extends "base.html" %}
+{% block extra_meta %}
+    <meta name="description" content="Thank you for choosing Eternity for your luxury watches.
+    Discover affordable, high-quality, and branded luxury watch options, from timeless designs
+    to the best affordable luxury watches for men and women.">
+{% endblock %}
+
+{% block extra_title %}| Order Confirmation{% endblock %}
 {% load static %}
 
 {% load humanize %}
@@ -37,7 +44,7 @@
                     </div>
                     {% endfor %}
                     <hr>
-                    
+
                     <!-- Totals and details sections -->
                     <div class="row">
                         <div class="col-6 col-md-4 text-start">

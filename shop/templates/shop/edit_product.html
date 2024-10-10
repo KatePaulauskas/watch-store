@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% block extra_meta %}
+    <meta name="description" content="Update product details for luxury watches in Eternity's collection,
+    including branded and affordable luxury watches with timeless designs for men and women.">
+{% endblock %}
+{% block extra_title %}| Edit {{ product.name }}{% endblock %}
 {% load static %}
 {% load crispy_forms_tags %}
 

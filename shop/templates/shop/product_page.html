@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% block extra_meta %}
+    <meta name="description" content="Explore our range of luxury watches with timeless designs and high-quality craftsmanship.
+    Discover men's and women's luxury watch brands at affordable prices, perfect for online shopping of premium timepieces.">
+{% endblock %}
+{% block extra_title %}| {{ product.name }}{% endblock %}
 {% load static %}
 
 {% load humanize %}
@@ -68,7 +73,7 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% else %}
-                        
+
                             <!-- If product is not available, show an "Out of Stock" button -->
                             <div class="col-12 d-flex justify-content-center justify-content-md-between">
                                 <button type="button" class="btn btn-add text-uppercase mt-4" disabled style="background-color: #ccc;">Out of Stock</button>

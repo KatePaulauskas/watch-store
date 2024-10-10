@@ -719,6 +719,11 @@ input[id^="id_qty_"] {
 .table td {
     padding-top: 15px !important;
     padding-bottom: 15px !important;
+    border-bottom: transparent !important;
+}
+
+.table th {
+    border-bottom: transparent !important;
 }
 
 /* Ensure images vertically aligned in the center */

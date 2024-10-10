@@ -21,18 +21,13 @@ var style = {
             fontWeight: '500',
         },
         '::selection': {
-            background: '#000000',
             color: '#AA9159',
             fontWeight: '500',
         },
         ':-webkit-autofill': {
             color: '#AA9159',
-            '-webkit-text-fill-color': '#AA9159',
-            'box-shadow': '0 0 0px 1000px #000 inset',
-            caretColor: '#AA9159',
         },
         ':focus': {
-            caretColor: '#AA9159',
             fontWeight: '500',
         },
 
@@ -45,7 +40,6 @@ var style = {
 var card = elements.create('card', {
     style: style,
     hidePostalCode: true,
-    ariaLabel: 'Credit or debit card',
 });
 card.mount('#card-element');
 

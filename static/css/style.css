@@ -272,6 +272,7 @@ input.search-bar {
     border: 1px solid #E4C58A !important;
     font-family: "Cormorant Unicase", sans-serif !important;
     font-size: 95%;
+    font-weight: 800 !important;
     outline: 1px solid #230903 !important;
     width: 165px !important;
     min-height: 30px !important;
@@ -311,8 +312,8 @@ input.search-bar {
 
 .btn-explore:hover,
 .btn-account:hover,
-.btn-account:active,
-.btn-account:visited,
+.btn-account:focus,
+.btn-account:after,
 .btn-add:hover,
 .btn-cart:hover,
 .btn-profile:hover,
@@ -323,8 +324,11 @@ input.search-bar {
     border: 1px solid #e4c58a !important;
 }
 
-.btn-account:visited {
-    background-color: #AA9159 !important;
+.btn-account:visited,
+.btn-account:disabled,
+.btn-account:focus-visible {
+    background-color: #e4c58a !important;
+    color: #230903 !important;
 }
 
 .btn-explore:active,
@@ -717,10 +721,6 @@ input[id^="id_qty_"] {
     padding-bottom: 15px !important;
 }
 
-table tr {
-    border-bottom: 0.1px solid #AA9159 !important;
-}
-
 /* Ensure images vertically aligned in the center */
 .img-col {
     vertical-align: middle;
@@ -751,6 +751,10 @@ table tr {
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+table tr {
+    border-bottom: 0.1px solid #230903 !important;
 }
 
 /* Style Checkout and Profile Pages */
@@ -1087,6 +1091,8 @@ font-size: 100% !important;
 
 .footer-heading {
     font-size: 16px !important;
+    text-decoration: none !important;
+    color: #AA9159 !important;
 }
 
 /* Mailchimp style */
@@ -1096,6 +1102,10 @@ font-size: 100% !important;
     width: 200px;
     color: #E4C58A;
     font-weight: 200 !important;
+}
+
+#mc_embed_signup .mc-field-group input {
+    height: 33px !important;
 }
 
 /* Ensure form container has enough width */
@@ -1213,11 +1223,6 @@ font-size: 100% !important;
 
     .table .product-name-wrap {
         max-width: 190px;
-    }
-
-    /* Remove border on the table sells that are hidden on mobile */
-    .table .d-none.d-sm-block {
-        border: none !important;
     }
     
     /* Style Checkout Page */
@@ -1670,7 +1675,7 @@ font-size: 100% !important;
 @media screen and (min-width: 1400px) {
     /* Style Shop page. 4 products per row */
     .product-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
     
     /* Style Subscribe form */

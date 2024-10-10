@@ -10,6 +10,7 @@ Additionally, customers have access to a contact form for enquiries and support,
 
 ![Responsive Mockup](media/responsive-mockup.jpeg)
 
+
 ## Project Link
 
 The live store is located at the following [address](https://eternity-watch-store-1f855f4289ad.herokuapp.com/).
@@ -41,13 +42,16 @@ Project milestones were carefully aligned with the established project epics to 
 
 By leveraging these Agile practices and tools, the project maintained a clear and organised structure, allowing for effective tracking and timely completion of 42 user stories.
 
+
 ## User Experience Design
 
 The Eternity - Luxury Watch Store website was meticulously developed to cater to the needs of discerning customers seeking affordable luxury watches. By implementing a strategic approach that combines user-centric design and business objectives, the platform ensures an exceptional online shopping experience for luxury watch enthusiasts.
 
+
 ### Strategy
 
 The foundation of the user experience was built by considering user needs and business objectives. The strategy focused on three main areas: identifying the target audience, defining clear business goals, and delivering value.
+
 
 #### User Needs
 
@@ -64,6 +68,7 @@ Understanding the diverse needs of our users was essential. After thorough resea
 
 These users require a platform that offers comprehensive, reliable, high-quality information about affordable luxury watches, including product details, reviews, and a seamless purchasing experience.
 
+
 #### Business Objectives
 
 For Eternity, the primary business objectives include streamlining the purchase process, showcasing a curated selection of high-quality yet affordable watches, and establishing a strong online presence to attract and retain discerning customers. The brand’s commitment is to offer luxury watches that are both timeless and accessible, within a price range customers are comfortable and confident purchasing online.
@@ -71,6 +76,7 @@ For Eternity, the primary business objectives include streamlining the purchase 
 **Goal**
 
 The primary goal of the Eternity website is to streamline the watch purchasing process for customers while providing an inviting, informative, and efficient online presence that highlights the high-quality, affordable timepieces offered.
+
 
 #### Focus, Definition, and Value
 
@@ -97,9 +103,11 @@ The value of the Eternity website is multi-faceted:
 
 By focusing on these key areas, the Eternity website aims to deliver a superior user experience that aligns with both business objectives and user needs.
 
+
 ### Scope
 
 At the Scope Plane, features and content were developed by defining User Scenarios to understand how different users will interact with the site. This process involved creating Epics and User Stories to break down these scenarios into manageable tasks and features.
+
 
 #### User Scenarios
 
@@ -115,7 +123,9 @@ Returning customers can quickly log in to their accounts to view and manage thei
 
 Jewellers, boutiques, and other potential partners can find comprehensive information about the store's offerings and expertise. They can view the quality of the watches through the gallery and contact the store for potential collaborations using the dedicated contact form.
 
+
 #### - User Stories -
+
 
 ##### **Epic 1: Home Page Experience**
 
@@ -156,6 +166,7 @@ Jewellers, boutiques, and other potential partners can find comprehensive inform
 
 - **User Story: Submit Contact Form Request**
 
+
 ##### **Epic 2:  User Registration and Account Management**
 
  As a **shopper** I **can register and manage my account** so that **I can have a personalised shopping experience**.
@@ -183,6 +194,7 @@ Jewellers, boutiques, and other potential partners can find comprehensive inform
 - **User Story: View Order History**
 
      As a **shopper**, I can **view my order history** so that **I can reference previous purchases**.
+
 
 ##### **Epic 3: Product Browsing and Search**
 
@@ -212,6 +224,7 @@ Jewellers, boutiques, and other potential partners can find comprehensive inform
 
      As a **user**, I can **clearly see my search query and the total number of results** so that **I can assess if the desired product is offered by the store**.
 
+
 ##### **Epic 4: Product Details**
 
  As a **shopper**, I can **view detailed information about watches** so that **I can make informed purchasing decisions**.
@@ -223,6 +236,7 @@ Jewellers, boutiques, and other potential partners can find comprehensive inform
 - **User Story: Select Product Quantity**
 
      As a **shopper**, I can **select product quantity** so that I can **customize my choice before adding it to the cart**.
+
 
 ##### **Epic 5: Shopping Cart and Checkout**
 
@@ -279,7 +293,7 @@ Jewellers, boutiques, and other potential partners can find comprehensive inform
 - **User Story: Order Email Confirmation**
 
      As a **shopper**, I can **receive an order confirmation via email** so that **I have proof of my purchase**.
-     
+  
 
 ##### **Epic 6: Admin and Store Management**
  
@@ -292,7 +306,6 @@ Jewellers, boutiques, and other potential partners can find comprehensive inform
 - **User Story: Edit/Update a Product as Admin**
 
      As an **admin**, I can **edit or update a product** so that **I can change product prices, descriptions, images, and other product criteria**.
-     
 
 - **User Story: Delete a Product as Admin**
 
@@ -314,6 +327,7 @@ Jewellers, boutiques, and other potential partners can find comprehensive inform
 ### Structure
 
 At the Structure Plane, the information organisation and interaction design were developed by defining the site pages, database structure, and purchasing flow. 
+
 
 #### - Site Pages -
 
@@ -380,6 +394,7 @@ Admin pages:
 **Manage Policies**
 
 * Is the regular Policies Page with additional functionality for the superuser, which allows the superuser to update existing policies via hidden Edit Policy Page, ensuring compliance with business and legal standards.
+
 
 #### - Database Structure -
 
@@ -500,6 +515,7 @@ The initial layout of the interface and navigation for the Eternity Luxury Watch
 
 At the Surface Plane, the visual design of the site was developed, with a strong focus on the overall look and feel of the site.
 
+
 #### Colour Scheme
 
 The colours for the Eternity Luxury Watch Store site were carefully chosen using the [Coolors tool](https://coolors.co/) to establish a brand identity that exudes both luxury and sophistication. 
@@ -515,6 +531,7 @@ Each color plays a critical role in creating an inviting and refined user experi
 - **Lion (#aa9159ff), Licorice (#230903ff), and Seasalt (#fbfaf8ff):** These colors are strategically employed throughout the site to add contrast and highlight important elements. The rich and sophisticated tones of lion and licorice, paired with the soft and clean seasalt, ensure that the overall design remains luxurious while also being visually dynamic and engaging. These colors work together to create a cohesive aesthetic that reflects the brand’s commitment to quality and timeless elegance.
 
 The combination of these carefully selected colors creates a cohesive and luxurious aesthetic that embodies the brand’s dedication to offering timeless, high-quality watches. The palette strikes a balance between bold, rich tones and elegant neutrals, ensuring that the website appeals to discerning customers who value both style and substance.
+
 
 #### Typography
 
@@ -539,6 +556,7 @@ Choosing the right fonts is essential for conveying the luxury and sophisticatio
    - **Readability and Functionality:** Muli is a sans-serif font that is optimized for on-screen readability. It’s clean and minimalistic, which makes it ideal for large blocks of text, such as product descriptions and informational content. The font ensures that the text is easy to read, enhancing the user experience.
    - **Subtle and Neutral:** Muli's subtle design does not distract from the content, allowing the luxury watches to remain the focal point. Its neutral appearance complements the more expressive heading fonts, ensuring a cohesive and harmonious overall design.
 
+
 #### Visual Representation of Font Pairing
 
 - **Headings (H1):** Cormorant Unicase
@@ -553,9 +571,12 @@ By integrating these fonts, the Eternity Luxury Watch Store website can effectiv
 
 In addition to the selected fonts, the backdrop font across the website is also sans-serif. This backdrop enhances the modern and clean aesthetic, supporting the visual hierarchy and helping foreground content pop against a clear, unobtrusive background.
 
+
 ## Features
 
+
 ### Existing Features
+
 
 #### Header
 
@@ -568,6 +589,7 @@ The logo with a tagline, representing the brand's identity, is centered in the h
 On the left side of the header, the navigation bar allows users to explore the site with ease. The search bar is aligned to the center offering quick access to product searches, while cart and account icons are aligned on the right, offering quick access to shopping cart overview, and account management. These elements ensure that users can efficiently browse and manage their shopping experience.
 
 ![Header](/media/header.jpeg)
+
 
 #### Navigation Bar
 
@@ -588,6 +610,7 @@ The fully responsive navigation bar is displayed across all site pages, allowing
  Clicking on this icon reveals a drop-down menu with the current page highlighted, ensuring smooth navigation. The user's login status is also displayed in the dropdown menu. Additionally, the search bar, cart, and account icons remain prominently displayed for easy access.
 
   ![Mobile Navbar Opened](/media/navbar-mob.jpeg)
+
 
 #### Search Bar
 
@@ -625,13 +648,16 @@ The user account dropdown menu changes based on the user's authentication status
 
 The account icon changes based on the user's login status, with different icons for logged-in and logged-out states, making the navigation more intuitive. The current page is also highlighted in the dropdown menu to improve user experience.
 
+
 #### Home Page
+
 
 ##### Above the Fold
 
 When users first visit the Eternity Luxury Watch Store website, they are greeted with an inviting hero image featuring a luxury watch. This section is designed to captivate the user’s attention immediately, creating a strong first impression of the store's curated selection of high-quality timepieces.
 
 ![Above Fold](/media/above-fold.jpeg)
+
 
 ##### Featured Products
 
@@ -643,11 +669,13 @@ If a customer attempts to add more than 10 pieces of the same product to the car
 
 ![Home Page Max Amount Warning.jpeg](/media/home-page-max-amount-warning.jpeg)
 
+
 ##### About Us
 
 The About Us section provides visitors with a comprehensive overview of the brand's mission and vision. It emphasizes Eternity's commitment to offering affordable luxury watches. This section builds trust and fosters a connection with potential customers by highlighting the brand’s dedication to quality and customer satisfaction.
 
 ![About Us](/media/about-us.jpeg)
+
 
 #### Shop Page
 
@@ -687,6 +715,7 @@ A reset button is also available next to the filters, allowing users to reset th
 
 ![Reset Appplied](/media/reset-filters-applied.jpeg)
 
+
 #### Product Page
 
 The Product Page offers a detailed view of each watch, showcasing comprehensive descriptions, specifications, and high-resolution images. 
@@ -713,6 +742,7 @@ At the top of the page on the left, a "Back to Shop" button allows customers to 
 
 ![Out of Stock](/media/out-of-stock.jpeg)
 
+
 #### Cart Page
 
 The Cart Page provides an overview of the items a customer plans to purchase, including the product name, SKU, image, price, quantity, subtotal, standard delivery cost, and total cost, allowing customers to review and adjust their selections before proceeding to checkout:
@@ -732,6 +762,7 @@ At checkout, customers have the option to switch to a priority delivery rate. De
 If a customer visits the Cart Page before adding any items to the cart, they receive a notification that their cart is empty, and a button is provided to return to the shop.
 
 ![Empty Cart](/media/empty-cart.jpeg)
+
 
 #### Checkout Page
 
@@ -764,6 +795,7 @@ The owner who has access to their Stripe account can also see the details of the
 
 ![Stripe Events](/media/stripe-events.jpeg)
 
+
 #### Thank You Page
 
 The Thank You Page provides users with a confirmation that their order has been successfully processed. It displays a summary of the order, including the order number, notification about confirmation email, products with quantities and charges breakdown. This page reassures customers that their payment has been securely processed and provides them with an order number.
@@ -778,6 +810,7 @@ Customers also receive an email confirmation with the same information for their
 
 The Thank You Page serves as the final step in ensuring a smooth and transparent checkout experience.
 
+
 #### Contact Us Page
 
 The Contact Page provides a user-friendly contact form for inquiries, collaborations and feedback. This page is designed to facilitate smooth communication between Eternity Luxury Watch Store and its customers and potential partners, allowing them to easily reach out with any questions or concerns regarding their purchases or collaboration offers.
@@ -787,6 +820,7 @@ The Contact Page provides a user-friendly contact form for inquiries, collaborat
 Upon submitting a request through the form, the user receives a notification confirming successful submission, and the form is refreshed in case the user wishes to send another request:
 
 ![Contact Us Page - Submission Confirmation](/media/contact-us-page-submission-confirmation.jpeg)
+
 
 #### Log In Page
 
@@ -826,6 +860,7 @@ If a user attempts to reset a password for an email that does not match an exist
 
 ![Password Reset Email - Account Does not Exist](/media/password-reset-account-does-not-exist.png)
 
+
 #### Register an Account Page
 
 If a customer does not have an existing account, they can click the "Register" link on the Log In page. They will be redirected to the Register page, where new users can create an account, enabling them to track their orders and manage their account details online.
@@ -860,6 +895,7 @@ In case a user has previously registered, they will receive an email notifying t
 
 ![Email - Account Exists](/media/account-exists.jpeg)
 
+
 #### Log Out Page
 
 To log out, the user must click the account dropdown and select the "Log Out" option. The log out page then loads, where the user must confirm their intent to log out:
@@ -869,6 +905,7 @@ To log out, the user must click the account dropdown and select the "Log Out" op
 Upon confirmation, the user is redirected to the homepage and notified of the successful action:
 
 ![Sign Out Confirmation](/media/sign-out-confirmation.jpeg)
+
 
 #### Store Policies
 
@@ -892,6 +929,7 @@ If a user is logged in, they can access the "Orders and Address" page via the ac
 Users can also click on any order number in the "Order History" table, which will redirect them to a past order confirmation page, commonly referred to as the "Thank You" page. This provides a detailed view of the specific order and its confirmation:
 
 ![Past Order Confirmation Page](/media/thank-you-page-past-order-user.jpeg)
+
 
 #### Footer
 
@@ -923,7 +961,9 @@ The submitted contacts can be seen in the Mailchimp dashboard:
 
      ![Footer](/media/footer-desktop.jpeg)
 
+
 ### Admin Access
+
 
 #### Manage Products
 
@@ -949,6 +989,7 @@ Additionally, the superuser has three extra entry points to manage products:
 
      ![Manage Products Featured Products Gallery](/media/manage-products-product-page.jpeg)
 
+
 #### Add Product
 
 The "Add Product" page allows superusers to expand the catalog by uploading new items. They can input essential details, such as product name, price, description, and images, ensuring the catalog stays updated with the latest offerings. The form is user-friendly, with fields to ensure all necessary information is provided, offering customers a comprehensive view of each product.
@@ -959,6 +1000,7 @@ The availability feature allows for effective stock management. Admins can mark 
 
 ![Edit Product Page](/media/add-product-page.jpeg)
 
+
 #### Edit Product
 
 The "Edit Product" page enables superusers to make changes to existing products. Superusers can update essential product details, such as name, price, description, images, and availability. This functionality allows for the smooth maintenance of the product catalog, ensuring all product information remains accurate and up-to-date.
@@ -966,6 +1008,7 @@ The "Edit Product" page enables superusers to make changes to existing products.
 Additionally, superusers can mark any product as a Featured Product to be displayed on the homepage in the featured product gallery. This option helps highlight key products and increase their visibility to potential customers.
 
 ![Edit Product Page](/media/edit-product-page.jpeg)
+
 
 #### Manage Policies
 
@@ -987,6 +1030,7 @@ Upon saving the updates, a notification is displayed to confirm the changes:
 
 This feature ensures the store remains compliant with business and legal requirements, keeping policies up-to-date with the latest regulations.
 
+
 #### Profile - Orders and Address
 
 The admin also has access to the "Orders and Address" page but with additional functionality. The admin can see a list of all orders placed by all customers, including the clients' names. This allows the admin to oversee every order that goes through the system, offering a broader view of the store's activity. This enhanced view helps the admin maintain oversight and quickly locate any order in question to see the details by clicking on the order number:
@@ -999,6 +1043,7 @@ Pages that are exclusive to the superuser are restricted to regular users. When 
 
 ![Superuser Access Only](/media/superuser-access-only.jpeg)
 
+
 ### Custom Error Pages
 
 To enhance the user experience, custom error pages for 404 and 500 errors have been implemented. These error pages provide clear and helpful messages when users encounter a broken link or an internal server error. By guiding users back to the home page or other key sections, these error pages help maintain a seamless browsing experience even in the event of an error.
@@ -1008,6 +1053,7 @@ To enhance the user experience, custom error pages for 404 and 500 errors have b
 
 **500 Error Page**
 ![500 Error Page](/media/500-error-page.jpeg)
+
 
 ### Admin Panel Features
 
@@ -1048,11 +1094,11 @@ The superuser can view existing users, edit or update their details by clicking 
 
 ![Admin Panel Users View](/media/admin-user-view.jpeg)
 
+
 ### Future Features
 
-**1. Enhanced Sorting Based on Selected Filters**
-
-Currently, sorting resets applied filters (like brand or gender). A future improvement would ensure that sorting respects active filters, maintaining them while sorting within the filtered results. This feature will allow users to apply multiple criteria simultaneously, offering a more personalised browsing experience.
+**1. Hide Products from the Live Site**
+Introduce a feature that allows the admin to hide specific products from the live site without deleting them from the inventory. This will be useful for products that are temporarily unavailable or seasonal, enabling store admins to control visibility and manage stock effectively. Admins can easily toggle products on or off from the storefront as needed.
 
 **2. Inventory Tracking System**
 
@@ -1103,11 +1149,9 @@ Integration of an order tracking system will allow customers to track the status
 
 Users will be able to store multiple default shipping addresses in their account, allowing them to quickly select from saved locations during checkout. This feature will be convenient for frequent shoppers or those who send gifts to multiple recipients, reducing the need to re-enter addresses for each purchase.
 
-**15. Hide Products from the Live Site**
-Introduce a feature that allows the admin to hide specific products from the live site without deleting them from the inventory. This will be useful for products that are temporarily unavailable or seasonal, enabling store admins to control visibility and manage stock effectively. Admins can easily toggle products on or off from the storefront as needed.
-
-**16. Email Confirmation and Campaigns for Subscribers**
+**15. Email Confirmation and Campaigns for Subscribers**
 Implement an automated email system that sends a confirmation email when users subscribe to the newsletter. Additionally, introduce the ability to send out email campaigns to the subscribers list directly from the admin dashboard. This feature will support targeted marketing, allowing the store to share new arrivals, exclusive deals, and personalized recommendations with subscribed users.
+
 
 ## E-commerce Business Model
 
@@ -1122,6 +1166,7 @@ The primary focus of the Eternity - Luxury Watch Store application is Business-t
 - **Brand Positioning:** Eternity aims to position itself as a reliable, affordable luxury watch brand, offering consumers access to premium timepieces without high-end price tags.
 
 - **Online Sales & Revenue Growth:** The key objective is to drive online sales by making the purchasing process simple and efficient, while also providing an informative platform about watches.
+
 
 ### Marketing Strategies
 
@@ -1214,7 +1259,9 @@ The keywords were selected using the Semrush platform based on two locations: Ir
 
 Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded marketing strategies across SEO, social media, and email marketing to enhance its visibility, engage with customers, and drive online sales of affordable luxury watches. These SEO-driven tactics ensure higher search engine rankings, while personalised newsletters and active social media presence promote brand loyalty and increase conversions.
 
+
 ## Technologies used
+
 
 ### Languages
 
@@ -1224,6 +1271,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 * **JavaScript:** Used to add interactivity for editing or deleting products, adjusting quantities on the Product and Cart pages, as well as calculating total of the order and handeling Stripe.
 
+
 ### Libraries and Frameworks
 
 * **Django (version 5.1):** The primary framework used to build this project, providing a robust back-end platform that includes an automatically configured admin panel and numerous helper template tags for efficient coding.
@@ -1231,6 +1279,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 * **Bootstrap (version 5.3.3):** The base front-end framework is used to create a responsive and visually appealing design that works seamlessly with Django's backend functionalities.
 
 * **Django Allauth (version 0.57.2):** Integrated for authentication processes, enhancing the site with login/logout capabilities and social account integration.
+
 
 #### Python Libraries
 
@@ -1240,11 +1289,13 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 - **boto3:** AWS service integration.
 - **django-storages:** Custom storage backends for Django.
 
+
 #### Django Libraries
 
 - **django-allauth:** User authentication.
 - **django-crispy-forms:** Custom form rendering.
 - **crispy-bootstrap5:** Bootstrap 5 template for Django forms.
+
 
 #### Dependencies
 
@@ -1276,6 +1327,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 - urllib3==1.26.20
 - whitenoise==5.3.0
 
+
 ### Technologies
 
 * **ElephantSQL:** Acts as the PostgreSQL hosting service, managing the project's database operations.
@@ -1291,6 +1343,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 - **Balsamiq:** Used to design wireframes for the project.
 
 - **QuickDatabaseDiagrams.com:** Utilised to create Entity-Relationship Diagrams (ERDs).
+
 
 ### Payment Processing
 
@@ -1308,9 +1361,12 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 
 - **Semrush:** Was utilised for keyword research and website optimisation.
 
+
 ## Testing
 
+
 ### Manual Testing
+
 #### Site features and behaviour
 
 | Action/Feature          | Expected Behavior       | Status         |
@@ -1329,6 +1385,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Click on the Cart Icon | Cart page loads | Pass |
 | Notification about user login status | Correctly displays user login status | Pass |
 
+
 #### Search Bar
 
 | Action/Feature          | Expected Behavior       | Status         |
@@ -1340,6 +1397,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Search term with special characters | The system correctly processes the special characters and shows results or an error if no match is found | Pass    |
 | Search term with uppercase letters | The search is case-insensitive, and products matching the term are displayed regardless of capitalisation | Pass    |
 | Search bar usability with keyboard shortcuts | The search bar is usable with the "Tab" and "Enter" keys for accessibility | Pass |
+
 
 #### Home Page
 | Action/Feature          | Expected Behavior       | Status         |
@@ -1354,6 +1412,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Click on any product name in the gallery | The user is directed to the Product Page for that specific product | Pass |
 | **About Us** | | |
 | Scroll past the Featured Products Gallery | Text displaying About Us information and company values is shown | Pass |
+
 
 #### Log In and Reset Password Page
 
@@ -1370,6 +1429,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Click 'Forgot password?' | Password Reset page loads | Pass |
 | On the Password Reset page enter an invalid email format missing @ | "Please include an '@' in the email address. 'email' is missing an '@'" notification appears | Pass |
 | On the Password Reset page enter a valid email address | A confirmation stating that the reset email has been sent is displayed | Pass |
+
 
 #### Register Page
 
@@ -1397,12 +1457,14 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Click confirm button on the loaded page to confirm the email address for the user | 'You have confirmed -email address-" notification is displayed and the user is redirected to the login page | Pass |
 | Enter the login and password details for the registered account |  'Successfully signed in as -username-" notification is displayed and the user is redirected to the home page | Pass |
 
+
 #### Log Out Page
 
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Click 'Log Out' button in the header | Redirects to the Log Out confirmation page | Pass |
 | Confirm logout by clicking on the 'Log Out' button | Redirects to Home page; notification about successful logout displayed | Pass |
+
 
 #### Shop Page 
 
@@ -1419,11 +1481,15 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Sort products by name (A-Z)   | Products are sorted alphabetically  | Pass   |
 | Sort products by name (Z-A) | Products are sorted alphabetically in reverse order  | Pass   |
 | Click "Reset" in the filters menu | All filters are cleared, and the full product list is displayed | Pass   |
+| Apply brand filter, then gender filter, then sorting | All three actions are applied, and products are filtered and sorted as specified | Pass |
+| Change any one of brand, gender, or sorting while all three filters are active | The other two filters remain the same, and accurate results are displayed | Pass |
+| Add a product to the cart while all three filters are applied | Product is added to the cart, and the filtered and sorted view remains intact | Pass |
 | Click "Add to Cart" on any product | The product is added to the cart, and a confirmation message is displayed: "-Product Name- was added to your cart" | Pass   |
 | Click the "Add to Cart" button multiple times on the same product | The cart quantity increases according to the number of times the "Add to Cart" button is clicked, without exceeding 10 | Pass |
 | Click the "Add to Cart" button 11 times on the same product | The message 'The maximum amount of 10 for -Product Name- has been added to your cart.' is displayed | Pass |
 | Click on any product image | The user is directed to the Product Page for that specific product | Pass   |
 | Click on any product name | The user is directed to the Product Page for that specific product | Pass   |
+
 
 #### Product Page 
 
@@ -1438,6 +1504,7 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Product is marked "Out of Stock" | The "Add to Cart" button is replaced with a disabled "Out of Stock" button | Pass |
 | Click "Back to Shop" button | The user is redirected back to the Shop Page | Pass |
 
+
 #### Cart Page
 
 | Action/Feature          | Expected Behavior       | Status         |
@@ -1450,7 +1517,9 @@ Eternity Luxury Watch Store leverages a B2C-focused model with well-rounded mark
 | Click the "Checkout" button  | The user is redirected to the checkout page to complete the purchase  | Pass   |
 | While being on the cart page when products are added to the cart, click on the "Back to Shop" button | The Shop page loads, displaying all the products  | Pass |
 
+
 #### Checkout Page
+
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Visit the checkout page with items in the cart by clicking on the Checkout button in the cart | The page loads displaying the Order summary and checkout fields | Pass |
@@ -1519,12 +1588,15 @@ notification: 'Please fill in this field'  | Pass |
 | Submit the checkout form with all fields filled correctly | Stripe payment intent is initiated, the user is redirected to the Thank You page | Pass |
 | Submit the form with no add-ons | The order is created without add-ons, and payment proceeds successfully | Pass |
 
+
 ##### Thank You Page
+
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | After a successful payment, the user is redirected to the Thank You page |   The Thank You page loads with a confirmation message, order number, and summary details | Pass |
 | The "Thank You" page displays the correct order number    | The order number corresponds to the order placed and is displayed prominently | Pass |
 | The order summary on the Thank You page is accurate | The products, quantities, add-ons, delivery method, and total amount match the order placed | Pass |
+
 
 #### Contact Page
 
@@ -1540,6 +1612,7 @@ notification: 'Please fill in this field'  | Pass |
 " Fill out all fields except for the 'Subject' (delete prefilled text "General Enquiry"), and click submit | "Please fill in this field" appears in the 'Subject' field | Pass |
 | Fill out the name, and email address with the '@'sign, add a subject or keep the default prefilled text "General Enquiry", and add a message, click submit | The notification "Thanks for reaching out! We got your message and will be in touch within 24 hours." displayed at the top of the screen | Pass |
 
+
 #### Policies Page
 
 | Action/Feature          | Expected Behavior       | Status         |
@@ -1551,6 +1624,7 @@ notification: 'Please fill in this field'  | Pass |
 | Verify content for "Return Policy" | The "Return Policy" content is displayed and properly formatted   | Pass |
 | Verify content for "Privacy Policy"   | The "Privacy Policy" content is visible and formatted correctly     | Pass |
 | Log in as a regular user and view policies | Edit buttons are not visible to regular users   | Pass |
+
 
 #### Footer
 
@@ -1597,10 +1671,13 @@ notification: 'Please fill in this field'  | Pass |
 |-------------------------|-------------------------|----------------|
 | Verify that the disclaimer text is visible | The text '* *This website is created for educational and training purposes only*' is displayed in the footer | Pass |
 
+
 #### Features and Pages with Admin Access
+
 | Action/Feature          | Expected Behavior       | Status         |
 |-------------------------|-------------------------|----------------|
 | Click on the Account icon while being logged in as a superuser | A Dropdown appears with the following pages: Manage Products, Manage Policies, Profile and Logout | Pass |
+
 
 #### Manage Products Page
 
@@ -1610,6 +1687,7 @@ notification: 'Please fill in this field'  | Pass |
 | Click the "Edit" button on any product from the "Manage Products" page | The admin is taken to the "Edit Product" page for the selected product  | Pass  |
 | Click the "Delete" button on any product from the "Manage Products" page | A confirmation modal appears asking if the admin wants to delete the product. If confirmed, the product is deleted, and the list is updated | Pass  |
 | Access the "Manage Products" page as a regular user | Regular users are denied access and redirected to the home page with an error message: "Only store owners have access to this action" | Pass  |
+
 
 #### Add Product Page
 
@@ -1670,6 +1748,7 @@ notification: 'Please fill in this field'  | Pass |
 | Click on 'Cancel' at the bottom of the form | The superuser is redirected back to the shop page without saving any product details, notification is displayed: 'action cancelled. No changes were made.' | Pass   |
 | Access the "Add Product" page as a regular user following this URL: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/add/ | Regular users are denied access and redirected to the home page with an error message: "Only store owner has access to this page". | Pass   |
 
+
 #### Edit Product Page
 
 | Action/Feature | Expected Behavior | Status |
@@ -1722,6 +1801,7 @@ notification: 'Please fill in this field'  | Pass |
 | Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/edit/45/) | The user is redirected to the login page with a message indicating that they need to log in | Pass |
 | Attempt to access the edit URL as a regular user | Regular users are denied access to editing product, redirected to the home page and shown an error message: "Only store owner has access to this action" | Pass |
 
+
 #### Delete Product Functionality
 
 | Action/Feature          | Expected Behavior       | Status         |
@@ -1731,6 +1811,7 @@ notification: 'Please fill in this field'  | Pass |
 | Locate any product on the Home Page, Shop Page, or from the Product Page and click on "Delete"; in the pop-up window, click the 'Close' button | The pop-up window is closed, and the admin remains on the same page with a confirmation message: "Action cancelled. No changes were made. " | Pass |
 | Log out and try to access the delete URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/shop/delete/42/) | The user is redirected to the login page with a message indicating that they need to log in  | Pass | 
 | Attempt to access the delete URL as a regular user | Regular users are denied access to deleting a product, redirected to the home page and shown an error message: "Only store owners have access to this action" | Pass |
+
 
 #### Manage Policies Page
 
@@ -1765,7 +1846,9 @@ notification: 'Please fill in this field'  | Pass |
 | Log out and try to access the edit URL directly (for instance: https://8003-katepaulausk-watchstore-26htz3q089y.ws.codeinstitute-ide.net/policies/edit/2/) | The user is redirected to the login page with a message indicating that they need to log in to edit policies | Pass | 
 | Attempt to access the edit URL as a regular user | Regular users are denied access to the policy editing page, redirected to the home page and shown an error message: "Only the store owner has access to this action" | Pass |
 
+
 #### User Stories
+
 | User Story | Expected Behaviour | Actual Behaviour | Status |
 |------------|-------------------|----------------|-----------|
 | Home Page First Impression (above fold) | User sees a visually appealing homepage with store name, logo, welcome message, image, and call-to-action button | Home page is loaded with all elements and attractive design | Pass |
@@ -1811,9 +1894,12 @@ notification: 'Please fill in this field'  | Pass |
 | Store Contact Form Requests | Admin can view and store contact form submissions via admin panel| Contact form submissions are stored and accessible by the admin via admin panel | Pass |
 | Track Contact Form Submissions | Admin can mark contact form submissions as "read" or delete them via admin panel | Admin can successfully track or delete contact form submissions from the dashboard via admin panel| Pass |
 
+
 ### Validator Testing
 
+
 #### HTML
+
 <details>
   <summary>HTML Testing</summary>
 
@@ -1924,6 +2010,7 @@ The rest of the pages passed validation with no errors apart from the Register a
 
 </details>
 
+
 #### CSS
 
 <details>
@@ -1949,6 +2036,7 @@ Although these warnings were flagged, the use of vendor-prefixed properties and 
 
 These warnings do not affect the website’s performance and are essential to delivering a consistent design and experience across all devices and platforms.
 </details>
+
 
 #### JavaScript
 
@@ -1996,6 +2084,7 @@ All the warnings are **ES6 Features Warnings**
 - Solution: The code should be interpreted as ES6. Having the Python runtime version specified in the runtime.txt file helps to address this warning. 
 
 </details>
+
 
 #### Python
 
@@ -2085,6 +2174,7 @@ After ensuring that there are two blank lines before each top-level function or 
 
 </details>
 
+
 ### Responsiveness
 
 <details>
@@ -2125,6 +2215,7 @@ The site was tested on various devices using multiple browsers, including Chrome
 | Samsung Galaxy A51/71      | Pass   | Pass    | N/A    | Pass  |
 
 </details>
+
 
 ### Lighthouse Testing
 
@@ -2187,6 +2278,7 @@ All other pages showed positive results:
 
 </details>
 
+
 ### Accessibility Testing
 
 <details>
@@ -2211,18 +2303,22 @@ The site's colours were also evaluated for accessibility to ensure they are safe
 
 </details>
 
+
 ### Bugs
+
 
 #### Solved Bugs
 
 **Bug 1: Uninitialised Payment Intent on Form Validation Failure**
 
 *Issue:*
+
 During the implementation of additional input field validation in the checkout form, an issue arose where the `intent` variable was not properly initialised when form validation failed during a POST request. Specifically, if invalid data was submitted, the logic did not initialise intent, causing an exception during the rendering of the checkout page.
 
 ![Uninitialised Payment Intent](/media/uninitialised-payment-intent-bug.jpeg)
 
 *Solution:*
+
 To resolve the issue, the initialisation of the `intent` variable was moved outside the conditional logic. This ensures that `intent` is always set, regardless of whether the form is valid or not.
 
 **Bug 2: Cart Behavior Inconsistency**
@@ -2315,6 +2411,38 @@ def shop_page_add_to_cart(request, item_id):
 
 These updates ensure that users cannot exceed the 10-item maximum per product. The total in the cart now updates correctly on the Product, Shop and Home pages, providing consistent behavior and clear feedback to users.
 
+
+#### Remaining Bugs
+
+**Bug 1: Browser Validation Not Triggering for certain input fields**
+
+In the Add Product and Checkout forms, input fields do not trigger the browser's required field validation in Chrome, when left empty upon clicking the submit button. Instead, validation is only triggered when pressing the Enter key on the keyboard. To ensure users receive proper feedback when fields are not filled out correctly, server-side validation, the clean method, and help text were added.
+
+This issue may be related to how Crispy Forms handles fields, especially when displayed individually or when using uncommon field names. Rendering the entire form did not resolve the issue either. While this doesn't affect the application's functionality for data storage and retrieval, as server-side validation ensures completeness, it may impact user experience due to the lack of immediate browser feedback.
+
+**Bug 2: Stripe Integration Styling Issues**
+
+*Issue:*
+
+Customising Stripe payment element for a cohesive look on the site led to warnings in the console, as Stripe restricts certain CSS properties in its secure elements for compliance and security reasons.
+
+![Stripe Unrecognised Oroperties](/media/stripe-unrecognised-properties.jpeg)
+
+The following warnings were encountered:
+
+*Unrecognised Parameters:*
+
+- ariaLabel: This parameter was added for accessibility but is not supported in Stripe’s inputs.
+
+*Unrecognised Properties:*
+
+- -webkit-text-fill-color, -webkit-box-shadow, background: These were added to control autofill background and text color, essential to maintaining the brand look when autofill is enabled.
+- -webkit-autofill: This selector included caretColor, which was added in attempt to avoid the default blue caret color on mobile devices.
+
+![Stripe Blue Caret Color](/media/stripe-caret-color.jpeg)
+
+Unsupported properties were removed. These limitations are due to Stripe’s compliance policies, and there are no current workarounds for unsupported parameters like background or ariaLabel.
+
 **Bug 3: Broken Border on Table Row in Cart**
 
 *Issue:* 
@@ -2329,7 +2457,7 @@ On the Cart page, the bottom border of table row appeared broken or incomplete o
 
 ![Table Row Broken Bottom Border](/media/table-row-broken-bottom-border.jpeg)
 
-*Solution:*
+*Workaround:*
 
 Changing the border color to a lighter shade (Lion #AA9159) resolved the issue, allowing the border to display as a continuous line across all devices and screen sizes.
 
@@ -2340,15 +2468,16 @@ Changing the border color to a lighter shade (Lion #AA9159) resolved the issue, 
 ```
 ![Tabble Row Fixed Bottom Border](/media/table-row-fixed-bottom-border.jpeg)
 
+However, after some time, the issue began recurring with the lighter shade (Lion #AA9159) as well:
+
+![Table Row Broken Bottom Border](/media/table-row-broken-bottom-border-light.jpeg)
+
+This is most likely due to hidden table columns on mobile. As a workaround, a horizontal rule was used instead of a bottom border:
+
+![Cart Tabble with Horizontal Rules](/media/cart-table-hr.jpeg)
+
 This fix improved the visual consistency of the Cart page on mobile screens.
 
-#### Remaining Bugs
-
-**Browser Validation Not Triggering for certain input fields**
-
-In the Add Product and Checkout forms, input fields do not trigger the browser's required field validation in Chrome, when left empty upon clicking the submit button. Instead, validation is only triggered when pressing the Enter key on the keyboard. To ensure users receive proper feedback when fields are not filled out correctly, server-side validation, the clean method, and help text were added.
-
-This issue may be related to how Crispy Forms handles fields, especially when displayed individually or when using uncommon field names. Rendering the entire form did not resolve the issue either. While this doesn't affect the application's functionality for data storage and retrieval, as server-side validation ensures completeness, it may impact user experience due to the lack of immediate browser feedback.
 
 ## Deployment
 
@@ -2373,6 +2502,7 @@ The luxury watch store Eternity website is hosted on [Heroku](https://heroku.com
 - Click 'Add'.
 
 ---
+
 
 ### Part 2 - Update Code for Deployment
 
@@ -2422,6 +2552,7 @@ The luxury watch store Eternity website is hosted on [Heroku](https://heroku.com
 5. **Push Updated Code to GitHub**
 
 ---
+
 
 ### Part 3 - Deployment with Static Files
 
@@ -2481,6 +2612,7 @@ To ensure the deployed app looks as nicely styled as the local development versi
 
 ---
 
+
 ### Part 4 - Configuring Cloudinary for Media Storage
 
 1. **Create a Cloudinary Account:**
@@ -2516,6 +2648,7 @@ To ensure the deployed app looks as nicely styled as the local development versi
 
 ---
 
+
 ### Part 5 - Configuring Email Settings
 
 1. **Set Up Gmail Account:**
@@ -2548,6 +2681,7 @@ To ensure the deployed app looks as nicely styled as the local development versi
      ```
 
 ---
+
 
 ### Part 6 - Configuring Stripe for Payments
 
@@ -2584,6 +2718,7 @@ To ensure the deployed app looks as nicely styled as the local development versi
 
 ---
 
+
 ### Part 7 -  Set Up Deployment from GitHub
 
 1. **Set Up Deployment from GitHub:**
@@ -2608,10 +2743,10 @@ To ensure the deployed app looks as nicely styled as the local development versi
 The deployed project link can be found at the following URL: [Eternity - Luxury Watch Store](https://eternity-watch-store-1f855f4289ad.herokuapp.com/).
 
 
-
 ## Credits
 
 ### Code Development
+
 - Repository was created using [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template).
 - Code Institute ['Boutique Ado' Walk through](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+4/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) was used as an inspiration and guide for creating this project.
 - [Bootstrap 5 documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/) was used for designing the layout and styling elements of the project.
@@ -2635,10 +2770,13 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 - Error pages 404 and 500 were set up using instructions provided by the Code Institute course facilitator: "Error Pages in Django."
 - Cursor color change instructions were implemented based on guidelines from: [GeeksforGeeks](https://www.geeksforgeeks.org/how-to-change-cursor-color-using-css/).
 - Cloudinary setup in the `settings.py` file followed the steps from [Cloudinary](https://cloudinary.com/blog/managing-media-files-in-django)
-
+- To ensure proper display of amounts on the checkout page, [Stack Overflow](https://stackoverflow.com/questions/2254185/regular-expression-for-formatting-numbers-in-javascript) instruction was used to handle JavaScript number formatting accurately. 
+- For retaining applied filters after adding a product to the cart on the Shop page, [GeeksforGeeks](https://www.geeksforgeeks.org/get-the-current-url-within-a-django-template/) approach was used to get the current URL within a Django template.
+-To hide default quantity input spinners on the Product and Cart Pages, the guidance from [CSS-Tricks](https://css-tricks.com/snippets/css/turn-off-number-input-spinners/) and [Stack Overflow](https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box) was followed.
 
 
 ### Content & Design
+
 - [Balsamiq Studios software](https://balsamiq.com/wireframes/) was used to create mockup wireframes for the current project.
 - To select the fonts for the site, a font pairing service was used: [Font Joy](https://fontjoy.com/).
 - Paired font families were downloaded from [Google Fonts](https://fonts.google.com/).
@@ -2659,6 +2797,7 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
 
 
 ### Media
+
 - The hero image and Contact page image were sourced from [Freepik](https://www.freepik.com/).
 - The Home page image above the footer was sourced from [Vecteezy](https://www.vecteezy.com/).
 - Product images were sourced from the official websites of the following brands:
@@ -2667,6 +2806,7 @@ The deployed project link can be found at the following URL: [Eternity - Luxury 
      - [Hamilton](https://www.hamiltonwatch.com/)
      - [Seiko](https://www.seikoboutique.ie/)
      - [Tissot](https://www.tissotwatches.com/en-en/).
+
 
 ### Fixing bugs
 

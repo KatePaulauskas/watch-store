@@ -14,9 +14,10 @@
     <div class="row">
         <div class="col-12 px-1 align-items-center justify-content-center mb-5">
             <div class="text-center">
-                <h2 class="px-2 text-center" id="orders">Order History:</h2>
+                <h2 class="px-2 text-center mb-3 mb-lg-5" id="orders">Order History:</h2>
                 <div class="d-flex justify-content-center">
                     <div class="order-history table-responsive">
+                        <hr>
                         <table class="table-orders-history">
                             <thead>
                                 <tr>
@@ -52,7 +53,7 @@
                                                     {% endfor %}
                                                 </ul>
                                             </td>
-                                            <td>${{ order.grand_total }}</td>
+                                            <td>${{ order.grand_total|intcomma }}</td>
                                         </tr>
                                     {% endfor %}
                                 {% else %}
@@ -66,9 +67,10 @@
                 </div>
             </div>
         </div>
+        <hr>
         <div class="col-12 px-sm-2 px-lg-5 align-items-center justify-content-center mb-5">
             <div class="d-flex justify-content-center">
-                <h2 class="mb-0 text-center" id="address">Default Delivery Address:</h2>
+                <h2 class="mb-0 text-center mb-3 mb-lg-5" id="address">Default Delivery Address:</h2>
             </div>
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}

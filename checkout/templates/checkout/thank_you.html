@@ -32,7 +32,7 @@
                             </a>
                         </div>
                         <div class="col-12 col-md-6 text-md-end">
-                            <p class="small mb-0">{{ item.quantity }} @ €{{ item.product.price }} each</p>
+                            <p class="small mb-0">{{ item.quantity }} @ €{{ item.product.price|intcomma }} each</p>
                         </div>
                     </div>
                     {% endfor %}
@@ -43,7 +43,7 @@
                             <p class="mb-0">Order Total:</p>
                         </div>
                         <div class="col-6 col-md-8 text-end">
-                            <p class="mb-0">€{{ order.order_total }}</p>
+                            <p class="mb-0">€{{ order.order_total|intcomma }}</p>
                         </div>
                     </div>
 
@@ -52,7 +52,7 @@
                             <p class="mb-0">Delivery:</p>
                         </div>
                         <div class="col-6 col-md-8 text-end">
-                            <p class="mb-0">€{{ order.delivery_cost }}</p>
+                            <p class="mb-0">€{{ order.delivery_cost|intcomma }}</p>
                         </div>
                     </div>
 
@@ -61,7 +61,7 @@
                             <p class="mb-0">Add-ons:</p>
                         </div>
                         <div class="col-6 col-md-8 text-end">
-                            <p class="mb-0">€{{ order.add_ons_cost }}</p>
+                            <p class="mb-0">€{{ order.add_ons_cost|intcomma }}</p>
                         </div>
                     </div>
 
@@ -70,7 +70,7 @@
                             <p class="mb-0 fw-bold">Grand Total:</p>
                         </div>
                         <div class="col-6 col-md-8 text-end">
-                            <p class="mb-0">€{{ order.grand_total }}</p>
+                            <p class="mb-0">€{{ order.grand_total|intcomma }}</p>
                         </div>
                     </div>
 

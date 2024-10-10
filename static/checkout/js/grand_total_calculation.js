@@ -1,3 +1,8 @@
+// Helper function to add comma formatting to numbers
+function formatWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 // Automatically select the standard delivery method on page load
 const standardDelivery = document.querySelector('input[name="delivery_method"][data-standard="true"]');
 if (standardDelivery) {
@@ -49,15 +54,15 @@ function updateGrandTotal() {
             });
 
             // Update the delivery cost and add-ons total in the DOM
-            deliveryCost.textContent = "€" + finalDeliveryCost.toFixed(2);
-            document.getElementById("add-ons").textContent = "€" + addOnTotal.toFixed(2);
+            deliveryCost.textContent = "€" + formatWithCommas(finalDeliveryCost.toFixed(2));
+            document.getElementById("add-ons").textContent = "€" + formatWithCommas(addOnTotal.toFixed(2));
 
             // Calculate the grand total by summing the initial total, delivery cost, and add-ons total
             const finalGrandTotal = finalInitialTotal + finalDeliveryCost + addOnTotal;
 
             // Update the grand total in both the summary and payment sections of the DOM
-            grandTotalSummary.textContent = "€" + finalGrandTotal.toFixed(2);
-            grandTotalPayment.textContent = "€" + finalGrandTotal.toFixed(2);
+            grandTotalSummary.textContent = "€" + formatWithCommas(finalGrandTotal.toFixed(2));
+            grandTotalPayment.textContent = "€" + formatWithCommas(finalGrandTotal.toFixed(2));
         } else {
             // Log an error if any of the required DOM elements are missing
             console.error("One or more elements with IDs 'initial-total', 'delivery-cost', or 'grand-total-summary' are missing in the DOM.");

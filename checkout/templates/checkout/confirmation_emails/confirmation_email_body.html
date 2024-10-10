@@ -1,3 +1,6 @@
+{% load humanize %}
+
+<!DOCTYPE html>
 <html>
 <body>
     <p>Hello <strong>{{ order.full_name }}</strong>,</p>
@@ -7,10 +10,10 @@
     <p>
         <strong>Order Number:</strong> {{ order.order_number }}<br>
         <strong>Order Date:</strong> {{ order.date }}<br>
-        <strong>Order Total:</strong> €{{ order.order_total }}<br>
-        <strong>Delivery:</strong> €{{ order.delivery_cost }}<br>
-        <strong>Add-ons:</strong> €{{ order.add_ons_cost }}<br>
-        <strong>Grand Total: €{{ order.grand_total }}</strong>
+        <strong>Order Total:</strong> €{{ order.order_total|intcomma }}<br>
+        <strong>Delivery:</strong> €{{ order.delivery_cost|intcomma }}<br>
+        <strong>Add-ons:</strong> €{{ order.add_ons_cost|intcomma }}<br>
+        <strong>Grand Total: €{{ order.grand_total|intcomma }}</strong>
     </p>
 
     <h4>Items in Your Order:</h4>
@@ -27,7 +30,7 @@
         {{ order.full_name }}<br>
         {{ order.street_address1 }}<br>
         {% if order.street_address2 %}{{ order.street_address2 }}<br>{% endif %}
-        {{ order.town_or_city }}, {{ order.county }}<br>
+        {{ order.town_or_city }}{% if order.county %}, {{ order.county }}{% endif %}<br>
         {{ order.postcode }}<br>
         {{ order.country }}<br>
     </p>
@@ -40,6 +43,6 @@
 
     <p>Best regards,<br>
     <strong>Eternity Watch Store Team</strong></p>
-    <a href="https://eternity-watch-store-1f855f4289ad.herokuapp.com/">https://eternity-watch-store-1f855f4289ad.herokuapp.com/</a>
+    <p>Visit us again at: <a href="https://eternity-watch-store-1f855f4289ad.herokuapp.com/">https://eternity-watch-store-1f855f4289ad.herokuapp.com/</a></p>
 </body>
 </html>

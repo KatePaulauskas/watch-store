@@ -1,4 +1,4 @@
-// Helper function to add comma formatting to numbers
+// Helper function to add comma formatting to numbers. Source: Stack Overflow
 function formatWithCommas(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

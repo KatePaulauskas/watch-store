@@ -710,7 +710,7 @@ input[id^="id_qty_"] {
     font-weight: 200;
 }
 
-/* Hide default arrows in input[type="number"] fields */
+/* Hide default arrows in input[type="number"] fields Sources: CSS-Tricks and Stack Overflow */
 
 /* Chrome, Safari, Edge, Opera, Brave, and other WebKit/Blink-based browsers */
 input[type="number"]::-webkit-inner-spin-button,

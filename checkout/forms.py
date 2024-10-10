@@ -125,14 +125,14 @@ class OrderForm(forms.ModelForm):
             )
 
         # Ensure name contains letters and does not contain digits
-        if not re.match(r"^[a-zA-Z\s'’-]+$", full_name):
+        if not re.match(r"^[a-zA-Z\s'’\-]+$", full_name):
             raise forms.ValidationError(
                 "Full name can only contain letters,"
                     "spaces, apostrophes, and dashes."
             )
 
         # Check for invalid characters
-        invalid_chars = set('<>!@#$%^&*()_+[]{}|;:\'",.?/~`\\=')
+        invalid_chars = set('<>!@#$%^&*()_+[]{}|;:\",.?/~`\\=')
 
         if any(char in invalid_chars for char in full_name):
             raise forms.ValidationError(

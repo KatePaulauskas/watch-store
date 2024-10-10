@@ -274,7 +274,7 @@ input.search-bar {
     font-size: 95%;
     font-weight: 800 !important;
     outline: 1px solid #230903 !important;
-    width: 165px !important;
+    width: 170px !important;
     min-height: 30px !important;
     margin: 15px !important;
     display: flex;
@@ -708,6 +708,26 @@ input[id^="id_qty_"] {
 .quantity {
     color: #E4C58A !important;
     font-weight: 200;
+}
+
+/* Hide default arrows in input[type="number"] fields */
+
+/* Chrome, Safari, Edge, Opera, Brave, and other WebKit/Blink-based browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Microsoft Edge Legacy (EdgeHTML Engine) */
+input[type="number"]::-ms-inner-spin-button,
+input[type="number"]::-ms-outer-spin-button {
+    display: none;
 }
 
 /* Style Cart Page */
@@ -1647,9 +1667,9 @@ font-size: 100% !important;
         width: 250px;
     }
 
-    /* Style Shop page. 3 products per row */
+    /* Style Shop page. 4 products per row */
     .product-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     /* Style Cart page */
@@ -1684,11 +1704,7 @@ font-size: 100% !important;
 
 /* Media query: larger screens (1400px and up) */
 @media screen and (min-width: 1400px) {
-    /* Style Shop page. 4 products per row */
-    .product-grid {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    
+
     /* Style Subscribe form */
     #mce-EMAIL {
         width: 300px !important;

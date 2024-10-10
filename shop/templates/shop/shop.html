@@ -39,7 +39,8 @@
                             {% if product.availability %}
                             <form action="{% url 'shop_page_add_to_cart' product.id %}" method="POST">
                                 {% csrf_token %}
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <!-- Use get_full_path to include query parameters. Source: GeeksforGeeks-->
+                                <input type="hidden" name="redirect_url" value="{{ request.get_full_path }}">
                                 <div class="col-12 d-flex justify-content-center">
                                     <button type="submit" class="btn btn-add text-uppercase mt-4">Add to Cart</button>
                                 </div>

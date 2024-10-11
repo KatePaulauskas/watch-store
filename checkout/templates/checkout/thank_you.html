@@ -31,7 +31,7 @@
                     {% for item in order.lineitems.all %}
                     <div class="row mb-5">
                         <div class="col-12 col-md-6">
-                            <p class="small mb-0">
+                            <p class="small mb-3">
                                 {{ item.product.name }}
                             </p>
                             <a href="{% url 'product_page' item.product.id %}">

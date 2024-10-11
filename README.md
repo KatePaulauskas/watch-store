@@ -1152,6 +1152,10 @@ Users will be able to store multiple default shipping addresses in their account
 **15. Email Confirmation and Campaigns for Subscribers**
 Implement an automated email system that sends a confirmation email when users subscribe to the newsletter. Additionally, introduce the ability to send out email campaigns to the subscribers list directly from the admin dashboard. This feature will support targeted marketing, allowing the store to share new arrivals, exclusive deals, and personalized recommendations with subscribed users.
 
+**16. Persist Shipping Selection on Reload**
+
+To improve the user experience, especially when encountering form validation errors during checkout, the checkout view should be developred further to retain the user’s shipping selection upon form reload. Currently, only add-ons selections are retained. With this feature, users will not need to reselect their preferred shipping option if the form reloads due to an error, providing a more streamlined and efficient checkout process. This enhancement will reduce friction and help users complete their purchases more seamlessly.
+
 
 ## E-commerce Business Model
 
@@ -1586,9 +1590,12 @@ notification: 'Please fill in this field'  | Pass |
 | Enter a postal code shorter than 3 characters (e.g., "12") | Error message "Please lengthen this text to 3 characters or more (you are currently using 2 characters)." is displayed | Pass |
 | Enter a postal code longer than 10 characters (e.g., "12345678901") | User is prevented from entering more than 10 characters | Pass |
 | Enter a valid postal code (e.g., "T56 T122") | The error message disappears, and the form accepts the postal code input | Pass |
+| **Form Reload Testing** |||
+| Submit form with invalid inputs, selecting add-ons | Form reloads, displaying errors; selected add-ons are retained on the reloaded page | Pass |
 | **Final Testing** |||
 | Submit the checkout form with all fields filled correctly | Stripe payment intent is initiated, the user is redirected to the Thank You page | Pass |
 | Submit the form with no add-ons | The order is created without add-ons, and payment proceeds successfully | Pass |
+| 
 
 
 ##### Thank You Page

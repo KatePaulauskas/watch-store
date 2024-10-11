@@ -63,7 +63,7 @@
                     </li>
                     <!-- Reset button -->
                     <li class="nav-item dropdown filters-menu mx-sm-3 mx-md-4 mx-lg-5">
-                        <a class="nav-link py-1 px-4" id="reset" href="{% url 'shop' %}" class="nav-link">Reset</a>
+                        <a class="nav-link py-1 px-1 px-sm-4" id="reset" href="{% url 'shop' %}" class="nav-link">Reset</a>
                     </li>
                 </ul>
             </nav>
@@ -72,19 +72,17 @@
 </form>
 
 <!-- Display Active Filters -->
-<div class="active-filters my-3"> 
+<div class="active-filters my-3">
     {% if brand_friendly_name or gender_friendly_name or current_sorting %}
         <p>
-            <!-- Brand Filter --> 
+            <!-- Brand Filter -->
             {% if brand_friendly_name %}
-                <span><strong>Brand:</strong> {{ brand_friendly_name }}</span>
-                {% if gender_friendly_name or current_sorting %}, {% endif %}
+                <span><strong>Brand:</strong> {{ brand_friendly_name }}</span>{% if gender_friendly_name or current_sorting %},{% endif %}
             {% endif %}
 
-            <!-- Gender Filter --> 
+            <!-- Gender Filter -->
             {% if gender_friendly_name %}
-                <span><strong>Gender:</strong> {{ gender_friendly_name }}</span>
-                {% if current_sorting %}, {% endif %}
+                <span><strong>Gender:</strong> {{ gender_friendly_name }}</span>{% if current_sorting %},{% endif %}
             {% endif %}
 
             <!-- Sorting Filter (only show if sorting is applied) -->

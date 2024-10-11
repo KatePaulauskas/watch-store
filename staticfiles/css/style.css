@@ -587,14 +587,14 @@ ul.errorlist li {
 /* Style Shop page filers and sorting */
 .category-menu .nav-link,
 .sort-menu .nav-link {
-    font-size: 90% !important;
+    font-size: 70% !important;
     font-family: "Antic", sans-serif !important;
     background-color: #230903;
     color: #FBFAF8 !important;
 }
 
 .products-count {
-    font-size: 90% !important;
+    font-size: 100% !important;
     font-family: "Antic", sans-serif !important;
     background-color: #113227;
 }
@@ -730,9 +730,10 @@ input[type="number"]::-ms-outer-spin-button {
     display: none;
 }
 
-/* Remove focus outline from increment and decrement buttons */
+/* Remove focus outline from increment and decrement buttons and back to cart */
 .increment-qty:focus,
-.decrement-qty:focus {
+.decrement-qty:focus,
+.btn-back-to-shop:focus {
     outline: none !important;
 }
 
@@ -1242,6 +1243,13 @@ font-size: 100% !important;
     .card-body, .card-footer {
         font-size: 16px !important;
     }
+
+    #brand,
+    #gender,
+    #sort,
+    #reset {
+        width: 60px !important;
+    }
     
     /* Style Cart table */
     .table {
@@ -1363,6 +1371,12 @@ font-size: 100% !important;
         width: 90px !important;
     }
     
+    /* Style Shop page filers and sorting */
+    .category-menu .nav-link,
+    .sort-menu .nav-link {
+        font-size: 90% !important;
+    }
+
     /* Style Cart table */
     .table {
         font-size: 14px;
@@ -1463,7 +1477,7 @@ font-size: 100% !important;
     /* Style Shop page filers and sorting */
     .category-menu,
     .products-count {
-        font-size: 100% !important;
+        font-size: 110% !important;
     }
 
     #brand,
@@ -1572,10 +1586,13 @@ font-size: 100% !important;
     .sort-menu .nav-link,
     .products-count,
     .admin {
-        font-size: 110% !important;
+        font-size: 115% !important;
     }
 
-    #brand, #gender, #sort, #reset {
+    #brand, 
+    #gender,
+    #sort, 
+    #reset {
         width: 120px !important;
     }
 

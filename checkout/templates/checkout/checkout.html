@@ -147,7 +147,8 @@
                             {% if add_ons %}
                                 {% for add_on in add_ons %}
                                     <div class="text-start ps-5">
-                                        <input type="checkbox" class="form-check-input mt-1" value="{{ add_on.id }}" data-price="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}">
+                                        <input type="checkbox" class="form-check-input mt-1" value="{{ add_on.id }}" data-price="{{ add_on.price }}" name="add_ons" id="addon{{ add_on.id }}"
+                                            {% if add_on.id in selected_add_ons_ids %} checked{% endif %}>
                                         <label class="mb-3" for="addon{{ add_on.id }}">
                                             {{ add_on.name }}
                                             <br>

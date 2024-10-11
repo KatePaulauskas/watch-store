@@ -14,6 +14,7 @@ from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from cart.contexts import cart_contents
 from delivery_method.models import DeliveryMethod
+from decimal import Decimal
 
 import stripe
 import json
@@ -61,9 +62,17 @@ def checkout(request):
         currency=settings.STRIPE_CURRENCY,
         payment_method_types=['card'],
     )
+    
+    # Initialise selected_add_ons_ids
+    selected_add_ons_ids = []
 
     if request.method == 'POST':
         selected_delivery_method_id = request.POST.get('delivery_method')
+        selected_add_ons_ids = request.POST.getlist('add_ons')
+
+        # Convert IDs to integers for comparison in the template
+        selected_add_ons_ids = [int(add_on_id) for add_on_id in selected_add_ons_ids]
+        
 
         # Use the selected delivery method or fall back to standard
         if selected_delivery_method_id:
@@ -94,22 +103,16 @@ def checkout(request):
             order.delivery_method = selected_delivery_method
             order.save()
 
-            # Calculate delivery based on the selected or default method
-            cart_weight = sum([
-                item_data * get_object_or_404(Product, pk=item_id).weight
-                if get_object_or_404(Product, pk=item_id).weight is not None
-                else Decimal('0.50')
-                for item_id, item_data in cart.items()
-            ])
+            # Use cart_weight from cart_contents
+            cart_weight = current_cart['cart_weight']
 
             delivery_cost = round(selected_delivery_method.rate * cart_weight)
             # Store the calculated delivery cost
             order.delivery_cost = delivery_cost
 
-            selected_add_ons = request.POST.getlist('add_ons')
-            if selected_add_ons:
+            if selected_add_ons_ids:
                 add_ons_queryset = AddOn.objects.filter(
-                    pk__in=selected_add_ons)
+                    pk__in=selected_add_ons_ids)
                 order.add_ons.set(add_ons_queryset)
 
             # Create order line items and save the order
@@ -137,6 +140,24 @@ def checkout(request):
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
+            
+            # Re-render the form with POST data and previous selections
+            order_form = OrderForm(request.POST)
+            context = {
+                'order_form': order_form,
+                'stripe_public_key': stripe_public_key,
+                'client_secret': intent.client_secret,
+                'add_ons': add_ons,
+                'selected_delivery_method_id': selected_delivery_method_id,
+                'selected_add_ons_ids': selected_add_ons_ids,
+                'cart_items': current_cart['cart_items'],
+                'total': current_cart['total'],
+                'grand_total': current_cart['grand_total'],
+                'product_count': current_cart['product_count'],
+                'delivery': current_cart['delivery'],
+                'cart_weight': current_cart['cart_weight'],
+            }
+            return render(request, 'checkout/checkout.html', context)
 
     else:
         # Prefill the form with user profile data, if available
@@ -167,6 +188,12 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
         'add_ons': add_ons,
+        'cart_items': current_cart['cart_items'],
+        'total': current_cart['total'],
+        'grand_total': current_cart['grand_total'],
+        'product_count': current_cart['product_count'],
+        'delivery': current_cart['delivery'],
+        'cart_weight': current_cart['cart_weight'],
     }
 
     return render(request, template, context)

@@ -368,7 +368,7 @@ input::placeholder {
     font-weight: 400 !important;
 }
 
-/* Override background color in forms when autifilled in browser. Source: CSS Tricks */
+/* Override background color in forms when autofilled in browser. Source: CSS Tricks */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -839,6 +839,13 @@ label[for^="addon"] {
 
 hr {
     color: #AA9159 !important;
+}
+
+form#payment-form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #113227 inset !important;
+    -webkit-text-fill-color: #E4C58A !important;
+    caret-color: #AA9159 !important;
+    transition: background-color 5000s ease-in-out 0s !important;
 }
 
 .form-check-label {

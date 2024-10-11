@@ -138,8 +138,8 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('thank_you', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
+            messages.error(request, 'Some of the details provided are missing or incorrect. \
+                Please check the highlighted fields below and try again.')
             
             # Re-render the form with POST data and previous selections
             order_form = OrderForm(request.POST)

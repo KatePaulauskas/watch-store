@@ -596,16 +596,16 @@ On the left side of the header, the navigation bar allows users to explore the s
 The fully responsive navigation bar is displayed across all site pages, allowing seamless navigation throughout the website. It includes links to the main site sections: Home, Shop and Contact. The design remains consistent across all devices, ensuring a cohesive user experience.
 
 * **Desktop View:**
-  
-  The navigation bar links are displayed horizontally, with the active page highlighted to indicate the user's current location on the site.
 
-  ![Desktop Navbar](/media/navbar-desktop.jpeg)
+    The navigation bar links are displayed horizontally, with the active page highlighted to indicate the user's current location on the site.
+
+    ![Desktop Navbar](/media/navbar-desktop.jpeg)
 
 * **Mobile View:**
   
- On tablets and mobile devices, the navigation bar is represented by a hamburger icon. 
+    On tablets and mobile devices, the navigation bar is represented by a hamburger icon. 
 
-  ![Mobile Navbar Closed](/media/navbar-mob-closed.jpeg)
+    ![Mobile Navbar Closed](/media/navbar-mob-closed.jpeg)
 
  Clicking on this icon reveals a drop-down menu with the current page highlighted, ensuring smooth navigation. The user's login status is also displayed in the dropdown menu. Additionally, the search bar, cart, and account icons remain prominently displayed for easy access.
 
@@ -628,7 +628,7 @@ If a term is provided, the system looks for products that match the search term 
 
 ![search-bar-no-results.jpeg](/media/search-bar-no-results.jpeg)
 
-###¢ User Account
+#### User Account
 
 The user account dropdown menu changes based on the user's authentication status. When clicked, the menu reveals different options:
 
@@ -703,13 +703,19 @@ Sorting Options:
 
 ![Sorting Options](/media/sorting-options.jpeg)
 
-Brand and gender filters work together helping to narrow down the search:
+Brand and gender filters, as well as sorting function can work all together or independently.
+
+Filters applied:
 
 ![Brand and Gender Filters](/media/brand-and-gender-filter-applied.jpeg)
 
-Whereas the sorting function works at the moment independently from the brand and gender filters. 
+Sorting applied:
 
 ![Sorting Results](/media/sorting-results.jpeg)
+
+Both filters and sortign applied:
+
+![Filters and Sorting Results](/media/filtes-and-sorting-applied.jpeg)
 
 A reset button is also available next to the filters, allowing users to reset the filters and view all store products.
 
@@ -912,12 +918,15 @@ Upon confirmation, the user is redirected to the homepage and notified of the su
 Store Policies page can be accessed in the footer of the site and the page contains the store’s Return policy, Privacy policy, and Terms and conditions ensuring customers are well-informed about their rights and the store’s practices.
 
 **Return Policy**
+
 ![Return Policy](/media/return-policy.jpeg)
 
 **Privacy Policy**
+
 ![Privacy Policy](/media/privacy-policy.jpeg)
 
 **Terms and Conditions**
+
 ![Store Policies](/media/terms-and-conditions.jpeg)
 
 #### Profile - Orders and Address
@@ -1229,9 +1238,7 @@ The keywords were selected using the Semrush platform based on two locations: Ir
 
 ![SEO Keywords Ireland](/media/seo-keywords-us-2.jpeg)
 
-- **On-page SEO:** Personalised and optimised meta descriptions and title tags have been crafted for all pages, enhancing search engine visibility and relevance to user queries. With comprehensive meta descriptions and title tags across each page, Eternity Watch Store reinforces its brand identity, ensuring visibility for both new and returning customers. Although admin pages are restricted to superusers, they include consistent SEO-friendly tags for a coherent site structure, contributing to clarity and alignment across all pages. 
-
-By incorporating keywords like "affordable luxury watch" and "online watch shopping," the site becomes more appealing to search engines. Additionally, each page includes a single H1 tag to reinforce relevance and improve search engine rankings, while other headings follow a clear, structured hierarchy.
+- **On-page SEO:** Personalised and optimised meta descriptions and title tags have been crafted for all pages, enhancing search engine visibility and relevance to user queries. With comprehensive meta descriptions and title tags across each page, Eternity Watch Store reinforces its brand identity, ensuring visibility for both new and returning customers. Although admin pages are restricted to superusers, they include consistent SEO-friendly tags for a coherent site structure, contributing to clarity and alignment across all pages. By incorporating keywords like "affordable luxury watch" and "online watch shopping," the site becomes more appealing to search engines. Additionally, each page includes a single H1 tag to reinforce relevance and improve search engine rankings, while other headings follow a clear, structured hierarchy.
 
 - **Image SEO:** All images on the website include descriptive alt-text to enhance accessibility and improve search engine visibility, ensuring that search engines and visually impaired users can understand the content of the images.
 
@@ -1247,13 +1254,16 @@ By incorporating keywords like "affordable luxury watch" and "online watch shopp
 
      ![Facebook Page](/media/facebook-page-overview.jpeg)
      ![Facebook Page](/media/facebook-page-posts.jpeg)
+
+     **About View:**
+
      ![Facebook Page](/media/facebook-page-about.jpeg)
 
 **Subscribe Form & Newsletter Marketing (Mailchimp)**
 
 - **Email List Building:** A subscribe form in the website footer invites users to sign up for newsletters powered by Mailchimp. This helps Eternity build a list of subscribers for future marketing campaigns.
 
-- **Personalized Email Campaigns:** Subscribers receive personalized newsletters with product recommendations, new arrivals, and exclusive discounts. Mailchimp's automation tools can help in managing these campaigns effectively.
+- **Personalised Email Campaigns:** Subscribers receive personalized newsletters with product recommendations, new arrivals, and exclusive discounts. Mailchimp's automation tools can help in managing these campaigns effectively.
 
 - **Engagement Metrics:** Mailchimp’s analytics can be used to track open rates, click-through rates, and conversions, refining future campaigns based on subscriber behavior.
 
@@ -1561,7 +1571,7 @@ notification: 'Please fill in this field'  | Pass |
 | **Full Name Validation** | | |
 | Enter a single word (e.g., "John") in the full name field and submit the form | Error message "Enter your full name (first and last)." is displayed | Pass |
 | Enter only digits in the full name field and submit the form | Error message "Full name can only contain letters, spaces, apostrophes, and dashes." is displayed | Pass |
-| Enter any of the following characters in the Full Name field: (<>!@#$%^&*()_+[]{}|;:\'",.?/~`\\=) and submit the form | Error message "Full name can only contain letters, spaces, apostrophes, and dashes." is displayed | Pass |
+| Enter any of the following characters in the Full Name field: (<>!@#$%^&*()_+[]{};:\'",.?/~`\\=) and submit the form | Error message "Full name can only contain letters, spaces, apostrophes, and dashes." is displayed | Pass |
 | Enter a valid full name (e.g., "John Doe") | The error message disappears, and the form accepts the full name input | Pass |
 | **Phone Number Validation** | | |
 | Enter a phone number with less than 7 digits (e.g., "123456") | Error message "Phone number must be between 7 and 15 digits long." is displayed | Pass |
@@ -1580,11 +1590,11 @@ notification: 'Please fill in this field'  | Pass |
 | Enter a valid street address 2 (e.g., "Apt 5B") | The error message disappears, and the form accepts the street address input | Pass |
 | **Town/City Validation** | | |
 | Enter a town name containing digits (e.g., "123City") | Error message "Town/City can only contain letters." is displayed | Pass |
-| Enter a town name containing any of the following characters (<>!@#$%^&*()_+[]{}|;:\'",.?/~`\\=) | Error message "Town/City can only contain letters." is displayed | Pass |
+| Enter a town name containing any of the following characters (<>!@#$%^&*()_+[]{};:\'",.?/~`\\=) | Error message "Town/City can only contain letters." is displayed | Pass |
 | Enter a valid town name (e.g., "Cork") | The error message disappears, and the form accepts the town/city input | Pass |
 | **County Validation (Optional)** | | |
 | Enter an invalid county name containing digits (e.g., "123County") | Error message "County can only contain letters." is displayed | Pass |
-| Enter an invalid county name containing any of the following characters (<>!@#$%^&*()_+[]{}|;:\'",.?/~`\\=) | Error message "County can only contain letters." is displayed | Pass |
+| Enter an invalid county name containing any of the following characters (<>!@#$%^&*()_+[]{};:\'",.?/~`\\=) | Error message "County can only contain letters." is displayed | Pass |
 | Enter a valid county name (e.g., "Los Angeles County") | The error message disappears, and the form accepts the county input | Pass |
 | **Postal Code Validation** | | |
 | Enter a postal code shorter than 3 characters (e.g., "12") | Error message "Please lengthen this text to 3 characters or more (you are currently using 2 characters)." is displayed | Pass |
